@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Cultiva Floripa</title>
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Fontawesome CSS -->
+	<link href="css/all.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+   <link href="css/style.css" rel="stylesheet">
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script src="https://www.pmf.sc.gov.br/sistemas/Biblioteca/js/buscarCep.js"        	  type="text/javascript" ></script>
+<script src="http://www.pmf.sc.gov.br/sistemas/Biblioteca/js/validadores.js"        	  type="text/javascript" ></script>  
+  
+<script> 
+	var arquivoMenu = 'paginas/cabecalhoMenu.php';
+	var arquivoNoticias = 'paginas/noticias.php';
+	var arquivoAbertura = 'paginas/abertura.php';	
+	var arquivoRodape = 'paginas/rodape.php';		 
+	 
+	montarMenu();
+	montarNoticias();
+	montarAbertura();
+	montarRodape();
+	
+	function montarMenu(){
+		 $.ajax( {
+				type:'GET',
+				url:arquivoMenu,
+				dataType: 'html',
+				success: function (data) { 
+					$("#cabecalhoMenu").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}
+
+	function montarNoticias(){
+		 $.ajax( {
+				type:'GET',
+				url:arquivoNoticias,
+				dataType: 'html',
+				success: function (data) { 
+					$("#notícias").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}	
+
+	function montarAbertura(){
+		 $.ajax( {
+				type:'GET',
+				url:arquivoAbertura,
+				dataType: 'html',
+				success: function (data) { 
+					$("#abertura").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}	
+	
+	function montarRodape(){
+		 $.ajax( {
+				type:'GET',
+				url:arquivoRodape,
+				dataType: 'html',
+				success: function (data) { 
+					$("#rodape").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}		
+
+
+	function filtroCEP(obj){
+        /* if( obj !=0 ){
+            var cep = $("#cep" + obj.toString() ).val().replace(/\D/g, '');
+        }else{
+            var cep = $("#cep").val().replace(/\D/g, '');
+        } */
+		var cep = $("#cep").val().replace(/\D/g, '');
+
+
+        if( cep.substring(0,3) == "880" ){
+            buscarCEP( obj );
+        }else{
+            alert("Esse CEP n�o pertence a Florian�polis ");
+        }
+	}
+	
+	
+	    function limparCampos(){
+		$('#nome').val("");
+		$('#cpf').val("");
+		$('#email').val("");
+		$('#telefone').val("");
+		$('#celular').val("");
+		$('#cep').val("");
+		$('#logradouro').val("");
+		$('#numero').val("");
+		$('#municipio').val("");
+		$('#bairro').val("");
+		$('#estado').val("");
+        $('#senha').val("");
+   		$('#rg').val("");				
+		$('#complemento').val("");
+    }
+    
+	
+	
+	function salvarHortelao(){
+		if( $.trim(  $('#nome').val() ) == "" ){
+				alert("Informe o nome!");
+				$('#nome').focus();
+				return false;
+		}else if($.trim( $('#cpf').val() ) == ""){
+				alert("Informe o cpf!");
+				$('#cpf').focus();
+				return false;
+		}else if( !eCPF($('#cpf').val()) ){
+            alert("CPF invalido!");
+            $('#cpf').focus;
+            return false;
+		}else if($.trim( $('#rg').val() ) == "" ){
+				alert("Informe o rg!");
+				$('#rg').focus(); 
+				return false;	
+		}else if($.trim( $('#email').val() ) == "" ){
+				alert("Informe o email!");
+				$('#email').focus();
+				return false;
+		}/*else if($.trim( $("#cep").val() ) == "" ){
+				alert("Informe o cep!");
+				$("#cep").focus();
+				return false;
+		}*/else if($.trim( $("#logradouro").val() ) == "" ){
+				alert("Informe seu logradouro!");
+				$("#logradouro").focus();
+				return false;
+		}else if($.trim( $("#numero").val() ) == "" ){
+				alert("Informe o número da sua residência!");
+				$("#numero").focus();
+				return false
+		}else if($.trim( $("#complemento").val() ) == "" ){
+				alert("Informe o complemento!");
+				$("#complemento").focus();
+				return false;
+		}else if($.trim( $("#bairro").val() ) == "" ){
+				alert("Informe o bairro!");
+				$("#bairro").focus();
+				return false;
+		}/*else if($.trim( $("municipio").val() ) == "" ){
+				alert("Informe o município");
+				$("#municipio").focus();
+				return false;
+		}*/else if($.trim( $("#estado").val() ) == "" ){
+				alert("Selecione um estado");
+				$("#estado").focus();
+				return false;
+		}else if($.trim( $("#celular").val() ) == "" ){
+				alert("Selecione um celular");
+				$("#celular").focus();
+				return false;
+		}else if($.trim( $("#telefone").val() ) == "" ){
+				alert("Selecione um telefone");
+				$("#telefone").focus();
+				return false;
+		}else if($.trim( $("#senha").val() ) == "" ){
+				alert("Selecione um senha");
+				$("#senha").focus();
+				return false;
+		}else if($.trim( $("#repitaSenha").val() ) == "" ){
+				alert("repita sua senha!");
+				$("#repitaSenha").focus();
+				return false;
+		}
+	
+
+	var arquivoURL = "BD/hortelaoBD.php";
+            
+            if( confirm("Tem certeza que deseja finalizar o cadastro ? ") ){
+                var form = $("#formHortelao").closest("form");
+                var formData = new FormData(form[0]);
+                            
+                $.ajax({			
+                        type: 'POST',
+                        url: arquivoURL ,
+                        dataType: 'json',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function ( data ) {
+                            if( data['success'] == 1 ){
+                                alert(data['mensagem']);
+                                limparCampos();
+                            }else if( data['success'] == 2 ){
+                                alert( data['mensagem'] );
+                            }else{
+                                alert( data['error'] );
+                            }	
+                        },				   
+                        error: function ( data ) {
+                            console.log(data);
+                        }					
+                });
+            
+            }
+		}
+		
+		//ESpecificar o tipo da horta
+		function validarTipoHorta(){
+				var tipoHorta = document.getElementsByName('tipoHorta');
+				var genValue = false;
+
+				for(var i=0; i<tipoHorta.length;i++){
+					if(tipoHorta[i].checked == true){
+						genValue = true;
+					}
+				}
+				if(!genValue){
+					alert("Especifique o tipo da horta!");
+					$('#tipoHorta').focus();
+				}else if($.trim( $("#tipoHorta").value="I")){
+					alert("Especifique o tipo de instituição!")
+					$('#tipoHortaInst').focus();
+				}
+				return false;
+		}
+		
+		
+		
+		
+		//Especificar a idade das pessoas envolvidas
+		function validarTipoIdade(){
+				var tipoIdade = document.getElementsByName('tipoIdade');
+				var genIdade = false;
+
+				for(var i=0; i<tipoIdade.length;i++){
+					if(tipoIdade[i].checked == true){
+						genIdade = true;
+					}
+				}
+				if(!genIdade){
+					alert("Especifique a faixa de idade das pessoas envolvidas!");
+					$('#tipoIdade').focus();
+				}
+				return false;
+		}
+		
+		
+		function salvarNovaHorta(){
+			if( $.trim(  $('#nomeHorta').val() ) == "" ){
+				alert("Informe o nome da sua horta!");
+				$('#nomeHorta').focus();
+				return false;
+		}else if($.trim(  $('#nomeResponsavelHorta').val() ) == "" ){
+				alert("Informe o nome do responsável!");
+				$("#nomeResponsavelHorta").focus();
+				return false;
+		}else if($.trim(  $("#telefoneHorta").val() ) == "" ){
+				alert("Informe o telefone");
+				$("#telefoneHorta").focus();
+				return false;
+		}else if($.trim(  $('#enderecoHorta').val() ) == "" ){
+				alert('Informe o endereço!');
+				$('#enderecoHorta').focus();
+				return false;
+		}else if($.trim(  $('#bairroHorta').val() ) == "" ){
+				alert("Informe o bairro");
+				$('#bairroHorta').focus();
+				return false;
+		}else if($.trim(  $('#estado').val() ) == "" ){
+				alert("Informe o estado");
+				$('#estado').focus();
+				return false;
+		}
+		validarTipoHorta();
+		
+		//validarTipoIdade();
+		}
+		
+		
+		
+		
+		
+		
+  </script>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+        <div class="container" id="cabecalhoMenu">
+
+        </div>
+    </nav>
+   
+    <div id="abertura" style="display:block;" >
+
+    </div>
+	
+    <!-- Page Content -->
+    <div class="container" id="notícias" style="display:block;" >
+            <!-- /.row -->
+    </div>
+	
+	<!-- Portfolio Section -->
+	<div class="portfolio-main" id="conteudo" style="display:block;" > 
+
+		<!-- /.row -->
+	</div>
+   
+   <hr>
+
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class="footer">
+        <div class="container" id="rodape" style="display:block;" >
+
+        </div>
+    </footer>
+	  
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+
+function salvarUsuario(){
+	
+}
+
+function enviar(area){
+	var codigoUsuario = getVar("codigoUsuario");
+	document.getElementById("formAluno").action = "areaAluno.html?area=" + area + "&codigoUsuario=" + codigoUsuario;
+	document.getElementById("formAluno").submit();
+}
+
+function AbrirItem(opc){
+  var pagina = "";
+  
+	  if( opc == 1 ){ 
+		  pagina = "paginas/sobre.php";
+	  }else if( opc == 2 ){ 
+		  pagina = "paginas/cursos-oficinas.php";
+	  }else if( opc == 3 ){ 
+		  pagina = "paginas/feiras-livres.php";
+	  }else if( opc == 4 ){ 
+		  pagina = "paginas/feiras-organicas.php";
+	  }else if( opc == 5 ){ 
+		  pagina = "paginas/historia-feiras.php";
+	  }else if( opc == 6 ){ 
+		  pagina = "paginas/viveiros-municipais.php";
+	  }else if( opc == 7 ){ 
+		  pagina = "paginas/contato.php";
+	  }else if( opc == 8 ){ 
+		  pagina = "paginas/horta-comunitaria.php";
+	  }else if( opc == 9 ){ 
+		  pagina = "paginas/hortas-institucionais.php";
+	  }else if( opc == 22 ){ 
+		  pagina = "paginas/centrosaude.php";
+	  }else if( opc == 18 ){ 
+		  pagina = "paginas/hortainsti.php";
+	  }else if( opc == 34 ){ 
+		  pagina = "paginas/loginhorta.php";
+	  }else if( opc == 10 ){ 
+		  pagina = "paginas/hortas-pedagogicas.php";
+	  }else if( opc == 31 ){ 
+		  pagina = "paginas/oqueeCompostagem.php";
+	  }else if( opc == 25 ){ 
+		  pagina = "paginas/cadastroHortelao.php";
+	  }else if( opc == 15 ){ 
+		  pagina = "paginas/cadastreSuaHorta.php";
+	  }
+	  else{
+	     alert("Em breve !");
+	  }
+	  
+	  
+
+	 if( pagina !="" ){ 
+		 $.ajax( {
+				type:'GET',
+				url:pagina,
+				dataType: 'html',
+				success: function (data) {
+					 document.getElementById('conteudo').style.display = 'none';	
+					 document.getElementById('notícias').style.display = 'none';					 
+					$('#abertura').html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	 }
+
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+#sejaVoluntario
+{
+    background-color: #f2ebee;
+    margin-top:100px;
+	padding:100px;
+}
+#label
+{
+    font-size: 40px;
+    color: #892055;
+    font-weight: bold;
+    left: 100px;
+    top: -50px;
+}
+#cadastreAqui
+{
+    height: 30px;
+    width: 150px;
+    background-color: rgb(139, 185, 12);
+    border-radius: 20px;
+    color: white;
+    top: -10px;
+    right:150px;
+    border: transparent;
+    box-shadow: 1px 5px 5px rgb(187, 185, 185);
+    font-weight: none;
+    transition: 0.5s;
+}
+#cadastreAqui:hover
+{
+    background-color:white;
+    color: rgb(139, 185, 12);
+}
+#filtar
+{
+    font-weight: bold;
+    position: relative;
+    left: 70px;
+    top: 20px;
+    display: inline;
+}
+.button
+{
+    height: 25px;
+    font-size: 12px;
+    background-color: white;
+    color: #828282;
+    border: solid 1px;
+    border-radius: 20px;
+    margin: 3px;
+    transition: 0.5s;
+}
+.button:hover
+{
+    background-color: #828282;
+    color:white;
+}
+#oportunidades
+{
+    color: #892055;
+    font-size: 25px;
+}
+#caixa1
+{
+    background-color: white; 
+    height: 160px;
+    width: 370px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+    margin: 50px;
+}
+#caixa2
+{
+    background-color: white;
+    height: 160px;
+    width: 370px;
+    margin: 50px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+
+}
+#caixa3
+{
+    background-color: white;
+    height: 160px;
+    width: 370px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+    margin: 50px;
+}

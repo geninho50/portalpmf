@@ -1,0 +1,82 @@
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+header{
+    background-color: #64398E;
+    margin: -10px -10px 0 -10px;
+    
+}
+
+footer{
+    
+    bottom: 0;
+    background-color: #64398E;
+    width: 100%;
+    margin: 100px -10px -10px -10px;
+    height: 100px;    
+    text-align: center;
+    padding:10px;
+	padding-bottom: 100px;
+}
+h1 p{
+    text-align: justify;
+}
+h1{
+    text-align: center;
+}
+a{
+    color:white;
+}
+p{
+    font-family: arial,helvetica;
+    line-height: 125%
+}
+#active{
+    font-size: 31px;
+}
+nav{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+.btn-link-secondary {
+    margin-left: 10px; /* Add a margin to separate the buttons */
+  }
+  
+  /* Update the common styles for both buttons */
+  .btn-link, .btn-link-secondary {
+    text-decoration: none;
+    border-radius: 3px;
+    width: 20%;  
+    text-align: center;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: white;
+    background-color: #64398E;
+    display: inline-block; /* Display buttons side by side */
+  }
+  
+  /* Add hover effect for both buttons */
+  .btn-link:hover, .btn-link-secondary:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.6);
+  }
+
+.link{
+    color:black;
+}
+.videos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adjust the value to set the desired space between videos */
+    margin-top: 20px; /* Add margin to separate the videos from other content */
+  }
+  
+  

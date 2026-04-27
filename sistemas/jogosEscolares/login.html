@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jogos Escolares</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="shortcut icon" href="icon.png" type="image/png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="menu" class="container">
+		<ul>
+			<li><a href="index.php">Início</a></li>
+			<li><a href="">Inscrição</a></li>
+			<li  class="current_page_item"><a href="">Entrar</a></li>
+			<li><a href="contato.html">Contato</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+	<div id="header" class="container" style="background-image: url('images/fundo1.jpeg'); background-color: #F5F5F5">
+		<div id="logo" style="background-color: #696969">
+			<h1><a href="#">Jogos Escolares</a></h1>
+			<p>Fundação Municipal de Esportes</a></p>
+		</div>
+	</div>
+	<div id="page" class="container">
+		<div class="title">
+		<!--	<h2>INSCRIÇÔES ENCERRADAS</h2>-->
+
+			<h2>Entrar</h2>
+			<span class="byline">Se sua escola já se cadastrou, entre com seu Login e Senha.</span>
+			<span class="byline">Ou cadastre-se clicando em Inscrição.</span></div>
+
+
+	
+	<form id="formLogin" name="formLogin" >
+		<input type="hidden" name="codigo" id="codigo" >
+        <div class="row"> 	
+ 		<div class="col-md-4"><label>Email (Login):</label><input value="" id="email" name="email" class="form-control" type="text"/></div>
+		<div class="col-md-4"><label>Senha:</label><input value="" id="senha" name="senha" class="form-control" type="password"/></div>
+		</div><br>
+	
+		<div class="row">
+		  <div class="col-md-1"><button type="button" class="btn btn-default" onclick="acessarSistema();">Entrar</button></div>
+		  <div class="col-md-1"><button type="button" class="btn btn-default" onclick="esqueceuSenha();">Esqueci a senha</button></div>
+		</div>
+	</div>
+</form>
+
+
+</div>
+
+<div id="footer-wrapper" style="background-color: #696969">
+	<div id="footer" class="container" >
+		<h2>Fundação Municipal de Esportes</h2>
+		<span class="byline"></span>
+		<ul class="contact">
+			<li><img src="images/logo.png" width="20%"></li>
+		</ul>
+	</div>
+</div>
+
+<div id="copyright" class="container">
+	<p><img src="images/pmf.png" width="20%"><a href="http://www.pmf.sc.gov.br"></a></p>
+	</div>
+
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.maskedinput.min.js" type="text/javascript"></script>
+<script src="../banco/js/base64.min.js"></script>
+
+<script type="text/javascript">
+	
+    function acessarSistema(){
+	  
+	  if( $("#email").val() =="" ){
+		  alert("Informe o login!");	
+          $("#email").val("");		  
+		  $("#senha").val("");
+	  }else if( $("#senha").val() =="" ){
+  			    alert("Informe a Senha !");		  
+				$("#email").val("");		  
+				$("#senha").val("");		  
+	  }else{
+        data = {
+             "login"  : $("#email").val(),
+             "senha"  : $("#senha").val()
+        };
+		
+		data = $( this ).serialize() + "&" + $.param(data);
+
+
+		$.ajax( {
+		  type: "POST",
+		  dataType: "json",
+		  url: "../banco/loginJEM.php", 
+		  data: data,
+		  success: function( data ){
+					 if( data['success'] == 1 ){
+						 $("#email").val("");		  
+						 $("#senha").val("");		  					 	
+
+					     document.formLogin.action = "home.php";
+						 $("#codigo").val( Base64Encode(data['codigoUsuario']) );
+						 document.formLogin.submit();
+					 }else{
+					 	 alert( data['error'] );
+						 $("#email").val("");		  
+						 $("#senha").val("");
+						 $("#login").focus;										 	
+					 }         
+				  },
+		  error: function( data ){
+				alert(data['error']);
+		 	}
+		} );
+	  }	
+    }
+
+    function esqueceuSenha(){
+
+	  if( $("#email").val() =="" ){
+		  alert("Informe o login !");	
+          $("#email").val("");		  
+		  $("#senha").val("");
+	  }else{
+        data = {
+             "login": $("#email").val(),
+        };
+		
+		data = $( this ).serialize() + "&" + $.param(data);
+
+		$.ajax( {
+		  type: "POST",
+		  dataType: "json",
+		  url: "esqueceuSenha.php", 
+		  data: data,
+		  success: function( data ){
+					 if( data != 0  ){
+						 alert("Um link foi enviado para o seu email. Clique nele e crie sua nova senha !");
+						 document.formIndex.action = "index.html";
+						 document.formIndex.submit();
+					 }else{
+					     alert("O usuário não foi encontrado!"); 
+						 $("#login").val("");		  
+						 $("#senha").val("");
+						 $("#login").focus;					
+					 }            
+				  },
+		 error: function( data ){
+			console.log( data );
+		 }
+		} 
+		);
+	  }	
+
+    }
+
+	function Base64Encode(str, encoding = 'utf-8') {
+	   var bytes = new (TextEncoder || TextEncoderLite)(encoding).encode(str);        
+	   return base64js.fromByteArray(bytes);
+	}	
+
+</script>
+
+
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>4</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Programa de Parcelamento Incentivado</title>
+<subtitle>Parcelamento em até 36 vezes</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_06_2011_14.39.53.04408ff1d79cd077b4379a51230a81ff.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Programa de Parcelamento Incentivado</title>
+<subtitle>Adesão pela internet: praticidade e segurança</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_06_2011_14.54.06.c183308bf0e4c1a06169c1db85823a59.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Programa de Parcelamento Incentivado</title>
+<subtitle>Desconto de 10% para pagamento em cota única</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_06_2011_14.41.25.41197613bf67a8fd2d9bdb5e50471f19.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Programa de Parcelamento Incentivado</title>
+<subtitle>Adesão até o dia 30 de setembro de 2011</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_06_2011_14.57.10.e364cbee07afe5d5e27713164f1e7b2d.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

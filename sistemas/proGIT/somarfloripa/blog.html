@@ -1,0 +1,268 @@
+ <html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <!--fonte-->
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/blog.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	
+	<!--font awesome-->
+	<script src="https//kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<!--progress bar-->
+	<script src="js/progressbar.min.js"></script>
+
+	<!--parallax-->
+	<script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+	
+	<!--donativos-->
+	<script src="js/donativos.js"></script>
+</head>
+<body>
+	<script>
+        var arquivoURLMenu = 'php/montarDivCabecalho.php';
+        var arquivoURLRodape = 'php/montarDivRodape.php';        
+        
+        montarDivRodape();
+        
+        function montarDivRodape(){
+            $.ajax( {
+					type:'POST',
+					url:arquivoURLRodape,
+					dataType: 'html',
+					success: function (data) { 
+						$("#divRodape").html( data );
+					},
+					error: function( data){
+						 console.log( data );
+					}
+				} 
+			 );	
+        }
+        
+
+        montarMenu ();
+
+        function montarMenu(){
+			 $.ajax( {
+					type:'POST',
+					url:arquivoURLMenu,
+					dataType: 'html',
+					success: function (data) { 
+						$("#barraMenu").html( data );
+					},
+					error: function( data){
+						 console.log( data );
+					}
+				} 
+			 );	
+        }
+
+    </script>
+    <header>
+		<div class="menu-bar" id="barraMenu">
+
+		</div>		
+	</header>
+		<div class="container" id="primeiroContainer">
+			<label id="label">Faça parte dessa<br> Rede Solidária</label>
+			<img src="images/mancha.png"  id="mancha" alt="">
+            <img src="images/mulherAutofalante.png"  id="mulherAutofalante" alt="">
+		</div>
+		<center><label for="" id="quatroPalavras">AÇÔES</label>
+			<label for="" id="quatroPalavras">CAMPANHAS</label>
+			<label for="" id="quatroPalavras">PREMIAÇÕES</label>
+			<label for="" id="quatroPalavras">EVENTOS</label></center>
+		<div class="container" id="containerDasImagens">
+			<div id="mainSlider" class="carousel slide carousel" data-ride="carousel">
+				<ol class="carousel-indicators">
+                    <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+                    <!--<li data-target="#mainSlider" data-slide-to="1"></li>
+                    <li data-target="#mainSlider" data-slide-to="2"></li>
+                    <li data-target="#mainSlider" data-slide-to="3"></li>-->
+                </ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<center><img src="images/galeraParque.png" id="galeraParque" alt=""></center>
+							<center><label id="tituloMateria">PREFEITURA DE FLORIANÓPOLIS PREMIA 400 CRIANÇAS COM CAMISETAS<br>.</label><br><br>
+								<p>Mais de <b>400 crianças de escolas municipais de Florianópolis</b> foram premiadas com<br>
+								camisetas escolares ecológicas, produzidas por malha vinda de garrafas PET, nesta<br>
+								sexta-feira(12), <span id="pontos">...</span><span id="mais">da capital catarinense.<br>
+								A premiação foi devido à participação de <b>mais de 90 turmas</b> das unidades<br>
+								educativas no <b>projeto Transformar</b>, iniciativa de conscientização sobre o descarte<br>
+								correto do plastico e sua reciclagem.<br>
+								A ação propôs uma gincana entre as turmas e o resultado foi a retirada de mais de<br>
+								30 mil garrafas plásticas do meio ambiente no período de uma semana.<br>
+								O material, destinado para reciclagem pela Comcap (responsável pela coleta de<br>
+								resíduos da cidade) totalizando <b>1,5 tonelada de plástico</b>, se transformou nas<br>
+								<b>camisetas escolares</b> ecológicas, que contemplou as dez turmas que arrecadaram a<br>
+								maior quantidade do item considerado um dos grandes vilões da natureza. A<br>
+								iniciativa faz parte do movimento global Julho sem Plástico.<br>
+								<b>"O projeto Transformar está entre as ações para sermos a primeira capital lixo<br>
+								zero do Brasil.</b> Precisamos transformar hábitos e por isso, impactamos as crianças<br>
+								com a conscientização ambiental para que reflita na família como um todo.<br>
+								Agradecemos aos pais, professores e diretores por todo o envolvimento nesta<br>
+								importante causa", afirma o prefeito Gean Loureiro.<br>
+								A aluna Crislaine de Oliveira da Luz, de 9 anos, foi uma das que mais arrecadou<br>
+								garrafa PET em sua turma. Deu uma grande missão para a família: ajudá-la a salvar<br>
+								o planeta, retirando do meio ambiente o material."Fomos pela rua, praia e em todos<br>
+								os lugares que achamos garrafas jogadas recolhemos e levamos para a escola para<br>
+								fazer a reciclagem e hoje poder ter a camiseta. Nós temos que cuidar do lugar onde<br>
+								a gente mora e da natureza" conta Crislaine.<br>
+								A escola que mais recolheu garrafas PET foi o NEIM Ingleses², <b>totalizando 8.383.</b> A<br>
+								diretora da unidade, Cláudia Costa Ricardo, explica que iniciativas com essa fazem<br>
+								grande diferença na educação ambiental das crianças."Quando fomos convidados<br>
+								para participar do projeto. Logo nos mobilizamos. Decoramos toda a escola e<br>
+								incentivamos as famílias a participarem conosco. Sentimos que foi de grande valia<br>
+								para a conscientização de todos em relação a preservação da natureza e o descarte<br>
+								correto do plástico", reitera.</center></span></p>
+								
+								<center><button onclick="leiaMais()" id="btnLeiaMais">Leia Mais</button></center>
+						</div>
+
+						<div class="carousel-item">
+							<center><img src="images/acaoSomar.jpeg" id="galeraParque" alt=""></center>
+							<center><label id="tituloMateria">ESTUDANTE DA EJA DA PREFEITURA DE FLORIANÓPOLIS GANHA MÁQUINA DE LAVAR ROUPAS DA<br>SOMAR FLORIPA.</label><br><br>
+								<p>O pequeno Igor Vinicius, de apenas oito anos, mostrou que tem um coração gigante. 
+								Na cartinha de Natal,<br>ao invés de querer um brinquedo ou uma roupa nova, pediu que a mãe,
+								Maria Eunice, ganhasse uma<br>máquina de lavar roupas. <span id="pontos1">...</span><span id="mais1"> Igor sabia que a família
+								precisava de uma máquina nova, então escreveu a cartinha<br>com o pedido com a ajuda da professora Zilá, que dá aulas para Maria Eunice 
+								na Educação de Jovens><br>e Adultos (EJA) da Escola Básica Municipal Donícia Maria da Costa, no Saco Grande.<br><br>
+								Sabendo da situação, a professora entregou a cartinha de Igor para a Rede Solidária Somar Floripa, da<br>Prefeitura de Florianópolis. 
+								Em menos de cinco minutos, uma das voluntárias cadastradas, Rita Soares, se<br>propôs a realizar o pedido de Igor. Rita relata que a doação 
+								é uma prática frequente pra ela e familiares, e<br>que quando podem, participam de algum projeto ou iniciativa solidária.<br><br>
+								“Eu fico muito feliz em saber que algo que estava comigo pôde ser útil às pessoas. Doar faz bem, ajudar os<br>outros ajuda em nossa cura como seres humanos”, afirma a voluntária.<br><br>
+								Maria Eunice ressalta a importância de receber ajuda neste momento, e reforça: “Não tenho palavras para<br>expressar o 
+								quanto me sinto grata com toda a ajuda. A professora Zilá e a equipe da Somar Floripa são<br>pessoas que fizeram diferença na minha vida”.
+									
+									</center></span></p>
+								
+								<center><button onclick="leiaMais1()" id="btnLeiaMais1">Leia Mais</button></center>
+						</div>
+
+						<div class="carousel-item">
+							<center><img src="images/vovó.jpeg" id="galeraParque" alt=""></center>
+							<center><label id="tituloMateria">SOMAR FLORIPA LANÇA CAMPANHA DE AUXÍLIO AOS IDOSOS PARA PREVENIR CORONAVÍRUS.</label><br><br>
+								<p>A rede solidária da Prefeitura de Florianópolis, Somar Floripa, inicia campanha digital para auxiliar idosos a<BR>
+								não saírem de casa como forma de prevenção ao Coronavírus.<span id="pontos2">...</span><span id="mais2">
+								A plataforma da rede traz uma oportunidade<br>para que voluntários ajudem vizinhos idosos a fazer compras,
+								seja de maneira presencial ou online. De outro<br>lado, há também o ícone para cadastro de idosos que estão com essa necessidade.
+								Desta forma, será<br>realizado o “macth” de quem quer ajudar com quem precisa.<br><br>
+								“Várias pessoas entraram em contato conosco para saber de que maneira poderiam ajudar nesta pandemia.<br>
+								Vimos que esse tipo de atitude funcionou na Europa. Pensamos que esta é uma maneira eficiente de<br>deixarmos os idosos,
+								que são os principais alvos do vírus, em casa. Sugerimos que os jovens possam<br>auxiliar, inclusive, realizando as compras de forma online,
+								assim ambos não precisam sair de seus lares”,<br>afirma a presidente da rede solidária, Somar Floripa, Cintia de Queiroz Loureiro.<br><br>
+								Se você é um idoso que está no grupo de risco do Coronavírus e precisa de ajuda de um voluntário, cadastre-se em<br>
+								<a href="https://www.pmf.sc.gov.br/sistemas/somarfloripa/cadastreSuaOng.html"></a>. E se você está fora do grupo de risco e pode ajudar,<br>
+								acesse <a href="https://www.pmf.sc.gov.br/sistemas/somarfloripa/sejaVoluntario.html"></a> e se inscreva.
+								
+									
+								</center></span></p>
+								
+								<center><button onclick="leiaMais2()" id="btnLeiaMais2">Leia Mais</button></center>
+						</div>
+
+						</div>
+					<a href="#mainSlider" class="carousel-control-prev" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a href="#mainSlider" class="carousel-control-next" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+			</div>	
+		</div>
+		<div class="container">
+			<center><div class=row>
+				<div class="col" id="anuncioONG">
+					<a href="https://www.pmf.sc.gov.br/sistemas/somarfloripa/sejaVoluntario.html"><label id="labelAnuncioONG">Sou uma ONG a procura de voluntarios</label></a>
+				</div>
+			<div class="col" id="anuncioVoluntario">
+				<a href="https://www.pmf.sc.gov.br/sistemas/somarfloripa/cadastreSuaOng.html"><label id="labelAnuncioVoluntario">Quero me voluntariar para um projeto social</label></a>
+				</div></center>				
+			</div>
+		</div>
+		<div style="background-color:#E0E0E0;" id="divRodape"></div>		
+		
+		<script>
+			function leiaMais()
+			{
+				var pontos=document.getElementById("pontos");
+				var maisTexto=document.getElementById("mais");
+				var btnLeiaMais=document.getElementById("btnLeiaMais");
+
+				if(pontos.style.display === "none")
+				{
+					pontos.style.display = "inline";
+					maisTexto.style.display = "none";
+					btnLeiaMais.innerHTML = "Leia Mais";
+				}
+				else
+				{
+					pontos.style.display = "none";
+					maisTexto.style.display = "inline";
+					btnLeiaMais.innerHTML = "Leia Menos";
+				}
+			}
+
+			function leiaMais1()
+			{
+				var pontos1=document.getElementById("pontos1");
+				var maisTexto1=document.getElementById("mais1");
+				var btnLeiaMais1=document.getElementById("btnLeiaMais1");
+
+				if(pontos1.style.display === "none")
+				{
+					pontos1.style.display = "inline";
+					maisTexto1.style.display = "none";
+					btnLeiaMais1.innerHTML = "Leia Mais";
+				}
+				else
+				{
+					pontos1.style.display = "none";
+					maisTexto1.style.display = "inline";
+					btnLeiaMais1.innerHTML = "Leia Menos";
+				}
+
+				
+			}
+
+			function leiaMais2()
+			{
+				var pontos2=document.getElementById("pontos2");
+				var maisTexto2=document.getElementById("mais2");
+				var btnLeiaMais2=document.getElementById("btnLeiaMais2");
+
+				if(pontos2.style.display === "none")
+				{
+					pontos2.style.display = "inline";
+					maisTexto2.style.display = "none";
+					btnLeiaMais2.innerHTML = "Leia Mais";
+				}
+				else
+				{
+					pontos2.style.display = "none";
+					maisTexto2.style.display = "inline";
+					btnLeiaMais2.innerHTML = "Leia Menos";
+				}
+
+				
+			}
+		</script>
+	</body>
+	</html>
+	

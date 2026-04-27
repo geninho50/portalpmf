@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validar Documento</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://www.pmf.sc.gov.br/sistemas/Biblioteca/govbr/dist/dsgov.css" /> 
+</head>
+
+<body>
+    <div class="page" id="fade">
+      <div id="modal">
+        <div class="modal-header">
+            <img src="pmf.png" alt="" style="width: 250px;">
+        </div>
+        <div class="modal-body">      
+          <form method="POST" class="formLogin" name="form" id="form"  action="" >
+            <h1>Seguran&ccedil;a P&uacute;blica</h1>
+            <p>Informe os dados abaixo para verificar a validade da GALSC.</p>
+            <label for="text">N&uacute;mero Documento: </label>
+            <input type="text" id="nu_docm" name="nu_docm" size="11" minlength="10" maxlength="10"  placeholder="Digite somente n&uacute;meros." autofocus="true" />
+            <br><br>
+            <label for="text">C&oacute;digo do hash: </label>
+            <input type="text" id="cd_hash" name="cd_hash" size="9" minlength="8" maxlength="8"  placeholder="Digite o c&oacute;digo" autofocus="true" />          
+            <br><br>
+            <input type="button" value="verificar" onclick="verificar();" class="btn" />
+          </form>
+      </div>
+    </div>
+  </div>
+</body>      
+
+<script>
+function verificar(){
+  var nu_docm    = form.nu_docm.value;
+  var cd_hash    = form.cd_hash.value;
+
+  if( nu_docm =='' ){
+      alert('Informe o número do documento que se encontra na GALSC !');
+      form.nu_docm.focus();
+  }else if( cd_hash =='' ){
+            alert('Informe o código que se encontra na GALSC !');
+            form.cd_hash.focus();
+  }else{
+        form.action = "pdf/galsc_pdf.php";
+        form.target = "_blank";
+        form.submit();
+        form.nu_docm.value = '';
+        form.cd_hash.value = '';
+
+  }  
+}
+</script>
+

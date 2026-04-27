@@ -1,0 +1,43 @@
+
+#pag{
+	width: 210mm; 
+	margin: auto;
+	padding: 15mm; 
+	border: 2px solid black;
+}
+
+#top img{
+	width: 20mm;
+	float: left;
+}
+
+#cab {
+	font-size: 12pt;	
+	text-align: center;
+	font-weight: bold;
+}
+
+#corpo {
+	font-size: 11pt;	
+	text-align: justify;
+}
+
+.titulos{
+	margin: 0px;
+	padding: 0px;
+}
+
+h5 {
+	text-align: center;
+	margin-bottom: 1mm!important;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.ass{
+	margin-top: 10mm!important;
+	text-align: center;
+	
+}

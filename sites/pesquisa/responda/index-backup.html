@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario SMA</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="../../../sistemas/Biblioteca/govbr/dist/dsgov.css" /> 
+</head>
+
+<body>
+    <div class="page">
+        <form method="POST" class="formLogin" name="form" id="form"  action="" >
+          <h1>Gestao de Pessoas</h1>
+          <p>Digite os seus dados de acesso no campo abaixo para acessar<br> o formulario de satisfação do atual plano de saude.</p>
+          <label for="text">Matricula:</label>
+          <input type="text" id="matriculaLogin" name="matriculaLogin" size="7" minlength="6" maxlength="6"  placeholder="Digite somente os numeros da matricula..." autofocus="true" />
+          <label for="password">Senha do Contra cheque:</label>
+          <input type="password" id="senha" name="senha" placeholder="Digite sua senha..." size="5" maxlength="4" />
+          <br><br>
+          <input type="button" value="Acessar" onclick="consultarPlano();" class="btn" />
+        </form>
+      </div>
+
+</body>      
+
+
+
+<script>
+function consultarPlano(){
+    var url = "consultaPlanoSaudeWB.php";
+    var matricula  = form.matriculaLogin.value;
+    var senha      = form.senha.value;
+    var parametros = "matricula="+ matricula +"&senha="+senha;    
+     
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      
+       
+        // aqui voc� pode trabalhar com a resposta da consulta  
+        if ( this.responseText.includes("valor") ){
+            var dados = JSON.parse( this.responseText );
+            if( dados.valor == 1 ){
+                form.action = "formsma.php";
+                form.submit();
+            }else{
+               alert(dados.Mensagem);
+               form.matriculaLogin.value = "";
+               form.senha.value          = "";            
+            }
+       }else{
+          alert("Matricula ou senha incorretamente informados !");
+          form.matriculaLogin.value = "";
+          form.senha.value          = "";            
+       }
+      }
+    };
+
+    xhttp.open("POST", url, true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(parametros);
+}
+
+</script>
+

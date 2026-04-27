@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>2</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>13ª Fenaostra</title>
+<subtitle>07 a 16 de Outubro </subtitle>
+<imagePath>../../arquivos/banners/png/23_09_2011_14.12.26.eb391a84e8f62e90ab93545dae851b9e.png</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Não faltam bons motivos para ir à Fenaostra.</title>
+<subtitle>Confira o que dizem alguns apaixonados pela festa</subtitle>
+<imagePath>../../arquivos/banners/jpg/29_09_2011_15.14.17.64047175e45e232fd66e5f9e98632071.jpg</imagePath>
+<link>?cms=eu+vou&menu=8</link>
+</banner>
+
+</banners>
+</rotator>

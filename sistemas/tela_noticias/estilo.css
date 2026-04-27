@@ -1,0 +1,126 @@
+#conteudo{
+	width: 1366px;
+	height: 768px;
+
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	background-image: url("fundo_azul.jpg");
+	background-position: 0% 103%; 
+	background-size: 100%;
+	background-color:  #209FE2;
+}
+
+body{
+	padding: 0px;
+	margin: 0px;
+}
+
+#imagem{
+	width:800px;
+	height: 533px;
+	margin-left: auto;
+	float: left;
+}
+
+#titulo{
+	width: 100%;
+	text-align: center;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+#manchete{
+	font-size: 30px;
+	position: absolute;
+	text-align: justify;
+	padding: 5px;
+}
+
+p{
+	margin: 0px;
+	padding: 5px;
+}
+
+#logo{
+	float: left;
+	margin: 25px 0 0 180px;
+}
+
+#fundo_site{
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+#caixa_branca{
+	background-color: #0178BA;
+	width: 1346px;
+	padding: 10px;
+	position: absolute;
+	z-index: 5;
+	top: 100px;
+   	left: 0px;
+}
+
+#textos{
+	right: 23px;
+	width: 500px;
+	height: 513px;
+	padding: 10px;
+	position: absolute;
+}
+
+#origem{
+	padding: 6px;
+	background-color: #0178BA;
+	position: absolute;
+	top: -27px;
+	right: 0px;
+	color: white!important;
+}
+
+h1{
+	
+	font-size: 35pt;
+	color: #fff;
+    text-transform: uppercase;
+   	font-family: "fontsite","Trebuchet MS",Tahoma,Arial,Helvetica,sans-serif;
+   	position: absolute;
+   	left: 570px;
+   	top: 18px;
+}
+
+#textos, span{
+	color: white!important;
+}
+
+#caixa_total, #caixa_total img{
+	background-color: black;
+	width: 1366px;
+	height: 768px;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	z-index: 1100;
+}
+#caixa_total{
+	visibility: hidden;
+}
+
+/* The animation code */
+@keyframes caixa_branca {
+    from {
+    	left: -1366px; 
+    	visibility: hidden;
+    }
+    to {
+    	left: 0px;
+		visibility: visible;}
+}
+
+.animacao{
+	animation-name: caixa_branca;
+    animation-duration: 1s;
+}

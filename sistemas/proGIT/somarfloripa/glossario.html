@@ -1,0 +1,672 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Glossário</title>
+
+        <!--fonte-->
+        <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/unificado_glossario.css">
+
+        <!--scripts-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        <!--font awesome--> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
+
+
+        <!--progress bar-->
+        <script src="js/progressbar.min.js"></script>
+
+        <!-- javascript -->
+        
+        <!--parallax-->
+        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+        
+        <!--donativos-->
+        <link rel="shortcut icon" href="images/logoTrans.png">
+    </head>
+    <script>
+
+        var arquivoURLfinalTransparencia = 'php/finalTransparencia.php';
+
+        
+        finalTransparencia();
+
+
+
+
+    function finalTransparencia(){
+            $.ajax({
+                type: 'POST',
+                url: arquivoURLfinalTransparencia,
+                dataType: 'html',
+                success: function(data) {
+                    $("#finalTransparencia").html( data );
+                },
+                error: function( data ){
+                    console.log( data );
+                }
+            }
+        );
+    }
+	
+	function MostrarSubmenu()
+    {
+        if(document.getElementById('subMenu').style.display == 'block'){
+            document.getElementById('subMenu').style.display = 'none';}
+        else{
+            document.getElementById('subMenu').style.display = 'block';
+        }
+    };
+	
+	function fecharSubMenu()
+    {
+        if(document.getElementById('subMenu').style.display == 'block'){
+            document.getElementById('subMenu').style.display = 'none';
+			document.getElementById('divMenu').style.visibility = 'visible';}
+			
+		else{
+            document.getElementById('subMenu').style.display = 'block';
+        }
+    };
+	function fecharMenu()
+    {
+		if(document.getElementById('subMenu').style.display == 'none'){
+		document.getElementById('subMenu').style.visibility == 'hidden';}
+    };
+    function MostrarSubmenu2()
+    {
+        if(document.getElementById('subMenu2').style.display == 'block'){
+            document.getElementById('subMenu2').style.display = 'none';}
+        else{
+            document.getElementById('subMenu2').style.display = 'block';
+            document.getElementById('dropdown ').style.visibility = 'visible';
+        }
+    };
+
+    function fecharSubMenu2()
+    {
+        if(document.getElementById('subMenu2').style.display == 'block'){
+            document.getElementById('subMenu2').style.display = 'none'
+            document.getElementById('subMenu').style.display = 'none';
+			document.getElementById('dropdown').style.visibility = 'visible';}
+			
+		else{
+            document.getElementById('subMenu2').style.display = 'block';
+        }
+    };
+    function fechardropdown()
+    {
+        if(document.getElementById('dropdown').style.display == 'block'){
+            document.getElementById('dropdown').style.display = 'none';}
+        };
+	
+    </script>
+    <body>
+        <header>
+            <div class="menu-bar" id="divCabecalho">
+                <ul>
+                    <div class="dropdown" id="divMenu">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="btnMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">menu</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown">
+                            <button type="button" id="fecharDropdown" data-dismiss="dropdown" aria-label="Close" onclick="fecharSubMenu()">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+    
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/inicioTransparencia.html" id="links"><li>Início</li></a>  
+    
+                            <a href="#" id="links"><input type="button" value="Transparência e Controle >" onclick="MostrarSubmenu()" id="inputMostraSubMenu"></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/covid19.html" id="links"><li>Covid19</li></a>
+                                
+                            <a href="#" id="links"><li>Diário oficial</li></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/licitacoesContratos.html" id="links"><li>Licitações e contratos</li></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/gestaoPessoas.html" id="links"><li>Gestão de pessoas</li></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/receitasDespesas.html" id="links"><li>Receitas e despesas</li></a>
+                                
+                            <a href="#" id="links"><li>Contas públicas</li></a>
+                                
+                            <a href="#" id="links"><li>Obras públicas</li></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/somarFloripa.html" id="links"><li>Somar Floripa</li></a>
+                            
+                        </div>
+                    </div>
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/inicioTransparencia.html"><input type="button" name="" id="inicio" value="Inicio"></a>
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/covid19.html"><input type="button" name="" id="inicio2" value="Voltar para Covid19"></a>
+                    <li id="redes1"><a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li id="redes2"><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li id="redes3"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li id="redes4"><a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div id="subMenu" class="hidden">
+                <input type="button" value="X" onclick="fecharSubMenu()" id="fecharDiv">
+                <!--<button type="button" id="fecharDiv" data-dismiss="modal" aria-label="Close" onclick="fecharSubMenu()">
+                    <span aria-hidden="false">&times;</span>
+                  </button>-->
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/sobrePortal.html" id="links2">Sobre o Portal</a>
+    
+                    <a href="#" id="links2">Tour pela Página</a>
+            
+                    <a href="#" id="links"><input type="button" value="Entre em Contato" onclick="MostrarSubmenu2()" id="inputMostraSubMenu"></a>
+                    
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/convenios_repasse.html" id="links2">Convênios</a>
+            </div>
+			
+			<!--SUBMENU 2, TRANSPARÊNCIA E CONTROLE -> ENTRE EM CONTATO -->
+			
+			<div id="subMenu2" class="hidden">
+                <input type="button" value="X" onclick="fecharSubMenu2()" id="fecharDiv">
+                <!--<button type="button" id="fecharDiv" data-dismiss="modal" aria-label="Close" onclick="fecharSubMenu()">
+                    <span aria-hidden="false">&times;</span>
+                  </button>-->
+    
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/faleConosco.html" id="links2">Fale conosco</a>
+            
+                    <a href="#" id="links2">telefones e endereços</a>
+                    
+            </div>
+        </header>
+        <main>
+			<div class="container">
+				<h3 id="textoInicial">Glossário</h3>
+			</div>
+			<div class="container">
+				<div class="container" id="containerCentral">
+					<div class="row">
+						<div class="col col-lg-2" id="caixaA" data-target="#modalLetraA" data-toggle="modal" ><center><a id="textoCaixas">A</center></a></div>
+                        <div class="col col-lg-2" id="caixaB" data-target="#modalSecretarias" data-toggle="modal" ><center><a id="textoCaixas">B</center></a></div>
+                        <div class="col col-lg-2" id="caixaC" data-target="#modalLetraC" data-toggle="modal" ><center><a id="textoCaixas">C</center></a></div>
+                        <div class="col col-lg-2" id="caixaD" data-target="#modalLetraD" data-toggle="modal" ><center><a id="textoCaixas">D</center></a></div>
+                        <div class="col col-lg-2" id="caixaE" data-target="#modalLetraE" data-toggle="modal" ><center><a id="textoCaixas">E</center></a></div>
+                        <div class="col col-lg-2" id="caixaF" data-target="#modalOrgaos" data-toggle="modal" ><center><a id="textoCaixas">F</center></a></div>
+                        <div class="col col-lg-2" id="caixaG" data-target="#modalOrgaos" data-toggle="modal" ><center><a id="textoCaixas">G</center></a></div>
+                        <div class="col col-lg-2" id="caixaH" data-target="#modalOrgaos" data-toggle="modal" ><center><a id="textoCaixas">H</center></a></div>
+                        <div class="col col-lg-2" id="caixaI" data-target="#modalLetraI" data-toggle="modal" ><center><a id="textoCaixas">I</center></a></div>    
+					</div>
+                    <div class="row">
+						<div class="col col-lg-2" id="caixaJ" data-target="#modalPrefeitura" data-toggle="modal" ><center><a id="textoCaixas">J</center></a></div>
+                        <div class="col col-lg-2" id="caixaK" data-target="#modalSecretarias" data-toggle="modal" ><center><a id="textoCaixas">K</center></a></div>
+                        <div class="col col-lg-2" id="caixaL" data-target="#modalLetraL" data-toggle="modal" ><center><a id="textoCaixas">L</center></a></div>
+                        <div class="col col-lg-2" id="caixaM" data-target="#modalLetra" data-toggle="modal" ><center><a id="textoCaixas">M</center></a></div>
+                        <div class="col col-lg-2" id="caixaN" data-target="#modalLetraN" data-toggle="modal" ><center><a id="textoCaixas">N</center></a></div>
+                        <div class="col col-lg-2" id="caixaO" data-target="#modalLetra" data-toggle="modal" ><center><a id="textoCaixas">O</center></a></div>
+                        <div class="col col-lg-2" id="caixaP" data-target="#modalLetraP" data-toggle="modal" ><center><a id="textoCaixas">P</center></a></div>
+                        <div class="col col-lg-2" id="caixaQ" data-target="#modalLetraQ" data-toggle="modal" ><center><a id="textoCaixas">Q</center></a></div>
+                        <div class="col col-lg-2" id="caixaR" data-target="#modalLetra" data-toggle="modal" ><center><a id="textoCaixas">R</center></a></div>    
+					</div>
+                    <div class="row">
+						<div class="col col-lg-2" id="caixaS" data-target="#modalPrefeitura" data-toggle="modal" ><center><a id="textoCaixas">S</center></a></div>
+                        <div class="col col-lg-2" id="caixaT" data-target="#modalSecretarias" data-toggle="modal" ><center><a id="textoCaixas">T</center></a></div>
+                        <div class="col col-lg-2" id="caixaU" data-target="#modalLetraU" data-toggle="modal" ><center><a id="textoCaixas">U</center></a></div>
+                        <div class="col col-lg-2" id="caixaV" data-target="#modalLetraV" data-toggle="modal" ><center><a id="textoCaixas">V</center></a></div>
+                        <div class="col col-lg-2" id="caixaW" data-target="#modalLetra" data-toggle="modal" ><center><a id="textoCaixas">W</center></a></div>
+                        <div class="col col-lg-2" id="caixaX" data-target="#modalLetra" data-toggle="modal" ><center><a id="textoCaixas">X</center></a></div>
+                        <div class="col col-lg-2" id="caixaY" data-target="#modalLetra" data-toggle="modal" ><center><a id="textoCaixas">Y</center></a></div>
+                        <div class="col col-lg-2" id="caixaZ" data-target="#modalLetra" data-toggle="modal" ><center><a id="textoCaixas">Z</center></a></div>    
+					</div>
+				</div>
+			</div>
+			
+				<button id="faleConosco1"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+                <button id="faleConosco" data-target="#modalFaleConosco" data-toggle="modal">Fale Conosco</button>
+
+                <!-- MODAL DO FALE CONOSCO  -->
+
+                <div class="modal fade" id="modalFaleConosco" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                        
+                            <h5 id="titulo">PODEMOS AJUDAR?</h5>
+    
+                          <button type="button" id="fecharModal" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <center>
+                                    <h6>Dúvidas, sugestões, não encontra algo.<br> Fale conosco.</h6><br><br>
+                                    <div class="form-group">
+                                    <label id="subModal">Nome</label>
+                                    <input type="text" id="inputs">
+                                    </div>
+                                    <div class="form-group">
+                                    <label id="subModal">Email</label>
+                                    <input type="email" id="inputs">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="subModal">Escreva aqui</label>
+                                        <textarea id="inputs"  rows="3" cols="35"></textarea>
+                                    </div>
+                                </center>    
+                              </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" id="enviar">enviar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+			
+                  <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "A" -->
+
+            <div class="modal fade" id="modalLetraA" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - A</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Adjundicação</th>
+                                        <th>ato pelo qual a administrção pública<br>atribui ao licitante o objeto da<br>licitação</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Autorização de<br>Fornecimento</th>
+                                        <th>documento hábil para que o<br>fornecedor entregue seus produtos<br>e/ou serviços ao município</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MODAL DA TERCEIRA CAIXA CHAMADA "C" -->
+
+            <div class="modal fade" id="modalLetraC" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - C</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Coronavírus</th>
+                                        <th>Vínculo jurídico de direito<br>correspondido pela vontade, da<br>responsabilidade do ato firmado,<br>resguardado pela segurança jurídica<br>em seu equilíbrio social</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Coronavírus</th>
+                                        <th>Coronavírus é uma família de vírus<br>que causam infecções respiratórias</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>covid-19</th>
+                                        <th>a covid-19 é uma doença causada<br>pelo Coronavírus</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>CPF/CNPJ do<br>Contratado</th>
+                                        <th>número do documento da<br>pessoa contratada</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "D" -->
+
+            <div class="modal fade" id="modalLetraD" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - D</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Decreto</th>
+                                        <th>Ato administrativo da competência do<br>chefe do poder executivo (prefeito).<br>Tem efeito de regulamentar</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Autorização de<br>Fornecimento</th>
+                                        <th>Contratação por meio da qual a<br>administração está desobrigada de<br>realizar procedimento licitatório,<br>sendo adotada nas hipóteses previstas<br>em lei. O objetivo da dispensa é<br>desburocratizar o processo licitatório<br>tornando a contratação mais rápida</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "E" -->
+
+            <div class="modal fade" id="modalLetraE" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - E</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Edição<br>Licitação</th>
+                                        <th>Documento que apresenta as<br>condições que devem ser cumpridas<br>em um processo licitatório</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Empenho</th>
+                                        <th>Ato emanado de autoridade<br>competente que cria para o Estado<br>obrigação de pagamento pendente</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "I" -->
+
+            <div class="modal fade" id="modalLetraI" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - I</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Instrumento<br>Contratual</th>
+                                        <th>Documento que materializa o acordo<br>na contratação pública</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            
+            <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "L" -->
+
+            <div class="modal fade" id="modalLetraL" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - L</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Licitação</th>
+                                        <th>Processo administrativo responsável<br>pela escolha da empresa apta a ser<br>contratada pela administração pública<br>para o fornecimento de seus produtos<br>e / ou serviços.</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Local de entrega<br>da prestação de<br>serviços</th>
+                                        <th>Local aonde vai ser entregue o produto<br>ou executado o serviço</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "N" -->
+
+            <div class="modal fade" id="modalLetraN" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - N</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Nome do Contrato</th>
+                                        <th>nome da empresa contratada</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Nota de Empenho</th>
+                                        <th>documento que registra as despesas realizadas pela administração pública em seu primeiro estágio</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Número de despesas de licitação</th>
+                                        <th>número de controle do processo de despesa da licitação</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Local de entrega<br>da prestação de<br>serviços</th>
+                                        <th>número de controle do processo da licitação</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "O" -->
+
+            <div class="modal fade" id="modalLetraO" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - O</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Objeto</th>
+                                        <th>descrição do produto a ser comprado<br>ou descrição do serviço que foi contratado</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Órgão Contratante</th>
+                                        <th>órgão, secretaria ou autarquia<br>responsável pela contratação</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+            <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "P" -->
+
+            <div class="modal fade" id="modalLetraP" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - P</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Pandemia</th>
+                                        <th>É a disseminação mundial de uma nova doença. O termo é utilizado quando uma epidemia - grande surto que afeta uma região - se espalha por diferentes continentes com transmissão sustentada de pessoa para pessoa</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Portaria</th>
+                                        <th>Documento emitido por autoridade pública, que contém instruções acerca da aplicação de leis ou regulamentos, recomendações de caráter geral, normas de execução de serviço, nomeações, demissões, punições, ou qualquer outra determinação da sua competência</th>
+                                    </tr>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Pregão Eletrônico</th>
+                                        <th>modalidade licitatória realizada de maneira eletrônica.</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+            <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "Q" -->
+
+            <div class="modal fade" id="modalLetraQ" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - Q</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Quantidade</th>
+                                        <th>É o número total de produtos ou serviços.</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+            <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "U" -->
+
+            <div class="modal fade" id="modalLetraU" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - U</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Unidade</th>
+                                        <th>É a forma que vai ser entregue o produto ou unidade de medida que vai ser feito o serviço.</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- MODAL DA PRIMEIRA CAIXA CHAMADA "V" -->
+
+            <div class="modal fade" id="modalLetraV" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" id="fecharModal2" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">X</span>
+                          </button>
+                          <br>
+                        <form>
+
+                            <h4 id="textoModal">Glossário - V</h4><br>
+                            
+                            <Table class="table table-bordered" id="tabela">
+                                <tbody>
+                                    <tr>
+                                        <th id="subtituloGlossario" ><i class="fa fa-angle-right">&nbsp;</i>Valor Unitário</th>
+                                        <th>É o valor de uma (01) unidade de produto ou serviço.</th>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                               
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+			<div id="finalTransparencia">
+
+            </div>
+        </main>
+</html>

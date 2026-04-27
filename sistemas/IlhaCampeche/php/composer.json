@@ -1,0 +1,13 @@
+{
+    "name": "vendor/qrcodeilhacampeche",
+    "description": "Geracao de QRCODE para Voucher",
+    "type": "library",
+    "authors": [
+        {
+            "name": "E-GOV"
+        }
+    ],
+    "require": {
+        "khanamiryan/qrcode-detector-decoder": "^1.0"
+    }
+}

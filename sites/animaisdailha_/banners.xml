@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>5</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>TUCANO-DE-BICO-PRETO</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/25_05_2011_11.14.49.76d0f4819ef65f5675e18dd886343f7d.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>MACACO-PREGO</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/25_05_2011_11.21.49.acbcf656bb5a9407096069bd7063d397.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>BEIJA-FLOR</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/06_06_2011_1.08.36.30fd8f639cb076b143097f5291cde303.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>GAVIÃO-TESOURA</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/12_07_2011_15.29.15.477f01f27eaf4d95c5a634c37c91048b.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>SAÍRA-LENÇO</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/12_07_2011_15.29.37.ef36d7be11f99079b66a101b55190c72.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

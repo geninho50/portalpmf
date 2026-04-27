@@ -1,0 +1,49 @@
+<html>
+<head></head>
+<body>
+<form class="layout_home" action="enviar.php" method="post" enctype="multipart/form-data">
+	<hr>
+	<div><h3>Informações sobre você:</h3></div>
+	
+	<div>Nome:</div>
+    <p><input type="text" name="nome" size="71" /></p>
+	<div>Endereço:</div>
+    <p><input type="text" name="endereco" size="71" /></p>
+	<div>CPF:</div>
+    <p><input type="text" name="cpf" size="71" /></p>
+	<div>Título de eleitor:</div>
+    <p><input type="text" name="titulo" size="71" /></p>
+	<div>Telefone:</div>
+	<p><input type="text" name="telefone" size="71" /></p>
+	<div>E-mail:</div>
+	<p><input type="text" name="email" size="71" /></p>
+	
+    <hr>
+	<div><h3>Informações sobre a obra:</h3></div>
+	
+	<div>Âmbito da obra: </div>	
+	<p>
+	<select name="ambito">
+		<option value="regiao">Região</option>
+		<option value="microrregiao">Microrregião</option>
+		<option value="cidade">Cidade</option>		
+	</select>
+	</p>
+	
+	<div>Descrição da obra:</div>
+	<p><textarea name="descricao" rows="10" cols="55"></textarea></p>
+	<div>Local da obra com referencias:</div>
+	<p><textarea name="local" rows="10" cols="55"></textarea></p>
+	
+    <!--
+    <div>Mande uma foto do local:</div>	
+    <p><input type="text" name="foto" />
+	
+    <div>data:</div>
+    <p><input type="text" name="data" /></p>
+    -->
+    
+    <p><input type="submit" name="submit" value="Enviar"/></p>
+</form> 
+</body>
+</html>

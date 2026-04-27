@@ -1,0 +1,233 @@
+
+            body{
+                
+                /*background: rgb(8, 169, 233);*/
+                background-image: url(fundoTainha.png);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: top;
+                background-attachment: fixed;
+                overflow-x: hidden;
+            }
+
+            p {
+              margin: 0;
+            }
+
+            
+
+            #div
+            {
+                position:absolute;
+                width: 100vw;
+                height: auto;
+                border-radius: 15px;
+            }
+            #tabela
+            {
+              width: 50%;
+              text-align: center;
+              border: 3px solid #fff;
+              margin: auto;
+            }
+
+            .topo {
+              display: flex;
+            }
+            
+            #total
+            {
+                color: white;
+                font-size: 100px;
+                font-weight:900;
+                text-align: center;
+                margin: 90px 30px 70px 70px;
+                text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+                padding: 2px;
+                transition: 0.5s;
+                z-index: 1;
+                width: 70%;
+            }
+            #tainha
+            {
+              position: relative;
+              bottom: 10px;
+              left: 10px;
+              width: 20%;
+            }
+            #tainha2
+            {
+              margin-left: 10px;
+              height: 25%;
+              width: 25%;
+            }
+            #tainha3 {
+              height: 20%;
+              width: 20%;
+            }
+
+            #alinhar {
+              padding-left: 35%;
+            }
+
+            .divCampea {
+              width: 20%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: white;
+            }
+
+            .boxCampea {
+              border: 3px solid white;
+              font-size: 30px;
+              font-weight: bold;
+              padding: 10px;
+              text-align: center;
+            }
+
+            #ano {
+              margin-top: -10px;
+            }
+            /*#textoTainha
+            {
+                color: black;
+                font-size: 50px;
+                margin-right: 100px;
+                display: inline;
+                text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+                transition: 0.5s;
+            }*/
+            #top10
+            {
+              -webkit-text-stroke-width: 2px;
+              -webkit-text-stroke-color: white;
+              text-align: center;
+              color: transparent;
+              font-size: 60px;
+              display: block;
+              text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+              transition: 0.5s;
+            }
+            .tds
+            {
+              color: white;
+              font-size: 30px;
+              font-weight: bold;
+            }
+            .tdss
+            {
+              color: white;
+              font-size: 30px;
+              font-weight: bold;
+              text-align: left;
+            }
+
+            #brs {
+              display: none;
+            }
+
+            @media screen and (max-width: 480px)
+            {
+              body{
+              background-image: url(FUNDO_TAINHOMETRO.png);
+              background-repeat: no-repeat;
+              background-size:cover;
+              background-position: top;
+              background-attachment: fixed;
+              overflow-x: hidden;
+              align-items: center;
+              }
+
+              #titulo {
+                width: 280px;
+              }
+
+              .boxCampea {
+                display: none;
+              }
+
+              #alinhar {
+                padding-left: initial;
+                display: flex;
+                justify-content: center;
+              }
+
+              .topo {
+                text-align: center;
+              }
+
+              #total {
+                position: relative;
+                color: white;
+                font-size: 60px;
+                right: 25px;
+                display: inline-flex;
+                font-weight:900;
+                z-index: 1;
+                margin: initial;
+                margin-left: 20%;
+              }
+
+              .ranking {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+              }
+
+              #tainha {
+                position: relative;
+                display: inline-flex;
+                top: 20px;
+                left: 10px;
+                height: 60px;
+                width: 60px;
+              }
+
+              #tainha2 {
+                margin-left: 10px;
+                height: 30px;
+                width: 30px;
+              }
+
+              #brs {
+                display: initial;
+              }
+              
+              #top10 {
+                margin-top: -30px;
+                text-align: center;
+                color: transparent;
+                font-size: 45px;
+                white-space: nowrap;
+                text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+                transition: 0.5s;
+              }
+
+              #tabela {
+                max-width: 80%;
+                text-align: center;
+                border: 3px solid #fff;
+                margin: auto;
+              }
+
+              .tds {
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+              }
+
+              .tdss {
+                color: white;
+                font-size: 15px;
+                font-weight: bold;
+                text-align: left;
+              }
+
+              #atualizacao {
+                font-size: 15px;
+              }
+            }
+            
+            
+           

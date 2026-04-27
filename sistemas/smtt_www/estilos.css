@@ -1,0 +1,66 @@
+body
+{
+background-color:#EAE9DB;
+}
+
+body.branco
+{
+background-color:#FFFFFF;
+}
+
+h2
+{
+align:center;
+color:black;
+font-family:Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif;
+font-size:14.5px;
+}
+
+h3
+{
+align:center;
+color:black;
+font-family:Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif;
+font-size:15px;
+}
+
+a.sma
+{
+font-family:Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif;
+font-size:10px;
+}
+
+a.smt
+{
+color:black;
+font-family:Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif;
+font-size:13px;
+}
+
+a.hr
+{
+color:black;
+font-family:Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif;
+font-size:13.5px;
+}
+
+a.lp
+{
+color:blue;
+font-family:Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif;
+font-size:14px;
+}
+
+a.tit
+{
+color:black;
+font-family:Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif;
+font-size:17px;
+}
+
+a.tab
+{
+color:black;
+font-family:Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif;
+font-size:14px;
+}

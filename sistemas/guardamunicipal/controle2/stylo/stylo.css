@@ -1,0 +1,141 @@
+html{        
+	height: 100%;	
+}
+BODY {margin:0; 
+	padding:0; 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;}
+
+.borda {
+	border:1px solid #003399;
+}
+
+
+
+input {
+	font-family: Arial, Verdana, Arial Black, Tahoma;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #ffffff;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+	height:20px;
+}
+
+textarea {
+	font-family: Arial, Verdana, Arial Black, Tahoma;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #ffffff;
+	border: 1px solid #999999;
+}
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+a:hover {
+	text-decoration: underline;
+	color: #333333;
+}
+a:active {
+	text-decoration: none;
+	color: #000000;
+}
+.branco {
+	color: #ffffff;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.fieldset{
+	color: #FF3300;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bold;
+}
+.select{
+	color: #000000;
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif
+}
+.letra{ font:Verdana, Arial, Helvetica, sans-serif;
+color:#000000;
+font-size:12px
+}
+.negrito{ font:Verdana, Arial, Helvetica, sans-serif;
+color:#000000;
+font-size:11px;
+font-weight:bold;
+}
+
+.confirmar{ font:Verdana, Arial, Helvetica, sans-serif;
+color:#000000;
+font-size:14px;
+font-weight:bold;
+}
+.botao{
+    font-family: Arial, Verdana, Arial Black, Tahoma;
+	font-weight:bold
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #cccccc;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+	height:20px;
+	width:80px;
+}
+.layer1 {
+margin: 0;
+padding: 0;
+width: 100%;
+}
+ 
+.heading {
+margin: 1px;
+color: #000000;
+padding: 3px 10px;
+cursor: pointer;
+position: relative;
+font-weight:bold
+}
+.content {
+padding: 5px 10px;
+}
+p { padding: 5px 0; }
+
+.password {
+font-size : 12px;
+border : 1px solid #999999;
+width : 329px;
+font-family : arial, sans-serif;
+}
+.pstrength-minchar {
+font-size : 10px;
+}

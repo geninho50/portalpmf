@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Simples - Botão Sanduíche</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #333;
+            color: white;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sidebar-toggle {
+            background: #555;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .sidebar-toggle:hover {
+            background: #666;
+        }
+
+        .sidebar-nav {
+            padding: 20px;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            background: #444;
+            border-radius: 5px;
+        }
+
+        .sidebar-nav a:hover {
+            background: #555;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 20px;
+            background: white;
+        }
+
+        /* Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+                z-index: 200;
+            }
+            
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .sidebar-toggle {
+                display: block;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .sidebar-toggle {
+                display: none;
+            }
+        }
+
+        /* Debug info */
+        .debug {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug" id="debug">
+        Largura: <span id="width">0</span>px<br>
+        Sidebar: <span id="sidebarState">fechada</span><br>
+        Overlay: <span id="overlayState">inativo</span>
+    </div>
+
+    <div class="container">
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">Menu</div>
+                <button class="sidebar-toggle" id="toggleBtn">☰</button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Usuários</a></li>
+                    <li><a href="#">Configurações</a></li>
+                    <li><a href="#">Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Teste do Botão Sanduíche</h1>
+            <p>Redimensione a janela para menos de 768px e clique no botão ☰</p>
+            <p>Este é um teste simplificado para verificar se o botão funciona.</p>
+            
+            <div style="margin-top: 20px;">
+                <button onclick="testToggle()" style="padding: 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Testar Toggle Manual
+                </button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Elementos
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const toggleBtn = document.getElementById('toggleBtn');
+        
+        // Debug elements
+        const widthSpan = document.getElementById('width');
+        const sidebarStateSpan = document.getElementById('sidebarState');
+        const overlayStateSpan = document.getElementById('overlayState');
+
+        // Função para atualizar debug
+        function updateDebug() {
+            widthSpan.textContent = window.innerWidth;
+            sidebarStateSpan.textContent = sidebar.classList.contains('open') ? 'aberta' : 'fechada';
+            overlayStateSpan.textContent = overlay.classList.contains('active') ? 'ativo' : 'inativo';
+        }
+
+        // Toggle sidebar
+        function toggleSidebar() {
+            console.log('Toggle chamado');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+            updateDebug();
+            console.log('Sidebar aberta:', sidebar.classList.contains('open'));
+        }
+
+        // Event listeners
+        toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Botão clicado!');
+            toggleSidebar();
+        });
+
+        // Fechar ao clicar no overlay
+        overlay.addEventListener('click', function() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            updateDebug();
+        });
+
+        // Fechar ao redimensionar
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            }
+            updateDebug();
+        });
+
+        // Função de teste manual
+        function testToggle() {
+            console.log('Teste manual chamado');
+            toggleSidebar();
+        }
+
+        // Inicializar debug
+        updateDebug();
+        
+        // Log inicial
+        console.log('Script carregado');
+        console.log('Elementos encontrados:', {
+            sidebar: !!sidebar,
+            overlay: !!overlay,
+            toggleBtn: !!toggleBtn
+        });
+    </script>
+</body>
+</html>

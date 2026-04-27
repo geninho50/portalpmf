@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang='pt-BR'>
+	<head>
+    <meta charset="UTF-8">
+    <title>Franklin Cascaes</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src="js/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/jquery.maskedinput.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+  <!-- -->
+    <div class="container">
+        <div class="alert alert-danger hide" id="error"></div>
+        <div class="form" role="form">
+
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/pmf2.png" class="pmf"> 
+            </div> 
+            <div class="col-md-6">
+                <img src="img/fcc.png" class="fcc"> 
+            </div>
+        </div>
+
+        <br><br>
+
+        <h1>Formulário Edital do Professor</h1>
+
+        <div class="row">
+
+        	<div class="col-md-12">
+                <form id="frm1" name="frm1" method="post" action="backend/cadastrar.php"; enctype="multipart/form-data">
+                        
+                <h2>Área de Atuação *:</h2><br>
+               
+
+                <label>Artes Visuais</label><br>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="atelie" class="desenho"> Desenho de Ateliê</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="quadrinho" class="desenho"> Desenho e Quadrinho</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="modelagem" class="desenho"> Modelagem em Argila/Cerâmica</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="pintura" class="desenho"> Pintura</div>
+                <br><br><br>
+
+
+                <label>Cultura Popular</label><br>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="boi" class="desenho"> Boi de Mamão</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="bilro" class="desenho"> Renda de Bilro para Iniciantes</div>
+                <br><br>
+
+                <label>Dança</label><br>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="danca1" class="desenho"> Iniciação à Dança I</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="danca2" class="desenho"> Iniciação à Dança II</div>
+                <br><br>
+
+                <label>Teatro</label><br>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="teatro" class="desenho"> Iniciação Teatral</div>
+                <br><br>
+
+                <label>Música</label><br>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="canto" class="desenho"> Canto</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="cavaquinho" class="desenho"> Cavaquinho/Bandolim</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="musicalizacao" class="desenho"> Musicalização</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="violao" class="desenho"> Violão/Guitarra</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="conjunto" class="desenho"> Prática de Conjunto</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="violino" class="desenho"> Violino</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="piano" class="desenho"> Piano</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="contrabaixo" class="desenho"> Contrabaixo</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="acordeon" class="desenho"> Acordeon</div>
+                <div class="col-md-6">
+                <input type="checkbox" name="habilidades[]" value="percussao" class="desenho"> Percussão</div>
+                <br><br>
+                <br><br>
+
+            
+        
+        <br><br>
+         <div class="row">
+            <div class="col-md-12">
+            <h2>Identificação do Candidato:</h2><br>
+            </div>
+
+            <div class="col-md-4"><label id="lbnome" >Nome *</label><input type="text" id="nome" name="nome" class="form-control obrigatorio " /></div>
+			<div class="col-md-4"><label id="lbnome" >Data de Nascimento *</label><input type="text" id="nascimento" name="nascimento" class="form-control obrigatorio " /></div>
+            <div class="col-md-4"><label id="lbrg" >RG *</label><input name="rg" id="rg" class="form-control obrigatorio " type="text"/></div>
+             </div> <br>
+
+            <div class="row">
+                <div class="col-md-6"><label id="lbcpf" >CPF *</label><input type="text" name="cpf" id="cpf" class="form-control obrigatorio " /></div>
+                <div class="col-md-6"><label id="lbpis" >PIS/PASEP *</label><input name="pis" id="pis" class="form-control obrigatorio " type="text"/></div>
+            </div><br>
+
+            <div class="row">
+                <div class="col-md-6"><label id="lbcelular" >Celular *</label><input  name="celular" id="celular" class="form-control obrigatorio " type="text"/></div>
+                <div class="col-md-6"><label id="lbtelefone" >Telefone *</label><input name="telefone"  id="telefone" class="form-control" type="text"/></div>
+            </div><br>
+
+
+            <div class="row">
+            <div class="col-md-3"><label  id="lbcep" >CEP *</label><input type="text" name="cep" id="cep" placeholder="CEP" class="form-control obrigatorio " />
+                 <span class="input-group-btn">
+                    <button class="btn btn-default" onclick="buscarCEP();" type="button">BUSCAR CEP</button>
+                </span></div>            
+                <div class="col-md-7"><label id="lblogradouro" >Endereço *</label><input type="text" name="logradouro" id="logradouro" placeholder="Endereço" class="form-control obrigatorio " /></div>
+				<div class="col-md-2"><label id="lbnumero" >Número *</label><input name="numero" id="numero" class="form-control" type="numero"/></div>
+            </div><br>
+
+            <div class="row">     
+                <div class="col-md-6"><label id="lbbairro" >Bairro *</label><input type="text" name="bairro" id="bairro" placeholder="Bairro" class="form-control obrigatorio " /></div>
+                <div class="col-md-6"><label>Cidade *</label><input type="text" name="municipio" id="municipio" placeholder="Cidade" class="form-control obrigatorio " /></div>
+            </div><br>
+
+            <div class="row">            
+            <div class="col-md-6"><label id="lbemail" >E-Mail *</label><input  name="email" id="email" class="form-control" type="text"/></div>
+            </div><br>
+
+        <div class="row">
+            <div class="col-md-3"><label id="lbbanco" >Banco *</label><input name="banco" id="banco" class="form-control obrigatorio " type="text"/></div>
+            <div class="col-md-3"><label id="lbagencia" >Agência *</label><input name="agencia" id="agencia" class="form-control obrigatorio " type="text"/></div>
+            <div class="col-md-3"><label id="lbcontaNum" >Nº da Conta *</label><input name="contaNum" id="contaNum" class="form-control obrigatorio " type="text"/></div>
+
+	   <div class="col-md-3"><label class="radio-inline">
+			<input type="radio" checked name="tipoConta" id="tipoConta"  value="1" class="tipoConta"> Conta Corrente *
+			</label></div>
+			<div class="col-md-3"><label class="radio-inline">
+			  <input type="radio" name="tipoConta" id="tipoConta"   value="2" class="tipoConta"> Poupança *
+			</label></div>
+		</div><br><br>
+
+
+        <div class="row">
+            <div class="col-md-6"><label id="lbcurriculo" >Link currículo lattes</label><input name="curriculo" id="curriculo" class="form-control" type="text"/></div>
+            <div class="col-md-6"><label id="lbfacebook">Facebook</label><input name="facebook" id="facebook" class="form-control" type="text"/></div>
+          </div><br>
+        
+		<div class="row">
+		<div class="col-md-6"><label id="lbyoutube">Site ou canal no Youtube</label><input name="youtube" id="youtube" class="form-control" type="text"/></div>
+		<div class="col-md-6"><label id="lbvideo">Link com vídeos e/ou fotos do seu trabalho</label><input name="video" id="video" class="form-control" type="text"/></div></div>
+
+	 	<div class="responsabilidade">
+            <p>*Todos os campos * são obrigatórios</p>
+            <p>**Qualquer necessidade de alteração na ficha de inscrição deve ser solicitada através do email: <strong>escolalivredeartesffc@gmail.com.</strong></p>
+        </div>
+          <input type="button" name="btnSubmit" id="btnSubmit" onclick="enviar();" class="btn btn-primary botao" value="Enviar" />
+        
+    </div>
+
+    <div class="overlay"></div>
+</div>
+</body>
+
+    </div>
+
+  </body>
+  
+  <script type="text/javascript" src="../../Biblioteca/js/buscarCep.js"></script>  
+  <script type="text/javascript" src="../../Biblioteca/js/validadores.js"></script>  
+  <script type="text/javascript">  
+    $('#telefone').mask("(99)9999-9999");
+    $('#celular').mask("(99)99999-9999");
+    $('#nascimento').mask("99/99/9999");
+    $('#cep').mask("99999-999");
+    $('#cpf').mask("999.999.999-99");
+	$('#pis').mask(" 999.99999.99-9");
+   
+    function enviar(){
+	
+	    var $inputsText = $('form input:text');		
+		var $habilidades = $("#frm1 input[name='habilidades[]']:checked");		
+		var habilidadesChecked = '';
+	    var values = {};
+		var err = '';
+		var localImagem  = '../Cultura/EscolaLivreArtes/img/';
+		var nTelefone = '';
+		
+		if( $habilidades.length == 0 ){
+		    alert("informe uma ou mais habilidades !");
+		    err = 'Tem';
+		    $("#frm1 input[name='habilidades[]']").focus();
+		}
+		
+		if( $habilidades.length != 0 ){
+		
+		    $habilidades.each( function(){
+			   habilidadesChecked += $(this).val() + ", ";
+			});
+			
+			$inputsText.each( function() {				    
+				if( $(this).hasClass('obrigatorio') &&  $(this).val() == "" && err !='Tem' ){			   			  
+					err = 'Tem';				
+					alert("Informe o " + $( '#lb'+$(this).attr('id') ).html() + " !");
+					$(this).focus();
+				}
+			});
+		}
+		
+		if( !ePIS() && err !='Tem' ){
+		   $("#pis").focus();
+		   err = 'Tem';
+		   alert("Informe o número do PIS/PASEP corretamente !");		   
+		}		
+      
+		if( err != 	'Tem' ){        
+		
+			var obj = {
+				habilidades    : habilidadesChecked,
+				nome           : $('#nome').val(),
+				rg             : limpezaDeDocumento( $('#rg').val() ),
+				cpf            : limpezaDeDocumento( $('#cpf').val() ),
+				pis            : limpezaDeDocumento( $('#pis').val() ),
+				celular        : limpezaDeDocumento( $('#celular').val() ),
+				telefone       : limpezaDeDocumento( $('#telefone').val() ),
+				cep            : limpezaDeDocumento( $('#cep').val() ),
+				nascimento     : ajustarData($('#nascimento').val()),
+				logradouro     : $('#logradouro').val(),
+				bairro         : $('#bairro').val(),
+				municipio      : $('#municipio').val(),
+				numero         : $('#numero').val(),
+				email          : $('#email').val(),
+				banco          : $('#banco').val(),
+				agencia        : $('#agencia').val(),
+				contaNum       : $('#contaNum').val(), 
+				tipoConta      : $('#tipoConta').val(),
+				curriculo      : $('#curriculo').val(),
+				facebook       : $('#facebook').val(),
+				youtube        : $('#youtube').val(),
+				video          : $('#video').val(),
+				codigoprojeto  : 'ELA'				
+			};
+			
+			obj = $( this ).serialize() + "&" + $.param( obj );
+					  
+			$.ajax({			
+				   type: "POST",
+				   url: "../../banco/cadastrarELAProfessor.php",
+				   dataType: "json",
+				   data: obj,
+				   success: function ( data ) {
+				      if( data['codigo'] !="E" ){
+						  document.getElementById("frm1").action = "../../banco/sucesso.php?telefone="+nTelefone+"&codigoprojeto=ELA&titulo=Franklin Cascaes&codigo="+data['codigo']+"&emailResposta=escolalivredeartesffc@gmail.com&localImagem="+ localImagem;
+						  document.getElementById("frm1").submit();                             
+					  }else{
+					      alert("O endereço está incompleto !!");
+						  $('#logradouro').focus();
+						  
+					  }
+					},				   
+				   error: function ( data ) {
+					  console.log(data);
+				   }
+				
+			});
+		}
+    }   
+      
+    </script>
+
+</html>

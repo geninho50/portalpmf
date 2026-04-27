@@ -1,0 +1,511 @@
+<!DOCTYPE HTML>
+<!--
+	Road Trip by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+  <meta name="author" content="GeeksLabs">
+  <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  <title>DGOV - Admin</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- bootstrap theme -->
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  
+  <!--external css-->
+  <!-- font icon -->
+  <link href="css/elegant-icons-style.css" rel="stylesheet" />
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  
+  <!-- full calendar css-->
+  <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+  <link href="assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+  
+  <!-- easy pie chart-->
+  <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
+  
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+  
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/fullcalendar.css">
+  <link href="css/widgets.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet" />
+  <link href="css/xcharts.min.css" rel=" stylesheet">
+  <link href="css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+  
+  <script src="js/jquery.js"></script>
+  <script src="js/url.js" ></script>
+  <script src="js/jquery-ui-1.10.4.min.js"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+  
+  <!-- bootstrap -->
+  <script src="js/bootstrap.min.js"></script>
+  
+  <!-- charts scripts -->
+  <script src="assets/jquery-knob/js/jquery.knob.js"></script>
+  <script src="js/jquery.sparkline.js" type="text/javascript"></script>
+  <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/sparkline-chart.js"></script>
+  <script src="js/sparklines.js"></script>
+  <script src="js/easy-pie-chart.js"></script>
+  <script src="js/jquery-jvectormap-1.2.2.min.js"></script>
+  <script src="js/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="js/xcharts.min.js"></script>
+  <script src="js/jquery.autosize.min.js"></script>
+  <script src="js/jquery.placeholder.min.js"></script>
+  <script src="js/gdp-data.js"></script>
+  <script src="js/morris.min.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/jquery.slimscroll.min.js"></script>
+   
+<!--
+  =======================================================
+  Theme Name: DGOV ADMIN
+  Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  Author: Geninho
+  Author URL: http://www.pmf.sc.gov.br
+  ======================================================= 
+-->
+
+</head>
+
+<body>
+ <script> 
+	var arquivoURLdadosUsuario = 'php/dadosUsuario.php';
+	var arquivoURLdashBoard    = 'php/dashBoard.php';
+	// var arquivoURLmenu         = 'php/menu.php';	
+
+
+	//montarNotificacaoDadosUsuarios();
+	montarDashBoard();
+	montarMenu();
+	
+	function montarNotificacaoDadosUsuarios(){
+		 $.ajax( {
+				type:'POST',
+				url:arquivoURLdadosUsuario,
+				dataType: 'html',
+				success: function (data) { 
+					$("#notificacoes").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}
+
+	function montarDashBoard(){
+		 $.ajax( {
+				type:'POST',
+				url:arquivoURLdashBoard,
+				dataType: 'html',
+				success: function (data) { 
+					$("#divCentral").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}	
+
+
+	function montarMenu(){
+		 // $("#sidebar").attr("style", "display:block");
+	}
+	
+  </script>
+  <!-- container section start -->
+  <section id="container" class="">
+
+
+    <header class="header dark-bg">
+      <div class="toggle-nav">
+        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+      </div>
+
+      <!--logo start-->
+      <a href="index.html" class="logo">e-GOV<span class="lite"> ADMIN</span></a>
+      <!--logo end-->
+
+      <div class="nav search-row" id="top_menu">
+        <!--  search form start -->
+        <ul class="nav top-menu">
+          <li>
+            <form class="navbar-form">
+              <input class="form-control" placeholder="Search" type="text">
+            </form>
+          </li>
+        </ul>
+        <!--  search form end -->
+      </div>
+
+      <div class="top-nav notification-row" id="notificacoes">
+
+      </div>
+    </header>
+    <!--header end-->
+
+    <!--Iniciando Menu Lateral-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+       <!-- Inicio do Menu Lateral -->
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a class="" href="index.html">
+                          <i class="icon_house_alt"></i>
+                          <span><b>Dashboard</b></span>
+                      </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+			  <i class="icon_photo_alt"></i>
+			  <span><b>Meus Dados</b></span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_documents"></i>
+                          <span><b> Reclamações </b></span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="">Cadastro</a></li>
+              <li><a class="" href="">Liberação</a></li>
+              <li><a class="" href="">Consultar</a></li>
+              <li><a class="" href="">Servidor</a></li>
+              <li><a class="" href="">Relatório</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_documents"></i>
+                          <span><b>Sistemas</b></span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="">Projetos</a></li>
+              <li><a class="" href="">Solicitações</a></li>
+              <li><a class="" href="">Banco de Dados</a></li>
+              <li><a class="" href="">Servidores</a></li>
+              <li><a class="" href="">Gerador</a></li>
+            </ul>
+      </li>
+      <li class="sub-menu">
+        <a href="javascript:;" class="">
+                      <i class="icon_documents"></i>
+                      <span><b>Suporte</b></span>
+                      <span class="menu-arrow arrow_carrot-right"></span>
+                  </a>
+        <ul class="sub">
+          <li><a class="" onclick="modulo(31);" >Equipamento</a></li>
+          <li><a class="" onclick="modulo(32);" >Usu&aacute;rios</a></li>
+          <li><a class="" onclick="modulo(33);" >T&eacute;cnicos</a></li>
+          <li><a class="" onclick="modulo(34);" >Solicita&ccedil;&otilde;es</a></li>
+          <li><a class="" onclick="modulo(35);" >Tramita&ccedil;&atilde;o</a></li>
+          <li><a class="" onclick="modulo(36);" >Chat</a></li>
+          <li><a class="" onclick="modulo(37);" >Whatzap</a></li>
+          
+        </ul>
+      </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+                          <i class="icon_documents"></i>
+                          <span><b>Administra&ccedil;&atilde;o</b></span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" href="">Usuários</a></li>
+              <li><a class="" href="">Módulos</a></li>
+			  <li><a class="" href="">Setores</a></li>
+            </ul>
+          </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;" class="" >
+                          <i class="icon_desktop"></i>
+                          <span><b>Transparência</b></span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" onclick="modulo(41);" >Contratos/Aquisições</a></li>
+              <li><a class="" href="">Legislação</a></li>
+              <li><a class="" href="">Glossário</a></li>
+			  <li><a class="" href="">Doações</a></li>
+            </ul>
+          </li>
+
+          <li class="sub-menu">
+            <a href="javascript:;" class="" >
+                          <i class="icon_desktop"></i>
+                          <span><b>PROCON</b></span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" onclick="modulo(51);" >Consumidor</a></li>
+              <li><a class="" href="">Reclamação</a></li>
+              <li><a class="" href="">Atendimento</a></li>
+			  <li><a class="" href="">Dúvidas</a></li>
+            </ul>
+          </li>
+		 <!--
+		  <li class="sub-menu">
+            <a href="javascript:;" class="" >
+                          <i class="icon_desktop"></i>
+                          <span><b>PGRSS</b></span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+            <ul class="sub">
+              <li><a class="" onclick="modulo(61);" >Responsável</a></li>
+              <li><a class="" href="">Estabelecimentos</a></li>
+              <li><a class="" href="">Produtos</a></li>
+			  <li><a class="" href="">Relatório</a></li>
+            </ul>
+          </li>
+
+		  <li class="sub-menu">
+            <a href="javascript:;" class="" >
+			  <i class="icon_desktop"></i>
+			  <span><b>Cultiva Floripa</b></span>
+			  <span class="menu-arrow arrow_carrot-right"></span>
+			</a>
+          </li>
+
+		  <li class="sub-menu">
+            <a href="javascript:;" class="" >
+			  <i class="icon_desktop"></i>
+			  <span><b>Minhoca</b></span>
+			  <span class="menu-arrow arrow_carrot-right"></span>
+			</a>
+          </li>
+		  
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+			   <i class="icon_documents_alt"></i>
+			   <span><b>Somar Floripa</b></span>
+			   <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
+			<ul class="sub">
+			   <li><a class="" href="">Instituições</a></li>	
+               <li><a class="" href="">Voluntários</a></li>
+			   <li><a class="" href="">Oportunidades</a></li>
+               <li><a class="" href="">Projetos</a></li>
+			   <li><a class="" href="">Donativos</a></li>
+            </ul> 
+          </li>		  
+        -->
+          <li class="sub-menu">
+            <a href="javascript:;" class="">
+			   <i class="icon_documents_alt"></i>
+			   <span><b>Relatório</b></span>
+			   <span class="menu-arrow arrow_carrot-right"></span>
+            </a>
+			<ul class="sub">
+              <li><a class="" href="">Atividades</a></li>
+              <li><a class="" href="">Acessos</a></li>
+            </ul>
+			 
+          </li>
+
+        </ul>
+        <!-- Terminando o Menu Lateral -->
+      </div>
+    </aside>
+    <!-- Termino do Menu Lateral -->
+
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper">
+          <div class="inner" id="divCentral"></div>
+      </section>
+      <div class="text-right">
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
+          -->
+          Designed by <a href="https://bootstrapmade.com/">Diretoria de Governo Eletrônico</a>
+        </div>
+      </div>
+    </section>
+    <!--main content end-->
+  </section>
+  <!-- container section start -->
+
+  <!-- javascripts -->
+  <!-- nice scroll -->
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+
+  <!-- jQuery full calendar -->
+    <script src="js/fullcalendar.min.js"></script>
+	
+    <!-- Full Google Calendar - Calendar -->
+    <script src="assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+	
+    <!--script for this page only-->
+    <script src="js/calendar-custom.js"></script>
+    <script src="js/jquery.rateit.min.js"></script>
+	
+    <!-- custom select -->
+    <script src="js/jquery.customSelect.min.js"></script>
+    <script src="assets/chart-master/Chart.js"></script>
+
+    <!--custome script for all page-->
+    <script src="js/scripts.js"></script>
+	
+    <!-- custom script for this page-->
+   <script>
+   function modulo(opc){
+   
+      var arquivoURL = "php/montarModulo.php";
+      obj = { modulo : opc };
+      
+      $.ajax( {
+          type:'POST',
+          url:arquivoURL,
+          data: obj,
+          dataType: 'html',
+          success: function (data) { 
+            $("#divCentral").html( data );
+          },
+          error: function( data){
+            console.log( data );
+          }
+        } 
+      );	
+   
+   }
+
+   function moduloCadastro(opc,id){   
+
+      var arquivoURL = "php/montarModuloCadastro.php";
+      obj = { modulo : opc, id : id };
+      
+      $.ajax( {
+          type:'POST',
+          url:arquivoURL,
+          data: obj,
+          dataType: 'html',
+          success: function (data) { 
+            $("#divCentral").html( data );
+          },
+          error: function( data){
+            console.log( data );
+          }
+        } 
+      );   
+  }
+	
+	function enviar(area){
+		 var codigoUsuario = getVar("codigoUsuario");
+		 document.getElementById("formAluno").action = "areaAluno.html?area=" + area + "&codigoUsuario=" + codigoUsuario;
+		 document.getElementById("formAluno").submit();
+	}
+	
+	function buscarDados( area ){
+		 var valor = getVar("codigoUsuario");
+		 var arquivoURL = '';
+
+      if( area == 'geral' ){
+        arquivoURL = 'http://www.nffacademia.com.br/nff/mobile/dadosGerais.php?codigoUsuario=' + valor;
+      }else if( area == 'avaliacao' ){
+                arquivoURL = 'http://www.nffacademia.com.br/nff/mobile/avaliacao.php?codigoUsuario=' + valor;
+      }else if( area == 'treino' ){
+                arquivoURL = 'http://www.nffacademia.com.br/nff/mobile/treino.php?codigoUsuario=' + valor;
+      }else if( area == 'frequencia' ){
+                arquivoURL = 'http://www.nffacademia.com.br/nff/mobile/frequencia.php?codigoUsuario=' + valor;
+      }else if( area == 'mensalidade' ){
+                arquivoURL = 'http://www.nffacademia.com.br/nff/mobile/mensalidade.php?codigoUsuario=' + valor;
+      }else if( area == 'compra' ){
+                arquivoURL = 'http://www.nffacademia.com.br/nff/mobile/compras.php?codigoUsuario=' + valor;
+      }else if( area == 'professor' ){ 
+                arquivoURL = 'http://www.nffacademia.com.br/nff/mobile/conversa.php?codigoUsuario=' + valor;
+                $("#ancora").focus();
+      }
+
+      $.ajax( {
+          type:'GET',
+          url:arquivoURL,
+          dataType: 'html',
+          success: function (data) { 
+            $("#divCentral").html( data );
+          },
+          error: function( data){
+            console.log( data );
+          }
+        } 
+      );	
+		
+	 $(".close").trigger('click');
+
+	}				
+
+	
+      //knob
+      $(function() {
+        $(".knob").knob({
+          'draw': function() {
+            $(this.i).val(this.cv + '%')
+          }
+        })
+      });
+
+      //carousel
+      $(document).ready(function() {
+        $("#owl-slider").owlCarousel({
+          navigation: true,
+          slideSpeed: 300,
+          paginationSpeed: 400,
+          singleItem: true
+
+        });
+      });
+
+      //custom select box
+
+      $(function() {
+        $('select.styled').customSelect();
+      });
+
+      /* ---------- Map ---------- */
+      $(function() {
+        $('#map').vectorMap({
+          map: 'world_mill_en',
+          series: {
+            regions: [{
+              values: gdpData,
+              scale: ['#000', '#000'],
+              normalizeFunction: 'polynomial'
+            }]
+          },
+          backgroundColor: '#eef3f7',
+          onLabelShow: function(e, el, code) {
+            el.html(el.html() + ' (GDP - ' + gdpData[code] + ')');
+          }
+        });
+      });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+td, th{
+	font-size: 0.9em;
+	border: 5px solid #F0F0F0;
+	width: 200px;
+	word-wrap: break-word;         /* All browsers since IE 5.5+ */
+    overflow-wrap: break-word;     /* Renamed property in CSS3 draft spec */
+}
+
+.table{
+	background-color: #FFF;
+	table-layout: fixed;
+	max-height: 350px;
+	font-size: 0.95em;
+	border: 5px solid #F0F0F0;
+	margin-bottom: 20px;
+	
+}
+
+th{
+	text-align: center !important;	
+
+}
+
+h1{
+	text-align: center;
+}

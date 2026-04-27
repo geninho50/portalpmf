@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Botão Visível</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #2c3e50;
+            color: white;
+            position: fixed;
+            height: 100vh;
+            left: 0;
+            top: 0;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            background: #34495e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sidebar-toggle {
+            background: #3498db;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+            display: block;
+        }
+
+        .sidebar-toggle:hover {
+            background: #2980b9;
+        }
+
+        .sidebar-nav {
+            padding: 20px;
+        }
+
+        .sidebar-nav ul {
+            list-style: none;
+        }
+
+        .sidebar-nav li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            background: #34495e;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .sidebar-nav a:hover {
+            background: #3498db;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 0;
+            padding: 20px;
+            background: white;
+        }
+
+        /* Overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Header */
+        .header {
+            background: #ecf0f1;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-hamburger {
+            background: #e74c3c;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-hamburger:hover {
+            background: #c0392b;
+        }
+
+        /* Status panel */
+        .status-panel {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Overlay -->
+        <div class="overlay" id="overlay"></div>
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">Menu</div>
+                <button class="sidebar-toggle" id="sidebarHamburger" onclick="toggleSidebar()">
+                    ☰
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#">🏠 Dashboard</a></li>
+                    <li><a href="#">👥 Usuários</a></li>
+                    <li><a href="#">⚙️ Configurações</a></li>
+                    <li><a href="#">📊 Relatórios</a></li>
+                    <li><a href="#">🚪 Sair</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h1>Teste do Botão Hambúrguer</h1>
+                <button class="header-hamburger" id="headerHamburger" onclick="toggleSidebar()">
+                    ☰
+                </button>
+            </div>
+
+            <div class="status-panel" id="statusPanel">
+                <strong>Status:</strong> <span id="statusText">Carregando...</span><br>
+                <strong>Sidebar:</strong> <span id="sidebarStatus">fechada</span><br>
+                <strong>Overlay:</strong> <span id="overlayStatus">inativo</span><br>
+                <strong>Cliques:</strong> <span id="clickCount">0</span>
+            </div>
+
+            <div style="background: #ecf0f1; padding: 20px; border-radius: 5px;">
+                <h3>📋 Instruções:</h3>
+                <ol>
+                    <li>Você deve ver dois botões ☰ (um no cabeçalho e outro na sidebar)</li>
+                    <li>Clique em qualquer um dos botões para abrir/fechar a sidebar</li>
+                    <li>Clique no overlay (área escura) para fechar a sidebar</li>
+                    <li>Monitore o painel de status para ver as mudanças</li>
+                </ol>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Variáveis globais
+        let clickCount = 0;
+        let sidebarOpen = false;
+
+        // Elementos
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        const headerHamburger = document.getElementById('headerHamburger');
+        const sidebarHamburger = document.getElementById('sidebarHamburger');
+
+        // Elementos de status
+        const statusText = document.getElementById('statusText');
+        const sidebarStatus = document.getElementById('sidebarStatus');
+        const overlayStatus = document.getElementById('overlayStatus');
+        const clickCountSpan = document.getElementById('clickCount');
+
+        // Função para atualizar status
+        function updateStatus(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            statusText.textContent = `${timestamp}: ${message}`;
+            sidebarStatus.textContent = sidebarOpen ? 'aberta' : 'fechada';
+            overlayStatus.textContent = overlay.classList.contains('active') ? 'ativo' : 'inativo';
+            clickCountSpan.textContent = clickCount;
+            
+            console.log(`[STATUS] ${timestamp}: ${message}`);
+        }
+
+        // Função principal para toggle da sidebar
+        function toggleSidebar() {
+            clickCount++;
+            console.log(`[TOGGLE] Clique #${clickCount}`);
+            
+            if (sidebarOpen) {
+                // Fechar sidebar
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+                sidebarOpen = false;
+                updateStatus('Sidebar fechada');
+            } else {
+                // Abrir sidebar
+                sidebar.classList.add('open');
+                overlay.classList.add('active');
+                sidebarOpen = true;
+                updateStatus('Sidebar aberta');
+            }
+        }
+
+        // Event listeners
+        function setupEventListeners() {
+            // Fechar ao clicar no overlay
+            overlay.addEventListener('click', function() {
+                console.log('[OVERLAY] Overlay clicado');
+                if (sidebarOpen) {
+                    toggleSidebar();
+                }
+            });
+
+            // Fechar ao pressionar ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && sidebarOpen) {
+                    console.log('[KEYBOARD] ESC pressionado');
+                    toggleSidebar();
+                }
+            });
+        }
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('[INIT] DOM carregado');
+            setupEventListeners();
+            updateStatus('Sistema inicializado');
+        });
+
+        // Log inicial
+        console.log('[INIT] Script carregado');
+        console.log('[INIT] Elementos encontrados:', {
+            sidebar: !!sidebar,
+            overlay: !!overlay,
+            headerHamburger: !!headerHamburger,
+            sidebarHamburger: !!sidebarHamburger
+        });
+    </script>
+</body>
+</html>

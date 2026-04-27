@@ -1,0 +1,375 @@
+:root {
+  --azulPmfEscuro: #002f66;
+  --pretoPmf: black;
+  --azulPmfClaro: #0093d4;
+  --brancoPmf: #ffffff;
+  --cinzaPmf: #606060;
+  --fonteTitulos: "Montserrat";
+  --fontePadrao: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontePadrao);
+  /* overflow: hidden; */
+}
+
+header {
+  background-color: var(--brancoPmf);
+  padding: 20px 130px;
+  height: 80px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 80px;
+  width: 280px;
+  margin-right: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+#burger {
+  display: none;
+  cursor: pointer;
+}
+
+#burger i {
+  font-size: 24px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-list a {
+  text-decoration: none;
+  margin-right: 20px;
+  color: var(--cinzaPmf);
+  font-weight: 500;
+  height: 24px;
+  font-size: 1.1rem;
+  font-family: var(--fonteTitulos);
+  user-select: none;
+}
+
+nav a:hover {
+  color: var(--azulPmfEscuro);
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+#pesquisa {
+  font-family: var(--fonteTitulos);
+  font-size: 1rem;
+  height: 35px;
+  width: 150px;
+  padding: 10px;
+  padding-left: 30px;
+  border: 1px solid var(--cinzaPmf);
+  border-radius: 5px;
+  padding-right: 30px;
+}
+
+#imgFundo {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+}
+
+main {
+  height: 100%;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.divCentro {
+  color: var(--brancoPmf);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.divCentro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Tags da Div Inicial */
+
+.divInicial {
+  margin-top: 15%;
+  width: 50%;
+  position: absolute;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: 1;
+  /* border: 2px solid red */
+}
+
+.h1-Inicial {
+  font-size: 4rem;
+  font-weight: bold;
+  font-family: var(--fonteTitulos);
+  margin: 0;
+  user-select: none;
+}
+
+.h2-Inicial {
+  font-size: 2.5rem;
+  margin-top: 10px;
+  font-family: var(--fonteTitulos);
+  font-weight: 400;
+  user-select: none;
+}
+
+.h3-Inicial {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: var(--fonteTitulos);
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+.button-Inicial {
+  background-color: transparent;
+  border-radius: 30px;
+  border: 3px solid white;
+  color: var(--brancoPmf);
+  height: 60px;
+  width: 200px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-right: 3%;
+  font-family: var(--fonteTitulos);
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.button-Inicial:hover {
+  color: var(--azulPmfClaro);
+  border: 3px solid var(--azulPmfClaro);
+}
+
+/* Estilos para os modais */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  padding-left: 40px;
+  border-radius: 10px;
+  max-width: 30%;
+  text-align: left;
+  position: relative;
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid var(--cinzaPmf);
+  margin: 20px 0 20px 0;
+  width: 70%;
+}
+
+.h3-Modal2 {
+  font-family: var(--fonteTitulos);
+  color: var(--azulPmfClaro);
+  font-size: 1.1rem;
+}
+
+.p-Modal2 {
+  font-family: var(--fonteTitulos);
+  color: var(--cinzaPmf);
+  font-size: 1rem;
+  margin: 6px 0 0 0;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estilos para o botão de fechar o modal */
+
+.close:hover {
+  color: red;
+}
+
+/* Estilo para o menu ativo em telas pequenas */
+.nav-list.active {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--brancoPmf);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.nav-list.active ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list.active ul li {
+  margin: 10px 0;
+}
+
+.nav-list.active ul li a {
+  color: var(--cinzaPmf);
+  font-size: 1.5rem;
+}
+
+/* Estilo para o botão de fechar no menu */
+#closeMenu {
+  font-size: 2rem;
+  color: var(--cinzaPmf);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none; /* Inicialmente oculto */
+}
+
+/* CSS do Footer  */
+
+footer {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 0px;
+    height: 6.5em;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #burger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    display: block;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .nav-list.active ul {
+    display: flex;
+  }
+
+  #imgFundo {
+    height: 100%;
+  }
+
+  .logo {
+    margin-right: 0px;
+    margin-left: 20px;
+  }
+
+  .input-container {
+    display: none;
+  }
+
+  .h1-Inicial {
+    font-size: 3rem;
+  }
+
+  .h2-Inicial {
+    font-size: 2rem;
+  }
+
+  .h3-Inicial {
+    margin-top: 2.5em;
+  }
+
+  .divInicial {
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 3em;
+  }
+
+  .brs {
+    display: none;
+  }
+
+  #botaoProCidadao {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  .modal-content {
+    max-width: 60%;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30%;
+  }
+
+  .hr {
+    width: 100%;
+  }
+}

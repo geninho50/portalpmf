@@ -1,0 +1,62 @@
+<html>
+<head>
+	  <title>sefinsite</title>
+
+<script type="text/javascript">
+	
+function validaNumero(evt,tipo) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  
+  var regex = '';
+  if(tipo == 1){
+  	regex = /^[0-9,]+$/ ;
+  }else{
+  	regex = /^[0-9]+$/ ;
+  }
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+
+</script>
+
+</head>
+<body>
+
+<select id="modoRecolhimento">
+  <option value="-1">Todos</option>
+  <option value="9">Recolhimento Fixo</option>
+  <option value="7">Recolhimento Variavel</option>
+  <option value="4">Micro Empreendedor Individual</option>
+  <option value="6">Profissional Liberal</option>
+</select> 
+
+ 
+  <input id="cnae" onkeypress="return validaNumero(event,1)" type="text"  name="cnae"><br>
+ 
+
+<select id="regime">
+  <option value="-1">Todos</option>
+  <option value="1">Simples Nacional</option>
+  <option value="2">Normal</option>
+
+</select> 
+
+ 
+  <input id="cpfsocio" type="text" onkeypress="return validaNumero(event,2)" name="cpf"><br>
+ 
+ 
+  <input id="cnpjsocio" type="text" onkeypress="return validaNumero(event,2)" name="cnpj"><br>
+ 
+ 
+  <input id="dataabertura" type="text" name="data"><br>
+ 
+ 
+  <input id="fim" type="text" name="fim"><br>
+
+
+</body>
+</html>

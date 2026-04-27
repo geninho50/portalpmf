@@ -1,0 +1,19 @@
+h1{
+	text-align: center;
+	font-family: 'Cabin Condensed', sans-serif;
+}
+
+th{
+	background-color: #265a88;
+	color: #FFF;
+}
+
+body{
+	background-color: #EEEEEE;
+}
+
+.logo{
+	margin-top: 30px;
+	height: 65%;
+	width: auto;
+}

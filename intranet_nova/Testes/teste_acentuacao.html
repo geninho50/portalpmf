@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Acentuação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f7fa;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #34495e;
+        }
+        
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            background: white;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+        
+        .test-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2980b9;
+        }
+        
+        .btn-success {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #229954;
+        }
+        
+        .status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Teste de Acentuação - Combo Entidades</h1>
+        
+        <div class="form-group">
+            <label for="entity-select">Entidade:</label>
+            <select id="entity-select" onchange="testSelection()">
+                <option value="">Selecione uma entidade...</option>
+            </select>
+        </div>
+        
+        <div class="test-buttons">
+            <button class="btn-primary" onclick="loadTestEntities()">Carregar Entidades de Teste</button>
+            <button class="btn-success" onclick="loadFromAPI()">Carregar da API</button>
+            <button class="btn-primary" onclick="clearSelect()">Limpar</button>
+            <a href="verificar_tabelas_existentes.php" class="btn-primary" style="text-decoration: none;">🔍 Verificar Tabelas Existentes</a>
+        </div>
+        
+        <div id="status" class="status info">
+            <strong>Status:</strong> <span id="statusText">Aguardando ação...</span><br>
+            <strong>Entidade Selecionada:</strong> <span id="selectedEntity">Nenhuma</span><br>
+            <strong>Valor Selecionado:</strong> <span id="selectedValue">-</span>
+        </div>
+    </div>
+
+    <script>
+        // Função para atualizar status
+        function updateStatus(message, type = 'info') {
+            const statusDiv = document.getElementById('status');
+            const statusText = document.getElementById('statusText');
+            
+            statusText.textContent = message;
+            statusDiv.className = `status ${type}`;
+            
+            console.log(`[STATUS] ${type.toUpperCase()}: ${message}`);
+        }
+        
+        // Função para testar seleção
+        function testSelection() {
+            const select = document.getElementById('entity-select');
+            const selectedEntity = document.getElementById('selectedEntity');
+            const selectedValue = document.getElementById('selectedValue');
+            
+            if (select.value) {
+                selectedEntity.textContent = select.options[select.selectedIndex].text;
+                selectedValue.textContent = select.value;
+                updateStatus(`Entidade selecionada: ${select.options[select.selectedIndex].text}`, 'success');
+            } else {
+                selectedEntity.textContent = 'Nenhuma';
+                selectedValue.textContent = '-';
+                updateStatus('Nenhuma entidade selecionada', 'info');
+            }
+        }
+        
+        // Função para carregar entidades de teste
+        function loadTestEntities() {
+            const select = document.getElementById('entity-select');
+            const testEntities = [
+                {id: 1, nome: 'Prefeitura Municipal de Florianópolis'},
+                {id: 2, nome: 'Secretaria de Educação'},
+                {id: 3, nome: 'Secretaria de Saúde'},
+                {id: 4, nome: 'Secretaria de Transportes'},
+                {id: 5, nome: 'Secretaria de Cultura'},
+                {id: 6, nome: 'Secretaria de Administração'},
+                {id: 7, nome: 'Secretaria de Planejamento'},
+                {id: 8, nome: 'Secretaria de Meio Ambiente'},
+                {id: 9, nome: 'Secretaria de Desenvolvimento Econômico'},
+                {id: 10, nome: 'Secretaria de Assistência Social'}
+            ];
+            
+            // Limpar opções existentes (exceto a primeira)
+            select.innerHTML = '<option value="">Selecione uma entidade...</option>';
+            
+            // Adicionar entidades de teste
+            testEntities.forEach(entity => {
+                const option = document.createElement('option');
+                option.value = entity.id;
+                option.innerHTML = entity.nome; // Usando innerHTML para preservar acentos
+                select.appendChild(option);
+            });
+            
+            updateStatus(`Carregadas ${testEntities.length} entidades de teste`, 'success');
+        }
+        
+        // Função para carregar da API
+        function loadFromAPI() {
+            updateStatus('Carregando entidades da API...', 'info');
+            
+            fetch('backend/api/get_entities.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success && data.entities && data.entities.length > 0) {
+                        const select = document.getElementById('entity-select');
+                        select.innerHTML = '<option value="">Selecione uma entidade...</option>';
+                        
+                        data.entities.forEach(entity => {
+                            const option = document.createElement('option');
+                            option.value = entity.entidade_id;
+                            
+                            // Criar nome de exibição com sigla se existir
+                            let displayName = entity.entidade_nome;
+                            if (entity.entidade_sigla) {
+                                displayName += ' (' + entity.entidade_sigla + ')';
+                            }
+                            
+                            option.innerHTML = displayName; // Usando innerHTML para preservar acentos
+                            select.appendChild(option);
+                        });
+                        
+                        updateStatus(`✅ Carregadas ${data.entities.length} entidades do banco de dados via API`, 'success');
+                        console.log('Entidades carregadas da API:', data.entities);
+                    } else {
+                        updateStatus(`❌ Erro da API: ${data.message || 'Nenhuma entidade encontrada'}`, 'error');
+                        console.error('Resposta da API:', data);
+                        // Fallback para entidades de teste
+                        updateStatus('🔄 Carregando entidades de teste como fallback...', 'info');
+                        loadTestEntities();
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro na requisição:', error);
+                    updateStatus('❌ Erro ao conectar com a API. Carregando entidades de teste...', 'error');
+                    // Fallback para entidades de teste
+                    loadTestEntities();
+                });
+        }
+        
+        // Função para limpar select
+        function clearSelect() {
+            const select = document.getElementById('entity-select');
+            select.innerHTML = '<option value="">Selecione uma entidade...</option>';
+            
+            const selectedEntity = document.getElementById('selectedEntity');
+            const selectedValue = document.getElementById('selectedValue');
+            selectedEntity.textContent = 'Nenhuma';
+            selectedValue.textContent = '-';
+            
+            updateStatus('Select limpo', 'info');
+        }
+        
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            updateStatus('Sistema inicializado. Clique em "Carregar Entidades de Teste" para começar.', 'info');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Final - Botão Sanduíche</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1001;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+        }
+
+        .sidebar-toggle {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: none;
+        }
+
+        .sidebar-toggle:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .sidebar-toggle:active {
+            transform: scale(0.95);
+        }
+
+        .sidebar-nav {
+            padding: 20px 0;
+        }
+
+        .sidebar__menu {
+            list-style: none;
+        }
+
+        .sidebar__item {
+            margin-bottom: 5px;
+        }
+
+        .sidebar__link {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .sidebar__link:hover {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            border-left-color: rgba(255,255,255,0.5);
+        }
+
+        .sidebar__link.active {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border-left-color: #fff;
+        }
+
+        .sidebar__link i {
+            margin-right: 12px;
+            width: 20px;
+            text-align: center;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Overlay */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        .sidebar-overlay.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .sidebar-toggle {
+                display: block !important;
+                background: rgba(255,255,255,0.1);
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .sidebar-toggle {
+                display: none;
+            }
+        }
+
+        /* Debug */
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 2000;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info" id="debugInfo">
+        Largura: <span id="screenWidth">0</span>px<br>
+        Sidebar: <span id="sidebarStatus">fechada</span><br>
+        Overlay: <span id="overlayStatus">inativo</span>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-building"></i>
+                    <span>Intranet PMF</span>
+                </div>
+                <button class="sidebar-toggle" id="sidebarToggle" type="button">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="sidebar__menu">
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link active">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Notícias</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <i class="fas fa-images"></i>
+                            <span>Mídias</span>
+                        </a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">
+                            <i class="fas fa-users"></i>
+                            <span>Usuários</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h1>Teste Final do Botão Sanduíche</h1>
+                <p>Redimensione a janela para menos de 1024px e clique no botão ☰</p>
+            </div>
+            <div style="padding: 20px;">
+                <h2>Conteúdo Principal</h2>
+                <p>Este é o teste final para verificar se o botão sanduíche está funcionando corretamente.</p>
+                
+                <div style="margin-top: 20px;">
+                    <button onclick="testManualToggle()" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px;">
+                        Testar Toggle Manual
+                    </button>
+                    <button onclick="forceMobile()" style="padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        Forçar Modo Mobile
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        // Elementos
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        const toggleBtn = document.getElementById('sidebarToggle');
+        
+        // Debug elements
+        const screenWidthSpan = document.getElementById('screenWidth');
+        const sidebarStatusSpan = document.getElementById('sidebarStatus');
+        const overlayStatusSpan = document.getElementById('overlayStatus');
+
+        // Função para atualizar debug
+        function updateDebug() {
+            screenWidthSpan.textContent = window.innerWidth;
+            sidebarStatusSpan.textContent = sidebar.classList.contains('open') ? 'aberta' : 'fechada';
+            overlayStatusSpan.textContent = overlay.classList.contains('active') ? 'ativo' : 'inativo';
+        }
+
+        // Toggle sidebar
+        function toggleSidebar() {
+            console.log('=== TOGGLE SIDEBAR ===');
+            console.log('Antes - Sidebar aberta:', sidebar.classList.contains('open'));
+            console.log('Antes - Overlay ativo:', overlay.classList.contains('active'));
+            
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+            
+            console.log('Depois - Sidebar aberta:', sidebar.classList.contains('open'));
+            console.log('Depois - Overlay ativo:', overlay.classList.contains('active'));
+            
+            updateDebug();
+        }
+
+        // Event listeners
+        toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('=== BOTÃO CLICADO ===');
+            console.log('Evento:', e);
+            console.log('Target:', e.target);
+            console.log('CurrentTarget:', e.currentTarget);
+            toggleSidebar();
+        });
+
+        // Fechar ao clicar no overlay
+        overlay.addEventListener('click', function() {
+            console.log('Overlay clicado - fechando sidebar');
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            updateDebug();
+        });
+
+        // Fechar ao redimensionar
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024) {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+            }
+            updateDebug();
+        });
+
+        // Função de teste manual
+        function testManualToggle() {
+            console.log('=== TESTE MANUAL ===');
+            toggleSidebar();
+        }
+
+        // Função para forçar modo mobile
+        function forceMobile() {
+            console.log('=== FORÇANDO MODO MOBILE ===');
+            // Simular largura de tela menor
+            const originalWidth = window.innerWidth;
+            Object.defineProperty(window, 'innerWidth', {
+                writable: true,
+                configurable: true,
+                value: 800
+            });
+            
+            // Disparar evento resize
+            window.dispatchEvent(new Event('resize'));
+            
+            // Restaurar largura original
+            setTimeout(() => {
+                Object.defineProperty(window, 'innerWidth', {
+                    writable: true,
+                    configurable: true,
+                    value: originalWidth
+                });
+                window.dispatchEvent(new Event('resize'));
+            }, 100);
+            
+            updateDebug();
+        }
+
+        // Inicializar
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('=== DOM CARREGADO ===');
+            console.log('Elementos encontrados:', {
+                sidebar: !!sidebar,
+                overlay: !!overlay,
+                toggleBtn: !!toggleBtn
+            });
+            
+            updateDebug();
+        });
+
+        // Log inicial
+        console.log('=== SCRIPT CARREGADO ===');
+    </script>
+</body>
+</html>

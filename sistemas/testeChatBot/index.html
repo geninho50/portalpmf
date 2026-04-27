@@ -1,0 +1,192 @@
+<html>
+<head>
+  <title>BotTest</title>
+ <meta charset="UTF-8">
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script>
+    $(document).ready(function(){
+
+             var customStyle = `#message-input {
+              box-sizing: border-box;
+              border: 1px solid #c52af5;
+              border-radius: 6px;
+              background: #628d96;
+              z-index:1;
+            }
+
+            #blip-chat-container{
+                z-index:1;
+            }
+
+
+           `
+
+            var builder = new BlipChat()
+            .withAppKey('cm91dGVycG1mOmZlZDJhN2MyLTgwMzUtNDUwNi1hYzM4LTdkMTkzMTZjM2JiOQ==')
+            .withButton({"color":"","icon":"https://i.kym-cdn.com/entries/icons/original/000/017/830/reee.jpg"})
+            .withAccount({
+                extras:{'cmcLogin':'31978239000164',}
+            })
+            .withCustomStyle(customStyle)
+            builder.build();
+
+
+
+
+var options = {
+  chart: {
+    type: 'bar'
+  },
+  series: [{
+    name: 'sales',
+    data: [5.56,7.62,7.92,9,10,12.7,20,30,40]
+  }],
+  xaxis: {
+    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+  }
+}
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
+
+
+
+
+
+
+        });
+
+
+
+</script>   
+
+
+<style>
+  #butt{
+    
+
+   display: flex;
+
+   align-items: center;
+
+   justify-content: center;
+
+   cursor: pointer;
+
+   position: fixed;
+
+   right: 30px;
+
+   bottom: 30px;
+   z-index: 1000000;
+   border-radius: 30px 30px 30px 30px;
+   width: 150px;
+   height: 60px;
+   background-color: #2CC3D5;
+   color: white;
+  
+  }
+ 
+  #blip-chat-container{
+    z-index: 999;
+  }
+
+  #chart {
+  max-width: 650px;
+  margin: 35px auto;
+}
+
+
+</style> 
+<!-- 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+
+
+
+</head>
+<body>
+<div> Teste de Icone</div>
+
+
+
+<script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+<script>
+    (function () {
+        setTimeout(function () {
+            new BlipChat()
+            .withAppKey('YXRlbmRpbWVudG9oZWxwc2VmaW5uZXQ6ZmVlMDFkY2YtMDg0MS00NzhkLWFhZGMtMzRkOGVlYzAwODA5')
+            .withButton({"color":"#2CC3D5","icon":""})
+            .build();
+        }, 5000)
+    })();
+</script>
+                                
+
+
+
+<div id="chart">
+</div>
+
+
+
+
+
+<input id="butt" type="button" value="Assistente Virtual 💬" onclick="fullscreen()"></input>
+
+<script type="text/javascript">
+
+  function fullscreen(){
+    //alert("pei");
+    document.getElementById('blip-chat-icon').click();
+    document.getElementById('blip-chat-iframe').setAttribute('allowfullscreen','false'); 
+    document.getElementById('butt').style.display = "none";
+  }
+
+</script>
+
+  <script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+</body>
+
+</html>

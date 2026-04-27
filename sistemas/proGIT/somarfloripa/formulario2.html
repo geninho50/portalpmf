@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/formulario.css">
+        <!--fonte-->
+        <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <!--scripts-->
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        <!--font awesome
+        <script src="https//kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>-->
+
+        <!--progress bar-->
+        <script src="js/progressbar.min.js"></script>
+
+        <!--parallax-->
+        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    </head>
+    <body>
+        <center><img src="images/logo_pmf.jpg" id="logoPrefeitura" alt="">
+            <hr>
+            <h4 id="titulo">TERMO DE TRABALHO INDIVIDUALIZADO</h4>
+            <h4 id="titulo">(Art. 12, Instrução Normativa N° 002/SMA/2021)</h4></center>
+        <form class="row">
+            <div class="col align-self-center">
+                <div class="form-group">
+                    <h5 id="subtitulo"><b>1. Dados do(a) agente público(a) aderente</b></h5>
+                    <label id="labels"></label>
+                    <input type="text" class="form-control" id="inputs" placeholder="Nome:">
+                    <label id="labels"></label>
+                    <input type="number" class="form-control" id="inputs" placeholder="Matrícula:">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputs" placeholder="Cargo:">
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="inputs" placeholder="Lotação:">
+                </div>
+                <div class="form-group">
+                    <h5 id="subtitulo"><b>2. Declaração</b></h5>
+                    <label id="subtitulo">Declaro que recebi do(a) <input type="text" placeholder="nome do setor">&nbsp;, os<br>
+                    processos administrativos e/ou documentos físicos abaixo especificados:</label><br>
+                    <textarea name="" id="" cols="45" rows="5" placeholder="N° do processo/documento"></textarea>
+                    <textarea name="" id="" cols="45" rows="5" placeholder="Descrição"></textarea>
+                </div>
+                <div class="form-group">
+                    <h5 id="subtitulo"><b>3. Termo de compromisso e assinatura</b></h5>
+                    <label id="labels">Fico responsável por prover o transporte, a guarda e a conservação dos processos e<br>
+                    documentos recebidos, ciente de que caso não devolvidos ou se, restituídos,<br>
+                    apresentarem danos ou qualquer irregularidade, sem que haja justificativa, estou<br>
+                    sujeito(a) às medidas administrativas e disciplinares cabíveis, inclusive o desligamento<br>
+                    do Trabalho Não Presencial.</label>
+                </div>
+                <p></p>
+                <label id="subtitulo">Florianópolis <input type="number" placeholder="somente números">&nbsp;de <input type="text">&nbsp;de <input type="number" placeholder="somente números">.</label><br>
+                <input type="text" placeholder="Nome" id="fin"><br>
+                <input type="number" placeholder="Matrícula" id="fin">
+            </div>
+        </form>
+        <hr>
+        <center><label id="endereço">Rua Conselheiro Mafra n° 656 - Florianópolis - SC<br>
+        Telefone: (48) 3251-5900 - Site: <a href="https://www.pmf.sc.gov.br/" target="_blank">www.pmf.sc.gov.br</a></label></center>
+    </body>
+</html>

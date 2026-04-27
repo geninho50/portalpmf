@@ -1,0 +1,73 @@
+/* CSS - Cascading Style Sheet */
+:root {
+    --color-background: #F0F0F7;
+    --color-primary-lighter: #4A79A7;
+    --color-primary-light: #00529E;
+    --color-primary: #003466;
+    --color-primary-dark: #4B7AAA;
+    --color-primary-darker: #3E668E;
+    --color-secondary: #04D361;
+    --color-secondary-dark: #04BF58;
+    --color-secondary-alt: #04a3d3;
+    --color-secondary-alt-dark: #038fb9;
+    --color-title-in-primary: #FFFFFF;
+    --color-text-in-primary: #C2E1FF;
+    --color-text-title: #00203D;
+    --color-text-complement: #989FA6;
+    --color-text-base: #727b83;
+    --color-line-in-white: #E6E6F0;
+    --color-input-background: #F8F8FC;
+    --color-button-text: #FFFFFF;
+    --color-box-base: #FFFFFF;
+    --color-box-footer: #FAFAFC;
+    --color-small-info: #C1BCCC;
+    
+    /* Tamanho da fonte padrão: 16px - 100% - 1rem  */
+    font-size: 60%; /* controle das medidas rem */
+}
+
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing:border-box ;
+
+}
+
+
+html, 
+body{
+    height: 100vh; /* medida de altura */
+}
+
+body{
+    background: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+body,
+input,
+button,
+textarea{
+    /* font: 500 1.6rem Poppins; */
+    font-weight: 500;
+    font-family: 'Montserrat';
+    font-size: 1.6rem;
+    color: var(--color-text-title);
+}
+
+#container{
+    width: 90vw;
+    max-width: 700px;
+    /* border: 1px solid red; */
+}
+
+@media (min-width: 700px) {
+    :root{
+        font-size: 62.5%;
+    }
+}

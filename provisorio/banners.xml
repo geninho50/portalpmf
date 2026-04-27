@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>10</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Elevado do Trevo da Seta</title>
+<subtitle>Infraestrutura para o Sul da Ilha</subtitle>
+<imagePath>arquivos/banners/jpg/31_03_2012_0.33.45.8a246b4ec42c691d4d4d87cf84abfe50.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Um computador por aluno</title>
+<subtitle>Tecnologia para o conhecimento</subtitle>
+<imagePath>arquivos/banners/jpg/31_03_2012_0.34.51.df3a9676f31dafcdfd7ad16ae584b60f.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Beira Mar Continental</title>
+<subtitle>Revitalização e valorização do continente</subtitle>
+<imagePath>arquivos/banners/jpg/31_03_2012_0.35.21.1b99dd54acd1aa516a5fb713e462f678.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Governo Eletrônico</title>
+<subtitle>Modernização, segurança e transparência</subtitle>
+<imagePath>arquivos/banners/jpg/31_03_2012_0.35.40.e5148ad39359e70e716fb08f394b65d9.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Elevado Carl Hoepcke</title>
+<subtitle>Melhorias para o tráfego da região central</subtitle>
+<imagePath>arquivos/banners/jpg/31_03_2012_0.36.02.62cd6853be0bd224289901fd876a27a2.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Centros de Saúde</title>
+<subtitle>Atenção à saúde em toda a cidade</subtitle>
+<imagePath>arquivos/banners/jpg/31_03_2012_0.36.47.f8b24ba6823544629ddc9042db870661.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Escola modelo</title>
+<subtitle>Instalações modernas, acessíveis e eficientes</subtitle>
+<imagePath>arquivos/banners/jpg/31_03_2012_0.37.45.3f50a44570a0c37306040ac10da49245.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Unidades de Pronto Atendimento</title>
+<subtitle>Atendimento médico 24 horas</subtitle>
+<imagePath>arquivos/banners/jpg/17_04_2012_11.56.25.a1f8a3cadc0c09e62e2242f60268dc3e.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Academia da saúde</title>
+<subtitle>Bem-estar e qualidade de vida ao ar livre</subtitle>
+<imagePath>arquivos/banners/jpg/17_04_2012_11.57.07.8d21b54000d93e116f0e2e5574291123.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Cultura</title>
+<subtitle>Resgate das tradições</subtitle>
+<imagePath>arquivos/banners/jpg/17_04_2012_11.57.35.3b79cd28cea288178b82a48fd0544612.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

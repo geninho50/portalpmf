@@ -1,0 +1,178 @@
+#page-minhas-viagens #container {
+    width: 100vw;
+    height: 100vh;
+}
+
+#page-minhas-viagens main {
+    margin: 3.2rem auto;
+    width: 90%;
+}
+
+.minhas-viagens-item {
+    background-color: var(--color-box-base);
+    border: 1px solid var(--color-line-in-white);
+    border-radius: .8rem;
+    margin-top: 2.4rem;
+}
+
+.minhas-viagens-item header {
+    padding: 3.2rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.minhas-viagens-item header div {
+    margin-left: 0rem;
+}
+
+.minhas-viagens-item header div strong {
+    font: 700 2.4rem 'Montserrat';
+    display: block;
+    color: var(--color-text-title);
+}
+
+.minhas-viagens-item > p {
+    color: var(--color-text-base);
+    padding-left: 2.6rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+.minhas-viagens-item footer {
+    padding: 3.2rem 2rem;
+    background-color: var(--color-box-footer);
+    border-top: 1px solid var(--color-line-in-white);
+    margin-top: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.minhas-viagens-item footer p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--color-text-base);
+
+}
+.minhas-viagens-item footer p strong {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    display: block;
+
+}
+
+.minhas-viagens-item .footer-buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.6rem;
+    justify-content: space-between;
+}
+
+.minhas-viagens-item footer .button {
+    width: 15rem;
+    height: 5.6rem;
+    background-color: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: .8rem;
+    cursor: pointer;
+    font: 700 1.4rem 'Montserrat';
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; /*  */
+    
+    text-decoration: none;
+
+    transition: baclground 0.2s;
+    margin-left: 1.6rem;
+}
+
+.minhas-viagens-item footer .button:hover {
+    background-color: var(--color-secondary-dark);
+}
+
+#page-minhas-viagens main .no-results {
+    max-width: 300px;
+    margin: 12rem auto;
+    text-align: center;
+}
+
+@media (min-width:700px) {
+    #page-minhas-viagens #container {
+        max-width: 100vw;
+    }
+
+    .page-header {
+        height: 340px;
+    }
+
+
+    .page-header .header-content {
+        max-width: 740px;
+
+        margin: 0 auto;
+
+        flex: 1 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+
+    .page-header .header-content strong {
+        max-width: 350px;
+    }
+
+    .minhas-viagens-item .page-header,
+    .minhas-viagens-item footer {
+        padding: 32px;
+    }
+
+     #page-minhas-viagens main {
+        padding: 32px 0;
+        max-width: 740px;
+        margin: 0 auto;
+    }
+
+    .minhas-viagens-item header {
+        padding-left: 32px;    
+    }
+
+    .minhas-viagens-item > p {
+        padding: 0 32px;
+    }
+
+    .minhas-viagens-item footer p strong {
+        display: initial;
+        margin-left: 16px;
+    }
+    .minhas-viagens-item .footer-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* .minhas-viagens-item .footer-buttons .button {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } */
+
+    .minhas-viagens-item .footer-buttons a img {
+        width: 15%;
+        color: white;
+    }
+
+    .minhas-viagens-item footer button {
+        width: 245px;
+        font-size: 16px;
+        justify-content: center;
+    }
+    .minhas-viagens-item footer button img {
+        margin-right: 16px;
+    }
+
+}
+

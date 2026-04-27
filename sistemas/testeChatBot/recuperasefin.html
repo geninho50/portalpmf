@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Recupera Senha</title>
+</head>
+<body>
+
+	<div id="email" style="display: block">
+		<p> *Para debug:</p>
+    <button type="button" onclick="changeStatus('1'),geraCodigo(),pegaEmail()">Recuperar Senha</button> 
+     </div>
+   
+
+     <div id="verificaCodigo" style="display: none">
+
+    <p>Digite o codido de verificação que foi enviado para o e-mail: <span id="emailrecuperacao"></span></p>
+    <input type="text" id="codigoVerificacao"><br>
+     <button type="button" onclick="validaCodigo()">Confirmar</button> 
+     </div>
+
+     <div id="novaSenha" style="display: none">
+     	Requisitos:
+     	<ul>
+     		<li id="tamanho"> Mínimo 6 caractéres;</li>
+     		<li id="maius"> Mínimo uma letra Maiúscula;</li>
+     		<li id="numero"> Mínimo um numero;</li>
+
+     	</ul>
+    <p>Digite sua nova senha:</p>
+    <div style="display: flex;">
+    	<input type="password" id="senha" oninput="checkForcaSenha()">
+    		<div style="background:#CCC; width: 100px; margin-left: 10px">
+     			<div style="width:0%;background:#F00;text-align:center; height:100%;" id="barra"></div>
+			</div>
+	</div>
+    <p>Confirme sua nova senha:</p>
+    <input type="password" id="confirma-senha"><br>
+    <button type="button" onclick="validaSenha()">Confirmar</button> 
+    	<p id="forca"></p>
+     </div>
+
+    <p id="codigoDebug"></p>
+
+        <script type="text/javascript" src="recuperasefin.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+/* CSS Document */
+html{        
+	height: 100%;	
+}
+body{
+    background-color: transparent;         
+	margin: 0px;         
+	padding: 0px;         
+	height: 100%;         
+	z-index:0;         
+	position:relative;
+	background-attachment: fixed;
+	background-image:url(../imagem/fundo_preto_vermelho.jpg);
+}
+
+.style1 {
+	font-family:Calibri, "Britannic Bold";
+	font-size: 11px;
+	color: #FFFFFF;
+}
+.style2 {
+	font-family:Calibri, "Britannic Bold";
+	font-size: 10px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style3 {
+	color: #7A3635; 
+	font-family:Calibri, "Britannic Bold";
+	font-size:30px;
+}
+
+/*
+	Utilizado na maioria dos textos na cor cinza escuro
+*/
+.style4 {
+	color: #615353; 
+	font-family:Calibri, "Britannic Bold";
+	font-size:11px;
+}
+
+.style5 {
+	color: #7A3635; 
+	font-family:Calibri, "Britannic Bold";
+	font-size:12px;
+}
+.style5modificado {
+	color: #7A3635; 
+	font-family:Calibri, "Britannic Bold";
+	font-size:11px;
+}
+
+/*
+	Utilizado em notícias na parte textual
+*/
+.style6 {
+	color: #615353; 
+	font-family:Calibri, "Britannic Bold";
+	font-size:11px;
+}
+
+.style7 {
+	color: #666666; 
+	font-family:Calibri, "Britannic Bold";
+	font-size:13px;
+	font-weight: bold;
+}
+
+
+
+a {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	/*font-weight: bold;*/
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+a:active {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a.menulink
+{ 
+	color: #7A3635; 
+	font-family:Calibri, "Britannic Bold";
+	font-size:11px; 
+} 
+a:hover.menulink
+{
+	text-decoration: underline;
+} 
+
+#paginacao
+{
+	margin: 6px 0px 6px 0px; /* define as margens em relação aos demais objetos da página*/
+}
+#paginacao p
+{		
+	font-size: 9px; /*tamanho da fonte*/
+	font-family: Trebuchet MS; /*tipo da fonte*/
+	text-align:center; /*alinhamento do texto*/
+	margin-top: 3px;/*margem superior*/
+	margin-bottom: 3px;/*margem inferior*/
+	color:#8f4343;/*cor da fonte*/
+	border:none;/*define sem borda*/
+}
+#paginacao a
+{
+	border: 1px solid #8f4343;/*define a borda*/
+	padding: 3px 3px; /*distância da margem*/
+	text-decoration: none;/*retira o underline do link*/
+	color:#8f4343;/*cor do texto*/
+}
+#paginacao a:hover
+{
+	background-color: #8f4343;/*cor de fundo*/
+	color:#FFFFFF;/*cor do texto*/
+	padding: 3px 3px;/*distancia da margem*/
+	text-decoration: none;/*retira o underline do link*/
+}
+
+
+
+
+/***********************************
+***** Play na Imagem com Borda *****
+***********************************/
+
+.GvamapgFKC{background-position:center;width:120px;height:90px;cursor:pointer;}
+.GvamapgPP{min-height:40px;padding-top:5px;border-top:1px solid #ccc;}
+.GvamapgKQ,.GvamapgOQ{position:relative;}
+.GvamapgKQ,.GvamapgOQ{position:relative;}
+.GvamapgBM{table-layout:fixed;}
+.GvamapgOV{position:relative;text-align:center;width:85px;height:105px;}
+.GvamapgAM{display:block;margin:auto;}
+.GvamapgHT{position:relative;}
+.GvamapgDT .GvamapgHT{height:24px;}
+.GvamapgNS{height:30px;display:block;overflow:hidden;position:absolute;}
+.GvamapgJO{display:inline-block;vertical-align:middle;padding:0 1px;cursor:pointer;font-size:12px;}
+.GvamapgKO{cursor:pointer !important;border-style:solid;border-color:#bbb;border-width:1px 0;margin:1px 0;}
+
+
+/***********************************
+***** Colunas para Ítens *****
+***********************************/
+
+ul.listaNovidades
+{
+	width:450px;
+	overflow:hidden;
+}
+ul.listaNovidades li
+{
+	float:left;
+	display:inline;
+	padding:0 8px 0 13px;
+	width:123px;
+	font:12px Arial, Helvetica, sans-serif;
+	color:#BEB7AF;
+	padding-bottom:6px;
+}
+ul.listaNovidades li span.precoNovidades
+{
+	display:block;
+	margin-top:12px;
+}
+ul.listaNovidades li span.precoNovidades span
+{
+	color:#CB3906;
+	font-weight:bold;
+}
+ul.listaNovidades li span.imgModelo
+{
+	display:block;
+	width:120px;
+	height:90px;
+	text-align:center;
+	margin:7px auto 0;
+}
+ul.listaNovidades li a
+{
+	font:12px Arial, Helvetica, sans-serif;
+}
+
+.tdl {
+        font-family:Calibri, "Britannic Bold";
+        font-size:9pt;
+        text-decoration: none;
+        color: #FF9900
+}
+.tdl:hover {
+        font-family:Calibri, "Britannic Bold";
+        font-size: 9pt;
+        text-decoration: none;
+        color: #FF0033
+}
+.tdl:visited {
+        font-family:Calibri, "Britannic Bold";
+        font-size: 9pt;
+        text-decoration: none;
+        color: #FF9900
+}

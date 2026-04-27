@@ -1,0 +1,623 @@
+/* gerais */
+body{
+    font-family:'signika' , sans-serif;
+}
+.row
+{
+    margin: 0;
+}
+.container
+{
+    padding: 70px 0;
+}
+
+/*p, li
+{
+    color: cyan;
+    font-size: 14px;
+}*/
+
+/* barra de navegação*/
+header, .navbar
+{
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+}
+#nav-container
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#logo
+{
+    width: 80px;
+    margin: 0 5px;
+	position:relative;
+	left:10px;
+	top:-30px;
+}
+.navbar-brand
+{
+    padding: 0;
+    color: white;
+
+}
+/*botão toda somar no cabeçalho*/
+#btnSomar
+{
+	border:none;
+	background-color:white;
+}
+.navbar-brand:hover
+{
+    color: white;
+}
+#navbar-links a 
+{
+    color: #4f4f4f;
+    cursor: pointer;
+}
+.navbar-expand-lg .navbar-nav .nav-link
+{
+    padding: 1rem .8rem;
+}
+#inputCabecalho
+{
+    height: 45px;
+    width: 450px;
+    background-color:#f2f2f2;
+    color: #333333;
+    border-radius: 20px;
+    border: 1px transparent;
+    font-size: 15px;
+    font-weight: 200;
+}
+#navbarDropdown
+{
+	margin:10px;
+}
+
+#dropdown
+{
+    cursor: pointer;
+    position: absolute;
+}
+
+
+/* slider */
+.container-fluid
+{
+    padding: 90px;
+}
+/*#mainSlider .carousel-inner, #mainSlider .carousel-item
+{
+    height: 90vh;
+}*/
+#btnCarrossel
+{
+    height: 65px;
+    width: 325px;
+    border-radius: 40px;
+    position: relative;
+    top: -180px;
+    left: 105px;
+    background-color: #F2EBEE;
+    color: #4F4F4F;
+    font-size: 30px;
+    transition: 0.5s;
+}
+#btnCarrossel:hover
+{
+    background-color:#4F4F4F;
+    color: #F2EBEE;
+}
+.carousel-indicators .active
+{
+    background-color: #696969;
+}
+
+#subTitulos
+{
+    color: #892055;
+   
+}
+.col-11
+{
+    color: #892055;
+    margin-left: 40px;
+}
+.col-md-8
+{
+    color: #4f4f4f;
+}
+#container
+{
+    color: white;
+    text-align: center;
+    background-color: #892055;
+    width: 100%;
+    height: 161px;
+}
+.col-md-3
+{
+    top: 50px;
+    font-size: 30px;
+}
+#main-btn
+{   
+    background-color: #fff;
+    color: #892055;
+    width: 160px;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #892055;
+    transition: 0.7s;
+    text-align: center;
+    line-height: 10px;
+    
+    font-size: 18px;
+}
+#main-btn:hover
+{
+    text-decoration: none;
+    color:white;
+    background-color: #892055;
+    border-color: white;
+}
+.container-box
+{
+    width: 270px;
+    height: 170px;
+    display: inline-flex;
+    margin-left: 30px;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+.p-1
+{
+    font-size: 10px;
+    margin: 17px;
+    display: block;
+}
+.p-2
+{
+    font-size: 10px;
+    margin: 17px;
+    display: block;
+}
+.p-3
+{
+    font-size: 10px;
+    margin: 17px;
+    display: block;
+}
+#btn.btn-block
+{
+    background-color: #fff;
+    color: #892055;
+    width: 320px;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #892055;
+    transition: 0.7s;
+    text-align: center;
+    line-height: 10px;
+    position: relative;
+    left: 300px;
+    margin-left: 13px;
+    font-size: 18px;
+    top: -10;
+}
+#btn.btn-block:hover
+{
+    text-decoration: none;
+    color:white;
+    background-color: #892055;
+    border-color: white;
+}
+.col-sm
+{
+    font-size: 25px;
+    text-align: center;
+    top: 60px;
+    font-weight: bold;
+}
+#um
+{
+    font-size: 15px;
+    line-height: 35px;
+    font-weight: normal;
+}
+#dois
+{
+   width: 180px;
+   height: 35px;
+   font-size: 20px;
+   border-radius: 30px;
+   background-color: #fff;
+   color: #892055;
+   border: solid #fff;
+   transition: 0.7s;
+}
+#dois:hover
+{
+    text-decoration: none;
+    color:white;
+    background-color: black;
+    border-color: white; 
+}
+
+#botoesONG
+{
+    width: 1230px;
+    height: 236px;
+    background-color: white;
+}
+.col #btn1
+{
+    width: 425px;
+    height: 34px;
+}
+#maisOnhs
+{
+    width: 159px;
+    height: 37px;
+}
+.btn.btn-block.btn-sm
+{
+    width: 128px;
+    height: 34px;
+    left: 400px;
+    top: 30px;
+}
+#final
+{
+    color: #E0E0E0;
+    font-family: Signika;
+    src: local(Signika), url(../../../Biblioteca/fontes/Signika/Signika-VariableFont_wght.ttf);
+    font-style: normal;
+    font-size: 25px;
+    line-height: 40px;
+}
+#primeiraColuna
+{
+    margin: 0 0 0 50px;
+}
+#h2Final
+{
+    cursor: pointer;
+    font-family: Signika;
+    src: local(Signika), url(../../../Biblioteca/fontes/Signika/Signika-VariableFont_wght.ttf);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 40px;    
+    color: #333333;
+}
+
+#quadradoONG
+{
+    align-content: center;
+    /*width: 1300px;    
+    height: 236px;
+    left: 468px;
+    top: 2185px;
+    
+     Gray 6 */
+    background: #F2F2F2;
+    
+    /* Gray 5 */
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;    
+}
+#h2Final:hover
+{
+    color: red;
+}
+#h4Final
+{
+    font-size: 15px;
+    cursor: pointer;	
+	line-height:30px;
+    font-family: Signika;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 40px;
+    color: #333333;
+
+}
+#h4Final:hover
+{
+    color: red;
+}
+
+.facebook
+{
+width: 25px;
+border-radius: 20px;
+background-color: #828282;
+}
+.instagram
+{   
+position:absolute;
+width: 27px;
+border-radius: 20px;
+background-color: #828282;
+left: 100px;
+}
+.twitter
+{
+position:absolute;
+width: 27px;
+border-radius: 20px;
+background-color: #828282;
+left: 55px;
+}
+#logoModal
+{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    left: 165px;
+    top: -25;
+}
+#tituloModal
+{
+    position: relative;
+    top: 100px;
+    left: 30px;
+}
+#facaUmaDoacao
+{
+    border-radius: 30px;
+    background-color: #f2ebee;
+    color: #333333;
+    transition: 0.5s;
+    font-size: 22px;
+}
+#facaUmaDoacao:hover
+{
+    background-color: red;
+    color: white;
+    border: white solid 2px;
+}
+#maisOngs
+{
+    background-color: #892055;
+    color: #fff;
+    width: 200px;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    transition: 0.7s;
+    text-align: center;
+    line-height: 10px;
+    font-size: 18px;
+    top: 35;
+}
+#maisOngs:hover
+{
+    text-decoration: none;
+    color: #892055;
+    background-color: #fff;
+    border-color: #892055;
+}
+#btnONG
+{
+   /*
+    width: 397px;
+    height: 25px;
+    left: 178px;
+    top: 2219px;
+    text-align: center;
+    
+   */
+
+    font-size: 18px;
+    line-height: 20px;   
+    font-family: Signika;
+    src: local(Signika), url(../../../Biblioteca/fontes/Signika/Signika-VariableFont_wght.ttf);
+    font-style: normal;
+    font-weight: normal;
+    border-radius: 20px;
+    border-style: solid;
+    border-bottom-style: solid;
+    transition: 1.0s;
+    margin: 15px;
+    color: #828282;
+    /**/
+}
+#btnONG:hover
+{
+    background-color: black;
+    color: white;
+}
+#queroOpotunidades
+{
+    background-color: #fff;
+    color: #892055;
+    width: 300px;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #892055;
+    transition: 0.7s;
+    line-height: 10px;
+    font-size: 18px;
+    top: 35;
+}
+#queroOpotunidades:hover
+{
+    text-decoration: none;
+    color: #fff;
+    background-color: #892055;
+    border-color: #892055;
+}
+#caixa1
+{
+    background-color: white; 
+    height: 150px;
+    width: 370px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+    margin:20px 50px 0px 30px;
+}
+#caixa2
+{
+    background-color: white;
+    height: 150px;
+    width: 370px;
+    margin:20px 50px 0px 30px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+
+}
+#caixa3
+{
+    background-color: white;
+    height: 150px;
+    width: 370px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+    margin:20px 50px 0px 30px;
+}
+#h6
+{
+    font-size: 7px;
+    margin: 16px 0 0 7px;
+}
+#h2
+{
+    font-size: 20px;
+    margin: 5px 0 0 7px;
+    font-weight: bold;
+}
+#h3
+{
+    font-size: 13px;
+    margin: 5px 0 0 7px;
+
+}
+#queroInscrever
+{
+    width: 100px;
+    font-size: 10px;
+    top: 4px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+    background-color: white;
+}
+#queroInscrever:hover
+{
+    background-color: #828282;
+    color: #333333;
+}
+#saibaMais
+{
+    width: 70px;
+    font-size: 10px;
+    top: 4px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+    background-color: white;
+    display: inline;
+}
+#saibaMais:hover
+{
+    background-color: #828282;
+    color: #333333;
+}
+#h6MODAL
+{
+	font-weight:300;
+	font-size:15px;
+}
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+.menu-bar
+{
+    background: white;
+    text-align: center;
+    margin: 0px 0px -10px 0px;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color:black;
+    font-size: 15px;
+    line-height: 15px;
+}
+.menu-bar ul li
+{   
+    margin: 5px;
+    padding: 20px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+/*.active, .menu-bar ul li:hover
+{
+    background: #0077ff;
+    border-radius: 3px;
+    cursor: pointer;
+}*/
+.sub-menu-1
+{
+    display: none;
+    position: absolute;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: white;
+    border: 1px solid;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 5px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.fa-angle-right
+{
+    float: right;
+}
+.sub-menu-2
+{
+    display: none;
+    position: absolute;
+}
+.hover-me:hover .sub-menu-2
+{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: white;
+    border: 1px solid;
+}

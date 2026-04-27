@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	</head>
+	<body>
+		<div id="content" >
+			
+		</div>
+	</body>
+	<script>
+		$('#content').html('<iframe width="100%" height="100%" src="http://monitor.ciasc.gov.br/dashboard.php"></iframe>');
+		
+		var i = 0;
+		setInterval(
+			function(){
+				switch(i) {
+					case 0:
+						$('#content').html('<iframe width="100%" height="100%" src="http://monitor.ciasc.gov.br/maps.php?ddreset=1&sid=f548b9120a66593b"></iframe>');
+						i++;
+						break;
+					case 1:
+						$('#content').html('<iframe width="100%" height="100%" src="http://monitor.ciasc.gov.br/maps.php?sid=f548b9120a66593b&form_refresh=1&fullscreen=0&sysmapid=118"></iframe>');
+						i++;
+						break;
+					case 2:
+						$('#content').html('<iframe width="100%" height="100%" src="http://192.168.150.175/localhost/check_mk"></iframe>');
+						i++;
+						break;
+					case 3:
+						$('#content').html('<iframe width="100%" height="100%" src="http://monitor.ciasc.gov.br/dashboard.php"></iframe>');
+						i = 0;
+						break;
+					default:
+						$('#content').html('<iframe width="100%" height="100%" src="http://monitor.ciasc.gov.br/dashboard.php"></iframe>');
+				}
+		}, 10000);
+	</script>
+</html>

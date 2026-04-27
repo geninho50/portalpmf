@@ -1,0 +1,421 @@
+#pag{
+	width: 210mm; 
+	margin: auto;
+}
+
+.img{
+	width: 20mm;
+	margin-top: -5px;
+}
+
+#cab {
+	font-size: 12pt;	
+	text-align: center;
+	font-weight: bold;
+	margin-top: -25mm;
+}
+
+
+h5, .center {
+	text-align: center;
+	margin-bottom: 1mm!important;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+form{
+	margin-top: 30px;
+}
+
+#documento{
+	max-width: 900px;
+	max-height: 200px;
+	overflow-y:scroll;
+	margin: auto;	
+	border: 1px solid #ccc;
+	padding: 10px;
+	clear: both;
+}
+
+.container{
+	width: 900px!important;
+	margin: auto;
+}
+
+
+.col1{
+	width: 430px;
+	float: left;
+}
+
+.col2{
+	width: 430px;
+	float: right;
+}
+
+.text-capitalize{
+	text-transform:capitalize;
+}
+
+
+#corpoIP {
+	font-size: 8pt;	
+	text-align: justify;
+}
+
+
+#corpoVPN {
+	font-size: 11pt;	
+	text-align: justify;
+}
+
+#corpoIP p, .titulos{
+	margin: 0px;
+	padding: 0px;
+}
+
+.subLista{
+	margin-bottom: 10px;
+}
+
+.subLista p{
+	margin-left: 5mm;	
+	margin-bottom: 0px
+}
+
+#assDir{
+	margin-top: 0mm;
+	float: right;
+	width: 100mm;
+}
+
+#assEsq p{
+	float: left;
+	width: 100mm;
+}
+
+#assDir, #assEsq{
+	text-align: center;
+}
+
+.dir{
+	float: right;
+	width: 100mm;
+}
+
+.esq p{
+	margin-top: 0mm;
+	float: left;
+	width: 100mm;
+}
+
+.dir, .esq{
+	text-align: center;
+}
+.ass{
+	margin-top: 15mm;
+	text-align: center;
+}
+
+.data{
+	margin-top: 15mm;
+	text-align: right;
+}
+
+.overflow{
+	width: 90%;
+	height:50px;
+	margin: auto;
+	overflow-y:scroll;
+	border: 3px outset #ccc;
+	cursor: pointer;
+	margin-top: 10px!important;
+	padding-top: 50px;
+}
+
+.overflowResultProc{
+	width: 90%;
+	height:300px;
+	margin: auto;
+	overflow-y:scroll;
+	border: 3px outset #ccc;
+	cursor: pointer;
+	margin-top: 10px!important;
+}
+
+.boxprocurar{
+	width: 90%;
+	height:50px;
+	margin: auto;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.vermelha{
+	border-color: #f2a69f!important;
+}
+
+.amarela{
+	border-color: #f2ef9f!important;
+}
+
+#obs{
+	width: 500px;
+	margin-top: 10px!important;
+	margin: auto;
+}
+
+.verde{
+	border-color: #b6f29f!important;
+}
+
+.tituloTabela{
+	width: 90%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 14pt;
+	height: 50px;
+	padding-top: 15px;
+	margin-top: -50px!important;
+	position: absolute;
+	float: left;
+}
+
+.tituloVerMais{
+	text-align: center;
+	font-weight: bold;
+	font-size: 14pt;
+}
+
+.nomeTabela{
+	
+	text-align:left!important;
+}
+
+.nomeTabelaVPN{
+	
+	text-align:left!important;
+}
+
+tr, th{
+	text-align: center!important;
+}
+
+.tabelaVPN{
+	width: 506px;
+	margin: auto;
+	border: 3px solid #fff!important;
+}
+
+.tabela{
+	width: 506px;
+	height: 166px;
+	margin: auto;
+	border: 3px outset #ccc;
+}
+
+
+.tabela > .coluna1{
+	width: 250px;
+	float: left;
+}
+
+.tabela > .coluna2{
+	width: 250px;
+	float: right;
+}
+
+.tabela > .linha{
+	width: 500px;
+	float: right;
+}
+
+.tabela > .coluna2 > .form-group, .tabela > .coluna1 > .form-group, .tabela > .linha > .form-group{
+	border: 1px solid #ccc;	
+	margin: 0px;
+	padding: 5px;
+}
+
+.botoesVerMais{
+	width: 500px;
+	margin: 10px auto;
+}
+
+.revogar, .aprovar, .finalizar{
+	float: left;
+	margin-left: 10px;
+}
+
+.voltar{
+	float: right;
+}
+
+.loginAdm{
+	width: 470px;
+	margin: auto;
+	padding: 10px
+}
+
+.boxLogin {
+    background-color: #eee;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 0;
+    padding: 20px;
+}
+
+.boxDecisao {
+    background-color: #eee;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 0;
+    padding: 20px;
+    text-align: center;
+    display: block;
+}
+
+.boxDecisao button{
+	width: 32%;
+	margin: auto;
+}
+
+.headerLogin{
+	height: 40px;
+	margin-bottom: 20px;
+	margin: auto;
+	border-color: #ddd;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+}
+
+.sair{
+	float:right;
+	margin-right: 30px;
+	margin-top: 8px;
+}
+
+.home{
+	float:right;
+	margin-right: 30px;
+	margin-top: 8px;
+}
+
+#nomeUsuario{
+	float:left;
+	margin-left: 30px;
+	margin-top: 8px;
+}
+
+#liberacaoIP, #liberacaoVPN, #certificacaoDigital, #servidores, #servidoresWindows, #servidoresLinux, #impressora, #thema{
+	width: 100%;
+}
+
+ #servidoresWindows, #servidoresLinux, #voz, #dados  {
+ 	width: 90% !important;
+ 	margin: auto;
+ 	display: block;
+
+ 	background-image: linear-gradient(to bottom, #fff 0px, #e5e5e5 100%);
+    background-repeat: repeat-x;
+    border-color: #ccc;
+    text-shadow: 0 1px 0 #fff;
+ }
+
+.tituloPag{
+	font-size: 16pt;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 2px;
+}
+
+.semOcorrencias{
+}
+
+.dataLiberacao{
+	width: 100px!important;
+	text-align: center;
+	margin: auto;
+	height: 25px!important;
+}
+
+.QtdAnoExpiracao{
+	width: 35px!important;
+	text-align: center;
+	margin: auto;
+	height: 25px!important;
+}
+
+
+red{color:red;}
+
+.procurarCampo{
+	width: 300px;
+	margin-right: 30px;
+}
+
+td{
+	text-align: left;
+
+}
+.tabelaServidor{
+	width: 90%;
+	margin: auto;
+	border: 1px solid #8C98A5;
+	margin-bottom: 10px !important;
+}
+ .formulario{
+ 	border: 1px solid #8C98A5;
+ 	margin: auto;
+ 	width: 500px;
+ 	text-align: center;
+ 	display: block;
+ 	margin-top: 10px; 
+ 	margin-bottom: 10px;
+ 	padding-bottom: 20px;
+
+}
+.formulario .botao{
+	width: 47%;
+	margin-top: 5px;
+}
+
+.alert, .alert-danger, .hide {
+	text-align: center;
+}
+
+.portas{
+	width: 100% !important;
+}
+
+.tabelaPortas{
+	width: 150px;
+	border: 1px solid #8C98A5;
+	margin: auto;
+	margin-bottom: 10px !important;
+}
+
+.tabelaPortas td{
+	text-align: center;
+
+}
+
+.table{
+	font-size: 13px !important;
+}
+
+.table td{
+	text-align: center !important; 
+	height: 30px !important;
+}
+
+.table th{
+	text-align: center !important;
+}
+
+strong{
+	font-size: 0.7em;
+}

@@ -1,0 +1,182 @@
+#page-cadastrar-operadoras #container {
+    width: 100vw;
+    height: 100vh;
+}
+
+#page-cadastrar-operadoras .page-header .header-content {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#page-cadastrar-operadoras main {
+    background-color: var(--color-box-base);
+    width: 100%;
+    max-width: 77rem;
+    border-radius: .8rem;
+    margin: -3.2rem auto 3.2rem;
+    padding-top: 6.4rem;
+}
+
+#page-cadastrar-operadoras fieldset {
+    border: none;
+
+    padding: 0 2.4rem;
+}
+
+#page-cadastrar-operadoras fieldset legend {
+    font: 700 2.4rem Archivo;
+    color: var(--color-text-title);
+    margin-bottom: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--color-line-in-white);
+}
+
+#page-cadastrar-operadoras fieldset button {
+    background: none;
+    border: 0;
+    padding-top: 3rem;
+
+    color: var(--color-primary);
+
+    font: 700 1.6rem Archivo;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#page-cadastrar-operadoras fieldset  button:hover {
+    transform: translateY(-5px);
+    color: var(--color-primary-dark);
+}
+
+
+#page-cadastrar-operadoras fieldset+fieldset {
+    margin-top: 6.4rem;
+}
+
+
+
+#page-cadastrar-operadoras .input-block+.input-block,
+#page-cadastrar-operadoras .input-block+.textarea-block,
+#page-cadastrar-operadoras .select-block+.input-block {
+    margin-top: 1rem;
+}
+
+#page-cadastrar-operadoras main footer {
+    padding: 4rem 2.4rem;
+
+    background: var(--color-box-footer);
+    border-top: 1px solid var(--color-line-in-white);
+    margin-top: 6.4rem;
+}
+
+#page-cadastrar-operadoras main footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    color: var(--color-text-complement);
+}
+
+#page-cadastrar-operadoras main footer p img {
+    margin-right: 2rem;
+}
+
+
+#page-cadastrar-operadoras main footer button {
+    width: 100%;
+    height: 5.6rem;
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: .8rem;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    transition: 0.2s;
+    margin-top: 3.2rem;
+}
+
+#page-cadastrar-operadoras main footer button:hover {
+    background: var(--color-secondary-dark);
+}
+
+
+@media (min-width: 700px) {
+    #page-cadastrar-operadoras #container{
+        max-width: 100vw;
+    }
+
+    #page-cadastrar-operadoras .page-header .header-content {
+        /* margin-bottom: 5rem; */
+        height: 400px;
+    }
+
+    .page-header {
+        /** 
+            Sobreescrevendo a regra de header.css
+        */
+        height: 420px;
+    }
+    #page-cadastrar-operadoras main fieldset {
+        padding: 0 64px;
+    } 
+
+    #page-cadastrar-operadoras .grid-two{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.8rem;
+    }
+
+    #page-cadastrar-operadoras .grid-tree{
+        display: grid;
+        grid-template-columns: 1fr 2fr .5fr;
+        column-gap: 1.8rem;
+    }
+    #page-cadastrar-operadoras .grid-tree-phone{
+        display: grid;
+        grid-template-columns: .9fr .9fr 2fr;
+        column-gap: 1.8rem;
+    }
+
+    #page-cadastrar-operadoras .grid-four{
+        display: grid;
+        grid-template-columns: 1fr 2fr .5fr 1fr;
+        column-gap: 1.8rem;
+    }
+
+    #page-cadastrar-operadoras .grid .select-block+.input-block,
+    #page-cadastrar-operadoras .grid .input-block+.input-block
+    {
+        margin-top: 0;
+    }
+
+    #page-cadastrar-operadoras main footer {
+        padding: 40px 54px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #page-cadastrar-operadoras main footer button {
+        margin-top: 0;
+
+        width: 200px;
+    }
+}

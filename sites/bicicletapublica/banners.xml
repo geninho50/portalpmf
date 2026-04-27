@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Floribike</title>
+<subtitle>Proposta de um sistema de bicicleta pública</subtitle>
+<imagePath>../../arquivos/banners/jpg/06_10_2011_18.40.09.ec9b30b7ea69e35391f9c83494939481.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Floribike</title>
+<subtitle>Proposta de um sistema de bicicleta pública</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_10_2011_14.11.01.ec9b30b7ea69e35391f9c83494939481.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Floribike</title>
+<subtitle>Proposta de um sistema de bicicleta pública</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_10_2011_14.14.45.19811821e65d5b158ea1bf507077eeb3.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

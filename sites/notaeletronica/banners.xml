@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>4</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Nota Fiscal de Prestação de Serviço Eletrônica</title>
+<subtitle>Inovação para o desenvolvimento econômico </subtitle>
+<imagePath>../../arquivos/banners/jpg/20_05_2011_13.16.57.3f7d4cd7ff4ceaafc7baba3134ff47f4.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Nota Fiscal de Prestação de Serviço Eletrônica</title>
+<subtitle>Economia e segurança para o contribuinte</subtitle>
+<imagePath>../../arquivos/banners/jpg/20_05_2011_14.03.28.048d03fe2c7686a7eeb897228262651f.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Nota Fiscal de Prestação de Serviço Eletrônica</title>
+<subtitle>Tecnologia para a modernização adiministrativa</subtitle>
+<imagePath>../../arquivos/banners/jpg/20_05_2011_14.01.49.3c42a2daa0edda9c891e286bac69365d.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Nota Fiscal de Prestação de Serviço Eletrônica</title>
+<subtitle>Ferramenta para a gestão tributária</subtitle>
+<imagePath>../../arquivos/banners/jpg/20_05_2011_14.16.36.7886b43b28026f8c46fc946a89b5fc97.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/favicon.ico" type="image/ico" />
+
+    <title>Dashboard | Suporte</title>
+   
+    <!-- Bootstrap -->
+    <link href="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">        
+    <!-- Custom Theme Style -->
+    <link href="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/css/custom.min.css" rel="stylesheet">
+
+  </head>
+
+  <body class="nav-md" sytle="overflow: hidden;">
+    <div class="container body">
+      <div class="main_container">
+       
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <!-- top tiles -->
+          <div class="row tile_count">
+          <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i> Nº NFPS-e emitidas hoje</span>
+              <div class="count green" id="valorDeclaradoMesAtual">44</div>
+              <span class="count_bottom">Total mês: <span class="green">333</span> </span>
+            </div>
+           
+          <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i> Nº Declarações hoje</span>
+              <div class="count green" id="valorDeclaradoMesAtual">15</div>
+             <span class="count_bottom">Total mês: <span class="green">58</span> </span>
+            </div>
+           
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i>Acessos Suporte NFPS hoje</span>
+              <div class="count green" id="valorMeta1MesAtual">114</div>
+              <span class="count_bottom">Total mês: <span class="green">1488</span> </span>
+            </div>  
+           
+             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Acessos Suporte Sefinnet hoje</span>
+              <div class="count green">50</div>
+              <span class="count_bottom">Total mês: <span class="green">514</span> </span>
+            </div>
+                       
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i> Nº acessos chatbot hoje</span>
+              <div class="count green"id="contribuintesDeclaradoMesAtual">10</div>
+               <span class="count_bottom">Total mês: <span class="green">28</span> </span>
+            </div>
+           
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Nº feedback hotjar hoje</span>
+              <div class="count green">0</div>
+              <span class="count_bottom">Total mês: <span class="green">2</span> </span>
+            </div>
+          </div>
+          <!-- /top tiles -->
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="dashboard_graph">
+
+                <div class="row x_title">
+                  <div class="col-md-6">
+                    <h3>Acompanhamento de Emissão de Notas<small>Atualizado as 10:59 09/01/2020.</small></h3>
+                  </div>
+                  <div class="col-md-6" style="text-align: right;">
+                    <h3>Informações das Notas:</h3>
+                  </div>
+                </div>
+
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="demo-placeholder" style="padding: 0px; position: relative;">
+                    <canvas id="graficoAcompanhamento" class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1142px; height: 280px;" width="1142" height="280"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
+
+                  <div class="col-md-12 col-sm-12 col-xs-6">
+                    <div>
+                      <p>Nota Fiscal Eletrônica</p>
+                      <p style="font-size: 9px">Número de notas:<span class="green">45</span></p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 90%">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="$infoPercentualDeclaracao_0;"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p>Nota Fiscal Eletrônica Simplificada</p>
+                      <p style="font-size: 9px">Número de notas:<span class="green">14</span></p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 90%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="$infoPercentualDeclaracao_1"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p>Nota Fiscal Eletrônica Homologação</p>
+                      <p style="font-size: 9px">Número de notas:<span class="green">24</span></p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 90%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="$infoPercentualDeclaracao_14"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                    <p>Nota Fiscal Eletrônica Simplificada Homologação</p>
+                      <p style="font-size: 9px">Número de notas:<span class="green">4</span></p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 90%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="$infoPercentualDeclaracao_8"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+
+                </div>
+
+                <div class="clearfix"></div>
+              </div>
+            </div>
+
+          </div>
+
+                    <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="dashboard_graph">
+
+                <div class="row x_title">
+                  <div class="col-md-6">
+                    <h3>Acompanhamento de Declarações<small>Atualizado as 12:39 09/01/2019.</small></h3>
+                  </div>
+                  <div class="col-md-6" style="text-align: right;">
+                    <h3>Informações das Declarações:</h3>
+                  </div>
+                </div>
+
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                <div class="demo-placeholder" style="padding: 0px; position: relative;">
+                    <canvas id="graficoAcompanhamento" class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1142px; height: 280px;" width="1142" height="280"></canvas>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 bg-white">
+
+                  <div class="col-md-12 col-sm-12 col-xs-6">
+                    <div>
+                      <p>GIF PJ</p>
+                      <p style="font-size: 9px">Realizado R$ $infoRealizadoDeclaracao_0 da Meta de R$ $infoMeta1Declaracao_0 - $infoPercentualDeclaracao_0%</p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 90%">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="$infoPercentualDeclaracao_0;"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p>GIF ST</p>
+                      <p style="font-size: 9px">Realizado R$ $infoRealizadoDeclaracao_1 da Meta de R$ $infoMeta1Declaracao_1 - $infoPercentualDeclaracao_1%</p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 90%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="$infoPercentualDeclaracao_1"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p>GIF PS</p>
+                      <p style="font-size: 9px">Realizado R$ $infoRealizadoDeclaracao_14 da Meta de R$ $infoMeta1Declaracao_14 - $infoPercentualDeclaracao_14%</p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 90%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="$infoPercentualDeclaracao_14"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <p>GIF IF</p>
+                      <p style="font-size: 9px">Realizado R$ $infoRealizadoDeclaracao_8 da Meta de R$ $infoMeta1Declaracao_8 - $infoPercentualDeclaracao_8%</p>
+                      <div class="">
+                        <div class="progress progress_sm" style="width: 90%;">
+                          <div class="progress-bar bg-green" role="progressbar" data-transitiongoal="$infoPercentualDeclaracao_8"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 
+
+                </div>
+
+                <div class="clearfix"></div>
+              </div>
+            </div>
+
+          </div>
+         
+          <p style="font-size: 1px;">.</p>
+
+          <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_300">
+                <div class="x_title">
+                  <h2>Atendimentos</h2>                  
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span nowrap="true">&nbsp;</span>
+                    </div>
+                    <div class="w_right w_20">
+                      <p>Mês</p>
+                    </div>
+                    <div class="w_right w_20">
+                      <p>Hoje</p>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span nowrap="true">Telefone</span>
+                    </div>
+                    <div class="w_right w_20">
+                      <span>148</span>
+                    </div>
+                    <div class="w_right w_20">
+                      <span>11</span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span>E-mails</span>
+                    </div>
+                    <div class="w_right w_20">
+                      <span>273</span>
+                    </div>
+                    <div class="w_right w_20">
+                      <span>51</span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>                                
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      <span>Presencial</span>
+                    </div>
+                    <div class="w_right w_20">
+                      <span>45</span>
+                    </div>
+                    <div class="w_right w_20">
+                      <span>4</span>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      
+                    </div>
+                    <div class="w_right w_20">
+                     
+                    </div>
+                    <div class="w_right w_20">
+                     
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="widget_summary">
+                    <div class="w_left w_55">
+                      
+                    </div>
+                    <div class="w_right w_20">
+                      
+                    </div>
+                    <div class="w_right w_20">
+                      
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_300 overflow_hidden">
+                <div class="x_title">
+                  <h2>ISSQN (R$) por Declaração</h2>                  
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <table class="" style="width:100%">
+                    <tr>
+                      <th style="width:37%;">
+                        <p></p>
+                      </th>
+                      <th>
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                          <p style="text-align: left">Declaração</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                          <p  style="text-align: right">Meta 1</p>
+                        </div>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <canvas class="graficoIssqnPorDeclaracao" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                      </td>
+                      <td>
+                        <table class="tile_info">
+                          <tr>
+                            <td style="background-color: #449284;color: white">
+                              <p>GIF PJ</p>
+                            </td>
+                            <td style="background-color: #449284;color: white;text-align:right">$infoPercentualDeclaracao_0 %</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #86B5AD;color: white">
+                              <p>GIF ST</p>
+                            </td>
+                            <td style="background-color: #86B5AD;color: white;text-align:right">$infoPercentualDeclaracao_1 %</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #7AC49F;color: white">
+                              <p>GIF PS</p>
+                            </td>
+                            <td style="background-color: #7AC49F;color: white;text-align:right">$infoPercentualDeclaracao_14 %</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #B6DDC8;color: white">
+                              <p>GIF IF</p>
+                            </td>
+                            <td style="background-color: #B6DDC8;color: white;text-align:right">$infoPercentualDeclaracao_8 %</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_300 overflow_hidden">
+                <div class="x_title">
+                  <h2>Declarações em Dia x Em Atraso</h2>                  
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <table class="" style="width:100%">
+                    <tr>
+                      <th style="width:37%;">
+                        <p></p>
+                      </th>
+                      <th>
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                          <p  style="text-align: left">Situação</p>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                          <p  style="text-align: right">Quantidade</p>
+                        </div>
+                      </th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <canvas class="graficoEmDiaAtrasos" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
+                      </td>
+                      <td>
+                        <table class="tile_info">
+                          <tr>
+                            <td style="background-color: #ABD57F;">
+                              <p><font style="color: white">Entre o dia 01 e 10</font></p>
+                            </td style="background-color: #ABD57F;">
+                            <td style="background-color: #ABD57F;color: white;text-align:right">$qndeDeclaracoesEmDia</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #FAD86A;">
+                              <p><font style="color: white;"></i>Entre o dia 11 e 15</font></p>
+                            </td style="background-color: #FAD86A;">
+                            <td style="background-color: #FAD86A;color: white;text-align:right">$qndeDeclaracoesEmBoleto</td>
+                          </tr>
+                          <tr>
+                            <td style="background-color: #DD5567;">
+                              <p><font style="color: white;"></i>Entre o dia 16 e 30</font></p>
+                            </td style="background-color: #DD5567;">
+                            <td style="background-color: #DD5567;color: white;text-align:right">$qndeDeclaracoesEmAtraso</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p><i class="fa fa-square green"></i>&nbsp;</p>
+                            </td>
+                            <td>&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+        <!-- /page content -->
+      </div>
+    </div>
+
+<!-- jQuery -->
+    <script src="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/js/jquery.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/vendors/bootstrap/dist/js/bootstrap.min.js"></script>      
+   
+    <!-- bootstrap-progressbar -->
+    <script src="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+   
+    <!-- Custom Theme Scripts -->
+    <script src="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/js/custom.min.js"></script>
+   
+    <!-- Chart.js -->
+    <script src="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/vendors/Chart.js/dist/Chart.min.js"></script>
+   
+    <!-- Flot -->
+    <script src="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/vendors/Flot/jquery.flot.js"></script>
+    <script src="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/vendors/Flot/jquery.flot.time.js"></script>
+   
+    <!-- Flot plugins -->    
+    <script src="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+   
+    <!-- DateJS -->
+    <script src="https://sefinnetweb.pmf.sc.gov.br/Sefinnet/resource/vendors/DateJS/build/date.js"></script>
+   
+   
+   
+    <script>      
+      //setTimeout(function(){location = 'dashMelhorias.vm';},300000);
+     
+      function number_format(number, decimals, dec_point, thousands_sep) {
+  // *     example: number_format(1234.56, 2, ',', ' ');
+  // *     return: '1 234,56'
+ 
+  number = (number + '').replace(',', '').replace(' ', '');
+ 
+  var n = !isFinite(+number) ? 0 : +number,
+    prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+    sep = (typeof thousands_sep === 'undefined') ? '.' : thousands_sep,
+    dec = (typeof dec_point === 'undefined') ? '.' : dec_point,
+    s = '',
+    toFixedFix = function(n, prec) {
+      var k = Math.pow(10, prec);
+      return '' + Math.round(n * k) / k;
+   };
+  // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+ s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.');
+  if (s[0].length > 3) {
+    s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+  }
+  if ((s[1] || '').length < prec) {
+    s[1] = s[1] || '';
+    s[1] += new Array(prec - s[1].length + 1).join('0');
+  }
+  return s.join(dec);
+}
+     
+
+$('.graficoEmDiaAtrasos').each(function(){
+
+var chart_emDiaEmAtraso_settings = {
+type: 'doughnut',
+data: {
+labels: [
+"Entre o dia 01 e 10",
+"Entre o dia 11 e 15",
+"Entre o dia 16 e 30"
+],
+datasets: [{
+data: [$qndeDeclaracoesEmDiaAux, $qndeDeclaracoesEmBoletoAux, $qndeDeclaracoesEmAtrasoAux],
+backgroundColor: [
+"#ABD57F",
+"#FAD86A",
+"#DD5567"
+]
+}]
+},
+options: {
+legend: false,
+responsive: false
+}
+}
+
+var chart_element = $(this);
+var chart_doughnut = new Chart( chart_element, chart_emDiaEmAtraso_settings);
+});
+
+
+$('.graficoIssqnPorDeclaracao').each(function(){
+
+var chart_issqnPorDeclaracao_settings = {
+type: 'doughnut',
+data: {
+labels: [
+"GIF PJ",
+"GIF ST",
+"GIF PS",
+"GIF IF"
+],
+datasets: [{
+data: [$infoRealizadoDeclaracaoAux_0, $infoRealizadoDeclaracaoAux_1, $infoRealizadoDeclaracaoAux_14, $infoRealizadoDeclaracaoAux_8],
+backgroundColor: [
+"#449284",
+"#86B5AD",
+"#7AC49F",
+"#B6DDC8"
+]
+}]
+},
+options: {
+legend: false,
+responsive: false
+}
+}
+
+var chart_element = $(this);
+var chart_doughnut = new Chart( chart_element, chart_issqnPorDeclaracao_settings);
+});
+
+if ($('#graficoAcompanhamento').length ){
+ 
+ var ctx = document.getElementById("graficoAcompanhamento");
+ var mybarChart = new Chart(ctx, {
+type: 'bar',
+data: {
+type: 'bar',
+ labels: [ $meses ],
+ datasets: [{
+label: '2018',
+backgroundColor: "#6B80B7",
+data: [ $valores2018 ]
+ }, {
+  type: 'bar',
+label: '2019',
+backgroundColor: "#93B5DA",
+data: [ $valores2019 ]
+ }, {
+  type: 'line',
+label: 'Meta 1',
+data: [ $valoresMeta1 ]
+ }, {
+  type: 'line',
+label: 'Meta 2',
+data: [ $valoresMeta2 ]
+ }]
+},
+options: {
+ scales: {
+       xAxes: [{
+           gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+           }
+        }],
+       yAxes: [{
+           gridLines: {
+                color: "rgba(0, 0, 0, 0)",
+           },
+           ticks: {
+beginAtZero: true,
+           callback: function(value, index, values) {
+            return 'R$' + number_format(value);
+          }
+  }  
+        }]
+       }
+}
+ });
+}
+
+    </script>
+  </body>
+</html>

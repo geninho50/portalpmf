@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário de Contrato</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <a href="#" onclick="toggleSidebar()">☰</a><span class="icon-text">Gestão de Sistemas PMF</span>
+        </div>
+            <a href="#" class="icon-middle"><span class="material-symbols-outlined">grid_view</span><span class="icon-text"> Dashboard</span></a>
+            <a href="#" class="icon-middle"><span class="material-symbols-outlined">how_to_reg</span><span class="icon-text"> Cadastrar</span></a>
+            <a href="#" class="icon-middle"><span class="material-symbols-outlined">add</span><span class="icon-text" >Adicionar</span></a>
+            <a href="#" class="icon-middle"><span class="material-symbols-outlined">contract</span></i><span class="icon-text"> Contratos</span></a>
+            <a href="#" class="icon-middle"><span class="material-symbols-outlined">inventory_2</span><span class="icon-text"> Arquivados</span></a>
+        <div class="bottom-icons">
+                <a href="#" class="icon-bottom"><span class="material-symbols-outlined">update</span><span class="icon-text"> Histórico</span></a>
+                <a href="#" class="icon-bottom"><i class="fa fa-sign-out"><span class="material-symbols-outlined">logout</span></i><span class="icon-text"> Sair</span></a>
+            </div>
+        </div>
+    <!-- <form action="processar_formulario.php" method="post">-->
+        <div class="container"> 
+
+
+
+
+
+
+
+
+            <form class="form-inline">
+                
+              
+            
+                <div class="input-group mb-2 mr-sm-2 col-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text" style="text-align: end;">Nome</div>
+                  </div>
+                  <input type="text" class="form-control" id="inlineFormInputGroupUsername2">
+                </div>
+              
+              </form>
+
+
+
+
+
+
+
+
+         </div>   
+        <!--   <h2>Título</h2>
+            <div class="input-group Titulo">   
+                <input type="text" name="titulo"> <!-- Adicionando o atributo 'name' 
+        <div class="section left">
+            <div class="input-container">
+                <span>Início da Vigência:</span>
+                <input type="text" name="inicio_vigencia" class="rounded" placeholder="xx/xx/xx">
+            </div>
+            <div class="input-container">
+                <span>Fim da Vigência:</span>
+                <input type="text" name="fimim_vigencia" class="rounded" placeholder="xx/xx/xx">
+            </div>
+            <div class="input-container">
+                <input type="text" name="fornecedor" class="rounded"><span>Fornecedor:</span>
+            </div>
+            <div class="input-container">
+                <input type="text" name="cnpj" class="rounded"><span>CNPJ:</span>
+            </div>
+            <div class="input-container">
+                <input type="text" name="sistema" class="rounded"><span>Sistema:</span>
+            </div>
+            <div class="input-container">
+                <input type="text" name="info" class="rounded"><span>Info.Contratuais:</span>
+            </div>
+            <div class="input-container">
+                <input type="number" name="valor" class="rounded"><span>Valor Anual:</span>
+            </div>
+            <div class="input-container">
+                <input type="text" class="dt-input" class="rounded"><span>Fiscal e-Gov:</span>
+            </div>
+            <div class="input-container">
+                <input type="text" class="fiscais" class="rounded"><span>Fiscal Adm:</span>
+            </div>
+        </div>
+        <div class="section right">
+            <div class="input-group">
+                <label for="objeto">Objeto</label>
+                <textarea name="objeto" id="objeto" class="textarea-custom" class="rounded" style="width: 360px; height: 222.5px; border-radius: 16px;"></textarea>
+            </div>
+            <div class="input-group">
+                <label for="observacoes">Detalhes e Observações</label>
+                <textarea name="observacoes" class="textarea-custom" id="observacoes" class="rounded" style="width: 360px; height: 222.5px; border-radius: 16px;"></textarea>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="section">
+            <div class="input-group gs">
+                <label>Gestores</label>
+                <input type="text">
+            </div>
+        </div>
+        <div class="section">
+            <div class="input-group gs">
+                <label>Secretaria</label>
+                <input type="text" name="secretaria" class="rounded">
+            </div>
+        </div>
+        <div class="text-center mt-3">
+            <p><strong>Documentos do Contrato</strong></p>
+        </div>
+        <div class="input-group mt-3">
+            <label for="docs"  class="file-upload-label btn btn-primary">Anexe aqui</label>
+            <input type="file" accept=".pdf,.doc,.docx"  name="docs" id="docs" onchange="updateFileName(this)" class="form-control visually-hidden">
+        </div>
+        <p id="file-name"></p>
+        
+        <div class="section">
+            <div class="input-group double">
+                <label>Categoria</label>
+                <input type="text" name="categoria" class="rounded">
+            </div>
+        </div>
+        <div class="section">
+            <div class="input-group double">
+                <label>Nome Comercial</label>
+                <input type="text" name="nome_comercial" class="rounded">
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="row justify-content-center">
+                <div class="col-auto custom-margin">
+                    <button type="button" onclick="cancelar()" class="btn btn-secondary btn-lg">Cancelar</button>
+                </div>
+                <div class="col-auto">
+                    <button type="button" onclick="salvarFormulario()" class="btn btn-success btn-lg">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </form> -->
+
+   
+    
+    
+</div>
+    </div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

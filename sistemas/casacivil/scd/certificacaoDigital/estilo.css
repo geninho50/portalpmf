@@ -1,0 +1,269 @@
+#pag{
+	width: 210mm; 
+	margin: auto;
+}
+
+.img{
+	width: 20mm;
+	margin-top: -5px;
+}
+
+#cab {
+	font-size: 12pt;	
+	text-align: center;
+	font-weight: bold;
+	margin-top: -25mm;
+}
+
+
+h5, .center {
+	text-align: center;
+	margin-bottom: 1mm!important;
+}
+
+
+.bold{
+	font-weight: bold;
+}
+
+form{
+	margin-top: 30px;
+}
+
+#documento{
+	max-width: 900px;
+	max-height: 200px;
+	overflow-y:scroll;
+	margin: auto;	
+	border: 1px solid #ccc;
+	padding: 10px;
+	clear: both;
+}
+
+.container{
+	width: 900px!important;
+	margin: auto;
+}
+
+
+.col1{
+	width: 430px;
+	float: left;
+}
+
+.col2{
+	width: 430px;
+	float: right;
+}
+
+.text-capitalize{
+	text-transform:capitalize;
+}
+
+
+#corpoIP {
+	font-size: 8pt;	
+	text-align: justify;
+}
+
+
+#corpoVPN {
+	font-size: 11pt;	
+	text-align: justify;
+}
+
+#corpoIP p, .titulos{
+	margin: 0px;
+	padding: 0px;
+}
+
+.subLista{
+	margin-bottom: 10px;
+}
+
+.subLista p{
+	margin-left: 5mm;	
+	margin-bottom: 0px
+}
+
+#assDir{
+	margin-top: 0mm;
+	float: right;
+	width: 100mm;
+}
+
+#assEsq p{
+	float: left;
+	width: 100mm;
+}
+
+#assDir, #assEsq{
+	text-align: center;
+}
+
+
+.ass{
+	margin-top: 15mm;
+	text-align: center;
+}
+
+.data{
+	margin-top: 15mm;
+	text-align: right;
+}
+
+.overflow{
+	width: 90%;
+	height:200px;
+	margin: auto;
+	overflow-y:scroll;
+	border: 4px outset #ccc;
+}
+
+.tituloTabela{
+	font-weight: bold;
+	font-size: 14pt;
+	margin-top: 20px!important;
+}
+
+.nomeTabela{
+	
+	text-align:left!important;
+}
+
+.nomeTabelaVPN{
+	
+	text-align:left!important;
+}
+
+tr, th{
+	text-align: center!important;
+}
+
+.tabelaVPN{
+	width: 506px;
+	margin: auto;
+	border: 3px solid #fff!important;
+}
+
+.tabela{
+	width: 506px;
+	height: 166px;
+	margin: auto;
+	border: 3px outset #ccc;
+}
+
+
+.tabela > .coluna1{
+	width: 250px;
+	float: left;
+}
+
+.tabela > .coluna2{
+	width: 250px;
+	float: right;
+}
+
+.tabela > .linha{
+	width: 500px;
+	float: right;
+}
+
+.tabela > .coluna2 > .form-group, .tabela > .coluna1 > .form-group, .tabela > .linha > .form-group{
+	border: 1px solid #ccc;	
+	margin: 0px;
+	padding: 5px;
+}
+
+.botoesVerMais{
+	width: 500px;
+	margin: 10px auto;
+}
+
+.revogar, .aprovar{
+	float: left;
+	margin-left: 10px;
+}
+
+.voltar{
+	float: right;
+}
+
+.loginAdm{
+	width: 470px;
+	margin: auto;
+	padding: 10px
+}
+
+.boxLogin {
+    background-color: #eee;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 0;
+    padding: 20px;
+}
+
+.boxDecisao {
+    background-color: #eee;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+    margin-right: 0;
+    padding: 20px;
+    height: 130px;
+}
+
+.headerLogin{
+	height: 40px;
+	margin-bottom: 20px;
+	margin: auto;
+	border-color: #ddd;
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+}
+
+.sair{
+	float:right;
+	margin-right: 30px;
+	margin-top: 8px;
+}
+
+.home{
+	float:right;
+	margin-right: 30px;
+	margin-top: 8px;
+}
+
+#nomeUsuario{
+	float:left;
+	margin-left: 30px;
+	margin-top: 8px;
+}
+
+#liberacaoIP, #liberacaoVPN{
+	width: 100%;
+}
+
+.tituloPag{
+	font-size: 16pt;
+	text-align: center;
+	font-weight: bold;
+	padding-top: 2px;
+}
+
+.semOcorrencias{
+}
+
+.row{
+	width: 700px;
+	margin: auto!important;
+
+}
+.container{
+	width: 720px;
+	
+
+}
+
+red{color:red;}

@@ -1,0 +1,204 @@
+.page-header{
+    background-color: var(--color-primary);
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.page-header .top-bar-container{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    /* border-bottom: 1px solid var(--color-line-in-white); */
+    /* background-color: var(--color-primary-light); */
+    background-color: #00284E;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.page-header .top-bar-container .navbar {
+
+    width: 740px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.page-header .top-bar-container .logo-title{
+    color: var(--color-title-in-primary);
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px ;
+}
+
+.toggle-button .bar {
+     height: 3px;
+     width: 100%;
+     background-color: white;
+     border-radius: 10px;
+}
+
+ .page-header .top-bar-container .navbar .navbar-links {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    list-style-type: none;
+}
+
+.page-header .top-bar-container .navbar .navbar-links li{
+    text-decoration: none;
+    padding: 1rem;
+    
+}
+
+.page-header .top-bar-container .navbar .navbar-links li a{
+    text-decoration: none;
+    color: var(--color-title-in-primary);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.page-header .top-bar-container .navbar .navbar-links li a:hover {
+    opacity: 0.6;
+    transition: 0.2s;
+}
+/** *****************************************************/
+
+
+/** 
+Cabecalho
+*/
+.page-header .header-content {
+    width: 90%;
+    margin: 3.2rem auto;
+    display: flex;
+    flex-direction: column;
+    /* padding-bottom: 5rem; */
+}
+
+.page-header .header-content img {
+    max-width: 30rem;
+    max-width: 175px;
+    /* padding-top: 2rem; */
+    /* margin-top: -2rem; */
+    margin-bottom: 2rem;
+}
+
+.page-header .header-content strong {
+    font: 700 3.6rem 'Archivo';
+    max-width: 13rem;
+    line-height: 4.2rem;
+    color: var(--color-title-in-primary);
+}
+
+.page-header .header-content strong i {
+    font: 500 3rem 'Archivo';
+    font-style: italic;
+    max-width: 10rem;
+    line-height: 3rem;
+    color: var(--color-text-in-primary);
+
+}
+
+.page-header .header-content p {
+    max-width: 60rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    color: var(--color-title-in-primary);
+    margin-top: .5rem;
+    margin-bottom: 0rem;
+
+}
+
+.page-header .header-content p i{
+    max-width: 60rem;
+    font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    color: var(--color-text-in-primary);
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+
+}
+/** *****************************************************/
+
+
+@media (min-width:700px) {
+
+    #page-study #container {
+        max-width: 100vh;
+    }
+
+    .page-header {
+        height: 340px;
+    }
+
+    .page-header .top-bar-container {
+        width: 100vw;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+  
+    .page-header .header-content {
+        max-width: 740px;
+
+        /* margin: 0 auto;
+
+        flex: 1 1;
+        padding-top: 1rem;
+        padding-bottom: 10rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+
+    .page-header .header-content strong {
+        max-width: 550px;
+    }
+
+}
+
+@media (max-width: 450px){
+    .toggle-button{
+        display: flex;
+    }
+    .page-header .top-bar-container .navbar .navbar-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+    .page-header .top-bar-container .navbar .navbar-links.active {
+        display: flex;
+    }
+    .page-header .top-bar-container .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .page-header .top-bar-container .navbar .navbar-links li {
+        padding-top: 2rem;
+        text-align: center;
+    }
+    
+}

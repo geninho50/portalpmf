@@ -1,0 +1,140 @@
+body,td,th {
+	font-family:Calibri, "Britannic Bold";
+	font-size: 10px;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+input {
+	font-family:Calibri, "Britannic Bold";
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #ffffff;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+}
+
+textarea {
+	font-family:Calibri, "Britannic Bold";
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #ffffff;
+	border: 1px solid #999999;
+}
+
+
+a {	font-family:Calibri, "Britannic Bold";
+	color:#000000}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+
+.negrito{ font-family:Calibri, "Britannic Bold";
+color:#000000;
+font-size:11px;
+font-weight:bold;
+}
+.branco{ font-family:Calibri, "Britannic Bold";
+color:#ffffff;
+font-size:11px;
+font-weight:bold;
+}
+.cabecalho{ font-family:Calibri, "Britannic Bold";
+color:#000000;
+font-size:14px;
+font-weight:bold;
+}
+.botao{
+    font-family: Calibri, "Britannic Bold";
+	font-weight:bold
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #cccccc;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #999999;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #999999;
+	height:20px;
+	width:80px;
+}
+.letra{ font-family:Calibri, "Britannic Bold";
+color:#000000;
+font-size:12px;
+}
+.online{ font-family:Calibri, "Britannic Bold";
+color:#000000;
+font-size:10px;
+}
+
+.vermelho{ font-family:Calibri, "Britannic Bold";
+color:#F00;
+font-size:12px;
+font-weight:bold;
+}
+.receber_auto{ font-family:Calibri, "Britannic Bold";
+color:#F00;
+font-size:15px;
+font-weight:bold;
+}
+
+.fieldset{
+	color:#900;
+	font-size:12px;
+	font-family:Calibri, "Britannic Bold";
+	font-weight:bold;
+}
+
+.style1 {
+	font-family:Calibri, "Britannic Bold";
+	font-weight: bold;
+	font-size: 13px;
+}
+.style2 {
+	font-family:Calibri, "Britannic Bold";
+	font-size: 13px;
+}
+.style3 {
+	font-family:Calibri, "Britannic Bold";
+	font-weight: bold;
+	font-size: 15px;
+	text-decoration: underline;
+}
+.diario{ font-family:Calibri, "Britannic Bold";
+color:#900;
+font-size:40px;
+font-weight:bold;
+}

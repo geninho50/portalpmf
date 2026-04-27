@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    button {
+      margin: 10px;
+    }
+  </style>
+  <title>Vagas disponiveis para visita</title>
+</head>
+<body>
+
+  <h2 id="monthYear">M&ecirc;s Ano</h2>
+  <button onclick="previousMonth()">M&ecirc;s Anterior</button>
+  <button onclick="nextMonth()">Pr&oacute;ximo M&ecirc;s</button>
+
+  <table id="calendar" onclick="selectDate(event)"> </table>
+
+  <script>
+    let currentDate = new Date();
+    let currentMonth = currentDate.getMonth();
+    let currentYear = currentDate.getFullYear();
+
+    function renderCalendar() {
+      const calendar = document.getElementById("calendar");
+      const monthYear = document.getElementById("monthYear");
+
+      calendar.innerHTML = "";
+      monthYear.textContent = `${getMonthName(currentMonth)} ${currentYear}`;
+
+      const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+      const firstDayIndex = new Date(currentYear, currentMonth, 1).getDay();
+
+      const daysOfWeek = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"];
+
+      // Cabe�alho da tabela
+      let headerRow = calendar.insertRow();
+      for (let day of daysOfWeek) {
+        let th = document.createElement("th");
+        th.textContent = day ;
+        headerRow.appendChild(th);
+      }
+
+      // Dias do m�s
+      let date = 1;
+      for (let i = 0; i < 6; i++) {
+        let row = calendar.insertRow();
+
+        for (let j = 0; j < 7; j++) {
+          if (i === 0 && j < firstDayIndex) {
+            // C�lulas vazias antes do primeiro dia do m�s
+            let cell = row.insertCell();
+            cell.textContent = "";
+          } else if (date > daysInMonth) {
+            // C�lulas vazias ap�s o �ltimo dia do m�s
+            let cell = row.insertCell();
+            cell.textContent = "";
+          } else {
+            // C�lulas com os dias do m�s
+            let cell = row.insertCell();
+            cell.textContent = date + ' (800)';
+            date++;
+          }
+        }
+      }
+    }
+
+    function getMonthName(month) {
+      const monthNames = [
+        "Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho",
+        "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+      ];
+      return monthNames[month];
+    }
+
+    function previousMonth() {
+      currentMonth--;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      renderCalendar();
+    }
+
+    function selectDate(event) {
+      const target = event.target;
+
+      if (target.tagName === 'TD' && target.textContent.trim() !== '') {
+         const selectedDate = new Date(currentYear, currentMonth, parseInt(target.textContent.substring(0, 2) ) );
+         const formattedDate = selectedDate.toLocaleDateString('pt-BR'); // Formata a data  
+         // alert( formattedDate );
+
+        if (window.opener!=null) {
+            window.opener.document.frm.dataVisita.value = formattedDate;
+            //window.opener.exibir();
+            window.close();
+        }
+
+        // const dateInput = document.getElementById("dateInput");
+        // dateInput.value = formattedDate;
+
+        // Fecha o popup ap�s selecionar a data
+        const calendarPopup = document.getElementById("calendarPopup");
+      }
+    }
+
+    function nextMonth() {
+      currentMonth++;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      renderCalendar();
+    }
+
+    // Inicializa o calend�rio ao carregar a p�gina
+    renderCalendar();
+  </script>
+
+</body>
+</html>

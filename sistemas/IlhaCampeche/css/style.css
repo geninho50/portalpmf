@@ -1,0 +1,488 @@
+:root {
+  --fontMontes: "Montserrat";
+  --brancoPmf: #ffffff;
+  --pretoPmf: black;
+  --azulPmfEscuro: #002f66;
+  --azulPmfClaro: #0093d4;
+  --azulPmfClaro_1: #00B1EB;
+  --marromMinhoca: #6D4426;
+  --verdeMinhoca: #95BA3E;
+  --vermelhoMinhoca: #DE4726;
+  --cinzaMinhoca: #F8F8F8;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #242424;
+  font-family: sans-serif;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  color: #000;
+}
+
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main {
+  display: block;
+  background-color: #FFF;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section.module p {
+  text-align: center;
+  font-family: var(--fontMontes);
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.divButtons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.divButtons button {
+  margin: 10px;
+  height: 55px;
+  width: 120px;
+  font-weight: 600;
+  background-color: #ffffffb9;
+  color: #964b00;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #964b00;
+  box-shadow: rgba(0, 0, 0, 0.446) 0.2em 0.2em 0.1em;
+}
+
+button:hover {
+  scale: 1.1;
+  transition: 40ms;
+}
+
+.inputButton {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--marromMinhoca);
+  color: var(--brancoPmf);
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  height: 40px;
+  width: 100px;
+}
+
+.inputButton:hover {
+  scale: 1.1;
+  transition: 40ms;
+}
+
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module h2 {
+  margin-bottom: 40px;
+  font-size: 50px;
+  text-align: center;
+  font-family: var(--fontMontes);
+  color: #964b00;
+
+}
+
+section.module.content {
+  padding: 25px 0;
+  background: #ece7d5;
+}
+
+section.module.parallax {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh !important;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+section.module.parallax:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  background: -moz-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+  background: -webkit-linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+}
+
+
+section.module.parallax-1 {
+  background-image: url("https://www.pmf.sc.gov.br/sistemas/IlhaCampeche/images/paralax1.jpg");
+}
+
+section.module.parallax-2 {
+  background-image: url("https://www.pmf.sc.gov.br/sistemas/IlhaCampeche/images/paralax2.jpg");
+}
+
+section.module.parallax-3 {
+  background-image: url("https://www.pmf.sc.gov.br/sistemas/IlhaCampeche/images/paralax3.jpg");
+}
+
+section.module.parallax-4 {
+  background-image: url("https://www.pmf.sc.gov.br/sistemas/IlhaCampeche/images/pedra.jpg");
+
+}
+
+section.module.parallax h1 {
+  color: #FFF;
+  text-align: center;
+  font-size: 78px;
+  z-index: 50;
+  text-transform: uppercase;
+  text-shadow: black 0.1em 0.1em 0.2em
+}
+
+/* Style do Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 18px;
+  background-color: #F8F8F8;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 60;
+  font-family: 'Inter', sans-serif;
+}
+
+.modal button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--marromMinhoca);
+  color: var(--brancoPmf);
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  height: 40px;
+  width: 100px;
+}
+
+.modal button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.modal input {
+  height: 25px;
+  width: 100%;
+}
+
+.modal label {
+  font-weight: 500;
+  color: #6D4426;
+}
+
+.modalLogin {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #F8F8F8;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 60;
+  font-family: 'Inter', sans-serif;
+}
+
+.modalLogin button {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: var(--marromMinhoca);
+  color: var(--brancoPmf);
+  font-size: 1.1rem;
+  font-family: 'Inter', sans-serif;
+  height: 40px;
+  width: 100px;
+}
+
+.modalLogin button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.modalLogin .button2 {
+  margin: 10px;
+  height: 55px;
+  width: 120px;
+  font-weight: 600;
+  background-color: #ffffffb9;
+  color: #964b00;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #964b00;
+}
+
+.modalLogin button:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.modalLogin input {
+  height: 25px;
+  width: 100%;
+}
+
+/* .cima {
+  width: 100%;
+} */
+
+.h4Escolha {
+  color: #6D4426;
+  text-align: center;
+}
+
+.modalLogin label {
+  font-weight: 500;
+  color: #6D4426;
+}
+
+.close {
+  color: #DE4726;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.divTextoModal h3,
+h5 {
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  color: var(--marromMinhoca);
+}
+
+.divButtonModal {
+  margin: 4% auto 1%;
+  width: 100%;
+  text-align: center;
+}
+
+.divIndivial {
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
+.divSenhaModal {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  display: flex;
+}
+
+.lado {
+  margin-right: 20px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* Ajuste o valor alpha para controlar a opacidade */
+  z-index: 59;
+}
+
+
+
+/* css do passo a passo  */
+
+.divCard {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.divCard div {
+  height: 190px;
+  width: 170px;
+  padding: 5px;
+  margin: auto;
+  border: 2px solid var(--marromMinhoca);
+  border-radius: 15px;
+  background-color: #f8f8f8aa;
+  box-shadow: rgba(0, 0, 0, 0.446) 0.4em 0.4em 0.2em;
+}
+
+.divCard div h4 {
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  color: var(--marromMinhoca);
+}
+
+.cont {
+  width: 100%;
+  /* max-width: 1100px; */
+  /* margin: 0 auto; */
+  /* padding: 0 20px; */
+}
+
+/* css do transporte */
+
+.divCard2 {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.divCard2 div {
+  height: 190px;
+  width: 21%;
+  padding: 5px;
+  margin: auto;
+  border: 2px solid var(--marromMinhoca);
+  border-radius: 15px;
+  background-color: #f8f8f8aa;
+  box-shadow: rgba(0, 0, 0, 0.446) 0.4em 0.4em 0.2em;
+}
+
+.divCard2 div h4 {
+  text-align: center;
+  font-family: Verdana, sans-serif;
+  color: var(--marromMinhoca);
+}
+
+
+/* ------------ */
+select {
+  padding: 6px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: var(--brancoPmf);
+  border-radius: 3px;
+  border: 1px solid grey;
+  color: #333;
+}
+
+@media only screen and (max-width: 500px) {
+
+  .modal {
+    width: 80%;
+    height: 90%;
+    overflow: auto;
+  }
+
+  .cima {
+    margin-top: 15px;
+  }
+
+  .lado {
+    margin-right: 0px;
+  }
+
+  .divSenhaModal {
+    display: block;
+  }
+
+  .divIndivial {
+    display: block;
+  }
+
+  .ocultar {
+    display: none;
+  }
+
+  .divCard {
+    overflow-x: scroll; /* Altera o overflow para scroll em dispositivos móveis */
+    -webkit-overflow-scrolling: touch; /* Adiciona rolagem suave no iOS */
+    padding-bottom: 10px; /* Adiciona um pouco de espaço abaixo da div para a barra de rolagem */
+  }
+
+  .divCard div {
+    margin-right: 20px;
+    margin-left: 20px;
+    min-width: 250px;
+  }
+
+  .divCard p {
+    width: auto;
+  }
+
+  .divCard2 {
+    overflow-x: scroll; /* Altera o overflow para scroll em dispositivos móveis */
+    -webkit-overflow-scrolling: touch; /* Adiciona rolagem suave no iOS */
+    padding-bottom: 10px; /* Adiciona um pouco de espaço abaixo da div para a barra de rolagem */
+  }
+
+  .divCard2 div {
+    margin-right: 20px;
+    margin-left: 20px;
+    min-width: 260px;
+    min-height: 215px;
+  }
+
+  .divCard2 p {
+    width: auto;
+  }
+}
+
+@media all and (max-width: 820px) {
+  section.module h2 {
+    font-size: 32px;
+  }
+
+  .module h2,
+  p {
+    padding: 0 8px;
+  }
+
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+
+  section.module.parallax h1 {
+    font-size: 36px;
+  }
+}

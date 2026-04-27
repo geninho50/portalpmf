@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Jogos Servidores</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="../default.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../fonts.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+	<script src="../js/jquery-2.1.4.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.maskedinput.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<?php
+
+	include_once("../../banco/gdb.php");
+
+	$gdb = new gdb();
+
+	$select = "SELECT e.nome as secretaria,
+				p.modalidade,
+			   case when p.genero = 'F' Then 'Feminino' else 'Masculino' end as genero,
+			   p.equipe,
+		count( r.idServidor ) as totalAluno
+			FROM secretariaJISF e
+			INNER JOIN preEquipeJISF p on p.idSecretaria = e.idSecretaria
+			INNER JOIN usuario u on e.email = u.login
+			LEFT OUTER JOIN preEquipeServidor r on p.idpreEquipeJISF = r.idpreEquipeJISF
+			GROUP BY e.nome, p.modalidade, p.genero, p.equipe";
+
+	$gdb->open($select);
+
+	?>
+
+	<div id="wrapper">
+
+	</div>
+	<!-- end #menu -->
+	<div id="header" class="container" style="background-image: url('../images/background-new.jpg'); background-color: #F5F5F5">
+		<div id="logo" style="background-color: #696969">
+			<h1><a href="#">JISF 2019</a></h1>
+			<p>Jogos de Integração dos Servidores Públicos de Florianópolis</p>
+		</div>
+	</div>
+
+
+	<div id="page" class="container">
+		<div class="title">
+			<h2>Modalidades</h2>
+			<span class="byline">veja abaixo os campos: Modalidade - Gênero - Equipe - Total de Servidores Cadastrados</span>
+		</div>
+
+
+		<table class="table table-striped table-bordered table-hover" width="" cellspacing="0" cellpadding="5" border="1">
+
+			<?
+			foreach ($gdb->gs['SECRETARIA'] as $key => $value) {
+				if ($nomeEscola != $value) {
+					$nomeEscola = $value;
+					?>
+					<tr>
+						<td colspan="5" style="background-color: #002f99; color: white;" align="left"><? print $value ?></td>
+					</tr>
+				<?
+					}; ?>
+
+
+				<tr>
+					<td align="left"><? print $gdb->gs['MODALIDADE'][$key]; ?></td>
+					<td align="left"><? print $gdb->gs['GENERO'][$key]; ?></td>
+					<td align="left"><? print $gdb->gs['EQUIPE'][$key]; ?></td>
+					<td align="left"><? print $gdb->gs['TOTALALUNO'][$key]; ?></td>
+				</tr>
+
+			<? }
+
+			?>
+
+		</table>
+
+
+	</div>
+
+	</div>
+
+
+	<div id="footer-wrapper" style="background-color: #696969">
+		<div id="footer" class="container">
+			<h2>Fundação Municipal de Esportes</h2>
+			<span class="byline"></span>
+			<ul class="contact">
+				<li><img src="../images/logo.png" width="20%"></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="copyright" class="container">
+		<p><img src="../images/pmf.png" width="20%"><a href="http://www.pmf.sc.gov.br"></a></p>
+	</div>
+
+</body>
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.maskedinput.min.js" type="text/javascript"></script>
+
+</html>

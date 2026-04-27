@@ -1,0 +1,941 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>rubi</title>
+	<link rel="stylesheet" type="text/css" href="senior.css">
+	<meta http-equiv="Content-Type" content="text/html;charset=utf8" />
+	<meta charset="ISO-8859-1">
+</head>
+
+<body>
+
+<h1>Documentação dos serviços do aplicativo rubi</h1>
+<h2>Índice (Serviços e Portas)</h2>
+<ul>
+			<li>
+			<a href="#com.senior.g5.rh.fp.portalTransparencia">com.senior.g5.rh.fp.portalTransparencia</a>
+			<ul>			
+									<li><a href="#Portal">Portal</a></li>
+							</ul		
+		</li>
+			<li>
+			<a href="#com.senior.g5.rh.fp.fichaBasica">com.senior.g5.rh.fp.fichaBasica</a>
+			<ul>			
+									<li><a href="#Funcionario">Funcionario</a></li>
+							</ul		
+		</li>
+			<li>
+			<a href="#com.senior.g5.rh.fp.Cigam.Ida.ExportaFunc">com.senior.g5.rh.fp.Cigam.Ida.ExportaFunc</a>
+			<ul>			
+									<li><a href="#ExportaFuncionarios">ExportaFuncionarios</a></li>
+							</ul		
+		</li>
+			<li>
+			<a href="#com.senior.g5.rh.fp.DocumentoClickSing">com.senior.g5.rh.fp.DocumentoClickSing</a>
+			<ul>			
+									<li><a href="#CriaDocumentos">CriaDocumentos</a></li>
+							</ul		
+		</li>
+			<li>
+			<a href="#Pamp.Coleta">Pamp.Coleta</a>
+			<ul>			
+									<li><a href="#ConsultarEmbalagens">ConsultarEmbalagens</a></li>
+									<li><a href="#RegistrarColeta">RegistrarColeta</a></li>
+							</ul		
+		</li>
+	</ul>
+
+
+	<h1><a name="com.senior.g5.rh.fp.portalTransparencia"></a>com.senior.g5.rh.fp.portalTransparencia</h1>
+
+	<h2>Tipo de execução</h2>
+	<p>
+		Para cada tipo de execução, existem diferentes parâmetros que podem ser comuns a todas as portas. 
+		Acesse o Manual do Usuário na nuvem em "<a target="_blank" href="http://documentacao.senior.com.br">http://documentacao.senior.com.br</a>" para mais informações.
+	</p>
+
+			<h2>WSDL</h2>
+		<ul>
+			<li>síncrono: https://comcap_files:8181/g5-senior-services/rubi_Synccom_senior_g5_rh_fp_portalTransparencia?wsdl</li>				
+			<li>Assíncrono: https://comcap_files:8181/g5-senior-services/rubi_Asynccom_senior_g5_rh_fp_portalTransparencia?wsdl</li>	 
+			<li>Agendado: https://comcap_files:8181/g5-senior-services/rubi_Scheduledcom_senior_g5_rh_fp_portalTransparencia?wsdl</li>	 
+		</ul>	
+		
+	<h2>Portas</h2>
+	<ul>
+					<li><a href="#Portal">Portal</a></li>
+			</ul>
+	
+			
+		<h3><a name="Portal"></a>Portal</h3>
+		<p></p>
+		<p><b>Necessita autenticação: </b>Sim</p>
+		<p><b>Situação de versão: </b> Atual </p>
+		<p><b>versão: </b>1</p>
+				<p><b>Requisição:</b></p>
+	
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:Portal&gt;
+      &lt;user&gt;<span class="bordo">String</span>&lt;/user&gt;
+      &lt;password&gt;<span class="bordo">String</span>&lt;/password&gt;
+      &lt;encryption&gt;<span class="bordo">Integer</span>&lt;/encryption&gt;
+      &lt;parameters&gt;
+        &lt;tipCal&gt;<span class="bordo">Integer</span>&lt;/tipCal&gt;
+        &lt;numEmp&gt;<span class="bordo">Integer</span>&lt;/numEmp&gt;
+        &lt;datCmp&gt;<span class="bordo">String</span>&lt;/datCmp&gt;
+      &lt;/parameters&gt;
+    &lt;/ser:Portal&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+	
+		</pre>
+	
+					<p><b>Atributos de "parameters":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+																																	<tr>
+							<td>tipCal</TD>
+							<td> Opcional </TD>
+							<td>Integer</td>
+							<td></TD>
+						</tr>
+				        																				<tr>
+							<td>numEmp</TD>
+							<td> Opcional </TD>
+							<td>Integer</td>
+							<td></TD>
+						</tr>
+				        																				<tr>
+							<td>datCmp</TD>
+							<td> Opcional </TD>
+							<td>DateTime</td>
+							<td></TD>
+						</tr>
+				        												</table>
+				
+		<p><b>Resposta:</b></p>
+				
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:PortalResponse&gt;
+      &lt;result&gt;
+        &lt;result&gt;
+          &lt;numCad&gt;<span class="bordo">Integer</span>&lt;/numCad&gt;
+          &lt;nomFun&gt;<span class="bordo">String</span>&lt;/nomFun&gt;
+          &lt;valSal&gt;<span class="bordo">Double</span>&lt;/valSal&gt;
+          &lt;totPro&gt;<span class="bordo">Double</span>&lt;/totPro&gt;
+          &lt;totDes&gt;<span class="bordo">Double</span>&lt;/totDes&gt;
+          &lt;totLiq&gt;<span class="bordo">Double</span>&lt;/totLiq&gt;
+          &lt;titCar&gt;<span class="bordo">String</span>&lt;/titCar&gt;
+        &lt;/result&gt;
+        &lt;erroExecucao&gt;<span class="bordo">String</span>&lt;/erroExecucao&gt;
+      &lt;/result&gt;
+    &lt;/ser:PortalResponse&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+		</pre>
+		
+		<p><b>Atributos de "result":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+			<tr>
+				<td>erroExecucao</td>
+				<td>Opcional</td>
+				<td>String</td>
+				<td></td>
+			</tr>					
+										<tr>
+							<td>result</td>
+							<td> Opcional </td>
+						<td>Set</td>
+							<td></td>
+						</tr>
+													<tr>
+			<td>result.numCad</td>
+			<td> Opcional </td>
+			<td>Integer</td>
+			<td></td>
+		</tr>
+					<tr>
+			<td>result.nomFun</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td></td>
+		</tr>
+					<tr>
+			<td>result.valSal</td>
+			<td> Opcional </td>
+			<td>Double</td>
+			<td></td>
+		</tr>
+					<tr>
+			<td>result.totPro</td>
+			<td> Opcional </td>
+			<td>Double</td>
+			<td></td>
+		</tr>
+					<tr>
+			<td>result.totDes</td>
+			<td> Opcional </td>
+			<td>Double</td>
+			<td></td>
+		</tr>
+					<tr>
+			<td>result.totLiq</td>
+			<td> Opcional </td>
+			<td>Double</td>
+			<td></td>
+		</tr>
+					<tr>
+			<td>result.titCar</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td></td>
+		</tr>
+															</table>	
+		
+	
+	<h1><a name="com.senior.g5.rh.fp.fichaBasica"></a>com.senior.g5.rh.fp.fichaBasica</h1>
+
+	<h2>Tipo de execução</h2>
+	<p>
+		Para cada tipo de execução, existem diferentes parâmetros que podem ser comuns a todas as portas. 
+		Acesse o Manual do Usuário na nuvem em "<a target="_blank" href="http://documentacao.senior.com.br">http://documentacao.senior.com.br</a>" para mais informações.
+	</p>
+
+			<h2>WSDL</h2>
+		<ul>
+			<li>síncrono: https://comcap_files:8181/g5-senior-services/rubi_Synccom_senior_g5_rh_fp_fichaBasica?wsdl</li>				
+			<li>Assíncrono: https://comcap_files:8181/g5-senior-services/rubi_Asynccom_senior_g5_rh_fp_fichaBasica?wsdl</li>	 
+			<li>Agendado: https://comcap_files:8181/g5-senior-services/rubi_Scheduledcom_senior_g5_rh_fp_fichaBasica?wsdl</li>	 
+		</ul>	
+		
+	<h2>Portas</h2>
+	<ul>
+					<li><a href="#Funcionario">Funcionario</a></li>
+			</ul>
+	
+			
+		<h3><a name="Funcionario"></a>Funcionario</h3>
+		<p></p>
+		<p><b>Necessita autenticação: </b>Sim</p>
+		<p><b>Situação de versão: </b> Atual </p>
+		<p><b>versão: </b>1</p>
+				<p><b>Requisição:</b></p>
+	
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:Funcionario&gt;
+      &lt;user&gt;<span class="bordo">String</span>&lt;/user&gt;
+      &lt;password&gt;<span class="bordo">String</span>&lt;/password&gt;
+      &lt;encryption&gt;<span class="bordo">Integer</span>&lt;/encryption&gt;
+      &lt;parameters&gt;
+        &lt;numEmp&gt;<span class="bordo">Integer</span>&lt;/numEmp&gt;
+        &lt;numCad&gt;<span class="bordo">Integer</span>&lt;/numCad&gt;
+      &lt;/parameters&gt;
+    &lt;/ser:Funcionario&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+	
+		</pre>
+	
+					<p><b>Atributos de "parameters":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+																																	<tr>
+							<td>numEmp</TD>
+							<td> Opcional </TD>
+							<td>Integer</td>
+							<td></TD>
+						</tr>
+				        																				<tr>
+							<td>numCad</TD>
+							<td> Opcional </TD>
+							<td>Integer</td>
+							<td></TD>
+						</tr>
+				        												</table>
+				
+		<p><b>Resposta:</b></p>
+				
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:FuncionarioResponse&gt;
+      &lt;result&gt;
+        &lt;nomFun&gt;<span class="bordo">String</span>&lt;/nomFun&gt;
+        &lt;datNas&gt;<span class="bordo">String</span>&lt;/datNas&gt;
+        &lt;tipSex&gt;<span class="bordo">String</span>&lt;/tipSex&gt;
+        &lt;erro&gt;<span class="bordo">String</span>&lt;/erro&gt;
+        &lt;erroExecucao&gt;<span class="bordo">String</span>&lt;/erroExecucao&gt;
+      &lt;/result&gt;
+    &lt;/ser:FuncionarioResponse&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+		</pre>
+		
+		<p><b>Atributos de "result":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+			<tr>
+				<td>erroExecucao</td>
+				<td>Opcional</td>
+				<td>String</td>
+				<td></td>
+			</tr>					
+										<tr>
+							<td>nomFun</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>datNas</td>
+							<td> Opcional </td>
+						<td>DateTime</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>tipSex</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>erro</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+												</table>	
+		
+	
+	<h1><a name="com.senior.g5.rh.fp.Cigam.Ida.ExportaFunc"></a>com.senior.g5.rh.fp.Cigam.Ida.ExportaFunc</h1>
+
+	<h2>Tipo de execução</h2>
+	<p>
+		Para cada tipo de execução, existem diferentes parâmetros que podem ser comuns a todas as portas. 
+		Acesse o Manual do Usuário na nuvem em "<a target="_blank" href="http://documentacao.senior.com.br">http://documentacao.senior.com.br</a>" para mais informações.
+	</p>
+
+			<h2>WSDL</h2>
+		<ul>
+			<li>síncrono: https://comcap_files:8181/g5-senior-services/rubi_Synccom_senior_g5_rh_fp_Cigam_Ida_ExportaFunc?wsdl</li>				
+			<li>Assíncrono: https://comcap_files:8181/g5-senior-services/rubi_Asynccom_senior_g5_rh_fp_Cigam_Ida_ExportaFunc?wsdl</li>	 
+			<li>Agendado: https://comcap_files:8181/g5-senior-services/rubi_Scheduledcom_senior_g5_rh_fp_Cigam_Ida_ExportaFunc?wsdl</li>	 
+		</ul>	
+		
+	<h2>Portas</h2>
+	<ul>
+					<li><a href="#ExportaFuncionarios">ExportaFuncionarios</a></li>
+			</ul>
+	
+			
+		<h3><a name="ExportaFuncionarios"></a>ExportaFuncionarios</h3>
+		<p></p>
+		<p><b>Necessita autenticação: </b>Sim</p>
+		<p><b>Situação de versão: </b> Atual </p>
+		<p><b>versão: </b>1</p>
+				<p><b>Requisição:</b></p>
+	
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:ExportaFuncionarios&gt;
+      &lt;user&gt;<span class="bordo">String</span>&lt;/user&gt;
+      &lt;password&gt;<span class="bordo">String</span>&lt;/password&gt;
+      &lt;encryption&gt;<span class="bordo">Integer</span>&lt;/encryption&gt;
+      &lt;parameters&gt;
+        &lt;WNumCpf&gt;<span class="bordo">String</span>&lt;/WNumCpf&gt;
+      &lt;/parameters&gt;
+    &lt;/ser:ExportaFuncionarios&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+	
+		</pre>
+	
+					<p><b>Atributos de "parameters":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+																																	<tr>
+							<td>WNumCpf</TD>
+							<td> Opcional </TD>
+							<td>String</td>
+							<td></TD>
+						</tr>
+				        												</table>
+				
+		<p><b>Resposta:</b></p>
+				
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:ExportaFuncionariosResponse&gt;
+      &lt;result&gt;
+        &lt;WSitAfa&gt;<span class="bordo">Integer</span>&lt;/WSitAfa&gt;
+        &lt;WNumEmp&gt;<span class="bordo">String</span>&lt;/WNumEmp&gt;
+        &lt;WNumFil&gt;<span class="bordo">String</span>&lt;/WNumFil&gt;
+        &lt;WNumCad&gt;<span class="bordo">Integer</span>&lt;/WNumCad&gt;
+        &lt;WTipCol&gt;<span class="bordo">Integer</span>&lt;/WTipCol&gt;
+        &lt;WDddTl1&gt;<span class="bordo">Integer</span>&lt;/WDddTl1&gt;
+        &lt;WDddTl2&gt;<span class="bordo">Integer</span>&lt;/WDddTl2&gt;
+        &lt;WDesEnd&gt;<span class="bordo">String</span>&lt;/WDesEnd&gt;
+        &lt;WNomBai&gt;<span class="bordo">String</span>&lt;/WNomBai&gt;
+        &lt;WNomCid&gt;<span class="bordo">String</span>&lt;/WNomCid&gt;
+        &lt;WNomFil&gt;<span class="bordo">String</span>&lt;/WNomFil&gt;
+        &lt;WNomFun&gt;<span class="bordo">String</span>&lt;/WNomFun&gt;
+        &lt;WNumCep&gt;<span class="bordo">Integer</span>&lt;/WNumCep&gt;
+        &lt;WNumEnd&gt;<span class="bordo">String</span>&lt;/WNumEnd&gt;
+        &lt;WNumTl1&gt;<span class="bordo">String</span>&lt;/WNumTl1&gt;
+        &lt;WNumTl2&gt;<span class="bordo">String</span>&lt;/WNumTl2&gt;
+        &lt;WSigUfs&gt;<span class="bordo">String</span>&lt;/WSigUfs&gt;
+        &lt;WTipFun&gt;<span class="bordo">Integer</span>&lt;/WTipFun&gt;
+        &lt;WTipLgr&gt;<span class="bordo">String</span>&lt;/WTipLgr&gt;
+        &lt;WTipSex&gt;<span class="bordo">String</span>&lt;/WTipSex&gt;
+        &lt;WDatNas&gt;<span class="bordo">String</span>&lt;/WDatNas&gt;
+        &lt;WVlrBon&gt;<span class="bordo">Double</span>&lt;/WVlrBon&gt;
+        &lt;WVlrLim&gt;<span class="bordo">Double</span>&lt;/WVlrLim&gt;
+        &lt;WReturn&gt;
+          &lt;ocorreuErro&gt;<span class="bordo">String</span>&lt;/ocorreuErro&gt;
+          &lt;ocorreuErro2&gt;<span class="bordo">String</span>&lt;/ocorreuErro2&gt;
+          &lt;mensagem&gt;<span class="bordo">String</span>&lt;/mensagem&gt;
+        &lt;/WReturn&gt;
+        &lt;WCgcFil&gt;<span class="bordo">String</span>&lt;/WCgcFil&gt;
+        &lt;WDatAdm&gt;<span class="bordo">String</span>&lt;/WDatAdm&gt;
+        &lt;WTemSer&gt;<span class="bordo">String</span>&lt;/WTemSer&gt;
+        &lt;erroExecucao&gt;<span class="bordo">String</span>&lt;/erroExecucao&gt;
+      &lt;/result&gt;
+    &lt;/ser:ExportaFuncionariosResponse&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+		</pre>
+		
+		<p><b>Atributos de "result":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+			<tr>
+				<td>erroExecucao</td>
+				<td>Opcional</td>
+				<td>String</td>
+				<td></td>
+			</tr>					
+										<tr>
+							<td>WSitAfa</td>
+							<td> Opcional </td>
+						<td>Integer</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNumEmp</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNumFil</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNumCad</td>
+							<td> Opcional </td>
+						<td>Integer</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WTipCol</td>
+							<td> Opcional </td>
+						<td>Integer</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WDddTl1</td>
+							<td> Opcional </td>
+						<td>Integer</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WDddTl2</td>
+							<td> Opcional </td>
+						<td>Integer</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WDesEnd</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNomBai</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNomCid</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNomFil</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNomFun</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNumCep</td>
+							<td> Opcional </td>
+						<td>Integer</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNumEnd</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNumTl1</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WNumTl2</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WSigUfs</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WTipFun</td>
+							<td> Opcional </td>
+						<td>Integer</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WTipLgr</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WTipSex</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WDatNas</td>
+							<td> Opcional </td>
+						<td>DateTime</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WVlrBon</td>
+							<td> Opcional </td>
+						<td>Double</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WVlrLim</td>
+							<td> Opcional </td>
+						<td>Double</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WReturn</td>
+							<td> Opcional </td>
+						<td>Set</td>
+							<td></td>
+						</tr>
+													<tr>
+			<td>WReturn.ocorreuErro</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td></td>
+		</tr>
+					<tr>
+			<td>WReturn.ocorreuErro2</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td></td>
+		</tr>
+					<tr>
+			<td>WReturn.mensagem</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td></td>
+		</tr>
+																		<tr>
+							<td>WCgcFil</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WDatAdm</td>
+							<td> Opcional </td>
+						<td>DateTime</td>
+							<td></td>
+						</tr>
+															<tr>
+							<td>WTemSer</td>
+							<td> Opcional </td>
+						<td>String</td>
+							<td></td>
+						</tr>
+												</table>	
+		
+	
+	<h1><a name="com.senior.g5.rh.fp.DocumentoClickSing"></a>com.senior.g5.rh.fp.DocumentoClickSing</h1>
+
+	<h2>Tipo de execução</h2>
+	<p>
+		Para cada tipo de execução, existem diferentes parâmetros que podem ser comuns a todas as portas. 
+		Acesse o Manual do Usuário na nuvem em "<a target="_blank" href="http://documentacao.senior.com.br">http://documentacao.senior.com.br</a>" para mais informações.
+	</p>
+
+			<h2>WSDL</h2>
+		<ul>
+			<li>síncrono: https://comcap_files:8181/g5-senior-services/rubi_Synccom_senior_g5_rh_fp_DocumentoClickSing?wsdl</li>				
+			<li>Assíncrono: https://comcap_files:8181/g5-senior-services/rubi_Asynccom_senior_g5_rh_fp_DocumentoClickSing?wsdl</li>	 
+			<li>Agendado: https://comcap_files:8181/g5-senior-services/rubi_Scheduledcom_senior_g5_rh_fp_DocumentoClickSing?wsdl</li>	 
+		</ul>	
+		
+	<h2>Portas</h2>
+	<ul>
+					<li><a href="#CriaDocumentos">CriaDocumentos</a></li>
+			</ul>
+	
+			
+		<h3><a name="CriaDocumentos"></a>CriaDocumentos</h3>
+		<p></p>
+		<p><b>Necessita autenticação: </b>Sim</p>
+		<p><b>Situação de versão: </b> Atual </p>
+		<p><b>versão: </b>1</p>
+				<p><b>Requisição:</b></p>
+	
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:CriaDocumentos&gt;
+      &lt;user&gt;<span class="bordo">String</span>&lt;/user&gt;
+      &lt;password&gt;<span class="bordo">String</span>&lt;/password&gt;
+      &lt;encryption&gt;<span class="bordo">Integer</span>&lt;/encryption&gt;
+      &lt;parameters/&gt;
+    &lt;/ser:CriaDocumentos&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+	
+		</pre>
+	
+					<p>"Parameters" n�o possui atributos.</p>
+				
+		<p><b>Resposta:</b></p>
+				
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:CriaDocumentosResponse&gt;
+      &lt;result&gt;
+        &lt;erroExecucao&gt;<span class="bordo">String</span>&lt;/erroExecucao&gt;
+      &lt;/result&gt;
+    &lt;/ser:CriaDocumentosResponse&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+		</pre>
+		
+		<p><b>Atributos de "result":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+			<tr>
+				<td>erroExecucao</td>
+				<td>Opcional</td>
+				<td>String</td>
+				<td></td>
+			</tr>					
+							</table>	
+		
+	
+	<h1><a name="Pamp.Coleta"></a>Pamp.Coleta</h1>
+
+	<h2>Tipo de execução</h2>
+	<p>
+		Para cada tipo de execução, existem diferentes parâmetros que podem ser comuns a todas as portas. 
+		Acesse o Manual do Usuário na nuvem em "<a target="_blank" href="http://documentacao.senior.com.br">http://documentacao.senior.com.br</a>" para mais informações.
+	</p>
+
+			<h2>WSDL</h2>
+		<ul>
+			<li>síncrono: https://comcap_files:8181/g5-senior-services/rubi_SyncPamp_Coleta?wsdl</li>				
+			<li>Assíncrono: https://comcap_files:8181/g5-senior-services/rubi_AsyncPamp_Coleta?wsdl</li>	 
+			<li>Agendado: https://comcap_files:8181/g5-senior-services/rubi_ScheduledPamp_Coleta?wsdl</li>	 
+		</ul>	
+		
+	<h2>Portas</h2>
+	<ul>
+					<li><a href="#ConsultarEmbalagens">ConsultarEmbalagens</a></li>
+					<li><a href="#RegistrarColeta">RegistrarColeta</a></li>
+			</ul>
+	
+			
+		<h3><a name="ConsultarEmbalagens"></a>ConsultarEmbalagens</h3>
+		<p></p>
+		<p><b>Necessita autenticação: </b>Sim</p>
+		<p><b>Situação de versão: </b> Atual </p>
+		<p><b>versão: </b>1</p>
+				<p><b>Requisição:</b></p>
+	
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:ConsultarEmbalagens&gt;
+      &lt;user&gt;<span class="bordo">String</span>&lt;/user&gt;
+      &lt;password&gt;<span class="bordo">String</span>&lt;/password&gt;
+      &lt;encryption&gt;<span class="bordo">Integer</span>&lt;/encryption&gt;
+      &lt;parameters&gt;
+        &lt;codBar&gt;<span class="bordo">String</span>&lt;/codBar&gt;
+      &lt;/parameters&gt;
+    &lt;/ser:ConsultarEmbalagens&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+	
+		</pre>
+	
+					<p><b>Atributos de "parameters":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+																																	<tr>
+							<td>codBar</TD>
+							<td> Opcional </TD>
+							<td>String</td>
+							<td>Código de barras</TD>
+						</tr>
+				        												</table>
+				
+		<p><b>Resposta:</b></p>
+				
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:ConsultarEmbalagensResponse&gt;
+      &lt;result&gt;
+        &lt;result&gt;
+          &lt;codBar&gt;<span class="bordo">String</span>&lt;/codBar&gt;
+          &lt;perMin&gt;<span class="bordo">String</span>&lt;/perMin&gt;
+          &lt;codTra&gt;<span class="bordo">String</span>&lt;/codTra&gt;
+        &lt;/result&gt;
+        &lt;erroExecucao&gt;<span class="bordo">String</span>&lt;/erroExecucao&gt;
+      &lt;/result&gt;
+    &lt;/ser:ConsultarEmbalagensResponse&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+		</pre>
+		
+		<p><b>Atributos de "result":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+			<tr>
+				<td>erroExecucao</td>
+				<td>Opcional</td>
+				<td>String</td>
+				<td></td>
+			</tr>					
+										<tr>
+							<td>result</td>
+							<td> Opcional </td>
+						<td>Set</td>
+							<td>Retorno do WS</td>
+						</tr>
+													<tr>
+			<td>result.codBar</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td>Código de barras</td>
+		</tr>
+					<tr>
+			<td>result.perMin</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td>Pertence a minuta? S/N</td>
+		</tr>
+					<tr>
+			<td>result.codTra</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td>Código da transportadora</td>
+		</tr>
+															</table>	
+		
+			
+		<h3><a name="RegistrarColeta"></a>RegistrarColeta</h3>
+		<p></p>
+		<p><b>Necessita autenticação: </b>Sim</p>
+		<p><b>Situação de versão: </b> Atual </p>
+		<p><b>versão: </b>1</p>
+				<p><b>Requisição:</b></p>
+	
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:RegistrarColeta&gt;
+      &lt;user&gt;<span class="bordo">String</span>&lt;/user&gt;
+      &lt;password&gt;<span class="bordo">String</span>&lt;/password&gt;
+      &lt;encryption&gt;<span class="bordo">Integer</span>&lt;/encryption&gt;
+      &lt;parameters&gt;
+        &lt;coletas&gt;
+          &lt;perMin&gt;<span class="bordo">String</span>&lt;/perMin&gt;
+          &lt;codBar&gt;<span class="bordo">String</span>&lt;/codBar&gt;
+        &lt;/coletas&gt;
+        &lt;codUsu&gt;<span class="bordo">Integer</span>&lt;/codUsu&gt;
+        &lt;numCol&gt;<span class="bordo">String</span>&lt;/numCol&gt;
+      &lt;/parameters&gt;
+    &lt;/ser:RegistrarColeta&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+	
+		</pre>
+	
+					<p><b>Atributos de "parameters":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+																																	<tr>
+							<td>coletas</TD>
+							<td> Opcional </TD>
+							<td>Set</td>
+							<td></TD>
+						</tr>
+				        				        			<tr>
+			<td>coletas.perMin</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td>Pertence a minuta? S/N</td>
+		</tr>
+					<tr>
+			<td>coletas.codBar</td>
+			<td> Opcional </td>
+			<td>String</td>
+			<td>Código de barras</td>
+		</tr>
+							        																				<tr>
+							<td>codUsu</TD>
+							<td> Opcional </TD>
+							<td>Integer</td>
+							<td>Código do Usuário</TD>
+						</tr>
+				        																				<tr>
+							<td>numCol</TD>
+							<td> Opcional </TD>
+							<td>String</td>
+							<td>N�mero da coleta</TD>
+						</tr>
+				        												</table>
+				
+		<p><b>Resposta:</b></p>
+				
+		<pre>
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:ser=&quot;http://services.senior.com.br&quot;&gt;
+  &lt;soapenv:Body&gt;
+    &lt;ser:RegistrarColetaResponse&gt;
+      &lt;result&gt;
+        &lt;erroExecucao&gt;<span class="bordo">String</span>&lt;/erroExecucao&gt;
+      &lt;/result&gt;
+    &lt;/ser:RegistrarColetaResponse&gt;
+  &lt;/soapenv:Body&gt;
+&lt;/soapenv:Envelope&gt;
+
+		</pre>
+		
+		<p><b>Atributos de "result":</b></p>
+			<table>
+				<tr>
+					<th>Nome</th>
+					<th>Preenchimento</th>
+					<th>Tipo</th>
+					<th>Descrição</th>
+				</tr>
+			<tr>
+				<td>erroExecucao</td>
+				<td>Opcional</td>
+				<td>String</td>
+				<td></td>
+			</tr>					
+							</table>	
+		
+	</body>
+</html>

@@ -1,0 +1,149 @@
+# Ignorar tudo por padrão
+*
+# Permitir apenas arquivos com extensões específicas (em qualquer diretório)
+
+!*.html
+!*.js
+!*.php
+!*.css
+!*.otf
+!*.xml
+
+# Permitir diretórios (para que o Git possa navegar)
+!*/
+# Permitir arquivos específicos importantes
+!.gitignore 
+
+!README.md 
+
+!LICENSE 
+
+!composer.json 
+
+!package.json 
+
+!package-lock.json 
+
+!yarn.lock
+
+# Ignorar submódulos problemáticos
+entidades/segpublica/IlhaAACampeche/php/php-qrcode-detector-decoder/ 
+producao/Biblioteca/dompdf/dompdf/ 
+producao/seloTurismo/ 
+sistemas/Biblioteca/dompdf/dompdf/ 
+sistemas/IlhaCampeche/php/php-qrcode-detector-decoder/ 
+sistemas/mobilidade/turismo-backup/teste01/turismo-dev/ 
+sistemas/mobilidade/turismo-backup/teste01/turismo-dev1/ 
+sistemas/proGIT/IlhaCampeche/php/php-qrcode-detector-decoder/
+
+# Ignorar diretórios específicos que não devem ser versionados
+node_modules/ 
+temporeal/ 
+temp/ 
+uploads/ 
+cache/ 
+tmp/ 
+banners_home/ 
+images/ 
+assets/ 
+midia/ 
+layout/ 
+scripts/ 
+portal/ 
+portal3/ 
+portaleducacional/ 
+portaleducacionalinfantil/ 
+mobile__/ 
+dispositivos moveis/ 
+eventos_/ 
+floripaIluminada/ 
+football/ 
+Verao/ 
+tcrs2018/ 
+coronavirus/ 
+dengue/ 
+crecheesaudeja/ 
+semanafloripaempreendedora/ 
+parqueMarina/ 
+perguntaserespostas/ 
+faleconosco/ 
+consultas-publicas/ 
+comercioAmbulante/ 
+bairroeducador/ 
+marcoedelas/ 
+onb/ 
+oficina/ 
+ouvidoria/ 
+paineldigital/ 
+slot/ 
+suporteSistemas/ 
+tutoriais/ 
+transparencia/ 
+servicos/ 
+residuos/ 
+receita/ 
+reencontro/ 
+radio/ 
+producao/ 
+iptu/ 
+intranet/ 
+internet/ 
+entidades/ 
+ef/ 
+adm1/ 
+sadm/ 
+sefin/ 
+seliganarede/ 
+comcap/ 
+arquivos/ 
+formularios/ 
+governo/ 
+gpweb/ 
+noticias/ 
+nfps/
+
+# Ignorar arquivos temporários mesmo com extensões permitidas
+*.tmp *.temp *.cache *.log *.bak *.backup *~
+
+# Ignorar arquivos de configuração local
+
+.env .env.local .env.production .env.development config.local.php database.local.php
+
+# Ignorar arquivos de IDE/Editor
+.vscode/ .idea/ *.swp *.swo *~
+
+# Ignorar arquivos de sistema
+.DS_Store Thumbs.db desktop.ini
+
+# Ignorar arquivos de backup/versão
+*.orig *.rej *.old
+
+# Ignorar arquivos de banco de dados
+*.sql *.db *.sqlite
+
+# Ignorar arquivos de imagem
+*.jpg *.jpeg *.png *.gif *.bmp *.ico *.svg *.webp *.avif
+
+# Ignorar arquivos de documento
+*.pdf *.doc *.docx *.xls *.xlsx *.txt *.rtf
+
+# Ignorar arquivos compactados
+*.zip *.rar *.tar *.gz *.7z
+
+# Ignorar arquivos de configuração de servidor
+.htaccess web.config robots.txt sitemap.xml
+
+# Ignorar arquivos de log específicos
+error_log access_log *.log
+
+# Ignorar arquivos de sessão
+sess_* *.session
+
+# Ignorar arquivos de cache de navegador
+*.cache cache/
+
+# Ignorar arquivos de configuração de ambiente
+.env*
+
+!.env.example
+ode_modules

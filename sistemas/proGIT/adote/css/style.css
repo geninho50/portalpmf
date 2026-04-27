@@ -1,0 +1,378 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body, footer{
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+h4, h6{
+    color: #ff6e00;
+}
+
+.card-animais{
+    margin: 1.5rem 0;
+}
+
+
+#capa{
+    object-fit:cover; 
+    /*object-position: 0 45%;*/
+    width: 100%;
+    height: 590px;/*auto;*/
+}
+
+.card-index{
+    background-color: #f3d8b0;
+    color: #ff6e00;
+}
+
+.card h5{
+    font-weight: bold;
+}
+
+.card-animal{
+    margin-left: 3rem;
+}
+
+.hr-card{
+    margin: 3rem 0;
+}
+
+span{
+    color: #ff8f33;
+    font-weight: bold;
+}
+
+.info-pet{
+    list-style: none;
+    padding-left: 0.2rem;
+}
+
+.perso-info{
+    font-size: 14px;
+    line-height: 1rem;
+}
+
+.info-pet li{
+    background: url(../img/pata.png) no-repeat 0 4px;
+    background-size: 10px 12px;
+    padding-left: 1rem;
+    margin-top: 0.1rem;
+} 
+
+.animalarea{
+    background-color: #fff0da;
+    padding: 39px;
+}
+
+.btn.btn-primary.text-center.text-uppercase, button.btn.btn-primary{
+    background-color: #ff8f33;
+    border-color: #ff6e00;
+}
+
+.btn.btn-primary.text-center.text-uppercase:hover, button.btn.btn-primary:hover{
+    background-color: #ff6e00;
+    transform: scale(1.1);
+}
+
+#modal{
+    margin-top: 2rem;
+}
+
+#modal p{
+    font-size: 14px;
+}
+
+footer{
+    margin-top: 2rem;
+    background-color: #ff8f33;
+}
+
+footer h3{
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 1rem;
+}
+
+footer div{
+    padding: 4rem 0;
+}
+
+h3, h4 {
+    font-size: 1.3rem;
+}
+
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+/* .card-img-top {
+    max-height: 164px;
+    min-height: 164px;
+    max-width: 246px;
+    object-fit: contain;
+} */
+
+.pet-list-index {
+    display: table;
+    margin: 0 auto;
+    width: 1102px;
+    margin-bottom: 20px;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+}
+
+.pet-list-index li {
+    background-color: #FFFFFF;
+    max-width: 192px;
+    margin: 8px;
+    padding-left: 0;
+    padding-right: 0;
+    vertical-align: top;
+    border-radius: 6px;
+    position: relative;
+    border: solid 1px #ff5d32;
+}
+
+.list-inline > li {
+    display: inline-block;
+}
+
+.pet-list-index li .image {
+    position: relative;
+    width: 190px;
+    height: 200px;
+}
+
+.pet-list-index li .image img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
+
+.pet-list-index li .info {
+    padding: 6px 10px 4px 10px;
+}
+
+.img-rounded {
+    border-radius: 6px 6px 0px 0px;
+}
+
+.pet-list-index li .info .name {
+    font-size: 16px;
+    color: #ff5d32;
+}
+
+
+.pet-list-index li .info p {
+    margin-bottom: 2px;
+}
+
+a {
+    color: #ff582f !important;
+}
+
+.pet-list-index li .info .details {
+    display: inline-block;
+    width: 100%;
+}
+
+.pet-list-index li .info .details .active {
+    color: #ff5d32;
+    border-color: #ff5d32;
+}
+
+.pet-list-index li .info .details div {
+    font-size: 13px;
+    border: 1px solid #ff5d3252;
+    color: #ff5d3252;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    float: left;
+    margin: 3px 3px 0 0;
+}
+
+#shiva {
+    width: 100px;
+    height: 100px;
+    background: #ff582f;
+    border-radius: 50px;
+    display: inline-block;
+    margin: 22px;
+}
+
+#shiva:hover {
+    border: 3px solid #ffb800;  
+    background:#ff8f33 repeat-x 0 0; 
+}
+
+#shiva:visited {
+    background: #ffb800;
+}
+
+#shiva:focus{
+    background: #ffb800;
+}
+
+#shiva2:hover {
+    border: 3px solid #ffb800;  
+    background:#ff8f33 repeat-x 0 0; 
+}
+
+.count {
+    line-height: 100px;
+    color:#fff;
+    text-align: center;
+    font-size: 25px;
+}
+
+@media (max-width: 1199px) {
+ .pet-list-index {
+  width:882px
+ }
+}
+@media (max-width: 991px) {
+ .pet-list-index {
+  width:662px
+ }
+}
+ @media (max-width: 776px) {
+ .pet-list-index {
+  width:442px
+ }
+}
+@media (max-width: 480px) {
+ .pet-list-index {
+  width:222px
+ }
+}
+
+a#pagina {
+    padding: 15px;
+    font-size: 17px;
+    background-color:#f2efef;
+    border-color:#2f2f2f2f;
+}
+
+.pagination {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 17px;
+}
+  
+.pagination .justify-content-center a {
+    color: black !important;
+    float: left !important;
+    text-decoration: none !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+a:hover {
+    background-color: ;
+}
+
+#id {
+    width: 100%;
+}
+
+
+li.page-item.disabled {
+    display: contents;
+}
+
+img#logo {
+    height: 35px;
+}
+
+.btn.btn-primary.botao.count {
+
+    padding: 8px 13px;
+
+}
+
+.at4-share-title {
+    display: none;
+}
+
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+.busca {
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 336px;
+    justify-content: right;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 287px;
+    justify-content: right;
+}
+
+.btn-outline-secondary:hover {
+    color:  #fff;
+    background-color: #ff582f;
+    border-color: #ff582f;
+}
+
+.show > .btn-outline-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #ff582f;
+    border-color: #ff582f;
+}
+
+.btn-outline-secondary:focus {
+    box-shadow: 0 0 0 .2rem  rgb(255, 88, 47, 0.68);
+}
+
+.show > .btn-outline-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem  rgba(255, 88, 47, 0.68);
+}
+
+.btn-outline-secondary {
+    color:#ff582f;
+    border-color:#ff582f;
+}
+
+.form-control {
+    border: 1px solid #ff582f;
+}
+
+.dropdown-menu {
+    border: 1px solid rgb(255, 88, 47);
+}
+
+a:hover {
+    color: #f1945d;
+    text-decoration: underline;
+}

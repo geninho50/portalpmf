@@ -1,0 +1,214 @@
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Floripa Mais Digital</title>
+    <!-- Fonte Rawline-->
+    <link rel="stylesheet" href="https://cdn.dsgovserprodesign.estaleiro.serpro.gov.br/design-system/fonts/rawline/css/rawline.css"/>
+    <!-- Fonte Raleway-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&amp;display=swap"/>
+    <!-- Design System de Governo-->
+    <link rel="stylesheet" href="../../Biblioteca/govbr/dist/dsgov.css"/>
+    <!-- Fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
+  </head>
+  <body>
+    <script type="text/javascript" src="../../Biblioteca/js/jquery.js"></script>
+    
+    <script> 
+      
+      function montarTela( opc ){
+
+        var nameFile   = '';
+        if ( opc == 1 ){
+             nameFile = 'meusDados.php';
+        }
+        
+        alert('Pasou aqui !');
+        $.ajax( {
+            type:'POST',
+            url:nameFile,
+            dataType: 'html',
+            success: function (data) { 
+              $("#divTela").html( data );
+            },
+            error: function( data){
+               console.log( data );
+            }
+          } 
+        );
+
+      }
+    
+      function montarMenuLateral(){
+         $.ajax( {
+            type:'POST',
+            url:fileMenuLateral,
+            dataType: 'html',
+            success: function (data) {
+              $("#divMenuLateral").html( data );
+            },
+            error: function( data){
+               console.log( data );
+            }
+          } 
+         );	
+      }	
+    
+    
+      function montarMenu(){
+         // $("#sidebar").attr("style", "display:block");
+      }
+      
+      </script>
+
+    <div class="template-base">
+      <header class="br-header" id="header" data-sticky="data-sticky">
+        <div class="container-lg" id="divCabecalho">
+                  <div class="header-top">
+              <div class="header-logo"><img src="../../../images/pmf.png"></span>
+                <div class="header-sign">Secretaria Municipal de Turismo, Tecnologia e Desenvolvimento Econômico</div>
+              </div>
+              <div class="header-actions">
+                <div class="header-links dropdown">
+                  <button class="br-button circle small" type="button" data-toggle="dropdown" aria-label="Abrir Acesso Rápido"><i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+                  </button>
+                  <div class="br-list">
+                    <div class="header">
+                      <div class="title">Acesso Rápido</div>
+                    </div>
+                  </div>
+                </div><span class="br-divider vertical mx-half mx-sm-1"></span>
+                <div class="header-functions dropdown">
+                  <button class="br-button circle small" type="button" data-toggle="dropdown" aria-label="Abrir Funcionalidades do Sistema"><i class="fas fa-th" aria-hidden="true"></i>
+                  </button>
+                  <div class="br-list">
+                    <div class="header">
+                      <div class="title">Funcionalidades</div>
+                    </div>
+                    <div class="align-items-center br-item">
+                      <button class="br-button circle small" type="button" aria-label="Funcionalidade 1"><i class="fas fa-chart-bar" aria-hidden="true"></i><span class="text">Dashboard</span>
+                      </button>
+                    </div>
+                    <div class="align-items-center br-item">
+                      <button class="br-button circle small" type="button" aria-label="Funcionalidade 2"><i class="fas fa-headset" aria-hidden="true"></i><span class="text">Suporte</span>
+                      </button>
+                    </div>
+                    <div class="align-items-center br-item">
+                      <button class="br-button circle small" type="button" aria-label="Funcionalidade 3"><i class="fas fa-comment" aria-hidden="true"></i><span class="text">Atendente</span>
+                      </button>
+                    </div>
+                    <div class="align-items-center br-item">
+                      <button class="br-button circle small" type="button" aria-label="Funcionalidade 4"><i class="fas fa-adjust" aria-hidden="true"></i><span class="text">Sugestões</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="header-search-trigger">
+                  <button class="br-button circle" type="button" aria-label="Abrir Busca" data-toggle="search" data-target=".header-search"><i class="fas fa-search" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="header-login">
+                  <div class="header-sign-in">
+                    <button class="br-button sign-in small" type="button" ><i class="fas fa-home" ></i><span class="d-sm-inline">Sair</span>
+                    </button>
+                  </div>
+                  <div class="header-avatar d-none">
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+            <div class="header-bottom">
+              <div class="header-menu">
+                <div class="header-menu-trigger">
+                  <button class="br-button small circle" type="button" aria-label="Menu" data-toggle="menu" data-target="#main-navigation" id="navigation"><i class="fas fa-bars" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <div class="header-info">
+                  <div class="header-title">Floripa Mais Digital</div>
+                  <div class="header-subtitle"></div>
+                </div>
+              </div>
+              <div class="header-search">
+                <div class="br-input has-icon">
+                  <label for="searchbox-12350">Texto da pesquisa</label>
+                  <input id="searchbox-12350" type="text" placeholder="O que você procura?"/>
+                  <button class="br-button circle small" type="button" aria-label="Pesquisar"><i class="fas fa-search" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <button class="br-button circle search-close ml-1" type="button" aria-label="Fechar Busca" data-dismiss="search"><i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+      </header>
+
+
+      <main class="d-flex flex-fill" id="main">
+        <div class="container-lg d-flex" id="divMenuLateral">
+          <div class="row">
+            <div class="br-menu" id="main-navigation">
+              <div class="menu-container">
+                <div class="menu-panel">
+                  <div class="menu-header">
+                    <div class="menu"><img src="../../../images/bannerabertura.png" alt="Imagem ilustrativa"/></div>
+                    <div class="menu-close">
+                      <button class="br-button circle" type="button" aria-label="Fechar o menu" data-dismiss="menu"><i class="fas fa-times" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!--- Inicio do  Menu Lateral  -->
+                  <nav class="menu-body">
+                    <div class="Menu"><a class="menu-item" href="javascript: void(0)" onclick="montarTela(1);" ><span class="icon"><i class="fas fa-user" aria-hidden="true"></i></span><span class="content">Meus dados</span></a>
+                    <div class="menu"><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-home" aria-hidden="true"></i></span><span class="content">Imobiliário</span></a>
+                    <div class="menu"><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-th" aria-hidden="true"></i></span><span class="content">Mobiliário</span></a>
+                    <div class="menu"><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-book" aria-hidden="true"></i></span><span class="content">IPTU 2021</span></a>
+                    <div class="menu"><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-address-book" aria-hidden="true"></i></span><span class="content">Débitos</span></a>
+                    <div class="menu"><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-adjust" aria-hidden="true"></i></span><span class="content">Parcelamentos</span></a>                      
+                    <div class="menu"><a class="menu-item" href="javascript: void(0)"><span class="icon"><i class="fas fa-search" aria-hidden="true"></i></span><span class="content">Processos</span></a>
+                  </nav>
+
+                  <!-- Rodapé do menu Lateral -->
+                  <div class="menu-footer">
+                    <div class="menu-social">
+                      <div class="text-semi-bold mb-1">Redes Sociais</div>
+                      <div class="sharegroup">
+                        <div class="share"><a class="br-button circle" href="javascript: void(0)" aria-label="Compartilhar por Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></div>
+                        <div class="share"><a class="br-button circle" href="javascript: void(0)" aria-label="Compartilhar por Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></div>
+                        <div class="share"><a class="br-button circle" href="javascript: void(0)" aria-label="Compartilhar por Linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></div>
+                        <div class="share"><a class="br-button circle" href="javascript: void(0)" aria-label="Compartilhar por Whatsapp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></div>
+                      </div>
+                    </div>
+                    <div class="menu-info">
+                      <div class="text-center text-down-01">Todo o conteúdo deste site está publicado sob a licença <strong>Creative Commons Atribuição-SemDerivações 3.0</strong></div>
+                    </div>
+                  </div> 
+
+                 </div>
+                <div class="menu-scrim" data-dismiss="menu" tabindex="0"></div>
+              </div>
+            </div>
+
+
+
+            <div class="col pt-20 pb-5" id="divTela" >
+                <img src="../../../images/logotipo.png">
+          </div>
+        </div>
+      </main>
+
+
+      <footer class="br-footer" id="footer">
+        <div class="container-lg" id="divRodape">
+          <div class="info">
+            <div class="text-down-01 text-medium pb-3">Texto destinado a exibição de informações relacionadas à&nbsp;<strong>licença de uso.</strong></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../../Biblioteca/govbr/dist/dsgov.js"></script>
+  </body>

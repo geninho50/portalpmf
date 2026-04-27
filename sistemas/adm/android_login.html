@@ -1,0 +1,19 @@
+<?php
+  include_once('../gdb.php'); 
+  include_once("../usuarios.func.php");   
+  include_once("../../../admin/fontes/sessao.php");        
+		  
+  $gdb = new usuarios();    		  
+  
+  $usuario       = $gdb->vargetpost('usuario');
+  $senha         = $gdb->vargetpost('senha');
+
+  $gdb->select("","","",$usuario,$senha,"","");      
+
+  if( $usuario !='' && $senha !='' ){
+	  if( $gdb->linhas >0 ){
+		  iniciar_sessao('nff_mob_', $gdb->cd_usrs);
+		  echo $gdb->cd_usrs;
+	  }else echo '0';
+  }   	  
+?>

@@ -1,0 +1,372 @@
+.highlight:hover {
+    background-color: #cfcfff; 
+}
+
+#topo {
+    margin-top: -20px;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 100px;
+    background-position: 0px -70px;
+    background-repeat: no-repeat;
+}
+
+.linkSpan {
+    color:blue;
+    text-decoration: underline;
+}
+.linkSpan:hover {
+    cursor: pointer;
+}
+
+.botaoGrande {
+    background-color: #9a9aff;
+    max-height: 100px;
+    max-width: 180px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 15px;
+    cursor: pointer;
+    width: 160px;
+}
+
+.botaoGrande a {
+    color: white;
+}
+
+.botaoGrande:hover {
+    background-color: #8181ff;
+    text-decoration: none;
+    color: #fff;
+}
+.botaoGrande a:hover {
+    background-color: #8181ff;
+    text-decoration: none;
+    color: #fff;
+}
+
+.folha {
+    background-color: #e8e8ff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.barraTopoConteudo {
+    background-color: #9a9aff;
+    height: 30px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.barraTopoConteudo a {
+    color: #F6F4F0;
+    border-right: 2px solid #b4b4ff;
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 100%;
+    line-height: 30px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+.barraTopoConteudo a:hover {
+    text-decoration: none;
+    color: #4e4eff;
+}
+
+.barraTopoConteudo a:last-child {
+    text-decoration: none;
+    border-right: none;
+}
+
+.itemCinza {
+    background-color: #ddd;
+    cursor: default;
+    color: #999;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 90%;
+    margin-bottom: 5px;
+    height: 40px;
+    line-height: 40px;
+    transition:width 1s;
+    -webkit-transition:width 1s; /* Safari */
+}
+
+.itemLaranja {
+    background-color: #9a9aff;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50%;
+    margin-bottom: 5px;
+    height: 40px;
+}
+
+.laranja:hover {
+    color: white;
+    background-color: #9a9aff;
+    width: 100%;
+}
+
+.itemVerde {
+    background-color: #82abdd;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50%;
+    margin-bottom: 5px;
+    height: 40px;
+}
+
+.verde:hover {
+    color: white;
+    background-color: #82abdd;
+    width: 100%;
+}
+
+.itemAzul {
+    background-color: #6bbcbc;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50%;
+    margin-bottom: 5px;
+    height: 40px;
+}   
+
+.azul:hover {
+    color: white;
+    background-color: #6bbcbc;
+    width: 100%;
+}
+
+.itemMarrom {
+    background-color: #54cd9a;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50%;
+    margin-bottom: 5px;
+    height: 40px;
+}    
+
+.marrom:hover {
+    color: white;
+    background-color: #54cd9a;
+    width: 100%;
+}
+
+.itemT {
+    background-color: #19f746;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50%;
+    margin-bottom: 5px;
+    height: 40px;
+}    
+
+.t:hover {
+    color: white;
+    background-color: #19f746;
+    width: 100%;
+}
+
+.itemAmarelo {
+    background-color: #3cdd78;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50%;
+    margin-bottom: 5px;
+    height: 40px;
+}    
+
+.amarelo:hover {
+    color: white;
+    background-color: #3cdd78;
+    width: 100%;
+}
+
+.itemRoxo {
+    background-color: #77b3cd;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50%;
+    margin-bottom: 5px;
+    height: 40px;
+}    
+
+.roxo:hover {
+    color: white;
+    background-color: #77b3cd;
+    width: 100%;
+}
+
+.itemOliva {
+    background-color: #30e668;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50%;
+    margin-bottom: 5px;
+    height: 40px;
+}  
+
+.oliva:hover {
+    color:white;
+    background-color: #30e668;
+    width: 100%;
+}
+
+.itemVerde-azulado {
+    background-color: #19f746;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    width: 50%;
+    margin-bottom: 5px;
+    height: 40px;
+} 
+
+.verde-azulado:hover {
+    color:white;
+    background-color: #19f746;
+    width: 100%;
+}
+
+.erro {
+    background-color: #ffcdcd;
+    border-radius: 5px;
+    color: #ff4e4e;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ativo {
+    width: 100%;
+    line-height: 40px;
+    cursor: default;
+}
+
+#bl .item {
+    width: 95%;
+}
+.conteudo {
+    border-left: 1px solid #9a9aff;
+    border-right: 1px solid #9a9aff;
+    border-bottom: 1px solid #9a9aff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+
+body {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    font-family: Helvetica;
+    background-color: #F6F4F0;
+}
+
+/* Custom container */
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+.container > hr {
+    margin: 60px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {  
+    margin-top: -40px;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 60px;
+    line-height: 1;
+}
+.jumbotron .lead {
+    font-size: 24px;
+    line-height: 1.25;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 10px 20px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+.marketing p + h4 {
+    margin-top: 20px;
+}
+
+
+/* Customize the navbar links to be fill the entire space of the .navbar */
+.navbar .navbar-inner {
+    padding: 0;
+}
+.navbar .nav {
+    margin: 0;
+    display: table;
+    width: 800px;
+}
+.navbar .nav li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+}
+.navbar .nav li a {
+    font-weight: bold;
+    text-align: center;
+    border-left: 1px solid rgba(255,255,255,.75);
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+.navbar .nav li:first-child a {
+    border-left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.navbar .nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.controls {
+    margin-bottom: 5px;
+}
+
+input {
+    width: 250px;
+}
+
+select {
+    width: 265px;
+}
+
+.dica {
+    background-color: yellow; 
+    width: 30px; 
+    font-weight: bold; 
+    padding-left: 3px; 
+    padding-right: 3px;
+    border-radius: 2px;
+    border-width: 1px;
+    border-style: dashed;
+}

@@ -1,0 +1,132 @@
+<?php
+require('../classes/fpdf.php');
+
+include '../fnc/buscaBairro.php';
+
+class PDF extends FPDF
+{
+
+    function Header()
+    {
+    // Logo 1
+        $this->Image('../img/logosystem.jpg',10,6,60);
+    // Logo 2
+        $this->Image('../img/logo_sigeduca.jpg',145,6,50);
+    // Line break
+        $this->Ln(15);
+    }
+
+// Page footer
+    function Footer()
+    {
+    // Position at 1.5 cm from bottom
+        $this->SetY(-25);
+    // Arial italic 8
+        $this->SetFont('Arial','I',8);
+    // Page number
+
+        date_default_timezone_set('America/Sao_Paulo');
+        $this->Cell(0,10, ('Página '.$this->PageNo().'/{nb}'),0,0,'C');
+        $this->Ln(6);
+        $texto = ("Data: ").date('d/m/Y') . (" - Hora: ").date('H:i:s TO');
+        $this->Cell(0, 10, utf8_decode($texto),0,0,'C');
+        $this->Ln(6);
+        $hash = hash('sha256', $_SERVER['REQUEST_TIME_FLOAT'], false); 
+        $this->Cell(0, 10, utf8_decode($hash),0,0,'C');
+    }
+
+    function FancyTable($header, $data)
+    {
+    // Colors, line width and bold font
+        $this->SetFillColor(255,0,0);
+        $this->SetTextColor(255);
+        $this->SetDrawColor(128,0,0);
+        $this->SetLineWidth(.3);
+        $this->SetFont('','B', 8);
+    // Header
+        $w = array(45, 20);
+        $this->Cell(43);
+        for($i=0;$i<count($header);$i++){
+            $this->Cell($w[$i],7,$header[$i],1,0,'C',true);
+        }
+        $this->Ln();
+    // Color and font restoration
+        $this->SetFillColor(224,235,255);
+        $this->SetTextColor(0);
+        $this->SetFont('');
+    // Data
+        $fill = false;
+        $i = 1;
+
+        $somaA = 0;
+        $somaB = 0;
+
+        foreach($data as $row)
+        {
+            $this->Cell(43);
+			$buscaBairro = buscaBairro($row[0]);
+            $this->Cell($w[0],6,$buscaBairro[$row[0]][1],'LR',0,'C',$fill);
+            $this->Cell($w[1],6,($row[1]),'LR',0,'C',$fill);
+            $this->Ln();
+            $fill = !$fill;
+            $somaA += $row[1];
+            $somaB += $row[2];
+        }
+            $this->Cell(43);
+            $this->Cell($w[0],6,'Total','LRT',0,'C',$fill);
+            $this->Cell($w[1],6,($somaA),'LRT',0,'C',$fill);
+            $this->Ln();
+
+    // Closing line
+        $this->Cell(43);
+        $this->Cell(array_sum($w),0,'','T');
+    }
+}
+
+// Instanciation of inherited class
+$pdf = new PDF();
+$pdf->AliasNbPages();
+$pdf->AddPage();
+$pdf->SetFont('Arial','',12);
+$pdf->Cell(0, 10, utf8_decode('Educação Infantil'),0,0,'C');
+$pdf->Ln(6);
+$pdf->Cell(0, 10, utf8_decode('Relatório - Crianças atendidas e em intenção por bairro'),0,0,'C');
+$pdf->Ln(12);
+$header = array('Bairro', 'Atendidos');
+include_once('../fnc/connect.php'); 
+$sql = sprintf("select x.id_bairro, atendidos, intencao, floor((atendidos/(atendidos+intencao))*100) as porcentagem from (select b.id_bairro, count(*) as atendidos from matricula.vaga a, matricula.bairro b, matricula.endereco c
+    where a.Fase_Periodo_Fase_Curso_id_curso = 2
+    and a.Aluno_Pessoa_Fisica_Pessoa_id_pessoa = c.Pessoa_id_pessoa
+    and c.Bairro_id_bairro = b.id_bairro
+    group by b.id_bairro
+    order by b.ds_nome) x,
+(select b.id_bairro, count(*) as intencao from matricula.lista_aluno a, matricula.bairro b, matricula.endereco c
+    where a.Lista_Fase_Periodo_Fase_Curso_id_curso = 2
+    and a.id_escolha = 1
+    and a.id_aluno = c.Pessoa_id_pessoa
+    and c.Bairro_id_bairro = b.id_bairro
+    and a.id_aluno not in (select distinct Aluno_Pessoa_Fisica_Pessoa_id_pessoa from matricula.vaga where Aluno_Pessoa_Fisica_Pessoa_id_pessoa is not null)
+    group by b.id_bairro
+    order by b.ds_nome) y
+where x.id_bairro = y.id_bairro");
+$resultado = mysql_query($sql);
+$row = true; 
+
+$i = 0;
+while ($row != false) {
+    $row = mysql_fetch_row($resultado);
+    if ($row[0] != '') {
+        $datas[$i] = $row;
+    }
+    $i++;
+}
+
+if(!isset($datas)){
+    $pdf->SetFont('Arial','',16);
+    $pdf->Cell(0, 10, utf8_decode(''),0,0,'C');
+} else{
+    $data = $datas;
+    $pdf->FancyTable($header, $data);
+} 
+$pdf->Output();
+?>

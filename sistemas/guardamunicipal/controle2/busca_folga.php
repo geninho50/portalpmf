@@ -1,0 +1,208 @@
+<?php
+			// Este primeiro header, corrigi o problema de acentuação dos caracteres.
+header('Content-Type: text/html; charset=iso-8859-1');
+// Os dois headers seguintes, evitam que a página seja armazenada em cache no navegador.
+header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+header("Expires: Mon, 26 Jul 1997 05:00:00 GMT"); // Date in the past
+include("incValidaSessao.php");
+    $idsession = $_SESSION['idSESSION'];
+	require ("../classes/DB_mysql.php");
+	$obj = new DB_mysql;
+	$conexao = $obj->conectarConf();
+
+	// Realiza a consulta ao banco;
+	$ygmsolicitante = "";
+	$ygmsolicitante = mysql_escape_string($_POST['ygmsolicitante']);
+	
+	$ygmsolicitante = trim($ygmsolicitante);
+	$tamanho = strlen($ygmsolicitante);
+	$nvaloresencontrados = 0;
+	
+		if($tamanho > 0 ){
+			$query = "SELECT * FROM folga where UPPER(guarda) like UPPER('%$ygmsolicitante%') order by data desc";
+			}
+	
+	//echo ''.$query;
+	if( $tamanho > 0 )
+	{
+		$nvaloresencontrados = $obj->numregistros($query);
+	}
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<meta http-equiv="Content-Type" content="text/xhtml; charset=UTF-8" />
+<head>
+<!-- ini inc head -->
+		<?php include("incHead.php");?>
+<!-- fim inc head -->
+</head>
+
+<body>
+
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr align="center" bgcolor="#666666">
+    <th bgcolor="#666666" scope="col">
+	<?php 
+		$sql = "SELECT * FROM guarda_gmf where id=$idsession";
+		$resultado = $obj->executaQuery($sql);
+		$linha = mysql_fetch_array($resultado);
+		if( $linha )
+		{
+			$login = $linha["login"];
+			
+			include("menu.php");
+		}
+	?>
+	</th>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>
+	<!--inicio adm-->
+	<fieldset>
+	<legend class="negrito">Consultar Folga</legend>
+	<form name="form1" method="post" action="busca_folga.php" onSubmit="return validaFormAll(this,'Pesquisar','Pesquisar')">
+	
+	<INPUT TYPE="hidden" name="cadastro" value="true">
+	
+	<table width="67%" border="0" cellspacing="1" cellpadding="1">
+	
+	  <tr>
+		<td width="20%" align="right" class="letra">Solicitante:</td>
+		<td width="53%">
+		<select name="ygmsolicitante">
+				  <option value="0">Selecionar...</option>
+				  <?php 
+					$queryS = "SELECT * FROM guarda_gmf order by login";
+					$resultadoS = $obj->executaQuery($queryS);
+					while($linhaS = mysql_fetch_array($resultadoS))
+					{
+						$login = $linhaS['login'];
+				  ?>
+							 <option value="<?php echo $login; ?>"><?php echo $login; ?></option>
+				  <?php 
+					} 
+				  ?>
+			  </select>
+		</td>
+		<td width="27%" align="right">&nbsp;</td>
+		</tr>
+	
+	  <tr>
+		<td align="right" class="letra">&nbsp;</td>
+		<td>&nbsp;</td>
+		<td width="27%">    </tr>
+	  <tr>
+		<td align="right">&nbsp;</td>
+		<td><input name="Submit" type="submit" class="botao" id="Submit3" value="Pesquisar" onClick="onClickButton(null,'Aguarde...','','Pesquisar')" /></td>
+		<td width="27%">    </tr>
+	
+	</table>
+	
+	</form>
+	</fieldset>
+	
+	<?php
+		if( $nvaloresencontrados > 0 )
+		{
+	?>
+	<fieldset>
+		<legend class="negrito">Resultado(s) <B><?echo $nvaloresencontrados;?></B> para <?echo $ygmsolicitante;?></legend>
+	
+	<table  width="100%" border="1" cellpadding="1" cellspacing="1" bordercolor="#FFFFFF" bgcolor="#006699">
+		<tr>
+			<td width="11%" align="left" class="branco"><B>Nome</B></td>				
+			<td width="70%" align="left" class="branco"><B>Descricao</B></td>
+			<td width="8%" align="center" class="branco"><B>Qtade Atual</B></td>
+			<td width="7%" align="center" class="branco"><B>Pendentes</B></td>
+			<td width="2%" align="left" class="branco">&nbsp;</td>
+			<td width="2%" align="left" class="branco">&nbsp;</td>
+		</tr> 
+	</table>
+	
+	<table width="100%" border="0" cellspacing="1" cellpadding="1">
+	<?php
+		$chavet = true;
+		$resultado = $obj->executaQuery($query);
+		while ( $linha = mysql_fetch_array($resultado) )
+		{		
+			$idfolga = $linha['id'];
+			$solicitante = $linha['guarda'];
+			$descricao = $linha['descricao'];
+			$qtade = $linha['qtade'];
+			$qtadeatual = $linha['qtadeatual'];
+			
+			$result = $qtade - $qtadeatual;
+	?>
+		<tr bgColor="<?PHP if($chavet)
+							{
+								echo '#cccccc';
+							}
+							else{ 
+								echo '#ffffff';
+							} 
+							$chavet=!$chavet;
+						?>" >
+			<td width="11%" align="left" class="negrito"><? echo $solicitante; ?></td>		
+			<td width="70%" align="left" class="negrito"><? echo $descricao; ?></td>
+			<td width="8%" align="center" class="negrito"><? echo $qtade; ?></td>
+			<td width="7%" align="center" class="negrito"><? echo $result; ?></td>
+			<td width="2%" align="center" class="negrito"><a onClick="Excluir('../classes/controleFolga.php?id=<? echo $linha['id']; ?>')" href="#"><IMG SRC="images/lixeira.jpg" WIDTH="16" HEIGHT="16" BORDER="0" ALT="Excluir"></A></td>
+			<td width="2%" class="letra" align="center"><a href="cadastro_pedido_folga_chefia.php?idfolga=<? echo $linha['id']; ?>&login=<? echo $solicitante;?>"><IMG SRC="images/pedido.gif" WIDTH="16" HEIGHT="16" BORDER="0" ALT="Pedido"></A></td>
+		</tr>
+	
+	<?php
+		}
+	?>
+		
+	</table>
+	
+	</fieldset>
+	
+	</td>
+  </tr> 
+		
+	</table>
+	
+	
+	<?php
+		}
+	
+		if( $nvaloresencontrados == 0 && $tamanho > 0 )
+		{
+			
+	?>
+	
+	<fieldset>
+		<legend class="negrito">Resultado(s) <B><? echo $nvaloresencontrados;?></B> para <? echo $ygmsolicitante;?></legend>
+	<table width="100%" border="0" cellspacing="1" cellpadding="1">
+		<tr>
+			<td width="100%" colspan="3" align="center" class="negrito">Nenhuma ocorr&ecirc;ncia para <B><?echo $ygmsolicitante;?></B></td>
+		</tr>	
+	</table>
+	</fieldset>
+	
+	<?php	
+		}
+	?>
+	<!--fim adm-->
+	</td>
+  </tr>
+</table>
+
+</body>
+</html>
+
+<?php
+	// Fechando as vari�veis de conex�o
+	$obj->closeVar($conexao);
+	$obj->closeVar($xBusca);
+	$obj->closeVar($tamanho);
+	$obj->closeVar($nvaloresencontrados);
+	$obj->closeVar($query);
+	$obj->closeVar($resultado);
+	$obj->closeVar($linha);
+	$obj->closeQuery();
+	$obj->closeConexaoGeral();
+?>

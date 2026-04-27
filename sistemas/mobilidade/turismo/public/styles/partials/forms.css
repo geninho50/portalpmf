@@ -1,0 +1,86 @@
+.select-block label,
+.input-block label,
+.textarea-block{
+    font-size: 1.3rem;
+    color: var(--color-text-base);
+    margin-top: 1.3rem;
+
+}
+
+.select-block label i,
+.input-block label i,
+.textarea-block i{
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-text-complement);
+}
+
+.input-block input,
+.select-block select,
+.textarea-block textarea {
+    width:  100%;
+    height: 3rem;
+    margin-top: .5rem;
+    border-radius: 0.8rem;
+    background: var(--color-input-background);
+    border: 1px solid var(--color-line-in-white);
+    outline: 0;
+    padding: 0 1rem;
+    font: 1.3rem Archivo;
+}
+
+.textarea-block textarea{
+    padding: 1.2rem 1.3rem;
+    height: 16rem;
+    resize: vertical;
+}
+
+.input-block, 
+.select-block,
+.textarea-block  {
+    position: relative;
+}
+
+
+
+label small {
+    font-size: 1rem;
+    padding-left: 2rem;
+    color: var(--color-small-info)
+}
+
+label small i{
+    font-style: italic;
+    font-size: .8rem;
+    padding-left: 2rem;
+    color: var(--color-small-info)
+}
+
+
+small {
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    color: var(--color-small-info)
+}
+
+small i{
+    font-style: italic;
+    font-size: 1rem;
+    padding-left:.3rem;
+    color: var(--color-small-info)
+}
+
+small.small-message {
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    font-weight: 600;
+    color: var(--color-text-message)!important;
+}
+
+small.small-message i{
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left:.3rem;
+    color: var(--color-text-message-light)
+}

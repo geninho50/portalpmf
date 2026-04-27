@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charst="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lista Telefonica PMF</title>
+    <link rel="stylesheet" href="http://192.168.12.4/desenvolvimento/desenv1/telefone/css/index.css" />
+    <link rel="stylesheet" href="http://192.168.12.4/desenvolvimento/desenv1/telefone/css/cardsTelefones.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <header>
+        <img src="imgs/logoPmf.png" alt="PMF" class="logo">
+        <nav>
+            <a href="#" id="botaoAdminDireta">Administração Direta</a>
+            <a href="#">Secretarias</a>
+            <a href="#">Conselhos</a>
+            <a href="#">Fundação e Autarquias</a>
+        </nav>
+        <div class="input-container">
+            <input type="text" id="pesquisa" placeholder="Pesquisar Setor">
+            <span class="material-symbols-outlined">search</span>
+        </div>
+    </header>
+
+
+    <h1>Administração Direta</h1>
+
+    <section class="clearfix">
+
+
+        <!-- Primeira Controladoria Geral -->
+        <div class="CardSecretaria">
+            <h2>Controladoria Geral</h2>
+            <div class="bordasDosCards">(048) 3251-6069 </div>
+            <div class="bordasDosCards"> email@pmf.sc.gov.br</div>
+
+            <div class="exibirConteudoDiv" onclick="toggleExpand(this)">
+                <i class="fas fa-eye"></i> Confira a Lista Completa
+            </div>
+
+            <div class="conteudoDiv">
+                <div class="exibirNovoConteudoDiv" onclick="expandirNovoConteudo(this)">Setor</div>
+                <div class="novoConteudo">
+                    <div class="nomeFuncionario"> Nome do Carinha</div>
+                    <div class="cargoFuncionario">Cargo</div>
+                    <div class="ramalFuncionario">Ramal</div>
+                    <hr>
+                    <div class="nomeFuncionario"> Nome do Carinha</div>
+                    <div class="cargoFuncionario">Cargo</div>
+                    <div class="ramalFuncionario">Ramal</div>
+                    <hr>
+                    <div class="nomeFuncionario"> Nome do Carinha</div>
+                    <div class="cargoFuncionario">Cargo</div>
+                    <div class="ramalFuncionario">Ramal</div>
+                    <hr>
+                    <div class="nomeFuncionario"> Nome do Carinha</div>
+                    <div class="cargoFuncionario">Cargo</div>
+                    <div class="ramalFuncionario">Ramal</div>
+                    <hr>
+                </div>
+                <div class="exibirNovoConteudoDiv" onclick="expandirNovoConteudo(this)">Setors</div>
+                <div class="novoConteudo">
+                    <div class="nomeFuncionario"> Nome do Carinha</div>
+                    <div class="cargoFuncionario">Cargo</div>
+                    <div class="ramalFuncionario">Ramal</div>
+                    <hr>
+                    <div class="nomeFuncionario"> Nome do Carinha</div>
+                    <div class="cargoFuncionario">Cargo</div>
+                    <div class="ramalFuncionario">Ramal</div>
+                    <hr>
+                    <div class="nomeFuncionario"> Nome do Carinha</div>
+                    <div class="cargoFuncionario">Cargo</div>
+                    <div class="ramalFuncionario">Ramal</div>
+                    <hr>
+                    <div class="nomeFuncionario"> Nome do Carinha</div>
+                    <div class="cargoFuncionario">Cargo</div>
+                    <div class="ramalFuncionario">Ramal</div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+        <!-- Procuradoria Geral-->
+        <div class="CardSecretaria">
+            <h2>Procuradoria Geral</h2>
+            <div class="bordasDosCards">(048) 3251-6069 </div>
+            <div class="bordasDosCards"> email@pmf.sc.gov.br</div>
+
+            <div class="exibirConteudoDiv" onclick="toggleExpand(this)">
+                <i class="fas fa-eye"></i> Confira a Lista Completa
+            </div>
+
+            <div class="conteudoDiv">
+                <div class="exibirNovoConteudoDiv" onclick="expandirNovoConteudo(this)">Setor</div>
+                <div class="novoConteudo">
+                    
+                        <div class="nomeFuncionario"> Nome do Carinha</div>
+                        <div class="cargoFuncionario">Cargo</div>
+                        <div class="ramalFuncionario">Ramal</div>
+                        <hr>
+                        <div class="nomeFuncionario"> Nome do Carinha</div>
+                        <div class="cargoFuncionario">Cargo</div>
+                        <div class="ramalFuncionario">Ramal</div>
+                        <hr>
+                        <div class="nomeFuncionario"> Nome do Carinha</div>
+                        <div class="cargoFuncionario">Cargo</div>
+                        <div class="ramalFuncionario">Ramal</div>
+                        <hr>
+                        <div class="nomeFuncionario"> Nome do Carinha</div>
+                        <div class="cargoFuncionario">Cargo</div>
+                        <div class="ramalFuncionario">Ramal</div>
+                        <hr>
+                    
+                </div>
+                <div class="exibirNovoConteudoDiv" onclick="expandirNovoConteudo(this)">Setors</div>
+                <div class="novoConteudo">
+                    <!-- Conteúdo dos Setors -->
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Gabinete do Prefeito -->
+        <div class="CardSecretaria">
+            <h2>Gabinete do Prefeito</h2>
+            <div class="bordasDosCards">(048) 3251-6069 </div>
+            <div class="bordasDosCards"> email@pmf.sc.gov.br</div>
+
+            <div class="exibirConteudoDiv" onclick="toggleExpand(this)">
+                <i class="fas fa-eye"></i> Confira a Lista Completa
+            </div>
+
+            <div class="conteudoDiv">
+                <div class="exibirNovoConteudoDiv" onclick="expandirNovoConteudo(this)">Setor</div>
+                <div class="novoConteudo">
+                    <!-- Conteúdo do Setor -->
+                </div>
+                <div class="exibirNovoConteudoDiv" onclick="expandirNovoConteudo(this)">Setors</div>
+                <div class="novoConteudo">
+                    <!-- Conteúdo dos Setors -->
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function toggleExpand(element) {
+            var conteudoDiv = element.nextElementSibling;
+            conteudoDiv.style.display = conteudoDiv.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function expandirNovoConteudo(element) {
+            var novoConteudo = element.nextElementSibling;
+            novoConteudo.style.display = novoConteudo.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>

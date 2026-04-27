@@ -1,0 +1,329 @@
+  <?php
+
+  error_reporting(E_ALL);
+  ini_set('display_errors', '1');
+  include_once("../banco/gdb.php");
+
+  $gdb = new gdb(); 
+  $gdb2 = new gdb(); 
+  $gdb3 = new gdb();
+  $gdb4 = new gdb();
+  $gdb5 = new gdb();
+
+  $cpf = $_GET['cpf'];
+
+  if(isset($_GET['tipo'])){
+  	$tipo = $_GET['tipo'];
+  }else{
+  	$tipo = null;
+  }
+
+  if(isset($_GET['assunto'])){
+  	$assunto = $_GET['assunto'];
+  }else{
+  	$assunto = null;
+  }
+
+  if(isset($_GET['secretaria'])){
+  	$secretaria= $_GET['secretaria'];
+  }else{
+  	$secretaria = null;
+  }
+
+  if(isset($_GET['nome'])){
+    $nome= $_GET['nome'];
+  }else{
+    $nome = null;
+  }
+
+  if($cpf == ''){
+  	header('Location: index.php');
+  }
+
+
+  $gdb2->open("select cpf
+  	FROM adm
+  	WHERE cpf = '$cpf'");
+
+  date_default_timezone_set('America/Sao_Paulo');
+  $atual = date('Y-m-d');
+
+  $select = "select c. tipo,
+  c.assunto,
+  c.secretaria,
+  l.idlista as chave,
+  l.nome, 
+  l.cpf,
+  l.email,
+  l.carga
+  from  capacitacao c, lista l
+  where l.nome like '%".$nome."%'
+  GROUP BY chave";
+
+  $gdb->open( $select );
+
+  $gdb3->open("select distinct c.tipo
+
+  	from  rastreabilidade.capacitacao c");
+
+  $gdb4->open("select distinct c.secretaria
+
+  	from  rastreabilidade.capacitacao c");
+
+  $gdb5->open("select distinct c.assunto
+
+  	from  rastreabilidade.capacitacao c");
+
+
+  	?>
+
+  	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  	<html xmlns="http://www.w3.org/1999/xhtml">
+  	<head>
+  		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<title>Prefeitura de Florianópolis</title>
+
+
+  		<link rel="stylesheet" href="../../../layout/pmf-estilo.css" type="text/css">
+  		<link rel="stylesheet" href="../../../layout/pmf-estilo-home-new-2.css" type="text/css">
+  		<link rel="stylesheet" href="../../../scripts/slidesjs/css/global.css">
+  		<link rel="stylesheet" href="../../../scripts/js/ui/jquery-ui.css">
+  		<link href="../../../layout/imagens/brasao.gif" rel="shortcut icon" type="image/x-icon" />
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  	</head>
+  	<body>
+
+  		<script>
+
+  			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  			ga('create', 'UA-54979843-1', 'auto');
+  			ga('send', 'pageview');
+
+  		</script>
+
+
+  		<link href="https://fonts.googleapis.com/css?family=Montserrat:300??,400,500,600,700" rel="stylesheet">
+  		<link rel="stylesheet" href="../../../layout/themePMF/css/style.css">
+
+  		<div class="mini-header">
+  			<ul class="mini-header__items">
+  				<li style="font-size: 13px;">Capacitação Rastreabilidade</li>
+  			</ul>
+  		</div>
+
+
+  		<div class="header">
+  			<div class="header__brand">
+  				<a href="http://www.pmf.sc.gov.br">
+  					<img src="../../../images/marca-pmf.svg">
+  				</a>
+  			</div>
+
+  			<ul class="header__nav">
+  				<li>
+  					<a href="solicitacao.php?cpf=<? echo $cpf; ?>" style="font-size: 15px;">Solicitações</a>
+  				</li>
+  				<li>
+  					<a href="agenda.php?cpf=<? echo $cpf; ?>" style="font-size: 15px; color: #e827d7;">Agenda</a>
+  				</li>
+  				<li>
+  					<a href="capacitacao.php?cpf=<? echo $cpf; ?>" style="font-size: 15px;">Capacitação</a>
+  				</li>
+  				<li>
+  					<a href="lista.php?cpf=<? echo $cpf; ?>" style="font-size: 15px; color: #A020F0;">Participantes</a>
+  				</li>
+  				<li>
+  					<a href="feriado.php?cpf=<? echo $cpf; ?>" style="font-size: 15px;">Compromisso</a>
+  				</li>
+  				<li>
+  					<a href="duvidas.php?cpf=<? echo $cpf; ?>" style="font-size: 15px; color: #32CD32;">Dúvidas</a>
+  				</li>
+  				<li>
+  					<a href="participantes.php?cpf=<? echo $cpf; ?>" style="font-size: 15px;">Capacitados</a>
+  				</li>
+  				<li>
+  					<a href="avaliacao.php?cpf=<? echo $cpf; ?>" style="font-size: 15px;">Avaliação</a>
+  				</li>
+  			</ul>
+  		</div>
+
+  		<div class="flex-container hero-wrapper">
+
+  			<div class="column4-lg column4-md column8-sm" style="padding-left: 15px; padding-bottom: 9px;">
+  				<form method="post" name="frmSituacao"> 
+  					<h1 class="hidden-sm hidden-xs"><span style="color: black;">Capacitados:</span></h1><br>
+
+  					<div class="row">
+  						<div class = "col-md-6">
+  							<label>Nome</label>
+  							<div class= "select-wrapper">
+  							 <input type="text" name="pesquisa_nome" id="pesquisa_nome"/>  
+  								</select>
+  							</div>
+  						</div>
+  						
+  						<div class = "col-md-2">
+  							<label></label><br><br>
+  							<input type="button" name="submit" id="submit" class = "btn btn-primary botao" value="Pesquisar" onclick="javascript:pesquisar();" />
+  						</div>
+  					</div>
+  				</form> 
+  			</div>
+
+         
+
+  			<table class="table">
+
+  				<tr>  
+  					<td align="center"><b>Secretaria</b></td>
+  					<td align="center"><b>Tipo</b></td>
+  					<td align="center"><b>Assunto</b></td>
+  					<td align="center"><b>Carga</b></td>
+  					<td align="center"><b>Nome</b></td>
+  					<td align="center"><b>CPF</b></td>
+  					<td align="center"><b>Email</b></td>
+  				</tr>
+
+  				<? 
+  				if(isset($gdb->gs['CHAVE'])){
+
+  					foreach($gdb->gs['CHAVE'] as $key=>$value){ 
+
+  						?>
+  						<tr>
+  							<td align="center"><? print $gdb->gs['SECRETARIA'][$key]; ?></td>
+  							<td align="center"><? print $gdb->gs['TIPO'][$key]; ?></td>
+  							<td align="center"><? print $gdb->gs['ASSUNTO'][$key]; ?></td>
+  							<td align="center"><? print $gdb->gs['CARGA'][$key]; ?></td>
+  							<td align="center"><strong><? print $gdb->gs['NOME'][$key]; ?></strong></td>
+  							<td align="center"><strong><? print $gdb->gs['CPF'][$key]; ?></strong></td>
+  							<td align="center"><strong><? print $gdb->gs['EMAIL'][$key]; ?></strong></td>
+
+  						</tr>                                 
+
+  						<?
+  					}
+  				}; ?>  
+
+  			</table>
+
+
+  		</div>
+  		<br><br><br><br><br>
+
+  		<div class="flex-container">
+  			<div class="column4-lg column4-md column8-sm">
+  				<div id="fb-root"></div>
+  				<script>
+  					(function(d, s, id) {
+  						var js, fjs = d.getElementsByTagName(s)[0];
+  						if (d.getElementById(id)) return;
+  						js = d.createElement(s); js.id = id;
+  						js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=150853192172803";
+  						fjs.parentNode.insertBefore(js, fjs);
+  					}(document, 'script', 'facebook-jssdk'));
+  				</script>
+
+  			</div>
+  		</div>
+
+  		<script type="text/javascript" src="../assets/js/validadores.js"></script>  
+  		<script src="../assets/js/jquery.min.js"></script>
+  		<script src="../assets/js/jquery.maskedinput.min.js" type="text/javascript"></script> 
+  		<script src='http://momentjs.com/downloads/moment.min.js'></script>
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  		<script type="text/javascript">
+
+
+
+
+  			function pesquisar(){
+  				//var novoCaminho = window.location.pathname+"?tipo="+document.getElementById("pesquisa_tipo").value+"&secretaria="+document.getElementById("pesquisa_secretaria").value+"&assunto="+document.getElementById("pesquisa_assunto").value+"&cpf=<? echo $cpf; ?>";
+
+          var novoCaminho = window.location.pathname+"?nome="+document.getElementById("pesquisa_nome").value+"&cpf=<?echo $cpf;?>";
+  				location.href = novoCaminho;
+  			}
+
+  			function loadScript( url, callback ) {
+  				var script = document.createElement( "script" )
+  				script.type = "text/javascript";
+          if(script.readyState) {  //IE
+          	script.onreadystatechange = function() {
+          		if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+          			script.onreadystatechange = null;
+          			callback();
+          		}
+          	};
+          } else {  //Others
+          	script.onload = function() {
+          		callback();
+          	};
+          }
+          script.src = url;
+          document.getElementsByTagName( "head" )[0].appendChild( script );
+      }
+
+
+      var input = document.getElementById("pesquisa_nome");
+
+        input.addEventListener("keypress", function(event) {
+         
+          if (event.keyCode === 13) {
+            event.preventDefault();
+            document.getElementById("submit").click();
+          }
+        }); 
+
+  </script>
+
+  <script src="layout/themePMF/js/slick.min.js"></script>
+
+  <script src="layout/themePMF/js/main.min.js"></script>
+
+  <div id="rodape">
+  	<div class="info">
+  		<div class="info-column">
+  			<div class="info-block">
+  				<h4>Equipe de Suporte</h4>
+  				<ul>
+  					<li><p style="color: white;">Karla Kinchescki</p></li>
+  					<li><p style="color: white;">Mayara Meurer</p></li>
+  				</ul>
+  			</div>
+  		</div>
+
+  		<div class="info-column">
+  			<div class="info-block">
+  				<h4>Telefone - Endereço</h4>
+  				<ul>
+  					<li><p style="color: white;">(48) 3213-5509 - Secretaria da Fazenda</p></li>
+  					<li><p style="color: white;">(48) 3251-6457 - Pró-Cidadão</p></li>
+  				</ul>
+  			</div>
+
+  			<div class="info-block">
+  				<h4>Email</h4>
+  				<ul>
+  					<li><p style="color: white;">suporte.rastreabilidade@pmf.sc.gov.br</p></li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+
+  <script src="layout/themePMF/js/home.min.js"></script>
+
+</body>
+</html>

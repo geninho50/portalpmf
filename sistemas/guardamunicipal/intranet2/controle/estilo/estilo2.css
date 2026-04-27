@@ -1,0 +1,49 @@
+body,td,th {
+	font-family:Calibri, "Britannic Bold";
+	font-size: 10px;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+a {	font-family:Calibri, "Britannic Bold";
+	color:#02577D}
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #02577D;
+}
+a:hover {
+	text-decoration: none;
+	color: #FF0000;
+}
+a:active {
+	text-decoration: none;
+	color: #02577D;
+}
+
+.style1 {color: #FFFFFF}
+
+.style2 {
+	font-family:Calibri, "Britannic Bold";
+	font-size: 11px;
+	font-weight: bold;
+	color:#02577D
+}
+.style3 {
+	font-family:Calibri, "Britannic Bold";
+	font-size: 11px;
+	font-weight: bold;
+	color:#006600
+}
+
+
+
+

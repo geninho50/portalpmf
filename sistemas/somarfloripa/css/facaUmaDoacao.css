@@ -1,0 +1,305 @@
+body{
+    font-family:'signika' , sans-serif;
+}
+header, .navbar
+{
+    background-color: white;
+	margin: 0px 0px 0px 0px;
+}
+#cabecalho
+{
+    background-color: white;
+}
+#nav-container
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.navbar-brand
+{
+    padding: 0;
+    color: white;
+}
+#logo
+{
+    padding: 0%;
+    width: 100px;
+    margin: -10px;
+	position:relative;
+	left:50px;
+	top:-10px;
+}
+#navbar-links a 
+{
+    color: #4f4f4f;
+    cursor: pointer;
+}
+.navbar-expand-lg .navbar-nav .nav-link
+{
+    padding: 1rem .8rem;
+	margin:10px 0px 0px 0px;
+}
+#inputCabecalho
+{
+    height: 45px;
+    width: 450px;
+    background-color:#bec0cc;
+    color: white;
+    border-radius: 20px;
+    border: 1px transparent;
+    font-size: 15px;
+    font-weight: 200;
+}
+.container
+{
+    padding: 70px 0;
+}
+#primeiroContainer
+{
+	margin-top:100px;
+	background-color:#F2EBEE;
+}
+#labelFacaDoacao
+{
+	position:relative;
+	left:300px;
+	color:#892055;
+	font-size:60px;
+	font-weight:bold;
+}
+#labelInferior
+{
+	position:relative;
+	top:30;
+	right:160px;
+    font-size:25px;
+    color: #4f4f4f;
+}
+#inputPriemiroContainer
+{
+	position:relative;
+	top:20px;
+	left:380px;
+	border-radius:20px;
+	width:300px;
+	/*
+	-webkit-box-shadow: 9px 7px 5px rgba(50, 50, 50, 0.77);
+		-moz-box-shadow:    9px 7px 5px rgba(50, 50, 50, 0.77);*/
+		box-shadow:         9px 7px 5px rgba(50, 50, 50, 0.77);
+	
+}
+#btn
+{
+    border-radius: 20px;
+    margin: 5px;
+    transition: 0.5s;
+}
+#btn:hover
+{
+    background-color: #4f4f4f;
+    color: white;
+}
+#filtrar
+{
+    margin: 0px 0px 0px 100px;
+}
+#caixa1
+{
+    background-color: white; 
+    height: 180px;
+    width: 370px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+    margin: 50px;
+}
+#caixa2
+{
+    background-color: white;
+    height: 180px;
+    width: 370px;
+    margin: 50px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+
+}
+#caixa3
+{
+    background-color: white;
+    height: 180px;
+    width: 370px;
+    border: solid 1px #828282;
+    border-radius: 20px;
+    margin: 50px;
+}
+#h6
+{
+    font-size: 7px;
+    margin: 16px 0 0 7px;
+}
+#h2
+{
+    font-size: 20px;
+    margin: 5px 0 0 7px;
+    font-weight: bold;
+}
+#h3
+{
+    font-size: 13px;
+    margin: 5px 0 0 7px;
+
+}
+#saibaMais
+{
+    margin: 20px 20px 0px 0px;
+    border-radius: 20px;
+    border: solid 1px rgb(172, 172, 36);
+    background-color: white;
+    transition: 0.5s;
+}
+#saibaMais:hover
+{
+    background-color: black;
+    color: white;
+}
+#queroAjudar
+{
+    margin: 0px 0px 0px 10px;
+    border-radius: 20px;
+    border: solid 1px rgb(172, 172, 36);
+    background-color: white;
+    transition: 0.5s;
+}
+#queroAjudar:hover
+{
+    background-color: black;
+    color: white;
+}
+#final
+{
+    background-color: #f2ebee;
+    color: #333333;
+    font-size: 15px;
+}
+#primeiraColuna
+{
+    margin: 0 0 0 50px;
+}
+#h2Final
+{
+    font-size: 20px;
+    cursor: pointer;
+	color:black;
+}
+#h2Final:hover
+{
+    color: red;
+}
+#h4Final
+{
+    font-size: 15px;
+    cursor: pointer;
+	color:black;
+	line-height:30px;
+}
+#h4Final:hover
+{
+    color: red;
+}
+
+.facebook
+{
+width: 25px;
+border-radius: 20px;
+background-color: #828282;
+}
+.instagram
+{   
+position:absolute;
+width: 27px;
+border-radius: 20px;
+background-color: #828282;
+left: 100px;
+}
+.twitter
+{
+position:absolute;
+width: 27px;
+border-radius: 20px;
+background-color: #828282;
+left: 55px;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color:black;
+    font-size: 15px;
+    line-height: 15px;
+}
+.menu-bar ul li
+{   
+    margin: 5px;
+    padding: 20px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+/*.active, .menu-bar ul li:hover
+{
+    background: #0077ff;
+    border-radius: 3px;
+    cursor: pointer;
+}*/
+.sub-menu-1
+{
+    display: none;
+    position: absolute;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: white;
+    border: 1px solid;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 5px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.fa-angle-right
+{
+    float: right;
+}
+.sub-menu-2
+{
+    display: none;
+    position: absolute;
+}
+.hover-me:hover .sub-menu-2
+{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: white;
+    border: 1px solid;
+}
+
+
+
+
+

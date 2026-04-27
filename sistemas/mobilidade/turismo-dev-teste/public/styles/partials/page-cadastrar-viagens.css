@@ -1,0 +1,258 @@
+#page-cadastrar-viagens #container {
+    width: 100vw;
+    height: 100vh;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* #page-cadastrar-viagens .page-header .header-content {
+    margin-top: 6.4rem;
+} */
+
+#page-cadastrar-viagens main {
+    background-color: var(--color-box-base);
+    width: 100%;
+    max-width: 77rem;
+    border-radius: .8rem;
+    margin: -3.2rem auto 3.2rem;
+    padding-top: 6.4rem;
+}
+
+#page-cadastrar-viagens fieldset {
+    border: none;
+
+    padding: 0 2.4rem;
+}
+
+#page-cadastrar-viagens fieldset legend {
+    font: 700 2.4rem Archivo;
+    color: var(--color-text-title);
+    margin-bottom: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--color-line-in-white);
+}
+
+#page-cadastrar-viagens fieldset button {
+    background: none;
+    border: 0;
+    padding-top: 3rem;
+
+    color: var(--color-primary);
+
+    font: 700 1.6rem Archivo;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#page-cadastrar-viagens fieldset  button:hover {
+    transform: translateY(-5px);
+    color: var(--color-primary-dark);
+}
+
+
+#page-cadastrar-viagens fieldset+fieldset {
+    margin-top: 6.4rem;
+}
+
+#page-cadastrar-viagens .input-block+.input-block,
+#page-cadastrar-viagens .input-block+.textarea-block,
+#page-cadastrar-viagens .select-block+.input-block {
+    margin-top: 2.4rem;
+}
+
+#page-cadastrar-viagens main footer {
+    padding: 4rem 2.4rem;
+
+    background: var(--color-box-footer);
+    border-top: 1px solid var(--color-line-in-white);
+    margin-top: 6.4rem;
+}
+
+#page-cadastrar-viagens main footer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    color: var(--color-text-complement);
+}
+
+#page-cadastrar-viagens main footer p img {
+    margin-right: 2rem;
+}
+
+
+#page-cadastrar-viagens main footer button {
+    width: 100%;
+    height: 5.6rem;
+    background: var(--color-secondary);
+    color: var(--color-button-text);
+    border: 0;
+    border-radius: .8rem;
+    cursor: pointer;
+    font: 700 1.6rem Archivo;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    transition: 0.2s;
+    margin-top: 3.2rem;
+}
+
+#page-cadastrar-viagens main footer button:hover {
+    background: var(--color-secondary-dark);
+}
+
+.schedule-item +.schedule-item/*,
+ .schedule-item-motorista + .schedule-item-motorista,
+.schedule-item-passageiros + .schedule-item-passageiros*/ { 
+    margin-top: 3.2rem;
+    padding-top: 3.2rem;
+
+    border-top: 1px solid var(--color-line-in-white);
+}
+
+@media (min-width: 700px) {
+    #page-cadastrar-viagens #container{
+        max-width: 100vw;
+    }
+
+    #page-cadastrar-viagens .page-header .header-content {
+        margin-bottom: 0;
+    }
+
+    #page-cadastrar-viagens main fieldset {
+        padding: 0 64px;
+    } 
+    .page-header {
+        /** 
+            Sobreescrevendo a regra de header.css
+        */
+        height: 380px;
+    }
+
+
+    
+    #page-cadastrar-viagens .grid-two{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.2rem;
+    }
+    /* #page-cadastrar-viagens .grid-two-passageiros{
+        display: grid;
+        grid-template-columns: 1fr .05fr  ;
+        grid-template-rows: 10rem 10rem;
+        column-gap: 1.1rem;
+    } */
+
+    #page-cadastrar-viagens .grid-tree{
+        display: grid;
+        grid-template-columns: 1fr 2fr .5fr;
+        column-gap: 1.8rem;
+    }
+    #page-cadastrar-viagens .grid-tree-rota{
+        display: grid;
+        grid-template-columns: .1fr 1.25fr 1.25fr;
+        column-gap: 1.8rem;
+    }
+
+    #page-cadastrar-viagens .grid-tree-passageiros{
+        display: grid;
+        grid-template-columns: 2fr .1fr 1fr;
+        column-gap: 1.8rem;
+    }
+    #page-cadastrar-viagens .grid-tree-phone{
+        display: grid;
+        grid-template-columns: .9fr .9fr 2fr;
+        column-gap: 1.8rem;
+    }
+
+    #page-cadastrar-viagens .grid-four{
+        display: grid;
+        grid-template-columns: 1fr 2fr .5fr 1fr;
+        column-gap: 1.8rem;
+    }
+
+
+/* 
+    .schedule-item-motorista{
+        display: grid;
+        grid-template-columns: 1fr .8fr .5fr .45fr .1fr ;
+        column-gap: 1.1rem;
+    }
+    .bloco-duplo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1.1rem;
+    }
+    .bloco-triplo-equal {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        column-gap: 1.1rem;
+    }
+    .bloco-triplo {
+        display: grid;
+        grid-template-columns: .5fr .5fr 3fr;
+        column-gap: 1.1rem;
+    }
+
+    .schedule-item{
+        display: grid;
+        grid-template-columns: 1fr 1fr .8fr .1fr ;
+        column-gap: 1.1rem;
+    }
+    .schedule-item-motorista{
+        display: grid;
+        grid-template-columns: 1fr .8fr .5fr .45fr .1fr ;
+        column-gap: 1.1rem;
+    }
+    .schedule-item-passageiros{
+        display: grid;
+        grid-template-columns: 1fr .05fr  ;
+        grid-template-rows: 10rem 10rem;
+        column-gap: 1.1rem;
+    }
+    .schedule-item-passageiros button{
+        margin-top: 7rem;
+    }
+    .schedule-item-passageiros-inputs{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1.6fr  ;
+        grid-template-rows: 10rem 10rem;
+        column-gap: 1.1rem;
+    } */
+  
+    #page-cadastrar-viagens .grid .select-block+.input-block,
+    #page-cadastrar-viagens .grid .input-block+.input-block
+     {
+        margin-top: 0rem;
+    }
+
+    #page-cadastrar-viagens main footer {
+        padding: 40px 54px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #page-cadastrar-viagens main footer button {
+        margin-top: 0;
+
+        width: 200px;
+    }
+}

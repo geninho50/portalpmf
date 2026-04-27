@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Cultiva Floripa</title>
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Fontawesome CSS -->
+	<link href="css/all.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+     <!-- Navigation -->
+     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top">
+      <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img class="logo" src="images/logo.png" alt="logo" />
+          </a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fas fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+             <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                   <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="sobre.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="cursos-oficinas.html">Cursos e Oficinas</a>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Feiras e Hortas
+                   </a>
+                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
+                      <a class="dropdown-item" href="historia-feiras.html">História das Feiras</a>
+                      <a class="dropdown-item" href="feiras-livres.html">Feiras Livres</a>
+                      <a class="dropdown-item" href="feiras-organicas.html">Feiras de Orgânicos</a>
+                      <a class="dropdown-item" href="encontre-horta.html">Onde Encontro uma Horta</a>
+                      <a class="dropdown-item" href="horta-comunitaria.html">Hortas Comunitárias</a>
+                      <a class="dropdown-item" href="cadastro-horta-comunitaria.html">Cadastre sua Horta Comunitária</a>
+                      <a class="dropdown-item" href="hortas-institucionais.html">Hortas Institucionais</a>
+                      <a class="dropdown-item" href="cadastro-horta-institucional.html">Cadastre sua Horta Institucional</a>
+                      <a class="dropdown-item" href="hortas-pedagogicas.html">Hortas Pedagógicas</a>
+                   </div>
+                </li>
+                <li class="nav-item dropdown">
+                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                   Compostagem
+                   </a>
+                   <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
+                      <a class="dropdown-item" href="o-que-e.html">O que é</a>
+                      <a class="dropdown-item" href="404.html">Composteira Termofílica</a>
+                      <a class="dropdown-item" href="www.pmf.sc.gov.br/MinhocaNovo/index.php">Minhocário</a>
+                      <a class="dropdown-item" href="404.html">Compostagem Comunitária</a>
+                   </div>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href="viveiros-municipais.html">Viveiros Municipais</a>
+                </li>
+             </ul>
+          </div>
+      </div>
+  </nav>
+	
+	<!-- full Title -->
+	<div class="full-title">
+		<div class="container">
+			<!-- Page Heading/Breadcrumbs -->
+			<h1 class="mt-4 mb-3">Cadastro de horta comunitaria</h1>
+		</div>
+	</div>
+
+    <!-- Page Content -->
+    <div class="container">
+		<hr>
+      <!-- Contact Form -->
+      <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+      <div class="row">
+        <div class="col-lg-8 mb-4 contact-left">
+          <form name="sentMessage" id="contactForm" novalidate>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Nome:</label>
+                <input type="text" class="form-control" id="name" required data-validation-required-message="Por favor insira seu nome.">
+                <p class="help-block"></p>
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Telefone:</label>
+                <input type="tel" class="form-control" id="phone" required data-validation-required-message="Por favor insira seu telefone.">
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Email:</label>
+                <input type="email" class="form-control" id="email" required data-validation-required-message="Por favor insira seu e-mail.">
+              </div>
+            </div>
+            <div class="control-group form-group">
+              <div class="controls">
+                <label>Mensagem:</label>
+                <textarea rows="5" cols="100" class="form-control" id="message" required data-validation-required-message="Por favor insira sua mensagem" maxlength="999" style="resize:none"></textarea>
+              </div>
+            </div>
+            <div id="success"></div>
+            <!-- For success/fail messages -->
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar</button>
+          </form>
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!--footer starts from here-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-logo">
+         <img class="rodade" src="images/logo-branca.png" alt="logo" />
+        </div>
+        <ul class="social_footer_ul">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+          <!--social_footer_ul ends here-->
+      </div>
+  </footer>
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Contact form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+</body>
+</html>

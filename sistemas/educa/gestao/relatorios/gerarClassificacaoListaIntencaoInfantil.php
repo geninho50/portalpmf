@@ -1,0 +1,261 @@
+<?php
+require('../classes/fpdf.php');
+
+class PDF extends FPDF
+{
+
+    function Header()
+    {
+    // Logo 1
+        $this->Image('../img/logosystem.jpg',10,6,60);
+    // Logo 2
+        $this->Image('../img/logo_sigeduca.jpg',145,6,50);
+    // Line break
+        $this->Ln(15);
+    }
+
+// Page footer
+    function Footer()
+    {
+    // Position at 1.5 cm from bottom
+        $this->SetY(-25);
+    // Arial italic 8
+        $this->SetFont('Arial','I',8);
+    // Page number
+
+        date_default_timezone_set('America/Sao_Paulo');
+        $this->Cell(0,10, utf8_decode('Página '.$this->PageNo().'/{nb}'),0,0,'C');
+        $this->Ln(6);
+        $texto = ("Data: ").date('d/m/Y') . (" - Hora: ").date('H:i:s TO');
+        $this->Cell(0, 10, utf8_decode($texto),0,0,'C');
+        $this->Ln(6);
+        $hash = hash('sha256', $_SERVER['REQUEST_TIME_FLOAT'], false); 
+        $this->Cell(0, 10, utf8_decode($hash),0,0,'C');
+    }
+
+    function FancyTable($header, $data)
+    {
+    // Colors, line width and bold font
+        $this->SetFillColor(255,0,0);
+        $this->SetTextColor(255);
+        $this->SetDrawColor(128,0,0);
+        $this->SetLineWidth(.3);
+        $this->SetFont('','B', 8);
+    // Header
+        $w = array(12, 25, 80, 20, 20, 25);
+        for($i=0;$i<count($header);$i++)
+            $this->Cell($w[$i],7,$header[$i],1,0,'C',true);
+        $this->Ln();
+    // Color and font restoration
+        $this->SetFillColor(224,235,255);
+        $this->SetTextColor(0);
+        $this->SetFont('');
+    // Data
+        $fill = false;
+        $i = 1;
+        foreach($data as $row)
+        {
+            if($row[3] == 1){
+                $bolsa = 'Sim';
+            } else {
+                $bolsa = 'Não';
+            }
+            if($row[4] == 1){
+                $resi = 'Sim';
+            } else {
+                $resi = 'Não';
+            }
+            $this->Cell($w[0],6, $i++,'LR',0,'C',$fill);
+            $this->Cell($w[1],6,$row[1],'LR',0,'C',$fill);
+            $this->Cell($w[2],6,($row[2]),'LR',0,'L',$fill);
+            $this->Cell($w[3],6,utf8_decode($bolsa),'LR',0,'C',$fill);
+            $this->Cell($w[4],6,utf8_decode($resi),'LR',0,'C',$fill);
+            $this->Cell($w[5],6,($row[5]),'LR',0,'R',$fill);
+            $this->Ln();
+            $fill = !$fill;
+        }
+    // Closing line
+        $this->Cell(array_sum($w),0,'','T');
+    }
+}
+
+// Instanciation of inherited class
+$pdf = new PDF();
+$pdf->AliasNbPages();
+$pdf->AddPage();
+$pdf->SetFont('Arial','',12);
+
+$pdf->Cell(0, 10, utf8_decode('Educação Infantil'),0,0,'C');
+$pdf->Ln(6);
+$pdf->Cell(0, 10, utf8_decode('Classificação - Lista de Intenção'),0,0,'C');
+$pdf->Ln(12);
+
+set_time_limit(300);
+
+include_once '../fnc/buscaClassificacaoListaIntencaoInfantil.php';
+include_once '../fnc/buscaEscola.php';
+include_once '../fnc/buscaFases.php';
+
+if($_GET['idEscola'] == 0){
+    include_once '../fnc/buscaEscolasComLista.php';
+    $escolas = buscaEscolasComListaInfantil();
+} else {
+    $escolas[$_GET['idEscola']][0] = $_GET['idEscola'];
+}
+
+foreach ($escolas as $key => $value) {
+
+    $classificacao = buscaClassificacaoListaIntencaoInfantil('INFANTIL - 2013', $value[0], 10);
+
+    if($classificacao != false){
+
+        $header[0] = utf8_decode('Posição');
+        $header[1] = utf8_decode('# Matrícula');
+        $header[2] = utf8_decode('Nome');
+        $header[3] = utf8_decode('Bolsa Família');
+        $header[4] = utf8_decode('Residência');
+        $header[5] = utf8_decode('Renda Per Capita');
+
+        $escola = buscaEscola($value[0]);
+        $fases = buscaFases(2);
+
+        $pdf->SetFont('Arial','',12);
+        $pdf->Cell(0, 10, utf8_decode($escola[1][1]),0,0,'C');
+        $pdf->Ln(6);
+        $pdf->Cell(0, 10, utf8_decode($fases[10][1]),0,0,'C');
+        $pdf->Ln(12);
+
+        $pdf->FancyTable($header, $classificacao);
+        $pdf->Ln(6);
+
+    }
+
+    $classificacao = buscaClassificacaoListaIntencaoInfantil('INFANTIL - 2013', $value[0], 11);
+
+    if($classificacao != false){
+
+        $header[0] = utf8_decode('Posição');
+        $header[1] = utf8_decode('# Matrícula');
+        $header[2] = utf8_decode('Nome');
+        $header[3] = utf8_decode('Bolsa Família');
+        $header[4] = utf8_decode('Residência');
+        $header[5] = utf8_decode('Renda Per Capita');
+
+        $escola = buscaEscola($value[0]);
+        $fases = buscaFases(2);
+
+        $pdf->SetFont('Arial','',12);
+        $pdf->Cell(0, 10, utf8_decode($escola[1][1]),0,0,'C');
+        $pdf->Ln(6);
+        $pdf->Cell(0, 10, utf8_decode($fases[11][1]),0,0,'C');
+        $pdf->Ln(12);
+
+        $pdf->FancyTable($header, $classificacao);
+        $pdf->Ln(6);
+
+    }
+
+    $classificacao = buscaClassificacaoListaIntencaoInfantil('INFANTIL - 2013', $value[0], 12);
+
+    if($classificacao != false){
+
+        $header[0] = utf8_decode('Posição');
+        $header[1] = utf8_decode('# Matrícula');
+        $header[2] = utf8_decode('Nome');
+        $header[3] = utf8_decode('Bolsa Família');
+        $header[4] = utf8_decode('Residência');
+        $header[5] = utf8_decode('Renda Per Capita');
+
+        $escola = buscaEscola($value[0]);
+        $fases = buscaFases(2);
+
+        $pdf->SetFont('Arial','',12);
+        $pdf->Cell(0, 10, utf8_decode($escola[1][1]),0,0,'C');
+        $pdf->Ln(6);
+        $pdf->Cell(0, 10, utf8_decode($fases[12][1]),0,0,'C');
+        $pdf->Ln(12);
+
+        $pdf->FancyTable($header, $classificacao);
+        $pdf->Ln(6);
+
+    }
+
+    $classificacao = buscaClassificacaoListaIntencaoInfantil('INFANTIL - 2013', $value[0], 13);
+
+    if($classificacao != false){
+
+        $header[0] = utf8_decode('Posição');
+        $header[1] = utf8_decode('# Matrícula');
+        $header[2] = utf8_decode('Nome');
+        $header[3] = utf8_decode('Bolsa Família');
+        $header[4] = utf8_decode('Residência');
+        $header[5] = utf8_decode('Renda Per Capita');
+
+        $escola = buscaEscola($value[0]);
+        $fases = buscaFases(2);
+
+        $pdf->SetFont('Arial','',12);
+        $pdf->Cell(0, 10, utf8_decode($escola[1][1]),0,0,'C');
+        $pdf->Ln(6);
+        $pdf->Cell(0, 10, utf8_decode($fases[13][1]),0,0,'C');
+        $pdf->Ln(12);
+
+        $pdf->FancyTable($header, $classificacao);
+        $pdf->Ln(6);
+
+    }
+
+    $classificacao = buscaClassificacaoListaIntencaoInfantil('INFANTIL - 2013', $value[0], 14);
+
+    if($classificacao != false){
+
+        $header[0] = utf8_decode('Posição');
+        $header[1] = utf8_decode('# Matrícula');
+        $header[2] = utf8_decode('Nome');
+        $header[3] = utf8_decode('Bolsa Família');
+        $header[4] = utf8_decode('Residência');
+        $header[5] = utf8_decode('Renda Per Capita');
+
+        $escola = buscaEscola($value[0]);
+        $fases = buscaFases(2);
+
+        $pdf->SetFont('Arial','',12);
+        $pdf->Cell(0, 10, utf8_decode($escola[1][1]),0,0,'C');
+        $pdf->Ln(6);
+        $pdf->Cell(0, 10, utf8_decode($fases[14][1]),0,0,'C');
+        $pdf->Ln(12);
+
+        $pdf->FancyTable($header, $classificacao);
+        $pdf->Ln(6);
+
+    }
+
+    $classificacao = buscaClassificacaoListaIntencaoInfantil('INFANTIL - 2013', $value[0], 15);
+
+    if($classificacao != false){
+
+        $header[0] = utf8_decode('Posição');
+        $header[1] = utf8_decode('# Matrícula');
+        $header[2] = utf8_decode('Nome');
+        $header[3] = utf8_decode('Bolsa Família');
+        $header[4] = utf8_decode('Residência');
+        $header[5] = utf8_decode('Renda Per Capita');
+
+        $escola = buscaEscola($value[0]);
+        $fases = buscaFases(2);
+
+        $pdf->SetFont('Arial','',12);
+        $pdf->Cell(0, 10, utf8_decode($escola[1][1]),0,0,'C');
+        $pdf->Ln(6);
+        $pdf->Cell(0, 10, utf8_decode($fases[15][1]),0,0,'C');
+        $pdf->Ln(12);
+
+        $pdf->FancyTable($header, $classificacao);
+        $pdf->Ln(6);
+
+    }
+}
+
+
+$pdf->Output();
+?>

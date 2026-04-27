@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>1</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>IPTU 2012</title>
+<subtitle>Pagamento em dia garante desconto</subtitle>
+<imagePath>../../arquivos/banners/jpg/03_01_2012_15.36.45.667f7c718e5292965be16efb7d4db376.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

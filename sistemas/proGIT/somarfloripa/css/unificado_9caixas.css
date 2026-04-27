@@ -1,0 +1,560 @@
+body{
+	overflow-x: hidden; 
+	overflow-y: auto;
+}
+#divCabecalho
+{
+	position:relative;
+}
+
+#btnMenu
+{
+    width: 135px;
+    height: 47px;
+	top:46px;
+	left:160px;
+	position:absolute;
+    border-radius: 25px;
+    border: 2px solid black;
+    background: transparent;
+	font-size:20px;
+	font-weight:600;
+	text-align:center;
+	color: #000;
+}
+#inicio
+{
+	position:absolute;
+	top: 60px;
+	left: 370px;
+	border:none;
+	background:#fff;
+	font-size:20px;
+	font-weight:600;
+	color:#002F66;
+}
+#inicio2
+{
+	position:absolute;
+	top: 60px;
+	left: 470px;
+	border:none;
+	background:#fff;
+	font-size:20px;
+	font-weight:400;
+	color:#002F66;
+}
+#dropdown
+{
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.hidden
+{
+    display: none;
+}
+#inputMostraSubMenu
+{
+    border: none;
+    background: #fff;
+    color: #002F66;
+}
+#links
+{
+    text-decoration: transparent;
+    display: block;
+	color: #000;
+}
+#links2
+{
+    text-decoration: transparent;
+    display: block;
+    padding: 5px;
+    border: none;
+    background: #fff;
+	color: #000;
+}
+#subMenu
+{
+    position: absolute;
+    width: 170px;
+	margin-left:410px;
+	background-color: #fff;
+	margin-top:150px;
+	padding:10px;
+	text-decoration:none;
+    border-radius: 5px ;
+	border: #000 1px solid;
+	z-index:1;
+}
+#subMenu2
+{
+    position: absolute;
+    width: 190px;
+	margin-left:585px;
+	background:#fff;
+	margin-top:225px;
+	padding:10px;
+	text-decoration:none;
+    border-radius: 5px ;
+    border: #000 1px solid;
+    z-index: 1;
+}
+#fecharDropdown
+{
+	width: 26px;
+	height: 26px;
+	border:solid 1px black;
+	border-radius:20px;
+	background:#fff;
+    display: inline;
+}
+#fecharDiv
+{
+    width: 26px;
+	height: 26px;
+	border:solid 1px black;
+	border-radius:20px;
+	background:#fff;    
+}
+
+#dropdown
+{
+    background: #fff;
+}
+.dropdown-item 
+{
+    color: #000;
+    margin: -20px;
+	text-align: left;
+	font-family:Trebuchet MS;
+}
+
+/*AQUI ACABA OS DADOS PRINCIPAIS DO CSS UNIFICADO*/
+
+#inputMenu::-webkit-input-placeholder
+{
+	color:#2C354A;
+    font-weight: 500;
+	font-size: 25.1786px;
+	line-height: 30px;
+	text-align: center;
+	text-transform: lowercase;
+}
+.menu-bar
+{
+    background: transparent;
+    text-align: left;
+    margin: 0px 0px -10px 0px;
+	position:absolute;
+}
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color:black;
+    font-size: 13px;
+    line-height: 15px;
+}
+.menu-bar ul li
+{   
+    margin: 10px;
+    padding: 15px;
+}
+#redes1
+{
+    margin-left: 1110px;
+	margin-top: 35px;
+	font-size:25px;
+}
+#redes2
+{
+    margin-left: 1145px;
+	margin-top: 35px;
+	font-size:25px;
+}
+#redes3
+{
+    margin-left: 1180px;
+	margin-top: 35px;
+	font-size:25px;
+}
+#redes4
+{
+    margin-left: 1215px;
+	margin-top: 35px;
+	font-size:25px;
+	
+}
+.menu-bar ul li a, #redes1
+{
+	position:absolute;
+    color: black;
+    
+}
+.menu-bar ul li a, #redes2
+{
+	position:absolute;
+    color: black;
+    
+}
+.menu-bar ul li a, #redes3
+{
+	position:absolute;
+    color: black;
+    
+}
+.menu-bar ul li a, #redes4
+{
+	position:absolute;
+    color: black;
+}
+/*.active, .menu-bar ul li:hover
+{
+    background: #0077ff;
+    border-radius: 3px;
+    cursor: pointer;
+}*/
+
+#hidden
+{
+    display: none;
+}
+/*COMEÇO DO CORPO DA PAGINAS, DIVIS A BAIXO DO BOTÃO MENU*/
+#textoInicial
+{
+	position: absolute;
+	width: 231px;
+	height: 41px;
+	left: 200px;
+	top: 161px;
+	font-family: Trebuchet MS;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 35px;
+	color: #2C354A;
+	z-index:0;
+}
+#duvidasPortal
+{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 470px;
+	top: 165px;
+}
+#duvidasPortal
+{
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 470px;
+	top: 165px;
+	border-radius:20px;
+	border:none;
+	background:#2C354A;
+	color:#fff;
+}
+#duvidasPortal2
+{
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	left: 520px;
+	top: 165px;
+	font-size:10px;
+	border-radius:20px;
+	border:none;
+	background:#2C354A;
+	color:#fff;
+}
+
+/*CONTAINER CENTRAL*/
+#containerCentral
+{
+	position:relative;
+	background:#E0E0E0;
+	top:300px;
+	width:1000px;
+	height:400px;
+	box-shadow: inset 0px 4px 4px rgb(180, 180, 180);
+}
+#caixa1
+{
+	position:relative;
+	
+	margin:15px;
+	margin-top:70px;
+	margin-left:30px;
+	background:#fff;
+	width:100px;
+	height: 120px;
+	box-shadow:4px 4px 4px rgb(180, 180, 180);
+	border-radius:5px;
+}
+#caixa2
+{
+	position:relative;
+	
+	margin:15px;
+	margin-top:70px;
+	margin-left: 10px;
+	background:#fff;
+	width:100px;
+	height: 120px;
+	box-shadow:4px 4px 4px rgb(180, 180, 180);
+	border-radius:5px;
+}
+#caixa3
+{
+	position:relative;
+	
+	margin:15px;
+	margin-top:70px;
+	margin-left: 10px;
+	background:#fff;
+	width:100px;
+	height: 120px;
+	box-shadow:4px 4px 4px rgb(180, 180, 180);
+	border-radius:5px;
+}
+#caixa4
+{
+	position:relative;
+	
+	margin:15px;
+	margin-top:70px;
+	margin-left: 10px;
+	background:#fff;
+	width:100px;
+	height: 120px;
+	box-shadow:4px 4px 4px rgb(180, 180, 180);
+	border-radius:5px;
+}
+#caixa5
+{
+	position:relative;
+
+	margin:15px;
+	margin-top:70px;
+	margin-left:10px;
+	background:#fff;
+	width:100px;
+	height: 120px;
+	box-shadow:4px 4px 4px rgb(180, 180, 180);
+	border-radius:5px;
+}
+#caixa6
+{
+	position:relative;
+
+	margin:15px;
+	margin-top:20px;
+	margin-left:125px;
+	background:#fff;
+	width:100px;
+	height: 120px;
+	box-shadow:4px 4px 4px rgb(180, 180, 180);
+	border-radius:5px;
+}
+#caixa7
+{
+	position:relative;
+
+	margin:15px;
+	margin-top:20px;
+	margin-left: 10px;
+	background:#fff;
+	width:100px;
+	height: 120px;
+	box-shadow:4px 4px 4px rgb(180, 180, 180);
+	border-radius:5px;
+}
+#caixa8
+{
+	position:relative;
+
+	margin:15px;
+	margin-top:20px;
+	margin-left: 10px;
+	background:#fff;
+	width:100px;
+	height: 120px;
+	box-shadow:4px 4px 4px rgb(180, 180, 180);
+	border-radius:5px;
+}
+#caixa9
+{
+	position:relative;
+
+	margin:15px;
+	margin-top:20px;
+	margin-left: 10px;
+	background:#fff;
+	width:100px;
+	height: 120px;
+	box-shadow:4px 4px 4px rgb(180, 180, 180);
+	border-radius:5px;
+}
+
+#textoCaixas
+{
+	text-decoration: none;
+	height: 6em;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	font-size: 19px;
+	color: #06a1a3;
+}
+
+#faleConosco1
+{
+	position: fixed;
+	width: 55px;
+	height: 55px;
+	left: 1127px;
+	top: 588px;
+	background: #002F66;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 27px;
+	border:none;
+	color:#fff;
+	font-size: 20px;
+	z-index: 1;
+}
+#faleConosco
+{
+	position: fixed;
+	width: 161px;
+	height: 54px;
+	left: 1195px;
+	top: 588px;
+	background: #002F66;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 27px;
+	border:none;
+	color:#fff;
+	font-size: 20px;
+	z-index: 1;
+}
+#titulo
+{
+	position:relative;
+	margin-left:150px;
+	display:block;
+}
+#fecharModal
+{
+	width: 26px;
+	height: 26px;
+	border:solid 1px black;
+	border-radius:20px;
+	background:#fff;
+    display: inline;
+}
+#inputs
+{
+	background: #F1EFEF;
+	/* efeito */
+
+	box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 34px;
+	border:none;
+	margin-bottom:20px;
+}
+#subModal
+{
+	display:block;
+	font-family: Trebuchet MS;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 17px;
+	text-align: center;
+
+	/* Gray 1 */
+
+	color: #333333;
+}
+#enviar
+{
+	width: 120.04px;
+	height: 26.94px;
+	margin-right:170px;
+	background: #002F66;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 27px;
+	border:none;
+	color:#fff;
+}
+/*CONTAINER FINAL, ULTIMAS INFORMAÇÕES*/
+
+#final
+{
+	position: absolute;
+	top: 800px;
+    background-color: #2C354A;
+    font-family: Signika;
+    src: local(Signika), url(../../../Biblioteca/fontes/Signika/Signika-VariableFont_wght.ttf);
+    font-style: normal;
+    font-size: 25px;
+    line-height: 40px;
+	z-index: 0;
+}
+#quartaColuna
+{
+    margin: 0px 50px 0px 0px;
+}
+#h2Final
+{
+    cursor: pointer;
+    font-family: Signika;
+    src: local(Signika), url(../../../Biblioteca/fontes/Signika/Signika-VariableFont_wght.ttf);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 15px;    
+    color: white;
+}
+
+#quadradoONG
+{
+    align-content: center;
+    /*width: 1300px;    
+    height: 236px;
+    left: 468px;
+    top: 2185px;
+    
+     Gray 6 */
+    background: #F2F2F2;
+    
+    /* Gray 5 */
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;    
+}
+#h2Final:hover
+{
+    color: red;
+}
+#h4Final
+{
+    font-size: 10px;
+    cursor: pointer;	
+	line-height:30px;
+    font-family: Signika;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 40px;
+    color: white;
+    text-align: center;
+
+}
+#h4Final:hover
+{
+    color: red;
+}

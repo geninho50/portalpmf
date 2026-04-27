@@ -1,0 +1,55 @@
+.wizard-bar  {
+    background-color: var(--color-box-base);
+    width: 100%;
+    max-width: 77rem;
+    border-radius: .8rem;
+    margin: -3.2rem auto 3.2rem;
+    padding-top: 0;
+    background: var(--color-box-base);
+    height: 12rem;
+    margin-bottom: 5rem;
+}
+.wizard-bar .nav-form-step-bar {
+    display: flex;
+    margin:  auto auto auto auto;
+    vertical-align: middle;
+    justify-content: space-between;
+    height: 100%;
+}
+.wizard-bar .nav-form-step-bar  li{
+    display: inline-block;
+    text-align: center;
+    margin: auto;          
+}
+.nav-form-step-bar a, .nav-form-step-bar button{
+    display: flex;
+    flex-direction: column;
+    margin: auto 2rem auto;
+    height: 100%;
+}
+.wizard-bar .nav-form-step-bar li, .nav-form-step-bar a , .nav-form-step-bar button{
+text-decoration: none; 
+list-style: none; 
+box-sizing: border-box;
+color: var(--color-text-base);
+}
+
+.wizard-bar .nav-form-step-bar button {
+    align-items: center;
+    background: none;
+    border: 0;
+    /* padding-top: 3rem; */
+
+    /* color: var(--color-primary); */
+
+    /* font: 700 1.6rem Archivo; */
+
+    cursor: pointer;
+    outline: none;
+
+    transition: 0.2s;
+}
+.wizard-bar .nav-form-step-bar button:hover {
+    transform: translateY(-2px);
+    color: var(--color-primary-dark);
+}

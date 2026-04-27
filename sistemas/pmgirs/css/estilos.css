@@ -1,0 +1,187 @@
+.botao{
+	width: 120px;
+}
+
+.row{
+	margin: auto;
+	width: 250px;
+}
+
+.clique{
+	color: #4c80ae;
+	font-weight: bold;
+	font-size: 0.85em;
+	cursor: pointer;
+}
+
+#minhaDiv{
+	display: none;
+	width: 100%;
+	height: 600px;
+	margin-bottom: 15px;
+}
+
+.pdf{
+	width: 100%;
+	height: 600px;
+	margin-bottom: 15px;
+}
+
+body{
+	background-color: #EEEEEE !important;
+}
+
+p{
+	text-align: justify;
+}
+
+h1{
+	margin-bottom: 25px;
+	font-family: 'Cabin Condensed', sans-serif;
+	text-align: center;
+}
+h2{
+	font-family: 'Cabin Condensed', sans-serif;
+	text-align: left;	
+}
+
+h3{
+	font-family: 'Cabin Condensed', sans-serif;
+	text-align: left;
+	font-size: 1.9em;
+}
+.container{
+
+	background-color: #EEEEEE;
+	width: 55% !important;
+	margin-bottom: 20px !important;
+}
+
+.foto{
+	max-width: 650px;
+	height: auto;
+	border-radius: 5px;
+	display: block;
+	margin: auto;
+	margin-bottom:10px;  
+	-webkit-box-shadow: 2px 2px 20px 0px rgba(143,143,143,0.62);
+	-moz-box-shadow: 2px 2px 20px 0px rgba(143,143,143,0.62);
+	box-shadow: 2px 2px 20px 0px rgba(143,143,143,0.62);
+}
+
+.logo{
+	width: 400px;
+	height: 108px; 
+	display: block; 
+	margin: auto;
+	margin-bottom: -50px;
+}
+
+#sendPesquisa, .btn{
+	text-align: center;
+	display: block;
+	margin: 20px auto;
+}
+
+textarea{
+	resize: none;
+	height: 150px !important;
+}
+
+.error{
+	border-color: red;
+}
+
+#error{
+	text-align: center;
+	margin:  20px auto;
+	 width: 800px;
+	
+}
+
+.centro{
+	text-align: center;
+	margin-top: -30px;
+}
+
+.artigo{
+	background-color: #FFF;
+	overflow: auto;
+	max-height: 400px;
+	font-size: 0.95em;
+	border: 1px solid #F0F0F0;
+	margin-bottom: 20px;
+	max-width: 1200px;
+}
+th{
+	text-align: center;
+	background-color: #4F81BD;
+	color: #FFF;
+}
+
+
+.bold{
+	font-weight: bold;
+}
+
+.centro{
+	margin-top: 5px;
+	text-align: center;
+}
+
+.caixa{
+	padding: 3px;
+	height: 70px;
+	width: 400px;
+	background-color: grey;
+	border: 1px solid #000;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.menu{
+	text-align: left;
+	margin: 0 10px;
+	width: 282px;
+	font-size: 0.91em;
+}
+
+.esquerda {
+	margin-top: 4.2%;
+}
+
+.tabela{
+	overflow: auto;
+	max-height: 350px;
+	font-size: 0.95em;
+	border: 1px solid #F0F0F0;
+	margin-bottom: 20px;
+}
+
+.botaoVerMais{
+	text-align: center;
+}
+
+.doc{
+	height: 45px;
+}
+
+.doco{
+	margin: 0 auto ;
+	width: 500px;
+}
+
+.destaque{
+	padding: 10px 10px 0 10px;
+	background-color: #a0d1e0;
+	border: 1px solid black;
+	margin-bottom: 10px;
+}
+
+.clique1{
+	color: #FFF;
+	font-size: 1.2em;
+	font-weight: bold;
+	cursor: pointer;
+	text-shadow: 1px 1px #d1d1d1;
+}

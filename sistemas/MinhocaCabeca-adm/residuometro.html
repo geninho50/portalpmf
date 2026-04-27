@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+<!--
+	Hielo by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Minhoca na Cabeça</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+			<script src="assets/js/jquery.min.js"></script>
+			<script type="text/javascript">
+				buscarResiduomero();
+				function buscarResiduomero(){
+					$.ajax( {
+					  type: "HTML",
+					  dataType: "json",
+					  url: "totalResiduometro.php", 
+					  success: function( data ){
+								$("#totalResiduometro").html(data + ' kg');   
+							  },
+					 error: function( data ){
+						console.log( data );
+					 		}
+						} 
+					);
+				}	
+
+			</script>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="residuometro.html">RESIDUÔMETRO</a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="http://www.pmf.sc.gov.br/sistemas/MinhocaCabeca-adm/">Home</a></li>
+					<li><a href="passo.html">Inscreva-se</a></li>
+					<li><a href="login.html">Área do Participante</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p><Strong>PROJETO MINHOCA NA CABEÇA</Strong></p>
+						<h2>Recicle seus hábitos, aprenda a valorizar os resíduos orgânicos</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content" style="text-align: justify;">
+							<header class="align-center">
+								<h2>RESIDUÔMETRO</h2>
+							</header>
+
+							<h4>Florianópolis já se tornou referência nacional com o programa de agricultura urbana, a compostagem e as hortas nas escolas e centros de saúde. Agora, por meio do Minhoca na Cabeça estimula melhores práticas com resíduos orgânicos também nas residências.</h4>
+
+							<h4>A reciclagem de orgânicos na fonte é a escolha mais inteligente para reduzir a pegada de carbono da cidade na geração de resíduos. E dá resultados rápidos.</h4>
+
+							<h4>Veja quantos quilos de resíduos orgânicos os participantes do Minhoca na Cabeça recuperam juntos:</h4>
+							<h4><strong><div id="totalResiduometro" align="center" style="font-size: 30px"></div></strong></h4>
+						</div>
+					</div>
+				</div>
+			
+		
+							<div class="inner">
+								<div class="box">
+									<div class="content">
+										<header class="align-center">
+							<h4>Movimentação de resíduos em 2017 - Centro de Valorização de Resíduos (CVR) - Comcap</h4>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Serviço</th>
+												<th>Quantidade</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Resíduos sólidos – coleta convencional e remoção</td>
+												<td>188.127 toneladas</td>
+											</tr>
+											<tr>
+												<td>Resíduos sólidos - coleta seletiva porta a porta e entrega voluntária</td>
+												<td>11.270 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de madeira</td>
+												<td>96,5 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de metal</td>
+												<td>213,8 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de pneus</td>
+												<td>151 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de podas</td>
+												<td>2.750 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de orgânicos</td>
+												<td>495 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de óleo</td>
+												<td>125 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem eletrônicos</td>
+												<td>32 toneladas</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="1"><strong>Total</strong></td>
+												<td><strong>203.262 toneladas</strong></td>
+											</tr>
+											<tr>
+												<td colspan="1">% DESVIADO DO ATERRO SANITÁRIO</td>
+												<td>6,17%</td>
+											</tr>
+										</tfoot>
+									</table>
+									<p>Fonte: Departamento de Valorização de Resíduos</p>
+								</div>
+
+
+					<!--		<h4>Movimentação de resíduos em 2015 Centro de Valorização de Resíduos (CVR) Comcap</h4>
+								<div class="table-wrapper">
+									<table class="alt">
+										<thead>
+											<tr>
+												<th>Serviço</th>
+												<th>Quantidade</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Resíduos sólidos domiciliares</td>
+												<td>185.353 toneladas</td>
+											</tr>
+											<tr>
+												<td>Resíduos sólidos - Coleta seletiva</td>
+												<td>12.127 toneladas</td>
+											</tr>
+											<tr>
+												<td>Resíduos de serviços de saúde</td>
+												<td>53 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de madeira</td>
+												<td>1.068 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de metal</td>
+												<td>110 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de pneus</td>
+												<td>234 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de podas</td>
+												<td>2.397 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reaproveitamento de restos de alimentos</td>
+												<td>634 toneladas</td>
+											</tr>
+											<tr>
+												<td>Reciclagem de óleo</td>
+												<td>282 toneladas</td>
+											</tr>
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="1"><strong>Total</strong></td>
+												<td><strong>202.258 toneladas</strong></td>
+											</tr>
+											<tr>
+												<td colspan="1">% DESVIADO DO ATERRO SANITÁRIO</td>
+												<td>6,92%</td>
+											</tr>
+										</tfoot>
+									</table>
+									<p>Fonte: Departamento de Valorização de Resíduos</p>
+								</div> -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+				<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://twitter.com/_comcap" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/comcapoficial" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/explore/locations/240724652/prefeitura-de-florianopolis/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="mailto:minhocacabeca.comcap@pmf.sc.gov.br" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<header class="align-center">
+							<img src="images/Comcap.png" alt="" />
+							<img src="images/Prefeitura.png" alt=""/>
+					</header>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+
+
+	</body>
+</html>

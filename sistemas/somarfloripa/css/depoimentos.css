@@ -1,0 +1,294 @@
+/* gerais */
+body{
+    font-family:'signika' , sans-serif;
+}
+.row
+{
+    margin: 0;
+}
+.container
+{
+    padding: 70px 0;
+}
+
+/*p, li
+{
+    color: cyan;
+    font-size: 14px;
+}*/
+
+/* barra de navegação*/
+header, .navbar
+{
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+}
+#nav-container
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#logo
+{
+    padding: 0%;
+    width: 100px;
+    margin: -10px;
+	position:relative;
+	left:50px;
+	top:-10px;
+}
+.navbar-brand
+{
+    padding: 0;
+    color: white;
+}
+/*botão toda somar no cabeçalho*/
+#btnSomar
+{
+	border:none;
+	background-color:white;
+}
+.navbar-brand:hover
+{
+    color: white;
+}
+#navbar-links a 
+{
+    color: #4f4f4f;
+    cursor: pointer;
+}
+.navbar-expand-lg .navbar-nav .nav-link
+{
+    padding: 1rem .8rem;
+}
+/*#inputCabecalho
+{
+    height: 45px;
+    width: 450px;
+    background-color:#f2f2f2;
+    color: #333333;
+    border-radius: 20px;
+    border: 1px transparent;
+    font-size: 15px;
+    font-weight: 200;
+}*/
+#navbarDropdown
+{
+	margin:10px;
+}
+#primeiroContainer 
+{
+    background-color: #f2ebee;
+}
+#label
+{
+    font-size: 40px;
+    color:#33AFC4;
+    font-weight: bold;
+    position: relative;
+    left: 50px;
+    top: 40px;
+}
+#sejaParceiro
+{
+    height: 30px;
+    width: 190px;
+    background-color:#B2C035;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    top: 100px;
+    right: 200px;
+    border: transparent;
+    box-shadow: 1px 5px 5px #B2C035;
+    font-weight: none;
+    transition: 0.5s;
+    border: 1px solid #B2C035;
+}
+#sejaParceiro:hover
+{
+    background-color:white;
+    color:#B2C035;
+}
+
+#mulher3pontos
+{
+    height: 300px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+#depoimentosParceiros
+{
+    
+    color:#33AFC4;
+    margin: 50px 0px 20px 0px;
+}
+#imagesDepoimento
+{
+    width: 150px;
+	border-radius:20px;
+}
+#nomesDepoimentos
+{
+    color:#B2C035;
+    display: block;
+}
+#containerFluid
+{
+	margin:0px 0px 50px 0px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon
+{
+	background-color:black;
+}
+#depoimentoEscrito1
+{
+    width: 300px;
+    height: 280px;
+    border: 1px solid #4f4f4f;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 0px #4f4f4f;
+    margin-top: 50px;
+}
+#dataDepoimento
+{
+    font-weight: bold;
+    margin: 20px 0px 20px 0px;
+}
+#depoimentoExtenso
+{
+    font-size: 15px;
+}
+#pessoaDeuDepoimento
+{
+    color: #B2C035;
+}
+#final
+{
+    background-color: #f2ebee;
+    color: #333333;
+    font-size: 15px;
+}
+#primeiraColuna
+{
+    margin: 0 0 0 50px;
+}
+#h2Final
+{
+    font-size: 20px;
+    cursor: pointer;
+	color:black;
+}
+#h2Final:hover
+{
+    color: red;
+}
+#h4Final
+{
+    font-size: 15px;
+    cursor: pointer;
+	color:black;
+	line-height:30px;
+}
+#h4Final:hover
+{
+    color: red;
+}
+
+.facebook
+{
+width: 25px;
+border-radius: 20px;
+background-color: #828282;
+}
+.instagram
+{   
+position:absolute;
+width: 27px;
+border-radius: 20px;
+background-color: #828282;
+left: 100px;
+}
+.twitter
+{
+position:absolute;
+width: 27px;
+border-radius: 20px;
+background-color: #828282;
+left: 55px;
+} 
+.menu-bar ul
+{
+    display: inline-flex;
+    list-style: none;
+    color:black;
+    font-size: 15px;
+    line-height: 15px;
+}
+.menu-bar ul li
+{   
+    margin: 5px;
+    padding: 20px;
+}
+.menu-bar ul li a
+{
+    text-decoration: none;
+    color: black;
+}
+/*.active, .menu-bar ul li:hover
+{
+    background: #0077ff;
+    border-radius: 3px;
+    cursor: pointer;
+}*/
+.sub-menu-1
+{
+    display: none;
+    position: absolute;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1
+{
+    display: block;
+    position: absolute;
+    background: white;
+    border: 1px solid;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 5px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child
+{
+    border-bottom: none;
+}
+.fa-angle-right
+{
+    float: right;
+}
+.sub-menu-2
+{
+    display: none;
+    position: absolute;
+}
+.hover-me:hover .sub-menu-2
+{
+    position: absolute;
+    display: block;
+    margin-top: -40px;
+    margin-left: 140px;
+    background: white;
+    border: 1px solid;
+}
+
+
+
+

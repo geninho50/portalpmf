@@ -1,0 +1,25 @@
+td, th{
+	font-size: 0.9em;
+}
+
+.table{
+	background-color: #FFF;
+	overflow: auto;
+	max-height: 350px;
+	font-size: 0.95em;
+	border: 1px solid #F0F0F0;
+	margin-bottom: 20px;
+	
+}
+
+th{
+	text-align: center !important;
+}
+
+td{
+	text-align: center !important;
+}
+
+h1{
+	text-align: center;
+}

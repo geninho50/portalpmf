@@ -1,0 +1,305 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Medidas de estímulo econômico e social</title>
+
+        <!--fonte-->
+        <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;700&display=swap" rel="stylesheet">
+
+        <!--bootstrap-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/unificado_6paragrafos.css">
+
+        <!--scripts-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
+        <!--font awesome--> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css' type='text/css'>
+
+
+        <!--progress bar-->
+        <script src="js/progressbar.min.js"></script>
+
+        <!-- javascript -->
+        
+        <!--parallax-->
+        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+        
+        <!--donativos-->
+        <link rel="shortcut icon" href="images/logoTrans.png">
+    </head>
+    <script>
+
+        var arquivoURLfinalTransparencia = 'php/finalTransparencia.php';
+
+        
+        finalTransparencia();
+
+
+
+
+    function finalTransparencia(){
+            $.ajax({
+                type: 'POST',
+                url: arquivoURLfinalTransparencia,
+                dataType: 'html',
+                success: function(data) {
+                    $("#finalTransparencia").html( data );
+                },
+                error: function( data ){
+                    console.log( data );
+                }
+            }
+        );
+    }
+	
+	function MostrarSubmenu()
+    {
+        if(document.getElementById('subMenu').style.display == 'block'){
+            document.getElementById('subMenu').style.display = 'none';}
+        else{
+            document.getElementById('subMenu').style.display = 'block';
+        }
+    };
+	
+	function fecharSubMenu()
+    {
+        if(document.getElementById('subMenu').style.display == 'block'){
+            document.getElementById('subMenu').style.display = 'none';
+			document.getElementById('divMenu').style.visibility = 'visible';}
+			
+		else{
+            document.getElementById('subMenu').style.display = 'block';
+        }
+    };
+	function fecharMenu()
+    {
+		if(document.getElementById('subMenu').style.display == 'none'){
+		document.getElementById('subMenu').style.visibility == 'hidden';}
+    };
+    function MostrarSubmenu2()
+    {
+        if(document.getElementById('subMenu2').style.display == 'block'){
+            document.getElementById('subMenu2').style.display = 'none';}
+        else{
+            document.getElementById('subMenu2').style.display = 'block';
+            document.getElementById('dropdown ').style.visibility = 'visible';
+        }
+    };
+
+    function fecharSubMenu2()
+    {
+        if(document.getElementById('subMenu2').style.display == 'block'){
+            document.getElementById('subMenu2').style.display = 'none'
+            document.getElementById('subMenu').style.display = 'none';
+			document.getElementById('dropdown').style.visibility = 'visible';}
+			
+		else{
+            document.getElementById('subMenu2').style.display = 'block';
+        }
+    };
+    function fechardropdown()
+    {
+        if(document.getElementById('dropdown').style.display == 'block'){
+            document.getElementById('dropdown').style.display = 'none';}
+        };
+	
+    </script>
+    <body>
+        <header>
+            <div class="menu-bar" id="divCabecalho">
+                <ul>
+                    <div class="dropdown" id="divMenu">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="btnMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">menu</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdown">
+                            <button type="button" id="fecharDropdown" data-dismiss="dropdown" aria-label="Close" onclick="fecharSubMenu()">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+    
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/inicioTransparencia.html" id="links"><li>Início</li></a>  
+    
+                            <a href="#" id="links"><input type="button" value="Transparência e Controle >" onclick="MostrarSubmenu()" id="inputMostraSubMenu"></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/covid19.html" id="links"><li>Covid19</li></a>
+                                
+                            <a href="#" id="links"><li>Diário oficial</li></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/licitacoesContratos.html" id="links"><li>Licitações e contratos</li></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/gestaoPessoas.html" id="links"><li>Gestão de pessoas</li></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/receitasDespesas.html" id="links"><li>Receitas e despesas</li></a>
+                                
+                            <a href="#" id="links"><li>Contas públicas</li></a>
+                                
+                            <a href="#" id="links"><li>Obras públicas</li></a>
+                                
+                            <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/somarFloripa.html" id="links"><li>Somar Floripa</li></a>
+                            
+                        </div>
+                    </div>
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/inicioTransparencia.html"><input type="button" name="" id="inicio" value="Inicio"></a>
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/covid19.html"><input type="button" name="" id="inicio2" value="Voltar para COVID19"></a>
+                    <li id="redes1"><a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li id="redes2"><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li id="redes3"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li id="redes4"><a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div id="subMenu" class="hidden">
+                <input type="button" value="X" onclick="fecharSubMenu()" id="fecharDiv">
+                <!--<button type="button" id="fecharDiv" data-dismiss="modal" aria-label="Close" onclick="fecharSubMenu()">
+                    <span aria-hidden="false">&times;</span>
+                  </button>-->
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/sobrePortal.html" id="links2">Sobre o Portal</a>
+    
+                    <a href="#" id="links2">Tour pela Página</a>
+            
+                    <a href="#" id="links"><input type="button" value="Entre em Contato" onclick="MostrarSubmenu2()" id="inputMostraSubMenu"></a>
+                    
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/convenios_repasse.html" id="links2">Convênios</a>
+            </div>
+			
+			<!--SUBMENU 2, TRANSPARÊNCIA E CONTROLE -> ENTRE EM CONTATO -->
+			
+			<div id="subMenu2" class="hidden">
+                <input type="button" value="X" onclick="fecharSubMenu2()" id="fecharDiv">
+                <!--<button type="button" id="fecharDiv" data-dismiss="modal" aria-label="Close" onclick="fecharSubMenu()">
+                    <span aria-hidden="false">&times;</span>
+                  </button>-->
+    
+                    <a href="http://www.pmf.sc.gov.br/sistemas/somarfloripa/faleConosco.html" id="links2">Fale conosco</a>
+            
+                    <a href="#" id="links2">telefones e endereços</a>
+                    
+            </div>
+        </header>
+        <main>
+			<div class="container">
+				<h3 id="textoInicial">Medidas de estímulo econômico e social</h3>
+			</div>
+			<div class="container">
+				<div class="container" id="containerCentral">
+					<center><h4 id="textoContainer">Medidas de estímulo econômico e social</h4></center>
+                    <center><h6 id="textoContainer2">MEDIDAS DE ESTÍMULO ECONÔMICO</h6></center>
+                    <div class="row">
+                        <div class="col" id="paragrafo1">
+                            <p><a href="https://leismunicipais.com.br/a/sc/f/florianopolis/decreto/2020/2135/21347/decreto-n-21347-2020-altera-o-decreto-n-21340-de-2020-que-dispoe-sobre-as-medidas-para-enfrentamento-da-emergencia-de-saude-publica-de-import-ncia-internacional-decorrente-da-infeccao-humana-pelo-novo-coronavirus-covid-19-e-da-outras-providencias?q=21347" target="_blank" id="linksTexto">
+                            Prorrogação no pagamento de impostos<br>
+                            decreto n. 21.347/2020 art.29<br></a>
+                            (dispõe sobre as medidas para<br>
+                            enfrentamento da emergência de saúde<br>
+                            pública de importância internacional<br>
+                            decorrente da infecção humana pelo<br>
+                            novo coronavírus (covid-19))<br>
+                            Sem custos para o município.</p>
+                        </div>
+                        <div class="col" id="paragrafo2">
+                            <p><a href="https://leismunicipais.com.br/a/sc/f/florianopolis/decreto/2020/2137/21365/decreto-n-21365-2020-dispoe-sobre-a-prorrogacao-do-vencimento-das-parcelas-do-imposto-sobre-servico-de-qualquer-natureza-iss-fixo-do-ano-2020-em-decorrencia-da-pandemia-relacionada-ao-coronavirus-covid-19?q=21365" target="_blank" id="linksTexto">
+                            Prorrogação de Vencimento da parcela<br>
+                            do iss - decreto n. 21.365/2020 <br></a>
+                            (dispõe sobre a prorrogação do<br>
+                            vencimento das parcelas do imposto<br>
+                            sobre serviço de qualquer natureza (ISS)<br>
+                            fixo do ano 2020 em decorrência da<br>
+                            pandemia relacionada ao coronavírus<br>
+                            (covid-19)) Sem custos para o município<br>
+                            sem custos para o município.</p>
+                        </div>
+                        <div class="col" id="paragrafo3">
+                            <p><a href="https://leismunicipais.com.br/a/sc/f/florianopolis/decreto/2020/2139/21388/decreto-n-21388-2020-estabelece-as-regras-de-operacao-do-programa-juro-zero-floripa-durante-a-vigencia-das-acoes-de-enfrentamento-ao-covid-19-altera-o-decreto-n-17809-de-2017-e-da-outras-providencias?q=21388" target="_blank" id="linksTexto">
+                            Programa Juro Zero - DECRETO n. 21.388/2020 <br>
+                            (estabelece as regras de operação do programa<br>
+                            </a>Juro Zero Floripa durante a vigência das ações de<br>
+                            enfrentamento ao covid-19)<br>
+                            Solicitação do crédito pode ser feita no site<br>
+                            www.bancodoempreendedor.org.br<br>
+                            (Juro Zero Floripa)<br>
+                            Valor Liberado até o dia 06 de agosto de 2020 =<br>
+                            R$ 1.115.510,00.</p>
+                        </div>
+                    </div>
+                    <center><h6 id="textoContainer3">MEDIDAS DE ESTÍMULO SOCIAL</h6></center><br><br>
+                    <center><h6 id="textoContainer4"><b>campanha #somandocontracovid19 |</b> doações realizadas com o apoio da prefeitura<BR>
+                    para mais informações <a href="http://www.pmf.sc.gov.br/transparencia/index.php?pagina=gestoresCOVID&menu=12&submenuid=1&cms=doacoes&IdEntidade=17" target="_blank" id="linksTexto">clique no link doações.</a></h6></center>
+                    <div class="row">
+                        <div class="col" id="paragrafo4">
+                            <p><a href="https://covidometrofloripa.com.br/uploads/Covid/4e153f528a94e4daec979a04cfeec82f.pdf" target="_blank" id="linksTexto">
+                            Plano de Contingência</a><br>Plano de contingência da Assistência<br>
+                            Social para atuação na situação de<br>
+                            emergência em saúde pública da doença<br>
+                            Covid-19. Plano de Contingência.</p>
+                        </div>
+                        <div class="col" id="paragrafo5">
+                            <p><a href="https://leismunicipais.com.br/a/sc/f/florianopolis/lei-ordinaria/2020/1071/10702/lei-ordinaria-n-10702-2020-altera-e-inclui-dispositivos-na-lei-n-10444-de-2018?q=10702" target="_blank" id="linksTexto">
+                            Lei 10.702 22/04/2020</a><br>
+                            Altera e inclui dispositivos na Lei nº<br>
+                            10.444. De 2018, que institui as normas<br>
+                            para concessão de benefícios eventuais<br>
+                            no âmbito da política municipal de<br>
+                            assistência social, revoga a lei nº 9022,<br>
+                            de 2012, e dá outras providências.</p>
+                        </div>
+                        <div class="col" id="paragrafo6">
+                            <p><a href="https://leismunicipais.com.br/a/sc/f/florianopolis/decreto/2020/2166/21659/decreto-n-21659-2020-preserva-o-beneficio-da-gratuidade-do-cartao-deficiente-durante-o-enfrentamento-da-emergencia-de-saude-publica-de-import-ncia-internacional-decorrente-da-infeccao-humana-pelo-novo-coronavirus-covid-19-e-da-outras-providencias?q=21659" target="_blank" id="linksTexto">
+                            Decreto 21.659 17/06/2020</a><br>
+                            Preserva o benefício da gratuidade do cartão<br>
+                            deficiente durante o enfrentamento da emergência<br>
+                            de saúde pública de importância internacional<br>
+                            decorrente da infecção humana pelo novo<br>
+                            coronavírus (covid-19) e dá outras providências.</p>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			
+				<button id="faleConosco1"><i class="fa fa-angle-up" aria-hidden="true"></i></button>
+                <button id="faleConosco" data-target="#modalFaleConosco" data-toggle="modal">Fale Conosco</button>
+
+                <div class="modal fade" id="modalFaleConosco" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                        
+                            <h5 id="titulo">PODEMOS AJUDAR?</h5>
+
+                          <button type="button" id="fecharModal" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <center>
+                                    <h6>Dúvidas, sugestões, não encontra algo.<br> Fale conosco.</h6><br><br>
+                                    <div class="form-group">
+                                    <label id="subModal">Nome</label>
+                                    <input type="text" id="inputs">
+                                    </div>
+                                    <div class="form-group">
+                                    <label id="subModal">Email</label>
+                                    <input type="email" id="inputs">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="subModal">Escreva aqui</label>
+                                        <textarea id="inputs"  rows="3" cols="35"></textarea>
+                                    </div>
+                                </center>    
+                              </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" id="enviar">enviar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+			
+			
+			<div id="finalTransparencia">
+
+            </div>
+        </main>
+</html>

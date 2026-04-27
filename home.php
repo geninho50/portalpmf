@@ -1,0 +1,332 @@
+<?php
+//---------------------------------------------------------------------
+// busca as configurações e funções para mostrar corretamento o portal
+//---------------------------------------------------------------------
+
+require_once("scripts/php/config.php");
+require_once("scripts/php/funcoes_bd.php");
+require_once("scripts/php/funcoes.php");
+
+$drive->conecta();
+
+?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prefeitura de Florianópolis</title>
+
+  <link rel="stylesheet" href="layout/pmf-estilo.css" type="text/css">
+  <link rel="stylesheet" href="layout/pmf-estilo-home-new-2.css" type="text/css">
+  <link rel="stylesheet" href="scripts/slidesjs/css/global.css">
+  <link rel="stylesheet" href="scripts/js/ui/jquery-ui.css">
+  <link href="layout/imagens/brasao.gif" rel="shortcut icon" type="image/x-icon" />
+
+	<!--	
+	Pop up
+	<script language="javascript">window.open('http://transparenciacovid.pmf.sc.gov.br/');</script>
+	<script language="javascript">window.open('http://www.pmf.sc.gov.br/coronavirus/');</script>
+  <script language="javascript">window.open('https://e-gov.betha.com.br/cdweb/03114-379/contribuinte/rel_guiaiptu.faces');</script>
+-->
+
+</head>
+
+<div id="abas_img">
+  <!-- 
+  <a class="view_pagina" href="https://www.pmf.sc.gov.br/arquivos/imagens/alerta_junta.jpg"></a>  -->
+  <a class="view_pagina" href="https://www.pmf.sc.gov.br/arquivos/imagens/alerta_seguranca.jpg"></a>
+</div> 
+<!-- -->
+<body>
+
+<!--  vlibras  -->
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+<script> new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+
+  <div style="display:none">
+	    <a href="mobile/" title="Link para o portal de acessibilidade">para acessar o portal no modulo de acessibilidade, acesse este link</a>
+  </div>
+
+  <?php
+  	$menu_principal = "home";
+  	include("layout/menus/menu_geral.php");
+	?>
+
+  <?php
+    //home background Image
+    $pathToFolder = CAMINHO_SITE."/layout/imagens/home-background";
+    if(glob($pathToFolder.'/home.*')){
+      $files = glob($pathToFolder . '/home.*');
+    }else{
+      $files = glob($pathToFolder . '/*.*');
+    }
+
+    $file = array_rand($files);
+    $style="/layout/imagens/home-background/".basename( $files[$file] );
+  ?>
+  <div class="flex-container hero-wrapper" style="background-image: url('<?=$style;?>')">
+    <?php
+       $buscaServicoTitle = "Encontre os serviços da Prefeitura de Florianópolis";
+       $class = "search-bar--home";
+       include(CAMINHO_SITE."/layout/themePMF/includes/buscaServicos.php");
+   
+       include(CAMINHO_SITE."/layout/themePMF/includes/servicosMaisAcessados.php");
+       $carouselColumn = 4;
+       $IdEntidade = 0;
+       $noti_id = 0;
+       $noti_id2 = 1;
+       $pageIsHome = true;
+       $only2 = true;
+       include(CAMINHO_SITE."/layout/themePMF/includes/home/noticias.php");
+    ?>
+  </div>
+
+  <div class="flex-container services-and-news">
+    <?php
+    $only2 = false;
+    $start = 2;
+    include(CAMINHO_SITE."/layout/themePMF/includes/servicosCategorias.php");
+    include(CAMINHO_SITE."/layout/themePMF/includes/home/noticias.php");
+    ?>
+  </div>
+
+  <div class="flex-container blocks--home">
+    <?php
+      $bannerEntityId = 0;
+      $bannersColumn = 8;
+      include("layout/themePMF/includes/banners.php");
+    ?>
+  </div>
+
+  <div class="flex-container">
+	  <?php
+      // include(CAMINHO_SITE."/layout/themePMF/includes/consultaProcessoProvisorio.php");
+      include(CAMINHO_SITE."/layout/themePMF/includes/consultaProcessoProvisorio.php");
+      include(CAMINHO_SITE."/layout/themePMF/includes/home/youtube.php");
+    ?>
+  </div>
+
+  <div class="flex-container">
+    <div class="column4-lg column4-md column8-sm">
+      <?php
+        include(CAMINHO_SITE."/layout/themePMF/includes/home/facebook.php");
+      ?>
+    </div>
+    <div class="column4-lg column4-md column8-sm">
+      <?php
+        include(CAMINHO_SITE."/layout/themePMF/includes/home/instagram.php");
+        $mostraTodosCalendario = true;
+        $calendarioNumeroResult = 4;
+        include(CAMINHO_SITE."/layout/themePMF/includes/home/calendario.php");
+      ?>
+    </div>
+  </div>
+
+  <link rel="stylesheet" type="text/css" href="/scripts/js/livevalidation/livevalidation13.css" />
+  <link rel="stylesheet" href="/scripts/colorbox/colorbox.css" type="text/css" media="screen"/>
+  <br>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script>
+$(document).ready(function() {
+  if (!checkCookie('image_seen')) {
+      $(".view_pagina").colorbox({
+         iframe: true,
+         width: "1080rem",
+         height: "630rem",
+         open: true,
+         onComplete: function() {
+           // Define o cookie para indicar que a imagem foi vista
+           setCookie('image_seen', 'true', 0); // O cookie expira em 7 dias
+         }           
+       });
+   }    
+  });
+</script>  
+
+
+
+<!--
+-->  
+<style>
+  .iss2026{ right:250px; 
+            position:fixed; 
+            width:80px; 
+            height:95px; 
+            bottom:30px;
+            border-radius:10px;
+            box-shadow: 2px 2px 3px #999;
+            background-image:url(sistemas/tainha/iss2026.png); 
+            background-size:100%; 
+            text-align:center;
+            font-size:30px; 
+            z-index:100;
+  } 
+
+  .iptu2026{ right:150px; 
+            position:fixed; 
+            width:80px; 
+            height:95px; 
+            bottom:30px;
+            border-radius:10px;
+            box-shadow: 2px 2px 3px #999;
+            background-image:url(sistemas/tainha/iptu2026.png); 
+            background-size:100%; 
+            text-align:center;
+            font-size:30px; 
+            z-index:100;
+  } 
+
+  .tcrs2026{ right:50px; 
+            position:fixed; 
+            width:80px; 
+            height:95px; 
+            bottom:30px;
+            border-radius:10px;
+            box-shadow: 2px 2px 3px #999;
+            background-image:url(sistemas/tainha/tcrs2026.png); 
+            background-size:100%; 
+            text-align:center;
+            font-size:30px; 
+            z-index:100;
+  } 
+
+.float{ right:140px; 
+            position:fixed; 
+            width:80px; 
+            height:110px; 
+            bottom:30px;
+            border-radius:10px;
+            box-shadow: 2px 2px 3px #999;
+            background-image:url(sistemas/tainha/logoComFundoA.png); 
+            background-size:100%; 
+            text-align:center;
+            font-size:30px; 
+            z-index:100;} 
+
+  .primeiroFloat{ 
+            right:50px; 
+            position:fixed; 
+            width:80px; 
+            height:110px; 
+            bottom:30px;
+            border-radius:10px;
+            box-shadow: 2px 2px 3px #999;
+            background-image:url(sistemas/tainha/conselhoFloripa.png); 
+            background-size:100%; 
+            text-align:center;
+            font-size:30px; 
+            z-index:100;
+          } 
+
+  .segundoFloat{ 
+            right:150px; 
+            position:fixed; 
+            width:80px; 
+            height:110px; 
+            bottom:30px;
+            border-radius:10px;
+            box-shadow: 2px 2px 3px #999;
+            background-image:url(sistemas/tainha/floripaMaisEmprego.png); 
+            background-size:100%; 
+            text-align:center;
+            font-size:30px; 
+            z-index:100;
+          }
+
+  .terceiroFloat{ 
+            right:250px; 
+            position:fixed; 
+            width:80px; 
+            height:110px; 
+            bottom:30px;
+            border-radius:10px;
+            box-shadow: 2px 2px 3px #999;
+            background-image:url(sistemas/tainha/gratuidadeEnem.png); 
+            background-size:100%; 
+            text-align:center;
+            font-size:30px; 
+            z-index:100;
+          }
+            			
+	.estiloFloat{ 
+			font-size:15px;
+			line-height:70px;
+			color:#FFFFFF;}     
+
+  .my-float{  margin-top:80px;
+                font-size:15px;
+                color:black;}
+
+</style> 
+
+   <!-- 
+   <a href="https://www.pmf.sc.gov.br/sistemas/tainha/" class="float"  target="_blank"><b class= "estiloTotal">144.727</b></a> 
+   <a href="http://geoportal.pmf.sc.gov.br/services/consulta-construcao/" class="floatCCA"  target="_blank"><b class= "estiloTotalCCA"></b></a>   
+   <a href="http://geoportal.pmf.sc.gov.br/services/consulta-construcao/" class="floatCCA"  target="_blank"><b class= "estiloTotalCCA"></b></a>
+   <a href="https://www.pmf.sc.gov.br/noticias/index.php?pagina=notpagina&noti=26143" class="floattainhometro" target="_blank"><b class="estiloTotalIPTU"></b></a>   
+   <a href="https://www.pmf.sc.gov.br/entidades/procuradoria/index.php?pagina=notpagina&noti=26403" class="floatIncentivoCultura" target="_blank" ><b class="estiloIncentivo"></b></a>
+   -->
+   <!-- <a href="https://wa.me/+5508008080155?text=Oi!." class="floatZapDenuncias" target="_blank" ><b class="estiloZapDenuncias"></b></a> -->
+   <!-- <a href="https://www.pmf.sc.gov.br/entidades/infraestrutura/index.php?pagina=notpagina&menu=0&noti=26534" class="floatZapDenuncias" target="_blank" ><b class="estiloZapDenuncias"></b></a>-->
+   <!-- <a href="https://www.pmf.sc.gov.br/sistemas/tainha/" class="floatZapDenuncias" target="_blank" ><b class="estiloZapDenuncias"></b></a> -->
+   <!-- <a href="https://e-gov.betha.com.br/cdweb/03114-379/contribuinte/rel_guiaiptu.faces" class="floatIPTU" target="_blank" ><b class="estiloTotalIPTU"></b></a>
+   <a href="https://www.pmf.sc.gov.br/entidades/ccf/index.php?cms=2024+processo+eleitoral&menu=5&submenuid=2744" class="primeiroFloat" target="_blank" ><b class="estiloFloat"></b></a>
+   <a href="https://floripamaisempregos.santacatarinapelaeducacao.com.br/" class="segundoFloat" target="_blank" ><b class="estiloFloat"></b></a>
+   -->
+
+   <a href="https://www.pmf.sc.gov.br/servicos/index.php?pagina=servpagina&id=3688 " class="iss2026" target="_blank" ><b class="estiloFloat"></b></a>
+   <!-- <a href="https://e-gov.betha.com.br/cdweb/03114-457/contribuinte/rel_guiaiptu.faces" class="iptu2025" target="_blank" ><b class="estiloFloat"></b></a>    -->
+   <a href="https://www.pmf.sc.gov.br/servicos/index.php?pagina=servpagina&id=5706&menu=2" class="iptu2026" target="_blank" ><b class="estiloFloat"></b></a>   
+   <a href="https://e-gov.betha.com.br/cdweb/03114-457/contribuinte/rel_guiaiptu.faces" class="tcrs2026" target="_blank" ><b class="estiloFloat"></b></a>   
+
+   <!-- <a href="https://www.pmf.sc.gov.br/arquivos/arquivos/pdf/01_11_2024_12.12.54.f78822f63206869313c5356395e90f44.pdf" class="terceiroFloat" target="_blank" ><b class="estiloFloat"></b></a>  -->
+
+  <script src="cookie.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="/scripts/js/maskinput/inputmask.dependencyLib.min.js"></script>
+  <script src="/scripts/js/maskinput/inputmask.min.js"></script>
+  <script type="text/javascript" src="/scripts/colorbox/jquery.colorbox.js"></script>
+
+  <script type="text/javascript">
+      function loadScript( url, callback ) {
+        var script = document.createElement( "script" )
+        script.type = "text/javascript";
+        if(script.readyState) {  //IE
+          script.onreadystatechange = function() {
+            if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+              script.onreadystatechange = null;
+              callback();
+            }
+          };
+        } else {  //Others
+          script.onload = function() {
+            callback();
+          };
+        }
+        script.src = url;
+        document.getElementsByTagName( "head" )[0].appendChild( script );
+     }
+  </script>
+
+  <?php
+    include("layout/rodape/rodape.php");
+    $minJs = "/layout/themePMF/js/home.min.js";
+    
+    if ( file_exists(CAMINHO_SITE.$minJs)){
+         echo "<script src=\"$minJs\"></script>";
+    }
+  ?>
+</body>
+
+</html>

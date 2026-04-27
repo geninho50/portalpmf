@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="icon" href="images/brasao.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <title>Ilha do Campeche</title>
+
+</head>
+
+<body>
+  <div id="overlay" class="overlay"></div>
+  <div class="wrapper">
+    <main>
+      <section class="module parallax parallax-1">
+        <h1>Ilha do Campeche</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h2>Historia</h2>
+          <p>
+            A Ilha do Campeche está localizada em frente à Praia do Campeche, no Leste da Ilha de Santa Catarina.
+            A ilha tem aproximadamente 1,6 km de comprimento e 500 metros de largura. Conhecida pela sua beleza com
+            águas cristalinas em tons turquesa e areia branca, a Ilha do Campeche foi tombada pelo IPHAN
+            (Instituto do Patrimônio Histórico e Artístico Nacional) no ano 2000, por seus a tributos paisagísticos
+            e arqueológicos. É o local que possui a maior concentração de oficinas líticas e gravuras rupestres do
+            litoral brasileiro. No passado mais recente foi utilizada como um ponto no complexo da caça à baleias.
+          </p>
+        </div>
+      </section>
+
+      <section class="module parallax parallax-2">
+        <h1>Marque sua Visita</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <!-- <h2>Qualquer texto aqui..</h2> -->
+          <p>
+            Para marcar sua visita a Ilha do Campeche voce precisa ter um cadastro, caso tenha alguma duvida pode enviar
+            mensagem para esse
+            E-mail: teste@pmf.sc.gov.br
+          </p>
+          <div class="divButtons">
+            <button onclick="openModalCadastro()">Cadastro</button>
+            <button onclick="openModalReservar()">Reservar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="module parallax parallax-3">
+        <h1>Esperamos você lá!</h1>
+      </section>
+
+      <section class="module content">
+        <div class="container">
+          <h2>Patrocínio</h2>
+          <p>
+            Esses são os nossos patrocinadores:
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="modalCadastro" class="modal">
+    <span class="close" onclick="closeModalCadastro()">&times;</span>
+    <div class="divTextoModal">
+      <h3>Cadastrar</h3>
+
+    </div>
+    <div class="divIndivial">
+      <label for="nomeCadastro">Nome:</label><br>
+      <input type="text" id="nomeCadastro" name="nomeCadastro" maxlength="80" placeholder="Digite seu Nome...">
+    </div>
+
+    <div class="divSenhaModal">
+      <div class="lado">
+        <label for="cpfCadastro">CPF:</label><br>
+        <input type="text" id="cpfCadastro" maxlength="11" name="cpfCadastro" placeholder="Digite seu CPF...">
+      </div>
+      <div class="cima">
+        <label for="dataNascimentoCadastro">Data Nascimento:</label><br>
+        <input type="date" id="dataNascimentoCadastro" name="dataNascimentoCadastro">
+      </div>
+    </div>
+
+    <div class="divSenhaModal">
+      <div class="lado">
+        <label for="emailCadastro">E-mail:</label><br>
+        <input type="text" id="emailCadastro" maxlength="45" name="emailCadastro" placeholder="Digite seu E-mail...">
+      </div>
+      <div class="cima">
+        <label for="telefoneCadastro">Telefone:</label><br>
+        <input type="text" id="telefoneCadastro" maxlength="15" name="telefoneCadastro" placeholder="Digite seu Telefone...">
+      </div>
+    </div>
+
+    <div class="divSenhaModal">
+      <div class="lado">
+        <label for="cepCadastro">CEP</label><br>
+        <input type="text" id="cepCadastro" name="cepCadastro" maxlength="9" placeholder="Apenas os Numeros" maxlength="9"
+          onkeyup="handleZipCode(event)">
+      </div>
+      <div class="cima">
+        <label for="cidade">Municipio</label><br>
+        <input type="text" id="cidade" name="municipio" placeholder="Digite seu Municipio...">
+        <input type="hidden" id="varMunicipio" maxlength="20" name="varMunicipio">
+      </div>
+    </div>
+
+    <div class="divIndivial">
+      <label for="bairroCadastro">Bairro:</label><br>
+      <input type="text" id="bairroCadastro" name="bairroCadastro" placeholder="Digite seu Bairro...">
+      <input type="hidden" id="varBairro" maxlength="20" name="varBairro">
+    </div>
+
+    <div class="divIndivial">
+      <label for="enderecoCompleto">Endereço:</label><br>
+      <input type="text" id="enderecoCompleto" name="enderecoCompleto" placeholder="Digite seu Endereço...">
+      <input type="hidden" id="varEndereco" maxlength="50" name="varEndereco">
+    </div>
+
+    <div class="divSenhaModal">
+      <div class="lado">
+        <label for="numeroResidencial">Numero:</label><br>
+        <input type="text" id="numeroResidencial" maxlength="10" name="numeroResidencial" placeholder="Digite o Numero...">
+      </div>
+      <div class="cima">
+        <label for="complemento">Complemento</label><br>
+        <input type="text" id="complemento" name="complemento" maxlength="20" placeholder="Digite o complemento...">
+      </div>
+    </div>
+
+    <div class="divSenhaModal">
+      <div class="lado">
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha">
+      </div>
+      <div class="cima">
+        <label for="senhaConf">Confirmar Senha:</label><br>
+        <input type="password" id="senhaConf" name="senhaConf">
+      </div>
+    </div>
+
+
+    <div class="divButtonModal">
+      <button onclick="salvarCadastro();">Salvar</button>
+    </div>
+
+  </div>
+
+  <form method="POST" class="formLogin" name="form" id="form" >
+    <div id="modalReservar" class="modalLogin">
+      <span class="close" onclick="closeModalReservar();">&times;</span>
+      <div class="divTextoModal">
+        <h3>Login</h3>
+        <h5>Para agendar sua visita</h5>
+      </div>
+      <div class="divIndivial">
+        <label for="login">E-mail:</label><br>
+        <input type="text" id="login" name="login">
+      </div>
+      <div class="divIndivial">
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha">
+      </div>
+      <div class="input-wrapper">
+        <div class="g-recaptcha" data-sitekey="6Lf0zBsaAAAAAPaI0ZpJj9u79TjRkLJuOl_d8kr5"></div>
+      </div>
+      <div class="divButtonModal">
+        <input type="button" class="inputButton" onclick="acessarSistema();" value="Acessar" />
+      </div>
+    </div>
+  </form>  
+
+  <script src="js/modal.js"></script>
+  <script src="js/cep.js"></script>
+  <script src="js/functions.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer> </script>
+
+</body>
+
+</html>

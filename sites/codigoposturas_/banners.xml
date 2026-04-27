@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>7</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Código de Posturas</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/16_11_2011_8.54.52.ff4ad5504c22498335e69b41b54744eb.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Normas e Regras para Comércio Localizado</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/05_09_2011_14.22.52.b47fa24fd4b32a773cf4167eb978da32.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Normas e Regras para Publicidade e Propaganda</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/JPG/05_09_2011_14.23.14.4631bb81b67ab76f62fe10b9727628e7.JPG</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Normas e Regras para Segurança Pública</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/05_09_2011_14.23.35.d32fea91f3b52d1ad49d12b4b8fc2bc1.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Áreas de Uso Comum e Conforto Público</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/JPG/05_09_2011_14.25.52.b5f330331f945444c2944dd80a61accf.JPG</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Normas e Regras para Feiras e Comércio Ambulante</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/05_09_2011_14.28.27.8e8ff15a2ddc1dc5b2c9e1464da548e9.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title> Procedimentos para Licenças e Fiscalização</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/05_09_2011_14.30.47.be46babc09f8706797c0ddbbe318458d.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

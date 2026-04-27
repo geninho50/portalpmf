@@ -1,0 +1,52 @@
+:root {
+    --azulPmfEscuro: #002f66;
+    --pretoPmf: black;
+    --azulPmfClaro: #0093d4;
+    --brancoPmf: #ffffff;
+    --azure: azure;
+    --azulGradiante: linear-gradient(var(--azulPmfEscuro), var(--azulPmfClaro));
+    --fontePadrao: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+}
+
+section {
+    column-count: 2;
+    column-gap: 20px; /* Espaço entre as colunas */
+}
+
+.CardSecretaria {
+    width: 100%; /* Ocupa a largura completa da coluna */
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 0 0 20px 0; /* Adiciona margem na parte inferior para espaço entre as divs */
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Garante que a largura inclui padding e borda */
+    break-inside: avoid; /* Impede que a div seja dividida entre colunas */
+}
+
+.exibirConteudoDiv,
+.exibirNovoConteudoDiv {
+    cursor: pointer;
+    color: blue;
+    margin-top: 10px;
+}
+
+
+.novoConteudo hr {
+    margin: 5px 0;
+
+
+}
+
+/* Limpa os floats para garantir que os elementos subsequentes não sejam afetados */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

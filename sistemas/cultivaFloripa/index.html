@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Cultiva Floripa</title>
+	<!-- Bootstrap core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Fontawesome CSS -->
+	<link href="css/all.css" rel="stylesheet">
+	<!-- Custom styles for this template -->
+   <link href="css/style.css" rel="stylesheet">
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<script> 
+
+	var arquivoMenu = 'paginas/cabecalhoMenu.php';
+	var arquivoNoticias = 'paginas/noticias.php';
+	var arquivoAbertura = 'paginas/abertura.php';	
+	var arquivoRodape = 'paginas/rodape.php';		 
+	 
+	montarMenu();
+	montarNoticias();
+	montarAbertura();
+	montarRodape();
+	
+	function montarMenu(){
+		 $.ajax( {
+				type:'GET',
+				url:arquivoMenu,
+				dataType: 'html',
+				success: function (data) { 
+					$("#cabecalhoMenu").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}
+
+	function montarNoticias(){
+		 $.ajax( {
+				type:'GET',
+				url:arquivoNoticias,
+				dataType: 'html',
+				success: function (data) { 
+					$("#notícias").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}	
+
+	function montarAbertura(){
+		 $.ajax( {
+				type:'GET',
+				url:arquivoAbertura,
+				dataType: 'html',
+				success: function (data) { 
+					$("#abertura").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}	
+	
+	function montarRodape(){
+		 $.ajax( {
+				type:'GET',
+				url:arquivoRodape,
+				dataType: 'html',
+				success: function (data) { 
+					$("#rodape").html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	}		
+	
+  </script>
+
+    <!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-light top-nav fixed-top" id="cabecalhoMobile">
+        <div class="container" id="cabecalhoMenu"></div>
+    </nav>
+   
+    <div id="abertura" style="display:block;" >
+    </div>
+	
+    <!-- Page Content -->
+    <div class="container" id="notícias" style="display:block;" >
+            <!-- /.row -->
+    </div>
+	
+	<!-- Portfolio Section -->
+	<div class="portfolio-main" id="conteudo" style="display:block;" > 
+
+		<!-- /.row -->
+	</div>
+   
+   <hr>
+
+    <!-- /.container -->
+    <!--footer starts from here-->
+    <footer class="footer">
+        <div class="container" id="rodape" style="display:block;" >
+
+        </div>
+    </footer>
+	  
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script>
+
+function salvarUsuario(){
+	
+}
+
+function enviar(area){
+	var codigoUsuario = getVar("codigoUsuario");
+	document.getElementById("formAluno").action = "areaAluno.html?area=" + area + "&codigoUsuario=" + codigoUsuario;
+	document.getElementById("formAluno").submit();
+}
+
+function AbrirItem(opc){
+  var pagina = "";
+  
+  $('#btnmenu').hide;
+  
+	  if( opc == 1 ){ 
+		  pagina = "paginas/sobre.php";
+	  }else if( opc == 2 ){ 
+		  pagina = "paginas/cursos-oficinas.php";
+	  }else if( opc == 3 ){ 
+		  pagina = "paginas/feiras-livres.php";
+	  }else if( opc == 4 ){ 
+		  pagina = "paginas/feiras-organicas.php";
+	  }else if( opc == 5 ){ 
+		  pagina = "paginas/historia-feiras.php";
+	  }else if( opc == 6 ){ 
+		  pagina = "paginas/viveiros-municipais.php";
+	  }else if( opc == 7 ){ 
+		  pagina = "paginas/contato.php";
+	  }else if( opc == 8 ){ 
+		  pagina = "paginas/horta-comunitaria.php";
+	  }else if( opc == 9 ){
+		  pagina = "paginas/hortas-institucionais.php";
+	  }else if( opc == 10 ){ 
+		  pagina = "paginas/hortas-pedagogicas.php";
+	  }else if( opc == 15 ){ 
+		  pagina = "paginas/cadastreSuaHorta.php";
+	  }else if( opc == 16 ){ 
+		  pagina = "paginas/agriculturaFamiliar.php";
+	  }else if( opc == 17 ){ 
+		  pagina = "paginas/apoioAgricultores.php";
+	  }else if( opc == 18 ){ 
+		  pagina = "paginas/hortainsti.php";
+	  }else if( opc == 22 ){ 
+		  pagina = "paginas/centrosaude.php";
+	  }else if( opc == 34 ){ 
+		  pagina = "paginas/loginhorta.php";
+	  }else if( opc == 31 ){ 
+		  pagina = "paginas/oqueeCompostagem.php";
+	  }else if( opc == 25 ){ 
+		  pagina = "paginas/cadastroResponsavelpelaHorta.php";
+	  }else{
+	     alert("Em breve !");
+	  }
+	  
+	  
+
+	 if( pagina !="" ){
+		 $.ajax( {
+				type:'GET',
+				url:pagina,
+				dataType: 'html',
+				success: function (data) {
+					 document.getElementById('conteudo').style.display = 'none';	
+					 document.getElementById('notícias').style.display = 'none';					 
+					$('#abertura').html( data );
+				},
+				error: function( data){
+					 console.log( data );
+				}
+			} 
+		 );	
+	 }
+
+}
+
+</script>
+</body>
+</html>
