@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>5</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Governo Eletrônico: a base para o futuro</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/10_12_2009_18.55.07.f4f09897afd229b0057a2e239a26d005.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Governo Eletrônico: a base para o futuro</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/10_12_2009_18.57.55.eeafbb23139c2022effa797e57de60ad.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Modernização do Atendimento ao Cidadão</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/10_12_2009_18.07.40.ada1f87fec0cca610e9d41c1e713a0df.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Profissionalização da Gestão Pública</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/07_12_2009_9.19.54.7fb929d541d0d66b86f6241effdb156c.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Controle de Gestão: Metas e Indicadores</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/10_12_2009_18.05.12.3a869306960639762af600f9d4256626.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

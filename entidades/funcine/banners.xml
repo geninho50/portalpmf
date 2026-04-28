@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>4</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>FUNDO MUNICIPAL DE CINEMA</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/07_12_2010_19.44.40.54b2c5e519546983e50cdfddbff347da.jpg</imagePath>
+<link>http://www.pmf.sc.gov.br/entidades/funcine/index.php?cms=o+funcine&menu=1</link>
+</banner>
+
+<banner>
+<title>CINE PITANGUEIRA</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/17_08_2011_17.54.19.b3f7798a5f9bcfcb00e79638517c16cc.jpg</imagePath>
+<link>http://www.pmf.sc.gov.br/entidades/funcine/index.php?pagina=notpagina&menu=3&noti=4951</link>
+</banner>
+
+<banner>
+<title>CINE DONA CHICA</title>
+<subtitle>No Rancho da Canoa na praia do Campeche</subtitle>
+<imagePath>../../arquivos/banners/jpg/19_08_2011_17.41.09.94ad2abdd97024811411aa94b45c45a7.jpg</imagePath>
+<link>http://www.pmf.sc.gov.br/entidades/funcine/index.php?pagina=notpagina&menu=3&noti=4952</link>
+</banner>
+
+<banner>
+<title>Cine Ieda Beck</title>
+<subtitle>Agora itinerante pela ilha</subtitle>
+<imagePath>../../arquivos/banners/jpg/09_04_2012_17.26.44.f11934c675e8f2242e1d8b2dbaed66d6.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

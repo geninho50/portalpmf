@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>2</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Campanha da Diretoria de Bem-Estar Animal</title>
+<subtitle>Pra Quem É da Família, Todo o Carinho é Pouco</subtitle>
+<imagePath>../../arquivos/banners/jpg/16_08_2011_17.10.11.c3948f573fd56cdc43badc871f45c06c.jpg</imagePath>
+<link>http://portal.pmf.sc.gov.br/noticias/index.php?pagina=notpagina&noti=4976</link>
+</banner>
+
+<banner>
+<title>CãoMinhada</title>
+<subtitle>24 de setembro, 13 h, BeiraMar Continental</subtitle>
+<imagePath>../../arquivos/banners/jpg/18_09_2011_10.05.38.774dd6e7a93007dbd5489038ea7e5d0e.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

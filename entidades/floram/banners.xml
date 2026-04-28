@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Proteção ao Meio Ambiente</title>
+<subtitle>Fundação Municipal do Meio Ambiente</subtitle>
+<imagePath>../../arquivos/banners/jpg/14_12_2009_22.04.15.49c140f4ea25640ec6a42d294ef333d0.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Proteção ao Meio Ambiente</title>
+<subtitle>Fundação Municipal do Meio Ambiente</subtitle>
+<imagePath>../../arquivos/banners/jpg/14_12_2009_22.08.47.1aa55138d78c0d4710d039467ed451ef.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Proteção ao Meio Ambiente</title>
+<subtitle>Fundação Municipal do Meio Ambiente</subtitle>
+<imagePath>../../arquivos/banners/jpg/14_12_2009_22.09.17.90a8cf20ea9683e0561c8825ad2e1948.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

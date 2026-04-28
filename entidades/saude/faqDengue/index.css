@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300|Roboto:300,500');
+
+/* Variáveis */
+:root {
+  --spacing: 24px;
+  --plus-size: 16px;
+  --plus-thickness: 2px;
+  --speed: 300ms;
+  --easing: ease-in-out;
+  --gray-dark: #546E7A;
+  --gray: #CFD8DC;
+  --gray-light: #ECEFF1;
+  --primary: #00ACC1;
+}
+
+/* Reset */
+html, body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-y: scroll;
+  font-size: 18px;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: Roboto, sans-serif;
+  line-height: 1.4;
+  color: var(--gray-dark);
+  background-color: var(--gray-light);
+}
+
+p, ul, li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: var(--spacing);
+}
+
+p:last-child,
+ul:last-child,
+li:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--primary);
+}
+
+code {
+  background: var(--gray-light);
+}
+
+/* Wrapper */
+.wrapper {
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: var(--spacing) var(--spacing) * 2;
+}
+
+/* Detalhes */
+.details-group {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.details {
+  overflow: hidden;
+  border-bottom: 1px solid var(--gray);
+  transition: height var(--speed) var(--easing);
+}
+
+.details:last-child {
+  border-bottom: 0;
+}
+
+.details__summary,
+.details__content {
+  padding: var(--spacing);
+}
+
+.details__summary {
+  
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-family: Oswald;
+  text-transform: uppercase;
+  transition: color var(--speed) var(--easing);
+}
+
+[open] > .details__summary {
+  color: var(--primary);
+}
+
+.details__summary::-webkit-details-marker {
+  display: none;
+}
+
+.details__summary::before {
+  left: calc(var(--spacing) / 2 + var(--plus-size) / 2);
+  top: 50%;
+  height: var(--plus-thickness);
+  margin-top: calc(-1 * var(--plus-thickness) / 2);
+  width: var(--plus-size);
+  background: var(--primary);
+}
+
+.details__summary::after {
+  left: calc(var(--spacing) / 2 + var(--plus-size));
+  top: 50%;
+  height: var(--plus-size);
+  margin-top: calc(-1 * var(--plus-size) / 2);
+  width: var(--plus-thickness);
+  margin-left: calc(-1 * var(--plus-thickness) / 2);
+  background: var(--primary);
+  transition: all var(--speed) var(--easing);
+}
+
+[open] .details__summary::after {
+  opacity: 0;
+  transform: translateY(25%);
+}
+
+.details__content {
+  padding-top: 0;
+  
+}
+
+

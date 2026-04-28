@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>2</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Mercado Público de Florianópolis</title>
+<subtitle>Foto: Fernando Dall'Acqua</subtitle>
+<imagePath>../../arquivos/banners/jpg/28_01_2010_22.45.12.22dd91182af43faa456679fd33e82efc.jpg</imagePath>
+<link>http://portal.pmf.sc.gov.br/entidades/sesp/?pagina=notpagina&menu=3&noti=890</link>
+</banner>
+
+<banner>
+<title>Medidor raios UV</title>
+<subtitle>Mobiliário Urbano de qualidade na Capital</subtitle>
+<imagePath>../../arquivos/banners/jpg/16_04_2010_15.59.02.88b757133689ac02b9bafb12e73a7497.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

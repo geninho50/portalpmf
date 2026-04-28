@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Investimento em gestão</title>
+<subtitle>Eficiência na arrecadação tributária municipal</subtitle>
+<imagePath>../../arquivos/banners/jpg/04_01_2010_14.57.22.802241314aca765e4c535fb14d61004a.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Atendimento qualificado ao contribuinte</title>
+<subtitle>Resolutividade de processos e respeito ao cidadão</subtitle>
+<imagePath>../../arquivos/banners/jpg/05_01_2010_18.37.27.3213190078f69971deeb8cabdf508fc7.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Tecnologia e modernização</title>
+<subtitle>Ações para ampliar a oferta de serviços on-line</subtitle>
+<imagePath>../../arquivos/banners/jpg/05_01_2010_18.50.36.98feddf86aed8b09189cfdcb15de75d2.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

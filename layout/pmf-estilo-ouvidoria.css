@@ -1,0 +1,144 @@
+/* -------------------------------------- */
+/* --------- ÁREA DE OUVIDORIA ----------- */
+/* -------------------------------------- */
+
+
+
+/* -------------- CORES ---------------- */
+
+.layout_ouvidoria h2, .layout_ouvidoria h3, 
+.layout_ouvidoria h3 a, .layout_ouvidoria h5  { color: #002f66; }
+
+.layout_ouvidoria #menu li a:hover, 
+.layout_ouvidoria #menu li a.selecionado { 
+	background-color:#002f66;
+}
+
+.layout_ouvidoria .painel_abas {
+	border-color:#b2a898;
+}
+
+.layout_ouvidoria .aba_sel {
+	background-color:#b2a898;
+}
+
+.layout_ouvidoria .aba_sel a{
+	color:#fff;
+}
+
+.layout_ouvidoria .conteudo_abas_ext {
+	border-color:#E4772C;
+}
+
+.layout_ouvidoria #area_paginacao a:hover {
+	background-color:#E4772C;
+}
+
+.layout_ouvidoria #area_paginacao b {
+	background-color:#E4772C;
+	border-color:#E4772C;
+}
+
+.layout_ouvidoria .box_msg_baixo {
+	color:#E4772C;
+}
+
+.layout_ouvidoria .calendario .numero { 
+	color:#E4772C;
+}
+
+.layout_ouvidoria #conteudo_pagina #galeria h1 {
+	background-color:#E4772C;
+}
+
+.layout_ouvidoria #conteudo_pagina #arquivos  { 
+	border-color:#E4772C;
+}
+
+.layout_ouvidoria #conteudo_pagina #arquivos li {
+	background-image: url(imagens/marcador_laranja.png);
+}
+
+.layout_ouvidoria #conteudo_pagina #arquivos li a:hover,
+.layout_ouvidoria #conteudo_pagina #arquivos li p:hover{
+	color:#E4772C;
+}
+
+.layout_ouvidoria #conteudo_pagina #arquivos a:hover {
+	color: #E4772C;
+}
+
+.layout_ouvidoria #conteudo_pagina #arquivos h1 {
+	background-color:#E4772C;
+}	
+
+.layout_ouvidoria .titulo_quem_e_quem {
+	background-color:#E4772C;
+}	
+
+.layout_ouvidoria #chamada_noticia { 
+	color: #E4772C; 
+}		
+
+
+
+/* ------------------- ESTRUTURA ------------------- */
+
+
+.layout_ouvidoria #conteudo_coluna2 {
+	margin-right:0px; 
+}
+
+.layout_ouvidoria .texto {
+	padding-right:60px;	
+}
+
+
+
+/* ------------------- PAINEL ------------------- */
+
+.painel_ouvidoria {
+     background-color:#EAE9DB;
+	 border-style:dashed;
+	 border-color:#999999;
+	 border-width:0px;
+	 border-top-width:1px;
+	 width:560px;
+	 padding:20px;
+	 padding-left:0px;
+	 font-family:Verdana, Arial, Helvetica, sans-serif;
+	 font-size:9pt;
+	 font-weight:bold;
+  
+}
+.painel_ouvidoria:hover { 
+	 font-family:Verdana, Arial, Helvetica, sans-serif;
+	 font-size:9pt;
+	 font-weight:bold;
+	 text-decoration:none;
+	 background-color:#002f66;
+	 color:#FFFFFF;
+}
+
+.painel_ouvidoria:hover a { 
+	 color:#FFFFFF;
+}
+
+.painel_ouvidoria a { 
+	 font-family:Verdana, Arial, Helvetica, sans-serif;
+	 font-size:9pt;
+	 font-weight:bold;
+	 text-decoration:none;
+	 width:516px;
+	 height:30px;
+	 padding:20px;	 
+}
+
+.painel_ouvidoria a:hover { 
+	 font-family:Verdana, Arial, Helvetica, sans-serif;
+	 font-size:9pt;
+	 font-weight:bold;
+	 text-decoration:none;
+	 background-color:#002f66;
+	 color:#FFFFFF;
+}

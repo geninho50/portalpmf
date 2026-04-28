@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>2</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Procon Municipal</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/07_12_2009_19.32.16.88b757133689ac02b9bafb12e73a7497.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Procon Municipal</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/07_12_2009_19.33.24.4f0691cfe48c8f74fe413c7b92391ff4.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>2</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>CMDCA</title>
+<subtitle>Conselho Municipal </subtitle>
+<imagePath>../../arquivos/banners/jpg/20_12_2010_2.11.04.420cefb23353b66f160c65d12f918969.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Faça uma Simulação</title>
+<subtitle>Veja quanto você pode abater do Imposto de Renda</subtitle>
+<imagePath>../../arquivos/banners/jpg/20_12_2010_2.11.53.5ea2ed0fc5d5b0c9a5ec4e5c0e7cec96.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

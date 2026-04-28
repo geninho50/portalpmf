@@ -1,0 +1,42 @@
+/* @import "/common/style/reset.css" */
+
+body, table, select, input, ul							{	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size: 10px; }
+a														{	text-decoration: none;	color: inherit; }
+
+a:hover													{	text-decoration: underline;}
+input.cell, td											{	border: solid 1px #CCC; padding: 3px;	}
+input.submit, button									{	border: solid 1px #808080; background-color: #ECECEC; font: 10px Verdana, Geneva, Arial, Helvetica, sans-serif; margin: 0px 2px; padding: 2px; }
+input.reset												{	border: solid 1px #808080; background-color: #FFA; }
+th														{	border: solid 1px #CCC; text-align: left; background-color: #ECECEC; font-weight: bold; padding: 3px; }
+fieldset												{	border: solid 1px #999; padding: 5px; }
+table													{	border-spacing: 1px; }
+img														{	border: none; }
+code													{	margin: 15px; border: solid 1px #808080; background: #ECECEC; padding: 10px; color: #444; display: block; }
+ul														{	padding: 0px 15px; margin: 0px 15px; list-style: disc; }
+label													{	vertical-align: 4px; }
+
+.cell													{	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;	font-size: 10px; border: solid 1px #CCCCCC; }
+.nob													{	border: none; }
+.errors													{	color: #900; font-weight: bold; }
+.yellow_block											{	border: solid 1px #CCC; background-color: #FFFCAA; }
+.yel													{	background-color: #FFFCAA; }
+.purple_block											{	border: solid 1px #CCC; background-color: #7C0868; font-weight: bold; color: white; font-size: 12px; padding: 10px; }
+.price													{	font-size: 12px; color: #900; font-style: italic; font-weight: bold; }
+
+.bg_orange												{	background: #D99B16; }
+.bg_green												{	background: #A7CD5B; }
+.bg_yellow												{	background: #FFFCAA; }
+.bg_#808080												{ 	background: #ECECEC; }
+
+.big_button												{	padding: 8px; font-weight: bold; }
+.border_bottom											{	border-bottom: 1px dotted #666; }
+
+.georgia												{	font: italic 16px Georgia; color: #444;}
+.georgia a												{	color: #444;}
+h1														{	font: italic 24px Georgia; color: #444; margin: 15px 5px; }
+a.h1													{	color: #444; }
+h2														{	font: italic 18px Georgia; color: #444; margin: 10px 5px; }
+a.h2													{	color: #444; }
+h3														{	font: 14px Georgia; color: #444; }
+
+.br														{	clear: left; }

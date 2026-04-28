@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>5</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Aqui o mosquito não se cria </title>
+<subtitle>Única capital 100% livre da Dengue</subtitle>
+<imagePath>../../arquivos/banners/jpg/25_02_2011_13.40.56.45c28a39aae329eb971a02bcfea9f3ec.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>UPAs 24 horas atendendo à população</title>
+<subtitle>Mais de 285 mil atendimentos/ano</subtitle>
+<imagePath>../../arquivos/banners/jpg/25_02_2011_13.49.10.13dba983b4f12ced307b3d57b7217c3c.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Referência nacional </title>
+<subtitle>Modelo no atendimento à criança </subtitle>
+<imagePath>../../arquivos/banners/jpg/14_06_2011_11.16.43.1595be3cf6516ade1ab23e7049b53422.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Reconhecimento estadual e nacional </title>
+<subtitle>Principais prêmios recebidos 2006/2012</subtitle>
+<imagePath>../../arquivos/banners/jpg/10_04_2012_11.00.28.f00d36a6abbcaef5b1066fe4b94bf72b.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>O combate à Dengue e tarefa de todos</title>
+<subtitle>Faça a sua parte !!!</subtitle>
+<imagePath>../../arquivos/banners/jpg/18_04_2012_17.05.47.335102e2887adf0972047781186bb7d6.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>2</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Florianópolis: Ilha da Magia</title>
+<subtitle>Venha conhecer os seus encantos</subtitle>
+<imagePath>../../arquivos/banners/jpg/11_12_2009_18.02.34.ccbf421920d1f566b4ebbb92b52fc802.jpg</imagePath>
+<link>?cms=praias&menu=5</link>
+</banner>
+
+<banner>
+<title>Ponte Hercílio Luz</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/22_03_2011_12.39.15.9f536a76ae5e5dcde182c33b24a00b84.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>4</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>EXPOSIÇÃO NA BIBLIOTECA SEMANA DA CRIANÇA</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/JPG/17_10_2011_14.28.52.189e753fe86ecfa6b14035c6be80871f.JPG</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>CRIANÇAS NA BIBLIOTECA</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/JPG/17_10_2011_14.35.11.9ac9e873ef9933e569c61a2d4ef7f325.JPG</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Oficinas Culturais na Biblioteca</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/09_05_2012_14.57.00.33c38be072bf2b5a257e6ee3be904497.jpg</imagePath>
+<link>http://www.pmf.sc.gov.br/entidades/bmpbf/index.php?pagina=notpagina&menu=3&noti=6762</link>
+</banner>
+
+<banner>
+<title>CULTURA AÇORIANA NA BIBLIOTECA</title>
+<subtitle>Oficina de cerâmica</subtitle>
+<imagePath>../../arquivos/banners/jpg/15_05_2012_16.57.55.361577e8ba61c707f1b74c5d269de859.jpg</imagePath>
+<link>http://www.pmf.sc.gov.br/entidades/bmpbf/?pagina=notpagina&menu=3&noti=6760</link>
+</banner>
+
+</banners>
+</rotator>

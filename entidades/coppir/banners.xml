@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>2</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Campanha SEPPIR </title>
+<subtitle>Igualdade racial é pra valer!</subtitle>
+<imagePath>../../arquivos/banners/JPG/24_03_2011_17.19.39.5275153bbf415b46f193b0b899429fdc.JPG</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Campanha Infância sem Racismo</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/07_04_2011_18.19.10.b00eeaa376223f9c78589a5ac3c9f55d.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

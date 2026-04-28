@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Planejamento</title>
+<subtitle>Secretaria Municipal de Finanças e Planejamento</subtitle>
+<imagePath>../../arquivos/banners/jpg/04_12_2009_9.48.47.b714a1a138fdc816dc49531603f5795e.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Transparência</title>
+<subtitle>Secretaria Municipal de Finanças e Planejamento</subtitle>
+<imagePath>../../arquivos/banners/jpg/04_12_2009_10.18.25.7d2bdc608534676a23ce04dfb9ac3802.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Responsabilidade Fiscal</title>
+<subtitle>Secretaria Municipal de Finanças e Planejamento</subtitle>
+<imagePath>../../arquivos/banners/jpg/04_12_2009_10.51.33.87d19727441e20cfe690e1f7471ba308.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

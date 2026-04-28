@@ -1,0 +1,332 @@
+/* -------------------------------------- */
+/* --------- ÁREA DE ENTIDADE ----------- */
+/* -------------------------------------- */
+
+
+
+/* -------------- CORES ---------------- */
+
+
+.layout_entidades h2, .layout_entidades h3, 
+.layout_entidades h3 a, .layout_entidades h5 { color: #1B9BE4; }
+
+.layout_entidades #menu li a:hover, 
+.layout_entidades #menu li a.selecionado { 
+	background-color:#1B9BE4;
+}
+
+.layout_entidades .painel_abas {
+	border-color:#b2a898;
+}
+
+.layout_entidades .aba_sel {
+	background-color:#b2a898;
+}
+
+.layout_entidades .aba_sel a{
+	color:#fff;
+}
+
+.layout_entidades .conteudo_abas_ext {
+	border-color:#1B9BE4;
+}
+
+.layout_entidades #area_paginacao a:hover {
+	background-color:#1B9BE4;
+}
+
+.layout_entidades #area_paginacao b {
+	background-color:#1B9BE4;
+	border-color:#1B9BE4;
+}
+
+.layout_entidades .box_msg_baixo {
+	color:#1B9BE4;
+}
+
+.layout_entidades .calendario .numero { 
+	color:#1B9BE4;
+}
+
+.layout_entidades #conteudo_pagina #galeria h1 {
+	background-color:#1B9BE4;
+}
+
+.layout_entidades #conteudo_pagina #arquivos  { 
+	border-color:#1B9BE4;
+}
+
+.layout_entidades #conteudo_pagina #arquivos li {
+	background-image: url(imagens/entid_marcador_novo.png);
+	background-position:0px 6px;
+}
+
+.layout_entidades #conteudo_pagina #arquivos li a:hover,
+.layout_entidades #conteudo_pagina #arquivos li p:hover{
+	color:#0d547c;
+}
+
+.layout_entidades #conteudo_pagina #arquivos a:hover {
+	color: #0d547c;
+}
+
+.layout_entidades #conteudo_pagina #arquivos h1 {
+	background-color:#1B9BE4;
+}
+
+.layout_entidades .titulo_quem_e_quem {
+	background-color:#1B9BE4;
+}		
+
+.layout_entidades #chamada_noticia { 
+	color: #1B9BE4; 
+}	
+
+#conteudo_pagina ul li {
+	background-image: url(imagens/entid_marcador_novo.png);
+	background-position:0px 13px;
+}	
+
+
+
+/* ------------------- LATERAL ------------------- */
+
+
+#menu #titulo-secretaria {
+	position:absolute;
+	background-image:url(imagens/titulo-secretaria.png);
+	background-repeat: no-repeat;
+	top:50px;
+	left:-26px;
+	height:500px;
+	width:35px;
+}
+
+.smap #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-adm-prev.png);
+}
+
+.semas #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-assist-soc.png);
+}
+
+.segov #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-casa-civil.png);	
+}
+
+.smctdes #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-cienc-tec.png);
+}
+
+.smc #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-continente.png);
+	left:-30px;
+}
+
+.sme #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-educacao.png);
+	left:-30px;
+}
+
+.smfp #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-finan-plan.png);
+}
+/* Alterado para Casa Civil -> quinto bloco pra cima
+.segov #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-governo.png);
+	left:-30px;
+}
+*/
+
+.smhsa #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-hab-san.png);
+}
+
+.smdu #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-meio-amb.png);
+}
+
+.smo #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-obras.png);
+	left:-28px;
+}
+
+.smr #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-receita.png);
+	left:-30px;
+}
+
+.sms #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-saude.png);
+	left:-30px;
+}
+
+.smsdc #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-seg-def.png);
+}
+
+.smtmt #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-transportes.png);
+	left:-30px;
+}
+
+.setur #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-tur-cult-esp.png);
+}
+
+.seainst #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-assun-inst.png);
+}
+
+.seai #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-assun-inter.png);
+}
+
+.seaj #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-assun-jur.png);
+}
+
+.seap #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-assun-parl.png);
+}
+
+.sec #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-comunicacao.png);
+	left:-30px;
+}
+
+.secin #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-cont-int-ouv.png);
+}
+
+.sesp #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-serv-pub.png);
+}
+
+.secult #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-cultura.png);
+}
+
+.smf #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-fazenda.png);
+}
+
+.smpg #menu #titulo-secretaria {
+	background-image:url(imagens/lateral-planejamento.png);
+}
+
+/* ------------------- HOME ------------------- */
+
+.layout_entidades #conteudo_destaques {
+    padding-top: 60px;
+}
+
+
+.layout_entidades .bloco-5-com-calendario {
+	width:245px !important;
+	padding-top:20px !important;
+	margin-left:5px !important;
+	font-size:0.85em !important;
+}
+
+.layout_entidades #bloco-calendario{
+	height:220px;
+	margin-top:20px;
+	margin-left:0px;
+}
+
+.layout_entidades  #bloco-3-destaques ul li {
+    margin-left: 0px;
+	margin-right:10px;
+}
+
+.layout_entidades #bloco-4-lista ul .li-inicio, 
+.layout_entidades #bloco-4-destaques ul .li-inicio {
+    padding-left: 0px;
+}
+
+
+/* ------------------- BANNER ------------------- */
+
+
+.deslocamento_banner {
+	height:230px;
+}
+
+.layout_entidades #banner_topo {
+	position:absolute;
+	left:0px;
+	top:45px;
+	width: 495px;
+	height: 175px;
+	padding:4px 5px 5px 3px;
+	background-color:#eee;
+	border:1px solid #ccc;
+	margin:0px;
+	margin-bottom:30px;
+	z-index:90;
+	overflow:hidden;
+}
+
+
+.layout_entidades #banner_topo .banners .banner-individual {
+	width:495px;
+	height:175px;
+	border:1px solid #ccc;
+	background-color:#ddd;
+}
+
+.layout_entidades #banner_topo .banners .container-texto {
+	float:left;
+	width:137px;
+	height:175px;
+	background-color:#1B9BE4;
+	margin-top:0px; 
+	color:#fff;
+	padding:0px;
+	margin-right:1px;
+	overflow:hidden;
+}
+
+.layout_entidades #banner_topo .banners .texto-banner {
+	height:155px;
+	padding:10px;
+	padding-top:20px;
+	padding-left:15px;
+}
+
+
+.layout_entidades #banner_topo .banners .texto-banner h1 {
+	color:#000;
+	font-size:14pt;
+	line-height:1;
+	margin-bottom:3px;
+}
+
+
+.layout_entidades #banner_topo .banners .banner-individual a {
+	color:#fff;
+	text-decoration:none !important;
+}
+
+.layout_entidades #banner_topo .banners .banner-individual a:hover {
+	text-decoration: underline;
+}
+
+.layout_entidades #banner_topo .banners img {
+	width:355px;
+	height:175px;
+	float:right; 
+	margin-right:2px;
+}	
+
+
+.layout_entidades #banner_topo .bannerprev {
+	margin-top: -50px;
+}
+
+.layout_entidades #banner_topo .bannernext {
+
+	margin-top: -50px;
+}
+	

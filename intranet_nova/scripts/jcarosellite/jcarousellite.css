@@ -1,0 +1,48 @@
+
+.bannerprev {
+	width: 23px;
+	height: 47px;
+	margin-top: -80px;
+	float: left;
+	position: relative;
+	left:0px;
+	background-image: url(btnPrevBanner.png);
+	background-repeat:no-repeat;
+	background-position: top;
+	text-indent: -99999px;
+	z-index: 999;	
+}
+.bannerprev:hover {
+	background-position: bottom;	
+}
+
+
+.bannernext {
+	width: 23px;
+	height: 47px;
+	margin-top: -80px;
+	position: relative;
+	float:right;
+	left:2px;
+	border: 0;
+	background-image: url(btnNextBanner.png);
+	background-repeat: no-repeat;
+	background-position: top;
+	text-indent: -99999px;
+	z-index: 999;	
+}
+.bannernext:hover {
+	background-position: bottom;	
+}
+
+
+.banners li {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.banners ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}

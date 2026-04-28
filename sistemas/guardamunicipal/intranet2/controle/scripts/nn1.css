@@ -1,0 +1,136 @@
+BODY {margin:0; padding:0; color:#000000;}
+
+.borda {
+	border:1px solid #003399;
+}
+
+form{margin:0;}
+
+P, H1, H2, .small, .white, .copy, P.A, TD.A, A, .quote, .smallwhite, .q, .i {font-family:Verdana, Arial, Helvetica, sans-serif} 
+
+P, H1, H2, .quote {margin-left:10px;margin-right:10px;}
+
+P, .white, .q {font-size:9pt} 
+
+DD, DT, DL, UL, OL, LI {font-family:Verdana, Arial, Helvetica, sans-serif; margin-right:5px;font-size:9pt; color:#003366;}
+
+A:link, A:active, A:visited 	
+{color:#3333FF;
+font-size:9pt; 
+text-decoration:none;
+}
+A:hover {color:#FF0000;text-decoration:none;} 
+
+A.sml:link, A.sml:active {color:#333399; font-size:8pt; text-decoration:none;}
+A.sml:visited {color:#0000AA;font-size:8pt;text-decoration:none;}
+A.sml:hover {color:#FF6600;font-size:8pt;text-decoration:none;}
+
+A.nav:link, A.nav:active, A.nav:visited 	
+{color:#000000;
+font-size:9pt; 
+text-decoration:none;
+margin-right:5px;
+}
+A.nav:hover {color:#ffffff;text-decoration:none;margin:0px 5px 0px 0px;
+} 
+
+A.menu:link, A.menu:active A.menu:visited 	
+{color:#000000;
+font-size:9pt; 
+text-decoration:none;
+} 
+A.menu:visited {color:#909090;}
+A.menu:hover {color:#FF6600;text-decoration:underline;} 
+
+.smallwhite {margin-right:10px;}
+.smallwhite, .white {color: #ffffff;}
+
+.quote {color: #666600;}
+.branco {color: #ffffff;}
+
+h1	
+{font-size:10pt;
+color:#000000; 
+margin:5px 10px 0px 10px;
+font-weight:bold;
+} 
+
+h2
+{font-size:9pt;
+color:#333333;
+margin:5px 10px 0px 10px;
+font-weight:bold;
+} 
+
+.bignum
+{font-size:10pt;
+color:#FF3300;
+font-weight:bold;
+} 
+
+.bignum1
+{font-size:16pt;
+color:#FF3300;
+font-weight:bold;
+text-decoration: underline ;
+}
+.small, .smallwhite, .quote {font-size:8pt;margin:2px 10px 2px 10px;} 
+
+.q {color:#000000;font-weight:bold;margin:3px 10px 5px 10px}
+.i {color:#666666;}
+
+P, .small, .white, .copy, .q, A, .quote {background-color:transparent;} 
+
+#menubox {
+	position:absolute;
+	top:4px;
+	left:0px;
+	z-index:100;
+	height: 603px;
+}
+#header {position:absolute; top:0px; left:0px; z-index:110; margin:0; padding:0;}
+
+
+.col{background-color:#000000}
+
+.form{color: #000000;font-size:9pt; margin:0;}
+input, textarea { font-size: 9pt; color: #000000; font-family: monospace, Verdana, Helvetica, Arial}
+
+.datatd {background-color:#ffffff;
+margin:5px 10px 0px 10px; border: 1px solid #000000}
+
+
+.letra{ font:Verdana, Arial, Helvetica, sans-serif;
+color:#000000;
+font-size:12px
+}
+
+.negrito{ font:Verdana, Arial, Helvetica, sans-serif;
+color:#000000;
+font-size:11px;
+font-weight:bold
+}
+
+#div1 {position:fixed;}
+
+.cabecalho {
+	color: #000000; 
+	font-family: arial, Helvetica, sans-serif;
+	font-size:15px;
+	font-weight: bold;
+}
+.cabecalho2 {
+	color: #000000; 
+	font-family: arial, Helvetica, sans-serif;
+	font-size:15px;
+}
+.nome{ font:Calibri, Arial, Helvetica, sans-serif;
+color:#000000;
+font-size:13px;
+
+}
+.data{ font:Calibri, Arial, Helvetica, sans-serif;
+color:#000000;
+font-size:12px;
+font-weight: bold;
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>9</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Polo UAB Florianópolis</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/png/07_10_2011_13.07.57.5f39a591e233aa84bdef89b268c3e460.png</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Secretaria Municipal Educação de Florianópolis</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/png/13_07_2011_19.30.39.bc0dec90131dd03db03d1596ce590dbf.png</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>CAPES Ministério da Educação</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/png/07_10_2011_13.10.45.9a35c2507f3a93998bcb99613b4bf098.png</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Universidade Federal de Santa Catarina</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/16_06_2010_10.03.41.0cb34e66694ed261ac10b9f3b8e7908e.jpg</imagePath>
+<link>http://ead.ufsc.br/</link>
+</banner>
+
+<banner>
+<title>Instituto Federal de Santa Catarina</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/16_06_2010_10.04.49.b26e3b6a2c41a10ea0c15ba2b9a22768.jpg</imagePath>
+<link>http://ead.ifsc.edu.br/</link>
+</banner>
+
+<banner>
+<title>Universidade Estadual de Ponta Grossa</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/10_06_2010_11.16.13.78fb6a8885ffd56e27fbcb913d8d98e0.jpg</imagePath>
+<link>http://www.uepg.br</link>
+</banner>
+
+<banner>
+<title>Universidade Federal do Ceará</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/16_06_2010_10.07.32.76c216bb1830cf9e07176b0d9d70a252.jpg</imagePath>
+<link>http://www.virtual.ufc.br/</link>
+</banner>
+
+<banner>
+<title>Universidade Federal do Rio Grande</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/16_06_2010_10.08.12.d3f9658479435f59b8be0ba26ab80468.jpg</imagePath>
+<link>http://www.sead.furg.br/</link>
+</banner>
+
+<banner>
+<title>Universidade do Estado de Santa Catarina</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/17_06_2010_9.24.47.69d3120b521b0e37139ae2f82fc8b3cf.jpg</imagePath>
+<link>http://www.virtual.udesc.br/Principal/principal.php</link>
+</banner>
+
+</banners>
+</rotator>

@@ -1,0 +1,27 @@
+red{
+	color: red;
+}
+input{
+	margin-top: 10px;
+}
+
+input, label{
+	cursor: pointer;
+}
+
+button{
+	background-color: #002f66;
+	color: white;
+	border: 1px solid #002f66;
+	margin-top: 20px;
+}
+
+#bloco_resultado{
+	margin-top: 10px;
+}
+
+p{
+	color: #333333;
+    font-size: 11pt;
+    list-style: outside none none;
+}

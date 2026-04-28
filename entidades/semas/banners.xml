@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>6</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Ressignificando a  melhor idade</title>
+<subtitle>Secretaria Municipal de Assistência Social</subtitle>
+<imagePath>../../arquivos/banners/jpg/01_12_2009_17.24.57.4f0691cfe48c8f74fe413c7b92391ff4.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Tecendo uma rede</title>
+<subtitle>Secretaria Municipal de Assistência Social</subtitle>
+<imagePath>../../arquivos/banners/jpg/20_11_2009_18.03.21.4f0691cfe48c8f74fe413c7b92391ff4.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>A oportunidade que muda uma vida</title>
+<subtitle>Secretaria Municipal de Assistência Social</subtitle>
+<imagePath>../../arquivos/banners/jpg/01_12_2009_17.31.31.f8d8153fb4f29d3af15276db22435d48.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Fazendo a diferença</title>
+<subtitle>Secretaria Municipal de Assistência Social</subtitle>
+<imagePath>../../arquivos/banners/jpg/01_12_2009_17.36.52.91537541e5bdc5983ab5cf487b872188.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Trilhando caminhos</title>
+<subtitle>Secretaria Municipal de Assistência Social</subtitle>
+<imagePath>../../arquivos/banners/jpg/01_12_2009_17.41.53.ac77a946706c680ac33c4a5036e3d810.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Porque o que nos difere são as oportunidades</title>
+<subtitle>Secretaria Municipal de Assistência Social</subtitle>
+<imagePath>../../arquivos/banners/jpg/01_12_2009_17.43.41.92a95308a0208618b4cfb9415060eefb.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

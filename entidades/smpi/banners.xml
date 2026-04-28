@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Ponte Hercílio Luz</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/18_12_2009_14.59.25.acbd75419562292b0ae6574c03556b3f.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Planejando o Futuro da Cidade</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/JPG/18_12_2009_15.00.23.bcd08076f1d254c80d0c66cff729656a.JPG</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>IPUF: Valorizando a História de Florianópolis</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/JPG/18_12_2009_15.01.13.9d36fb00f1077332fd7c698a776a32e2.JPG</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

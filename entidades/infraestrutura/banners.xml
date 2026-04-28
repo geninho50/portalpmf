@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Secretaria de Habitação e Saneamento Ambiental</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_12_2009_17.18.42.40cd25afd13cacd06b5ff994da66c98e.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Projeto Maciço do Morro da Cruz</title>
+<subtitle>Qualidade de vida da população em primeiro lugar</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_12_2009_15.15.36.b7c5e07d060c73f6033117ea117faade.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Secretaria de Habitação enfrentando desafios</title>
+<subtitle>Mais segurança nas áreas de risco</subtitle>
+<imagePath>../../arquivos/banners/jpg/26_10_2010_15.05.00.b60d7fbeded5fed740f091e24bd93286.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>7</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Pontes Colombo Salles e Hercílio Luz </title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/27_11_2009_17.07.58.7c6f07fd3ac7cb780be036cc05bc1091.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Alfândega </title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/30_11_2009_12.18.30.5739492395e40a72cae081cabfe3fc03.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Forte Santa Ana </title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/30_11_2009_12.52.07.6cb021a97c7413f325104fb174cf9cbc.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Av. Beira Mar </title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/03_12_2009_13.48.18.ec887200861effe4ee88f87a63921cb7.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Lagoa da Conceição </title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/03_12_2009_13.54.36.44b14bef7e8ab1b9b332de042630435c.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Alfândega </title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/03_12_2009_14.00.00.fd70bf6c670779279477ebb082162a22.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Centro </title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/03_12_2009_14.12.28.dba367deafe284c83d05d18d473091a7.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

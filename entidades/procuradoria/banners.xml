@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>2</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Procuradoria Geral do Município</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_12_2009_18.45.44.671362174757a9d41ba4bf74141b6bab.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Em defesa da cidadania</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_12_2009_18.45.59.2f9e1cfdb644a1c5ac29d6f2146854ec.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

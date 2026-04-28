@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>8</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>FME</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/21_01_2010_15.47.34.464b94296df0efcd01335f89f4f0c021.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Academias da Saúde</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_02_2011_15.52.02.19f75f079392edd6a824d8c891e7fc2b.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>JASC 2010 Ciclismo</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_02_2011_15.54.09.860a50e3564a7031101c21a8db0626f7.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>JASC 2010 Ginástica Ritmica</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_02_2011_15.55.16.dc4b5f5d3d0edcb633a1b581b13a532a.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>PARAJASC 2010</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_02_2011_15.55.53.195dc648c83788be83bcf477957e8109.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>JASC 2009 Campeã em Chapecó</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_02_2011_15.56.33.95d3425ea22c747552fd09c2611f33d6.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>JASC 2010 Campeã em Brusque</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_02_2011_15.57.09.59a2b50b2f7509b22e58a174b72f8fca.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Festa da Conquista do JASC 2010</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/11_02_2011_15.57.54.d6d73e52d9e54534d5e0bab2891bb53e.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

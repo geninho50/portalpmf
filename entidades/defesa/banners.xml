@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>4</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Sec. Segurança e Defesa do Cidadão</title>
+<subtitle>3251-4420</subtitle>
+<imagePath>../../arquivos/banners/jpg/04_12_2009_11.44.25.a017e0caf9119cc47e6729799c0161ba.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Guarda Municipal</title>
+<subtitle>Emergência 153</subtitle>
+<imagePath>../../arquivos/banners/jpg/24_11_2009_20.18.44.156005c5baf40ff51a327f1c34f2975b.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Defesa Civil</title>
+<subtitle>Emergência 199</subtitle>
+<imagePath>../../arquivos/banners/jpg/24_11_2009_20.20.13.799bad5a3b514f096e69bbc4a7896cd9.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Procon</title>
+<subtitle>Contato: 3251-4400</subtitle>
+<imagePath>../../arquivos/banners/jpg/24_11_2009_20.20.36.f3ccdd27d2000e3f9255a7e3e2c48800.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

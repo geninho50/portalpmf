@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>4</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Avenida Beiramar Norte</title>
+<subtitle>Secretaria Executiva de Assuntos Institucionais</subtitle>
+<imagePath>../../arquivos/banners/jpg/25_08_2011_14.38.45.8884ee2d24a4054742642af929abcd41.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Centro</title>
+<subtitle>Secretaria Executiva de Assuntos Institucionais</subtitle>
+<imagePath>../../arquivos/banners/jpg/25_08_2011_14.39.06.56d3c71ffef4a2d84798a6f13e683c62.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Pontes Colombo Salles e Hercílio Luz</title>
+<subtitle>Secretaria Executiva de Assuntos Institucionais</subtitle>
+<imagePath>../../arquivos/banners/jpg/25_08_2011_14.39.32.3f08a3b7592c07356204a9fad85992f1.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Ponte Hercílio Luz</title>
+<subtitle>Secretaria Executiva de Assuntos Institucionais</subtitle>
+<imagePath>../../arquivos/banners/jpg/25_08_2011_14.51.20.180e7e66f1fca72aea557869b0a36f77.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

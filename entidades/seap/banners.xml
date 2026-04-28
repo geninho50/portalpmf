@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Ponte Hercílio Luz</title>
+<subtitle>Secretaria Executiva de Assuntos Parlamentares</subtitle>
+<imagePath>../../arquivos/banners/jpg/14_12_2009_18.09.33.54dbdb6243f57ccc3f7a22d06b41dcf1.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Antigo Prédio da Câmara Municipal</title>
+<subtitle>Secretaria Executiva de Assuntos Parlamentares</subtitle>
+<imagePath>../../arquivos/banners/jpg/14_12_2009_18.08.08.e899a06459b99e39a1642dd6d934a22d.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Câmara Municipal de Florianópolis</title>
+<subtitle>Secretaria Executiva de Assuntos Parlamentares</subtitle>
+<imagePath>../../arquivos/banners/jpg/14_12_2009_18.09.10.0a1152be938fef698c74155ad791e408.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

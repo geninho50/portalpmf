@@ -1,0 +1,39 @@
+.bot
+{
+	text-decoration: none;
+	color: 000000;
+	font-size: 10px; 
+	font-family: verdana,arial;
+	font-weight: bold;
+}
+.bot:hover
+{
+	color: FFFFFF;
+}
+.bot1
+{
+	color: D56767;
+	font-size: 15px; 
+	font-family: Times New Roman,verdana,arial;
+	font-weight: bold;
+}
+.bot1:hover
+{
+	color: 3B5598;
+}
+.bot2
+{
+	color: D56767;
+	font-size: 13px; 
+	font-family: Times New Roman,verdana,arial;
+}
+.bot2:hover
+{
+	color: 3B5598;
+}
+TD
+{
+	font-size: 10px;
+	FONT-FAMILY: verdana,arial;
+	color: 000000;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>1</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Secretaria de Assuntos Jurídicos</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/23_04_2012_16.14.45.9762d2cfee6e0866321e4f2b1fc0bb3b.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

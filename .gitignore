@@ -47,13 +47,13 @@ banners_home/
 images/ 
 assets/ 
 midia/ 
-layout/ 
-scripts/ 
+# layout/ 
+#scripts/ 
 portal/ 
 portal3/ 
 portaleducacional/ 
 portaleducacionalinfantil/ 
-mobile__/ 
+# mobile__/ 
 dispositivos moveis/ 
 eventos_/ 
 floripaIluminada/ 
@@ -72,8 +72,8 @@ comercioAmbulante/
 bairroeducador/ 
 marcoedelas/ 
 onb/ 
-oficina/ 
-ouvidoria/ 
+# oficina/ 
+# ouvidoria/ 
 paineldigital/ 
 slot/ 
 suporteSistemas/ 
@@ -86,9 +86,9 @@ reencontro/
 radio/ 
 producao/ 
 iptu/ 
-#intranet/ 
+# intranet/ 
 # internet/ 
-entidades/ 
+# entidades/ 
 ef/ 
 adm1/ 
 sadm/ 
@@ -100,7 +100,7 @@ formularios/
 governo/ 
 gpweb/ 
 noticias/ 
-nfps/
+# nfps/
 
 # Ignorar arquivos temporários mesmo com extensões permitidas
 *.tmp *.temp *.cache *.log *.bak *.backup *~

@@ -1,0 +1,434 @@
+:root {
+  --fontMontes: "Montserrat";
+  --brancoPmf: #ffffff;
+  --pretoPmf: black;
+  --azulPmfEscuro: #002f66;
+  --azulPmfClaro: #0093d4;
+  --azulPmfClaro_1: #00b1eb;
+  --marromMinhoca: #6d4426;
+  --verdeMinhoca: #95ba3e;
+  --vermelhoMinhoca: #de4726;
+  --cinzaMinhoca: #f8f8f8;
+  --verdeValidar: #03ac03;
+  --vermelhoCancelar: #FF6347;
+}
+
+main {
+
+  height: 1150px;
+}
+
+.divImagem {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.divImagem::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+main {
+
+  background-image: url("https://quantocustaviajar.com/blog/wp-content/uploads/2019/12/ilha-do-campeche-santa-catarina-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 2% 1% 2%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  /* Sombreamento na parte inferior */
+  max-height: 70px;
+
+}
+
+header img {
+  width: 20%;
+  height: 20%;
+  max-height: 60px;
+  max-width: 240px;
+}
+
+.blocoCentral {
+  padding: 5px;
+  margin: auto;
+  padding: 100px;
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  z-index: 1;
+  position: relative;
+}
+
+.infos {
+  padding: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  margin-bottom: 10px;
+  height: auto;
+  width: 90%;
+  max-width: 1100px;
+  background-color: #f5f5f5;
+
+  border-radius: 20px;
+}
+
+.infos h2 {
+  text-align: center;
+  font-family: var(--fontMontes);
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #002f66;
+}
+
+.infos h3 {
+  font-family: var(--fontMontes);
+  font-weight: 600;
+  color: var(--azulPmfClaro);
+}
+
+.divInfo {
+  display: flex;
+
+}
+
+.divdados {
+  margin-left: 5px;
+}
+
+#dataVisita {
+  width: 90%;
+  text-align: center;
+
+}
+
+#quadro {
+  border-style: double;
+  color: var(--brancoPmf);
+  background-color: var(--azulPmfEscuro);
+  margin: 0 5px 0 5px;
+  font-weight: bolder;
+
+}
+
+#quadroAba {
+  border-style: double;
+  color: var(brancoPmf);
+  background-color: var(azulPmfEscuro);
+  margin: 0 5px 0 5px;
+  font-weight: bolder;
+
+}
+
+/* NOVO EFEITO */
+
+.novoEfeito {
+  position: relative;
+  padding-top: 1rem;
+}
+
+.novoEfeito input {
+  border: 0;
+  border-bottom: 2px solid lightgrey;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.novoEfeito input:focus {
+  border-bottom: 2px solid #3951b2;
+}
+
+.novoEfeito input::placeholder {
+  color: transparent;
+}
+
+.novoEfeito label {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+}
+
+.novoEfeito input:required:invalid+label {
+  color: red;
+}
+
+.novoEfeito input:focus:required:invalid {
+  border-bottom: 2px solid red;
+}
+
+.novoEfeito input:required:invalid+label:before {
+  content: '*';
+}
+
+.novoEfeito input:focus+label,
+.novoEfeito input:not(:placeholder-shown)+label {
+  font-size: 13px;
+  margin-top: 0;
+  color: #3951b2;
+}
+
+/* FIM DO NOVO EFEITO */
+
+.divInfo input {
+  width: 100%;
+  height: 35px;
+  border-radius: 15px;
+  border-style: none;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+
+  font-size: 0.9rem;
+
+}
+
+.divInfo select {
+  width: 100%;
+  height: 35px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.divInfo label {
+  font-family: var(--fontMontes);
+  /* font-weight: 500; */
+  color: #002f66;
+  font-size: 13px;
+
+}
+
+.divInfoInterna {
+  margin-right: 30px;
+  display: flex;
+}
+
+.tableAc {
+  font-family: var(--fontMontes);
+  /* font-weight: 500; */
+  color: #002f66;
+  font-size: 13px;
+
+}
+
+.tableAc input {
+  width: 100%;
+  height: 35px;
+  border-radius: 12px;
+  border-style: none;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  padding-left: 5;
+  font-size: 0.9rem;
+}
+
+.divExplicando {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-family: var(--fontMontes);
+  font-weight: 500;
+  color: #002f66;
+}
+
+.verdeAdd {
+  color: rgb(0, 128, 0);
+}
+
+.vermelhoCancel {
+  color: red;
+}
+
+#inputNomeBanco {
+  margin-left: 15px;
+}
+
+.btnGerar {
+  margin: 10px;
+  height: 40px;
+  width: 80px;
+  font-weight: 600;
+  background-color: var(--azulPmfClaro);
+  color: var(--brancoPmf);
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+  border-style: none;
+
+}
+
+.btnGerar:hover,
+.btnValidar:hover {
+  scale: 1.1;
+  transition: 40ms;
+}
+
+/* Estilo quadros */
+
+.divQuadro {
+  display: none;
+}
+
+.divButtonQuadro {
+  text-align: center;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+}
+
+tbody {
+  width: 100%;
+}
+
+#calender {
+  width: 100%;
+}
+
+.inputQuadro {
+  background-color: var(--azulPmfClaro);
+  color: var(--brancoPmf);
+  padding: 5px 8px 5px 8px;
+  cursor: pointer;
+  border-radius: 10px;
+  border-style: none;
+  margin-bottom: 10px;
+}
+
+.thCalendario {
+  font-family: var(--fontMontes);
+  color: var(--brancoPmf);
+  background-color: var(--azulPmfEscuro);
+  font-weight: 700;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #00306625;
+  border-radius: 10px;
+}
+
+.cellQuadro {
+  height: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Responsividade */
+
+@media only screen and (max-width: 600px) {
+  .logo-header {
+    width: 50%;
+    height: 50%;
+    margin: 3%;
+  }
+
+  .infos {
+    width: 70%;
+    margin: auto;
+  }
+
+  tr {
+    display: flex;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  li {
+    margin-right: 10px;
+    /* Adicione margem para espa�amento entre as op��es */
+  }
+
+  .tableAc tr {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tableAc {
+    width: 100%;
+  }
+
+  tbody {
+    width: 100%;
+  }
+
+  .blocoCentral {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+
+  .divImagem {
+    align-items: center;
+  }
+
+  .divInfoInterna {
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .divInfo {
+    align-items: center;
+    width: 100%;
+  }
+
+  #inputNomeBanco {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .divdados {
+    width: 100%;
+  }
+
+  #calendar {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  #calendar td {
+    width: 45px;
+  }
+
+  .thCalendario {
+    padding: 7.7px;
+    width: 31.7px;
+  }
+
+}

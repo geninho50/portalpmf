@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>1</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Secretaria Executiva de Assuntos Institucionais</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/05_08_2011_16.31.28.c8b5d7d2f93ba5a5bc6afe9e76c56555.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

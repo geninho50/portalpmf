@@ -1,0 +1,428 @@
+
+/* -------------------------------------- */
+/* --------- ÁREA DE EVENTOS ----------- */
+/* -------------------------------------- */
+
+
+.layout_eventos #conteudo {
+	background-image:none;
+}
+
+.layout_eventos #conteudo_wrapper {
+	background-image:none;
+	padding-top:30px;
+}
+
+.layout_eventos #rodape-wrapper {
+	background-image:none;
+}
+
+
+/* -------------- CORES ---------------- */
+
+.layout_eventos h2, .layout_eventos h3, 
+.layout_eventos h3 a, .layout_eventos h5  { color: #BF8F1B; }
+
+.layout_eventos #menu li a:hover, 
+.layout_eventos #menu li a.selecionado { 
+	background-color:#EEBB23;
+}
+
+.layout_eventos .painel_abas {
+	border-color:#b2a898;
+}
+
+.layout_eventos .aba_sel {
+	background-color:#b2a898;
+}
+
+.layout_eventos .aba_sel a{
+	color:#fff;
+}
+
+.layout_eventos .conteudo_abas_ext {
+	border-color:#EEBB23;
+}
+
+.layout_eventos #area_paginacao a:hover {
+	background-color:#EEBB23;
+}
+
+.layout_eventos #area_paginacao b {
+	background-color:#EEBB23;
+	border-color:#EEBB23;
+}
+
+.layout_eventos .box_msg_baixo {
+	color:#BF8F1B;
+}
+
+.layout_eventos .calendario .numero { 
+	color:#EEBB23;
+}
+
+.layout_eventos #conteudo_pagina #galeria h1 {
+	background-color:#EEBB23;
+}
+
+.layout_eventos #conteudo_pagina #arquivos  { 
+	border-color:#EEBB23;
+}
+
+.layout_eventos #conteudo_pagina #arquivos li {
+	background-image: url(imagens/marcador_laranja.png);
+}
+
+.layout_eventos #conteudo_pagina #arquivos li a:hover,
+.layout_eventos #conteudo_pagina #arquivos li p:hover{
+	color:#B54615;
+}
+
+.layout_eventos #conteudo_pagina #arquivos a:hover {
+	color: #B54615;
+}
+
+.layout_eventos #conteudo_pagina #arquivos h1 {
+	background-color:#EEBB23;
+}	
+
+.layout_eventos .titulo_quem_e_quem {
+	background-color:#EEBB23;
+}	
+
+.layout_eventos #chamada_noticia { 
+	color: #BF8F1B; 
+}
+
+
+
+.layout_eventos #conteudo {
+	background-image:none;
+}
+
+
+
+.layout_eventos #titulo #banner_evento {
+	padding:0px;
+	background-color:#FFFFFF;
+	border-style:solid;
+	border-color:#FFFFFF;
+	border-width:0px;
+	text-align:left;
+	width:520px;
+	margin:0px;
+}	
+.layout_eventos #titulo #banner_evento img {
+	padding:0px;
+	border-style:solid;
+	border-color:#EEEEEE;
+	border-width:0px;
+	text-align:left;
+}
+
+.layout_eventos #titulo #transmissao {
+	background-color:#FFFFFF;
+	color: #FFFFFF;
+	text-decoration:none; 
+	padding:0px;
+	margin:0px;
+}	
+
+
+
+.layout_eventos #conteudo_coluna2B {
+	margin:0; 
+	padding:0px; 
+	text-align:left; 
+	vertical-align:top; 
+	width:570px; 
+	border-style:solid;
+	border-color:#FFFFFF;
+	border-width:0px;
+}
+
+				  
+.layout_eventos #conteudo_coluna3B {
+    width:380px;  
+	height:100%;
+	margin:0; 
+	margin-left:20px;
+	padding:0px; 
+	padding-top:90px; 
+	text-align:left; 
+	float:right; 
+    font-family: Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif; 
+    color: #333333; 
+	word-spacing:0px; 
+	font-style: normal; 
+	font-size: 9pt; 
+	font-weight:bold; 
+	border-style:solid;
+	border-color:#FFFFFF;
+	border-width:0px;
+}		
+
+
+.layout_eventos #conteudo_coluna3B .box {
+    padding-top:10px;
+	margin:0px;
+}	
+
+
+.layout_eventos #conteudo_coluna3B .painel_abas {
+    left:0px;
+	width:auto;
+	margin-bottom:12px;
+}
+
+.layout_eventos #caminho_migalhas  {
+	margin-bottom:8px;
+}	
+
+.layout_eventos #caminho_migalhas a {
+	background-color:#b2a898;
+	padding:3px 8px;
+	color:#fff;
+	text-decoration:none;
+}
+
+.layout_eventos #caminho_migalhas a:hover {
+	background-color:#333;
+	text-decoration:none;
+}
+
+
+.layout_eventos #conteudo_coluna3B #conteudo_noticias .botoes_navegacao {
+	padding:10px;
+	padding-left:20px;
+	padding-top:15px;
+	margin:0px;
+}
+
+.layout_eventos #conteudo_coluna3B #conteudo_noticias .botoes_navegacao a {
+	padding:5px;
+	padding-top:3px;
+	padding-bottom:3px;
+	margin:0px;
+	background-color:#e4dcca;
+	border-style:solid;
+	border-width:1px;
+	border-color:#c4bba7;
+	color: #666666; 
+	font-weight: bold; 
+	font-size: 10pt; 
+	line-height: 12pt; 
+    font-family: Verdana, Helvetica, sans-serif; 
+}
+
+.layout_eventos #conteudo_coluna3B #conteudo_noticias .botoes_navegacao a:hover {
+	background-color:#333333;
+	color: #FFFFFF; 
+	
+}
+
+
+		  
+	
+.layout_eventos #conteudo_coluna2B #titulo {
+	margin:0px; 
+	margin-left:25px;
+	padding:0px; 
+	padding-top:0px;  
+	vertical-align:top; 
+	background-color:#FFFFFF;
+	width:540px;
+}		
+
+			
+.layout_eventos #conteudo_coluna2B #conteudo_pagina {
+    padding:0px;
+	padding-top: 25px;
+	margin:0px;
+	margin-left:25px;
+	margin-right:25px;
+}		
+
+
+.layout_eventos #conteudo_coluna3B #noticias_relaciondas  {
+	padding:15px 15px; 
+	text-align:left;
+	background-color:#eee;
+}			
+		
+.layout_eventos #conteudo_coluna3B #galeria  {
+	cursor: default; 
+	list-style: none; 
+	padding:15px 15px;
+	text-align:left;
+	background-color:#eee;
+}
+
+.layout_eventos #conteudo_coluna3B #galeria img {
+	background: #fff;
+	border: 0px solid #CCCCCC;
+	color: inherit;
+	vertical-align: top;
+	width: 108px;
+	height: 81px;
+	margin: 2px;
+	float: none;
+}
+
+	
+
+.layout_eventos #conteudo_coluna3B #galeria img:hover {
+	background-color: #58574B;
+}
+
+.layout_eventos #conteudo_coluna3B #galeria ul {
+	font-weight:bold;
+	list-style-type: none;
+	padding:0px;
+	list-style-image:none;
+	overflow:auto;
+}
+
+.layout_eventos #conteudo_coluna3B #galeria li {
+	color: inherit;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	list-style-type: none;
+	list-style-image: none;
+}		   
+
+	
+
+.layout_eventos #conteudo_coluna3B #arquivos  { 
+    cursor: default; 
+	list-style: none; 
+}
+
+
+.layout_eventos #conteudo_coluna3B #arquivos ul {
+	font-weight:bold;
+	list-style-position: outside;
+	list-style-type:none;
+	padding:0px;
+	padding-top:0px;
+	padding-left:5px;
+	padding-right:20px;
+	overflow:auto;
+}
+
+.layout_eventos #conteudo_coluna3B #arquivos li {
+	margin: 0px;
+	margin-left:0px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8.5pt;
+	border-style:dashed;
+	border-color:#57584B;
+	border-width:0px;
+	border-top-width:1px;
+}
+
+.layout_eventos #conteudo_coluna3B #arquivos a {
+	color: #57584B;
+	text-decoration: none;	
+}
+
+.layout_eventos #conteudo_coluna3B #arquivos p {
+	color: #57584B;
+	text-decoration: none;
+	padding:2px;
+	padding-left:5px;
+}
+
+.layout_eventos #conteudo_coluna3B #arquivos a:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color:#ac9e90;
+}
+
+.layout_eventos #conteudo_coluna3B #arquivos p:hover {
+	color: #FFFFFF;
+	text-decoration: none;
+	background-color:#ac9e90;
+}	
+  
+
+
+
+.layout_eventos #conteudo_coluna2B #conteudo_pagina table {
+	margin:0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width:525px;
+	padding:0px;
+	border-width:0px;
+	border-collapse: collapse;
+}	
+
+.layout_eventos #conteudo_coluna2B #conteudo_pagina th {
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9.5pt;
+	line-height: 12pt;
+	text-align:left;
+	vertical-align:top;
+	
+	padding:8px;
+	border-style:solid;
+	border-color:#999999;
+	border-width:0px;
+	border-bottom-width:1px;
+	background-color: #FFFFFF;
+}	
+
+.layout_eventos #conteudo_coluna2B #conteudo_pagina th p {
+	padding:0px;
+	margin:0px;
+	
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9.5pt;
+	line-height: 12pt;
+	text-align:left;
+	vertical-align:top;
+}
+
+.layout_eventos #conteudo_coluna2B #conteudo_pagina td {
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8.5pt;
+	line-height: 11pt;
+	text-align:left;
+	vertical-align:top;
+	
+	padding:8px;
+	border-style:solid;
+	border-color:#999999;
+	border-width:0px;
+	border-bottom-width:1px;
+	background-color: #FFFFFF;
+	
+}	
+
+.layout_eventos #conteudo_coluna2B #conteudo_pagina td p {
+	padding:0px;
+	margin:0px;
+	
+	color: #333333;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 8.5pt;
+	line-height: 11pt;
+	text-align:left;
+	vertical-align:top;
+}	
+	
+.layout_eventos #conteudo_coluna2B #conteudo_pagina td+td {
+	border-left: 1px solid #AAAAAA;
+	text-align: center;
+}		
+				

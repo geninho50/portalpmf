@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>2</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Bernunça: um símbolo do folclore catarinense</title>
+<subtitle>Fundação Franklin Cascaes</subtitle>
+<imagePath>../../arquivos/banners/jpg/13_01_2010_14.15.23.2896100c7ca46d7dec18513b7dd8a292.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Fomentar a cultura é nossa arte</title>
+<subtitle>Fundação Franklin Cascaes</subtitle>
+<imagePath>../../arquivos/banners/jpg/13_01_2010_14.16.06.8c5d2169f652ed1da495918a55ab1aa4.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

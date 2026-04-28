@@ -1,0 +1,1 @@
+<div class="box_link_menu"><a href="index.php?pagina=notultimas" title="voltar para a lista de notícias" >&laquo; últimas notícias</a></div>

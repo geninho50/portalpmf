@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>4</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Ouvidoria</title>
+<subtitle>saiba como entrar em contato</subtitle>
+<imagePath>../../arquivos/banners/jpg/15_06_2012_16.26.29.82bcdf9c6e7d9bbb8c5c9a8d9633329f.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Mudança no embarque!</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/20_06_2012_18.15.37.11cc6743d51487f80943ee4a4cc2c159.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Mudança no itinerário</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/22_06_2012_14.09.37.4f0588bcdcc56757f4438ac0e8a0fb42.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Aumento de tarifa</title>
+<subtitle>no Sistema Hidroviário</subtitle>
+<imagePath>../../arquivos/banners/jpg/22_06_2012_17.25.34.e50e42d65b5e9a4297423aae4ce63e09.jpg</imagePath>
+<link>http://www.pmf.sc.gov.br/arquivos/diario/pdf/21_06_2012_19.17.06.6ce9fdbe88a711f2049f32515081079a.pdf</link>
+</banner>
+
+</banners>
+</rotator>

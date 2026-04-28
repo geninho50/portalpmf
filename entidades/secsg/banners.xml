@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>SMDU</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/27_04_2010_14.33.39.f3ccdd27d2000e3f9255a7e3e2c48800.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>SMDU</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/27_04_2010_14.35.12.156005c5baf40ff51a327f1c34f2975b.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>SMDU</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/27_04_2010_14.35.36.799bad5a3b514f096e69bbc4a7896cd9.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

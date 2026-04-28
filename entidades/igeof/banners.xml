@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>1</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Caminhão do Peixe</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/13_01_2010_17.26.56.96e78c3e23f84273c2772f50d049adac.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

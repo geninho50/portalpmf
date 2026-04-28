@@ -1,0 +1,649 @@
+
+/* ------------------------------- */
+/* ------------------------------- */
+/* ------------------------------- */
+/* estrura geral a pagina oubidoria */
+
+
+
+
+.layout_ouvidoria_novo h1 { 
+	font-family: fontsite, tahoma, arial, sans-serif; 
+	font-style:normal; 
+	font-weight:normal; 
+    font-size:20pt; 
+	color: #333; 
+	padding:0px; 
+	padding-right:0px; 
+	padding-left:0px;  
+	border:0px; 
+	margin:0px; 
+	margin-top:2px; 
+	margin-bottom:2px; 
+}
+	 
+.layout_ouvidoria_novo h2 { 
+	font-family: fontsite, tahoma, arial, sans-serif; 
+	font-style:normal; 
+	font-weight:normal; 
+    font-size:17pt; 
+	color: #e4772c; 
+	padding:0px; 
+	padding-right:0px; 
+	padding-left:0px;  
+	border:0px; 
+	margin:0px; 
+	margin-top:2px; 
+	margin-bottom:2px;
+}
+	 
+.layout_ouvidoria_novo h3 { 
+	font-family:  "Trebuchet MS", tahoma, arial, sans-serif; 
+	font-style:normal; 
+	font-weight:normal; 
+    font-size:12.5pt;
+	line-height:14pt; 
+	color: #e4772c; 
+	padding:0px; 
+	padding-right:0px; 
+	padding-left:0px;  
+	border:0px; 
+	margin:0px; 
+	margin-top:2px; 
+	margin-bottom:2px;
+}
+
+.layout_ouvidoria_novo h3 a { 
+	color: #e4772c; 
+}
+	 
+.layout_ouvidoria_novo h4 { 
+	font-family:  "Trebuchet MS", tahoma,  arial, sans-serif; 
+	font-style:normal; 
+	font-weight:bold; 
+    font-size:10pt; 
+	color: #333;
+	padding:0px; 
+	padding-right:0px; 
+	padding-left:0px;  
+	border:0px; 
+	margin:0px; 
+	margin-top:2px;
+	margin-bottom:2px;
+}
+	 
+.layout_ouvidoria_novo h5 { 
+	font-family:  "Trebuchet MS", tahoma,  arial, sans-serif;  
+	font-style:normal; 
+	font-weight:bold; 
+    font-size:9pt; 
+	color: #e4772c; 
+	padding:0px; 
+	padding-right:0px; 
+	padding-left:0px;
+	border:0px; 
+	margin:0px; 
+	margin-top:5px; 
+	margin-bottom:1px;  
+}
+
+.layout_ouvidoria_novo h6 { 
+	font-family:  "Trebuchet MS", tahoma,  arial, sans-serif; 
+	font-style:normal; 
+	font-weight:bold; 
+    font-size:7.5pt; 
+	color: #333; 
+	padding:0px; 
+	padding-right:0px; 
+	padding-left:0px;
+	border:0px; 
+	margin:0px; 
+	margin-top:5px; 
+	margin-bottom:1px;  
+}
+
+
+.layout_ouvidoria_novo h3 { 
+	color: #e4772c; 
+	font-weight:bold; 
+}
+
+.layout_ouvidoria_novo h3 a { 
+	color: #e4772c; 
+	font-weight:bold; 
+}
+
+.layout_ouvidoria_novo h5 a {
+	font-weight:bold; 
+}
+		
+
+
+
+.layout_ouvidoria_novo {
+	width:100%; 
+	margin:0 auto; 
+	text-align:left; 
+	vertical-align:top; 
+    background-color:#efeee9; 
+	background-image:url(imagens/fundo_geral.jpg);
+	background-repeat:repeat-x;
+} 
+			 
+			 
+
+.layout_ouvidoria_novo #cabecalho {
+	width:980px; 
+	height:150px; 
+	background-image:url(menus/imagens/cab_generico.jpg); 
+    position:relative; 
+	margin:0; 
+	padding:0px; 
+	text-align:left;
+}
+					  
+					  
+.layout_ouvidoria_novo #conteudo {
+	width:980px; 
+	background-image:url(imagens/borda-pontilhada.png);
+	background-repeat:repeat-y;
+	background-position:240px 0px; 
+	background-color:#FFFFFF; 
+	padding:0px;
+	padding-bottom:30px;
+	text-align:left; 
+	vertical-align:top; 
+	text-indent: 0em; 
+	font-size: 8pt; 
+	font-family: verdana, arial, sans-serif;
+	color: #333333; 
+	word-spacing: normal; 
+	font-style:normal; 
+	position:relative; 
+	left:0px;
+    border-style:solid; 
+	border-color: #DEDEDE; 
+	border-right-width:0px; 
+	border-left-width:0px;
+	border-top-width:0px; 
+	border-bottom-width:0px;		
+} 
+					  
+					  
+.layout_ouvidoria_novo #conteudo_topo {
+	width:980px; 
+	background-image: none; 
+    background-repeat: no-repeat; 
+	position:relative; 
+	left:0px; 
+	top:0px;
+}
+					  
+					  
+					  
+.layout_ouvidoria_novo #conteudo_coluna1 {
+	width:240px;
+	margin:0; 
+	padding:0px; 
+	padding-top:20px; 
+    text-align:left; 
+	float:left;   
+} 
+							  
+
+										  
+.layout_ouvidoria_novo #conteudo_coluna1_topo {
+	width:12px;
+	height:70px; 
+	background-image:none; 
+	position:absolute;
+	left:240px;
+	top:0px;
+	background-color:#e4772c;
+	z-index:1000;
+	border-radius:0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius:0px;
+	border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-right-radius:5px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius:5px;
+	border-width:0px;
+	border-color:#FFFFFF;
+	border-style:solid;
+	border-top-width:0px;
+}
+ 							 
+
+.layout_ouvidoria_novo #conteudo_coluna2 {
+	margin:0; 
+	margin-left:260px; 
+	margin-right:0px; 
+	padding:0px; 
+	padding-top:21px;  
+    text-align:left; 
+	vertical-align:top;  
+}
+							   
+							   
+.layout_ouvidoria_novo #conteudo_coluna2 p { 
+	padding:0px; 
+	padding-right:25px;
+}						 
+	
+					  
+.layout_ouvidoria_novo #conteudo_destaques {
+	width:200px; 
+	height:100%; 
+	margin:0; 
+	padding:0px; 
+	padding-top:40px; 
+	text-align:left; 
+	float:right; 
+    font-family: Lucida Sans Unicode, Lucida Grande, arial, verdana, sans-serif; 
+    color: #E4772C; 
+	word-spacing:0px; 
+	font-style: normal; 
+	font-size: 14pt; 
+	font-weight:bold; 
+	padding-bottom:30px; 
+}
+								 
+								 
+.layout_ouvidoria_novo #conteudo_destaques ul {
+	list-style: none; 
+	margin-top:10px;
+	background-color:#dedede;
+	width:152px;
+	padding:13px;
+	padding-bottom:5px;
+	margin:0px;
+	margin-left:10px;
+}
+
+.layout_ouvidoria_novo #conteudo_destaques li { 
+	width:152px; 
+	padding:0px; 
+	margin:0px; 
+	margin-bottom:10px; 
+	text-align:left; 
+	border-width:0px;						   
+ }
+	
+.layout_ouvidoria_novo #conteudo_destaques li img { 
+	width:152px; 
+	height:80px; 
+	border-style:solid; 
+	border-color: #ccc; 
+	border-width:1px; 
+}	
+
+.layout_ouvidoria_novo #conteudo_destaques div { 
+	font-size: 14pt; 
+	color: #333333; 
+	font-weight:normal; 
+	padding:0px; 
+	padding-left:18px;
+	font-family:fontsite, "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-image:url(imagens/destaques_seta.png); 
+    background-repeat: no-repeat;
+	background-position:10px 20px;
+	height:35px;
+	width:170px;
+}
+	
+	
+
+.layout_ouvidoria_novo #conteudo_base {
+	width:980px; 
+	height:5px; 
+	background-image:none; 
+    background-repeat: no-repeat;
+	background-color:#fff; 
+	border-style:solid; 
+	border-color: #DEDEDE; 
+	border-right-width:1px; 
+	border-left-width:1px; 
+	border-top-width:0px; 
+	border-bottom-width:1px;
+}	
+
+
+
+.layout_ouvidoria_novo #rodape { 
+	height:70px; 
+	width:980px; 
+	text-align:left; 
+	clear:both; 
+	vertical-align:top;
+    padding:0px; 
+	padding-top:15px; 
+	padding-left:20px;  
+    font-size: 7.5pt; 
+	font-family: verdana, arial, sans-serif;  
+    color: #333333; 
+	word-spacing: normal; 
+	font-style:normal; 
+	font-weight:normal;
+} 
+					  
+
+.layout_ouvidoria_novo #menu { 
+	padding:0px; 
+}
+
+
+.layout_ouvidoria_novo #menu #menugeral {
+	border-top-left-radius:10px;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius:10px;
+	background-color:transparent;
+	margin:0px;
+	margin-left:10px;
+	padding:15px;
+	padding-left:15px;
+}
+
+.layout_ouvidoria_novo #menu .letras a {
+	font-family: monospace !important;
+	font-weight: normal;
+	font-size: 10pt;
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+.layout_ouvidoria_novo #menu .letras a:hover {
+	padding:1px;
+	padding-left:3px;
+	padding-right:3px;
+}
+
+
+.layout_ouvidoria_novo #menu #menuespecifico {
+	border-top-left-radius:10px;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius:10px;
+	background-color:#eee;
+	margin:0px;
+	margin-left:10px;
+	margin-top:10px;
+	padding:15px;
+	padding-left:15px;
+	padding-bottom:25px;
+}
+
+
+.layout_ouvidoria_novo #menu #menuespecifico div { 
+	font-size: 8.5pt; 
+	color: #333333; 
+	font-weight:normal;
+	text-transform:lowercase;
+	margin:0px;
+	margin-top:8px;
+	margin-bottom:2px;
+}
+
+
+.layout_ouvidoria_novo #menu #menubusca {
+	border-top-left-radius:10px;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius:10px;
+	border-bottom-left-radius:10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius:10px;
+	background-color:#e7f4d5;
+	margin:0px;
+	margin-left:10px;
+	margin-top:10px;
+	padding:15px;
+	padding-left:15px;
+	padding-bottom:25px;
+	color:#fff;
+}
+
+
+.layout_ouvidoria_novo #menu ul {
+	list-style-position: outside;
+	list-style-type:none;
+	padding:0px;
+}
+
+.layout_ouvidoria_novo #menu li {
+	width:200px;
+	margin:0;
+	padding:0px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:0px;
+	text-align:left;
+	border-style:solid;
+	border-color: #ccc;
+	border-right-width:0px;
+	border-left-width:0px;
+	border-top-width:0px;
+	border-bottom-width:1px;
+	font-size: 11.5pt;
+	font-weight:bold;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", arial, verdana, sans-serif;
+	color: #333333;
+	word-spacing:0px;
+	font-style: normal;
+	background-color:transparent;
+	text-transform:uppercase;
+	background-image:url(imagens/arrow_entidx.png);
+	background-repeat:no-repeat;
+	background-position: 0px 5px;
+}
+
+	
+
+.layout_ouvidoria_novo #menu li a  { 
+	text-decoration:none; 
+	font-weight:normal;  
+	font-size: 8.6pt;  
+	color:#333333;
+	padding:2px;
+	padding-left:6px;
+	padding-right:6px;
+	
+}
+
+
+.layout_ouvidoria_novo #menu li .consulta a,
+.layout_ouvidoria_novo #menu li .consulta a:hover  { 
+	padding:0px;
+	background-color:transparent;
+	
+}
+
+.layout_ouvidoria_novo #menu li a:hover, 
+.layout_ouvidoria_novo #menu li a.selecionado { 
+	color: #FFFFFF; 
+	padding:2px;
+	padding-left:6px;
+	padding-right:6px;
+	padding-bottom:1px;
+	background-color:#e4772c;
+	border-radius:5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius:5px;
+}
+
+
+.layout_ouvidoria_novo #menu li span { 
+	font-size: 9.2pt; 
+	color: #333333; 
+	font-weight:normal;
+}
+
+
+.layout_ouvidoria_novo #menu li ul  { 
+	padding:0px; 
+	padding-top: 5px; 
+	padding-bottom:0px; 
+	padding-left:10px;  
+    border-style:solid; 
+	border-color: #999999; 
+	border-right-width:0px;
+    border-left-width:0px; 
+	border-top-width:0px; 
+	border-bottom-width:0px;
+}	
+
+
+.layout_ouvidoria_novo #menu li li {
+	width:175px; 
+	margin:0px; 
+	padding:0px; 
+	padding-top:2px; 
+	padding-bottom:2px; 
+	padding-left:11px; 
+	text-align:left; 
+    border-style:dashed; 
+	border-color: #CCCCCC; 
+	border-right-width:0px; 
+	border-left-width:0px; 
+	border-top-width:1px; 
+	border-bottom-width:0px; 
+	font-size: 9pt; 
+	line-height:18px; 
+	background-color:transparent; 
+	font-family: Lucida Sans Unicode, Lucida Grande, verdana, arial, sans-serif; 
+	color: #333333; 
+	word-spacing:normal; 
+	font-style: normal; 
+	font-weight:normal; 
+	text-transform:none;
+	background-image:url(imagens/arrow_cinza.png); 
+	background-color:transparent;
+    background-repeat:no-repeat; 
+	background-position: 0px 7px; 
+}
+
+
+
+.layout_ouvidoria_novo #caminho_migalhas { 
+	font-family: verdana, arial, sans-serif; 
+	font-style:normal; 
+	font-weight:normal; 
+    font-size:8pt; 
+	color: #666666; 
+	padding:0px; 
+	padding-right:0px; 
+	padding-left:0px;  
+	border:0px; 
+	margin:0px; 
+	margin-top:0px; 
+	margin-bottom:0px;
+}
+						
+						
+.layout_ouvidoria_novo #titulo_pagina { 
+	height:auto; 
+	padding:0px; 
+	border:0px; 
+	margin:0px; 
+	font-size:22pt; 
+    line-height:23pt; 
+	font-family:fontsite, tahoma, arial, verdana, sans-serif; 
+	letter-spacing:0px; 
+	color: #333; 
+	word-spacing:normal; 
+	font-style:normal; 
+	font-weight:normal;
+}
+				 
+							 
+.layout_ouvidoria_novo #titulo_noticia {
+	padding:0px;
+	padding-right:20px;
+	padding-top:5px;
+	padding-bottom:5px;
+	border:0px; 
+	margin:0px; 
+	font-size:22pt; 
+    line-height:21pt; 
+	font-family:fontsite, tahoma, arial, verdana, sans-serif; 
+	letter-spacing:0px; 
+	color: #333; 
+	word-spacing:normal; 
+	font-style:normal; 
+	font-weight:normal;
+}								 
+							 
+.layout_ouvidoria_novo #chamada_noticia { 
+	border:0px; 
+	margin:0px; 
+	padding:0px; 
+	padding-bottom:20px; 
+	padding-right:15px;
+	font-size:12.5pt; 
+    line-height:15pt; 
+	font-family:"Trebuchet MS", tahoma, arial, verdana, sans-serif; 
+	letter-spacing:0px; 
+	color: #e4772c; 
+	word-spacing:normal; 
+	font-style:normal; 
+	font-weight:normal;
+	
+}
+
+.layout_ouvidoria_novo #chamada_noticia em,
+.layout_ouvidoria_novo #chamada_noticia h1,
+.layout_ouvidoria_novo #chamada_noticia h2,
+.layout_ouvidoria_novo #chamada_noticia h3,
+.layout_ouvidoria_novo #chamada_noticia h4,
+.layout_ouvidoria_novo #chamada_noticia h5,
+.layout_ouvidoria_novo #chamada_noticia h6, 
+.layout_ouvidoria_novo #chamada_noticia address {
+	font-size:12.5pt; 
+    line-height:15pt; 
+	font-family:"Trebuchet MS", tahoma, arial, verdana, sans-serif; 
+	letter-spacing:0px; 
+	color: #e4772c; 
+	word-spacing:normal; 
+	font-style:normal; 
+	font-weight:normal;
+}
+
+							 
+.layout_ouvidoria_novo #chamada_noticia p {
+	padding:0px; 
+	border:0px; margin:0px; 
+	font-size:11pt; 
+    line-height:18px; 
+	font-family:tahoma, arial, verdana, sans-serif; 
+	letter-spacing:0px; 
+	color: #58574B; s
+	word-spacing:normal; 
+	font-style:normal; 
+	font-weight:normal;
+	display:inline;
+	margin:0px;
+	padding:0px;
+}	
+
+
+.layout_ouvidoria_novo #banner_topo{
+	width:740px; 
+	height:125px; 
+	background:url(imagens/banner_ouvidoria.png) no-repeat; 
+	margin:-21px 0 0 -20px;	
+}				   
+
+
+.result_busca_ouvidoria {padding:0px; padding-top:15px; padding-bottom:10px; padding-left:0px; padding-right:10px; text-align:left;
+                        border-style:dashed; border-color: #999999; border-right-width:0px; border-left-width:0px;
+			            border-top-width:0px; border-bottom-width:1px; font-weight:normal;}
+
+
+

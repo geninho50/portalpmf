@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Guarda Municipal</title>
+<subtitle>Assessoria de Comunicação</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_12_2009_20.14.44.88b757133689ac02b9bafb12e73a7497.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Sede da Guarda Municipal</title>
+<subtitle>Assessoria de Comunicação</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_12_2009_21.44.38.f8d8153fb4f29d3af15276db22435d48.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Setor de Educação</title>
+<subtitle>Assessoria de Comunicação</subtitle>
+<imagePath>../../arquivos/banners/jpg/07_12_2009_22.00.57.4f0691cfe48c8f74fe413c7b92391ff4.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

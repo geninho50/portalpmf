@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>3</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Florianópolis: abrindo as portas para o mundo</title>
+<subtitle>Secretaria Executiva de Assuntos Internacionais</subtitle>
+<imagePath>../../arquivos/banners/jpg/14_12_2009_8.20.40.8dd13090e0c061e28a47a970c496bc73.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Globalização responsável e com sustentabilidade</title>
+<subtitle>Secretaria Executiva de Assuntos Internacionais</subtitle>
+<imagePath>../../arquivos/banners/jpg/14_12_2009_8.22.45.bc9e80979ff26714f5c2d3c4b73aae25.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Relações internacionais de e com Florianópolis</title>
+<subtitle>Secretaria Executiva de Assuntos Internacionais</subtitle>
+<imagePath>../../arquivos/banners/jpg/14_12_2009_8.28.31.058606b56863ad2229edca8744c57095.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

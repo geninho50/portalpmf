@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>5</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Florianópolis: Capital da Inovação</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/09_12_2009_12.52.45.ac321627a2649702ce9ef4c1bc5a665d.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Mais de 560 empresas de tecnologia</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/09_12_2009_12.55.13.ccf82fae6e752bddac2a10f905859250.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Setor de Tecnologia: R$ 1 bilhão de faturamento</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/09_12_2009_12.57.03.09445f98e359e06abc0b63914629299d.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Apoio a ambientes de inovação</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/09_12_2009_12.56.39.d0dd5b4f68bd987b90cb2ee7241c13b9.jpg</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Setor de Tecnologia: mais de 5.000 empregos</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/jpg/09_12_2009_12.57.42.3692752cb754ec0adec6763c76c8d3bf.jpg</imagePath>
+<link></link>
+</banner>
+
+</banners>
+</rotator>

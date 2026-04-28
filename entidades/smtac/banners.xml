@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rotator isRandom="false">
+<bannerTime>7</bannerTime>
+<numberOfBanners>6</numberOfBanners>
+<banners showHeader="true">
+<banner>
+<title>Sec. Executiva de Controle Interno e Ouvidoria</title>
+<subtitle></subtitle>
+<imagePath>../../arquivos/banners/JPG/10_12_2009_18.24.44.4a1a3b4b53cbb1391caea5a114a593c1.JPG</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Beira Mar Continental</title>
+<subtitle>A SECIN cuida para que as obras continuem.</subtitle>
+<imagePath>../../arquivos/banners/JPG/12_04_2010_17.17.53.10a8c560231a494a3086e21c0b41b9f0.JPG</imagePath>
+<link></link>
+</banner>
+
+<banner>
+<title>Diga NÃO!</title>
+<subtitle>A PMF  fiscaliza e é contra a corrupção.</subtitle>
+<imagePath>../../arquivos/banners/jpg/12_04_2010_18.31.48.8486727d4848d8d68c235cfea18ded23.jpg</imagePath>
+<link>http://www.mp.sc.gov.br/portal/site/denuncia/default.asp</link>
+</banner>
+
+<banner>
+<title>Boletins Informativos da Ouvidoria em 2011</title>
+<subtitle>Veja aqui o resultado do que a PMF faz por você.</subtitle>
+<imagePath>../../arquivos/banners/JPG/15_02_2011_8.41.28.12d55c83ffe1625ce18507e1f7a5d3ab.JPG</imagePath>
+<link>http://portal.pmf.sc.gov.br/noticias/index.php?pagina=notpagina&noti=3517</link>
+</banner>
+
+<banner>
+<title>Na Prefeitura de Florianópolis há transparência</title>
+<subtitle>É o dever do Controle Interno fiscalizar</subtitle>
+<imagePath>../../arquivos/banners/JPG/22_11_2010_11.57.10.08377d061fb7c6a48c225ec97882ff8f.JPG</imagePath>
+<link>http://portal.pmf.sc.gov.br/entidades/ouvidoria/?cms=lei+da+transparencia</link>
+</banner>
+
+<banner>
+<title>Uma maior transparência em tempo real</title>
+<subtitle>A PMF está se adequando à LCP 131-2009</subtitle>
+<imagePath>../../arquivos/banners/JPG/30_04_2010_17.02.00.812e357c97a7cab69f85e3949840b2e2.JPG</imagePath>
+<link>http://portal.pmf.sc.gov.br/entidades/ouvidoria/?pagina=notpagina&menu=3&noti=1591</link>
+</banner>
+
+</banners>
+</rotator>
