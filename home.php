@@ -97,7 +97,8 @@ $drive->conecta();
     $only2 = false;
     $start = 2;
     include(CAMINHO_SITE."/layout/themePMF/includes/servicosCategorias.php");
-    include(CAMINHO_SITE."/layout/themePMF/includes/home/noticias.php");
+    include(CAMNHO_SITE."/layout/themePMF/includes/home/noticias.php");
+    // Fazendo teste e atualização do sistema. 
     ?>
   </div>
 
