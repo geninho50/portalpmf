@@ -22,6 +22,8 @@ jQuery(document).ready(function($) {
           rule = rule.substr(pos + 1, rule.length);
         }
 
+        // testando 
+
         switch (rule) {
           case 'required':
             if (i.val() === '') {

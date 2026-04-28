@@ -86,8 +86,8 @@ reencontro/
 radio/ 
 producao/ 
 iptu/ 
-intranet/ 
-internet/ 
+#intranet/ 
+# internet/ 
 entidades/ 
 ef/ 
 adm1/ 
