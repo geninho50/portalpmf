@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 
 <?php
@@ -83,7 +83,12 @@ $drive->conecta();
 <link rel="stylesheet" href="../scripts/colorbox/colorbox.css" type="text/css" media="screen"/>
 
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.3.0.min.js"
+  integrity="sha256-+/QytbLYK1r6AApmPrwhgXw7uz4u9H1E65c85XWyHRo="
+  crossorigin="anonymous"></script>
 <script type="text/javascript" src="../scripts/js/livevalidation/livevalidation13.js"></script>
 <script type="text/javascript" src="../scripts/js/jmask/jquery.maskedinput.js" ></script>
 <script type="text/javascript" src="../scripts/js/jdrag-n-drop/jquery-ui-1.7.1.custom.min.js"></script>

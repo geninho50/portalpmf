@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 
 <?php
@@ -98,12 +98,18 @@ $drive->conecta();
 <link rel="stylesheet" href="../layout/pmf-estilo-governo.css" type="text/css">
 <link rel="stylesheet" href="../layout/pmf-estilo-noticias.css" type="text/css">
 <link rel="stylesheet" href="../layout/pmf-estilo-intranet.css" type="text/css">
+<link rel="stylesheet" href="../layout/pmf-estilo-intranet-nova.css" type="text/css">
 <link rel="stylesheet" href="../scripts/slidesjs/css/global.css" type="text/css">
 <link rel="stylesheet" href="../scripts/js/livevalidation/livevalidation13.css" type="text/css" />
 <link rel="stylesheet" href="../scripts/colorbox/colorbox.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="../scripts/js/ui/jquery-ui.css" >
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.3.0.min.js"
+  integrity="sha256-+/QytbLYK1r6AApmPrwhgXw7uz4u9H1E65c85XWyHRo="
+  crossorigin="anonymous"></script>
 <script type="text/javascript" src="../scripts/colorbox/jquery.colorbox.js"></script>
 <script type="text/javascript" src="../scripts/js/tiny_mce/tiny_mce_src.js"></script>
 <script type="text/javascript" src="../scripts/js/livevalidation/livevalidation13.js"></script>

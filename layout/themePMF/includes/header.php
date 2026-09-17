@@ -2,14 +2,24 @@
  require_once "Mobile_Detect.php";
  $urlHost = $_SERVER['HTTP_HOST'];
  $urlUri = $_SERVER['REQUEST_URI'];
+
+ // Areas administrativas ja carregam jQuery + plugins (ex.: colorbox) no proprio head.
+ // Recarregar jQuery aqui sobrescreve $ e quebra plugins.
+ $skipThemeJquery = (
+   stripos($urlUri, '/intranet') !== false ||
+   stripos($urlUri, '/internet/') !== false
+ );
 ?>
 
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300‌​,400,500,600,700" rel="stylesheet">
-<link rel="stylesheet" href="https://<?php echo($urlHost);?>/layout/themePMF/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+<link rel="stylesheet" href="https://<?php echo($urlHost);?>/layout/themePMF/css/style.css?v=<?php echo @filemtime(dirname(dirname(__FILE__)).'/css/style.css'); ?>">
 
 <?php
-  if(stripos($urlUri, 'internet/') == 0){
+  if (!$skipThemeJquery) {
  ?>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
