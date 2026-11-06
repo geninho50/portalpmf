@@ -1,6 +1,30 @@
 <?php
+require_once __DIR__ . '/../php/acoes.php';
+// ------------------------------------------------------------------------------------------
+// INTERCEPTACAO AJAX PARA REORDENACAO
+// ------------------------------------------------------------------------------------------
+if (isset($_REQUEST['ajax']) && $_REQUEST['ajax'] === 'reordenar_menus') {
+    if (function_exists('ob_clean')) { @ob_clean(); }
+    header('Content-Type: application/json');
+    
+    $ent   = intval($_SESSION['SuserEnt']);
+    $ordem = (isset($_POST['ordem']) && is_array($_POST['ordem'])) ? array_values($_POST['ordem']) : [];
+
+    foreach ($ordem as $pos => $idMenu) {
+        $idMenu = intval($idMenu);
+        if ($idMenu > 0) {
+            $n = $pos + 1;
+            $drive->pedido("UPDATE cms_menu SET cmsmenu_posicao = {$n}
+                            WHERE cmsmenu_id = {$idMenu} AND cmsmenu_entidade_id = {$ent}");
+        }
+    }
+    
+    echo json_encode(['status' => 'sucesso']);
+    exit;
+}
+
 if (isset($_POST["btSalvar_x"]) || isset($_POST["btSalvar"])) {
-    include("cms/php/php_menus.php");
+    cmsSalvarMenu($drive);
 }
 
 // --------------------------
@@ -30,18 +54,38 @@ if (!isset($_GET['menuId'])) {
 }
 ?>
 
+<!-- Importação do SortableJS -->
+<!-- NOTA: Caso haja firewall bloqueando o carregamento, baixe o arquivo e aponte localmente (ex: src="../scripts/js/Sortable.min.js") -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js"></script>
+
+<style>
+    .handle-drag { cursor: grab; padding: 0 12px; font-size: 18px; color: #64748b; }
+    .handle-drag:active { cursor: grabbing; }
+    .sortable-ghost { opacity: 0.4; background-color: #cbd5e1 !important; }
+</style>
+
 <script type="text/javascript">
-$(document).ready(function(){
-    $(".container-ordenacao").sortable({
-        opacity: 0.6,
-        cursor: 'move',
-        handle: '.drag-handle',
-        update: function() {
-            var order = $(this).sortable("serialize") + '&action=updateRecordsListings&tab=cms_menu&recId=cmsmenu_id&recPos=cmsmenu_posicao';
-            $.post("../scripts/js/jdrag-n-drop/updateDB.php", order);
+// RESTAURADO: Patch legado para jQuery (essencial para não quebrar abas ou outras funções globais do painel)
+(function() {
+    var jQ = window.jQuery || window.$;
+    if (jQ) {
+        if (!jQ.curCSS) {
+            jQ.curCSS = function(elem, prop) {
+                return jQ(elem).css(prop);
+            };
         }
-    });
-});
+        if (!jQ.browser) {
+            var ua = (navigator.userAgent || '').toLowerCase();
+            jQ.browser = {
+                version: (ua.match(/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/) || [0, '0'])[1],
+                safari: /webkit/.test(ua),
+                opera: /opera/.test(ua),
+                msie: /msie/.test(ua) || /trident/.test(ua),
+                mozilla: /mozilla/.test(ua) && !/(compatible|webkit)/.test(ua)
+            };
+        }
+    }
+})();
 
 function MostraPaineis() {
     if (document.getElementById("Fint").checked) {
@@ -55,15 +99,21 @@ function MostraPaineis() {
         document.getElementById('Dinterno').style.display = 'none';
     }
 }
+
+function del(valor) {
+    if (confirm("Tem certeza que deseja EXCLUIR?")) {
+        location.href = '?pagina=<?= urlencode($_GET['pagina'] ?? '') ?>&ac=ex&exc=' + valor + '&menu=<?= urlencode($_GET['menu'] ?? '') ?>';
+    }
+}
 </script>
 
 <div class="centro">
     <div id="caminho_migalhas">atualização do portal > personalizar site</div>
-    <div id="titulo_pagina">montar menu</div>
+    <div id="titulo_pagina">Montar Menu</div>
     
     <div id="margem_direita">
         <div class="abas-navegacao">
-            <?php include("cms/formularios/abas_menus.php"); ?>
+            <?php renderAbasMenus(); ?>
         </div>
         
         <div class="conteudo_abas">
@@ -141,7 +191,7 @@ function MostraPaineis() {
                         Para ordenar os Menus, clique no ícone indicador à esquerda de cada item, segure e arraste para cima ou para baixo até a posição desejada.
                     </div>
                     
-                    <ul id="lista_ordenada" class="container-ordenacao">
+                    <ul id="lista_ordenada" class="container-ordenacao" style="list-style-type: none; padding: 0;">
                         <?php
                         while ($oquery = pg_fetch_object($rquery)) {
                             $TtituloItem = mb_strtoupper($oquery->cmsmenu_titulo, 'UTF-8');
@@ -153,18 +203,16 @@ function MostraPaineis() {
                                 $linkEditar = "inicio.php?pagina=" . htmlspecialchars($_GET['pagina'] ?? '') . "&menu=" . htmlspecialchars($_GET['menu'] ?? '') . "&menuId=" . $oquery->cmsmenu_id;
                             }
                         ?>
-                            <li id="recordsArray_<?= $oquery->cmsmenu_id ?>" class="item-registro item-ordenavel<?= $classeStatusVazio ?>">
+                            <!-- Item base -->
+                            <li data-id="<?= $oquery->cmsmenu_id ?>" class="item-registro item-ordenavel<?= $classeStatusVazio ?>" style="display: flex; align-items: center; justify-content: space-between; width: 100%; margin-bottom: 5px;">
                                 
-                                <!-- Alça de arrastar sempre fixa e alinhada à esquerda -->
-                                <div class="drag-handle" title="Clique e arraste para reordenar">☰</div>
+                                <span class="handle-drag" title="Clique e arraste para reordenar">&#9776;</span>
                                 
-                                <!-- Dados do item (ocupa o centro e quebra linha se necessário) -->
-                                <div class="item-dados">
-                                    <span class="item-titulo titulo_linkserv"><?= htmlspecialchars($TtituloItem) ?></span>
+                                <div class="item-dados" style="margin-right: auto; text-align: left; padding-left: 15px;">
+                                    <span class="item-titulo"><?= htmlspecialchars($TtituloItem) ?></span>
                                 </div>
                                 
-                                <!-- Ações alinhadas à direita -->
-                                <div class="item-acoes im-botoes-alinhados">
+                                <div class="item-acoes im-botoes-alinhados" style="display: flex; gap: 8px; flex-shrink: 0; align-items: center;">
                                     <?php if ($oquery->cmsmenu_tipo_menu == 1): ?>
                                         <a href="<?= $linkEditar ?>" class="btn-acao">Submenus</a>
                                     <?php endif; ?>
@@ -172,32 +220,54 @@ function MostraPaineis() {
                                     <a href="<?= $linkEditar ?>" class="btn-acao btn-editar">Editar</a>
                                     <a href="javascript:del(<?= $oquery->cmsmenu_id ?>);" class="btn-acao btn-excluir">Excluir</a>
                                 </div>
-
                             </li>
                         <?php } ?>
                     </ul>
+                    
+                    <script type="text/javascript">
+                    // Executado logo apos renderizar a lista (previne falhas em caso de injecao AJAX)
+                    (function() {
+                        var lista = document.getElementById("lista_ordenada");
+                        if (lista && typeof Sortable !== 'undefined') {
+                            new Sortable(lista, {
+                                handle: ".handle-drag",
+                                animation: 150,
+                                axis: "y",
+                                ghostClass: "sortable-ghost",
+                                onEnd: function (evt) {
+                                    if (evt.oldIndex === evt.newIndex) return;
+
+                                    var formData = new FormData();
+                                    var itens = lista.querySelectorAll("li.item-registro");
+                                    for (var i = 0; i < itens.length; i++) {
+                                        formData.append("ordem[]", itens[i].getAttribute("data-id"));
+                                    }
+
+                                    fetch("?pagina=<?= urlencode($_GET['pagina'] ?? '') ?>&menu=<?= urlencode($_GET['menu'] ?? '') ?>&ajax=reordenar_menus", {
+                                        method: "POST",
+                                        body: formData
+                                    })
+                                    .then(function(r) { return r.json(); })
+                                    .then(function(data) {
+                                        if (data.status !== "sucesso") alert(data.mensagem || "Erro ao atualizar no banco de dados.");
+                                    })
+                                    .catch(function(err) { console.error("Falha na requisicao Fetch:", err); });
+                                }
+                            });
+                        }
+                    })();
+                    </script>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<script type="text/javascript">
-function del(valor) {
-    if (confirm("Tem certeza que deseja EXCLUIR?")) {
-        location.href = '?pagina=<?= urlencode($_GET['pagina'] ?? '') ?>&ac=ex&exc=' + valor + '&menu=<?= urlencode($_GET['menu'] ?? '') ?>';
-    }
-}
-</script>
-
 <?php
 // ------------------
 // Exclui o menu
 // ------------------
 if (isset($_GET['ac']) && $_GET['ac'] == "ex") {
-    require_once("../scripts/php/funcoes.php");
-    require_once("../scripts/php/funcoes_bd.php");
-    
     $drive->conecta();
     $idExcluir = intval($_GET['exc']);
     $sql = "SELECT cmsmenu_tipo_menu FROM cms_menu WHERE cmsmenu_id = " . $idExcluir;
