@@ -2,43 +2,35 @@
  require_once "Mobile_Detect.php";
  $urlHost = $_SERVER['HTTP_HOST'];
  $urlUri = $_SERVER['REQUEST_URI'];
-
- // Areas administrativas ja carregam jQuery + plugins (ex.: colorbox) no proprio head.
- // Recarregar jQuery aqui sobrescreve $ e quebra plugins.
- $skipThemeJquery = (
-   stripos($urlUri, '/intranet') !== false ||
-   stripos($urlUri, '/internet/') !== false
- );
 ?>
-
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+
+<!-- Folha de Estilos do Tema e do Colorbox -->
 <link rel="stylesheet" href="https://<?php echo($urlHost);?>/layout/themePMF/css/style.css?v=<?php echo @filemtime(dirname(dirname(__FILE__)).'/css/style.css'); ?>">
+<link rel="stylesheet" href="https://<?php echo($urlHost);?>/scripts/colorbox/colorbox.css">
 
-<?php
-  if (!$skipThemeJquery) {
- ?>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-    crossorigin="anonymous">
-  </script>
+<script src="https://cdn.tailwindcss.com"></script>
 
-  <script src="https://code.jquery.com/jquery-migrate-1.3.0.min.js"
-    integrity="sha256-+/QytbLYK1r6AApmPrwhgXw7uz4u9H1E65c85XWyHRo="
-    crossorigin="anonymous">
-  </script>
+<!-- 1. Biblioteca Principal do jQuery (baseada na estrutura de assets) -->
+<?php if (!(isset($menu_principal) && $menu_principal === 'intranet')): ?>
+<script src="https://<?php echo($urlHost);?>/assets/js/jquery.min.js"></script>
 
-<?php } ?>
-
-
+<!-- 2. Plugins de Interface e Efeitos -->
 <script src="https://<?php echo($urlHost);?>/scripts/js/ui/jquery-ui.min.js"></script>
-
-
-<script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="https://<?php echo($urlHost);?>/scripts/js/jquery/jquery.easing.min.js"></script>
 
-<script src="https://<?php echo($urlHost);?>/scripts/js/ui/jquery-ui.min.js"></script>
-<script src="https://<?php echo($urlHost);?>/scripts/slidesjs/js/slides.min.jquery.js"></script>
+<!-- 3. Plugin Colorbox (conforme directório de scripts) -->
+<script src="https://<?php echo($urlHost);?>/scripts/colorbox/jquery.colorbox.js"></script>
+<?php endif; ?>
+
+<!-- 4. Google reCAPTCHA e outros componentes externos -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<!-- 5. Scripts Personalizados do Tema (por último) -->
+<?php if (!(isset($menu_principal) && $menu_principal === 'intranet')): ?>
+<script src="https://<?php echo($urlHost);?>/layout/themePMF/js/home.min.js"></script>
+<?php endif; ?>

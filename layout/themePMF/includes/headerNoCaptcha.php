@@ -2,19 +2,14 @@
  require_once "Mobile_Detect.php";
  $urlHost = $_SERVER['HTTP_HOST'];
  $urlUri = $_SERVER['REQUEST_URI'];
-
- $skipThemeJquery = (
-   stripos($urlUri, '/intranet') !== false ||
-   stripos($urlUri, '/internet/') !== false
- );
 ?>
 
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300‌​,400,500,600,700" rel="stylesheet">
 <link rel="stylesheet" href="https://<?php echo($urlHost);?>/layout/themePMF/css/style.css">
 
 <?php
-  if (!$skipThemeJquery) {
+  if(stripos($urlUri, 'internet/') == 0){
  ?>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
